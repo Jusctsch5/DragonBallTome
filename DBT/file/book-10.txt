@@ -1,0 +1,74 @@
+#####R                  /---------------------------\
+#####R                 <    DBT V029 Release Notes   >
+#####R                  \---------------------------/
+
+Summary:
+*****/abook-10.txt*1[(a) Hello!]
+*****/bbook-10.txt*2[(b) To Submit a Big Report]
+*****/cbook-10.txt*3[(c) Noteworthy Changes since Version 0.2.4]
+*****/dbook-10.txt*4[(d) Current Issues]
+*****/gbook-10.txt*5[(e) Fixnotes 'todo' list]
+
+~~~~~1
+#####G(a)Hello!
+This is the second unoffical public release. Like last release,
+it is 'mostly stable' but there isn't really enough material
+available to really consider it playable.
+
+~~~~~2
+#####G(b)To Submit a Bug Report
+If convenient, submit bug reports for Dragonball T on the wiki.
+I've created a bug report section on the DBT page. That should
+be a little easier than navigating the official bug report forum.
+If you don't feel comfortable with the Wiki feel welcome to submit
+via email to lordbucket@hotmail.com. If you have the time, you
+might read over the fixnotes.txt file to see if the problem you're
+having is a known condition, but, honestly I'd rather sort through
+a few redundant reports than have bugs go undetected.
+
+~~~~~3
+#####G(c)Noteworthy Changes since Version 0.2.4
+1) Several new quests
+2) Basic implementation of devices
+3) The 'untargetable monster' bug has PARTIALLY gone away. It still
+   happens, but only rarely. I'm not sure if that's an improvement.
+   I still have no idea why it happens, but the problem diminished
+   when I removed the old archery code. If you'd like to reproduce
+   the bug, go into wizard mode, and summon eight or nine monsters.
+   You'll probably get one or two that can't be targeted.
+4) Dr. Gero, robots, and lair added. (Though none of the Gero Quest
+   material exists yet.)
+5) Several big nasty bugs fixed.
+6) Totally new melee combat system. (Only partially implemented.)
+7) Various limits have been temporarily imposed to make DBT
+   friendlier with the engine (Stats at 99, skills at 50, etc.)
+
+~~~~~4
+#####G(d)Current Issues
+1) Challenge/World Tournament Quest transitions are still not
+   correct. At the moment I'm placing staircases via cave_feat
+   but the behavior is not quite as intended. For the tournament
+   it's not a big deal, but it leaves the challenge quests not
+   behaving as intended. They're functional...but not correct.
+2) Archery does not exist. I know, I just haven't done it yet.
+3) The new melee combat system is not entirely implemented. In
+   particular, the charcater sheet display is woefully incomplete.
+4) I STILL haven't figured out how to make monsters drop certain
+   items. If I don't soon, I'm just going to use drop_near.
+5) Perma-missing store info problem continues to exist.
+6) Tilde quest info is unreliable. I can't see it with this
+   alpha, so I haven't bothered trying to update it.
+7) Some display texts are still incorrect
+8) None of the combat related help texts or parchments are relevant
+   anymore. All the math has changed.
+
+~~~~~5
+#####G(e)Fixnotes 'todo' list
+As with last release, and as for probably the next several more...
+this is just a partial list of the more noteworthy issues. For the
+complete list, see todo.txt
+
+Enjoy!
+
+Bucket Man
+lordbucket@hotmail.com

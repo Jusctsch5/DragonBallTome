@@ -1,0 +1,20 @@
+ book-1.txt Welcome to Dragonball T
+ book-2.txt Pilot's Club
+ book-3.txt Barehand vs. Weapons
+ book-4.txt Combat Math
+ book-5.txt Acupuncture
+ book-6.txt World Tournament Pamphlet
+ book-7.txt Weapons Guide?
+ book-8.txt RN 024
+ book-9.txt Firearms Guide
+book-10.txt RN 029
+book-11.txt Translation Commentary
+book-12.txt Manual for the Recently Deceased
+book-13.txt RN 041
+book-14.txt RN 050
+book-15.txt RN 057
+book-16.txt RN 066
+book-17.txt
+book-18.txt
+book-19.txt
+book-20.txt

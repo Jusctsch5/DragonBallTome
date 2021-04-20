@@ -1,0 +1,85 @@
+-- Not used yet
+
+map.define("aru.map")
+
+-- Floor
+map.symbol{ symbol='.' feat=FEAT_FLOOR info=6 }
+
+-- Tree
+map.symbol{ symbol='X' feat=FEAT_TREES info=6 }
+
+-- Perma-wall
+map.symbol{ symbol='#' feat=FEAT_PERMA_WALL info=6 }
+
+-- Wall of Fire
+map.symbol{ symbol='w' feat=FEAT_WALL_OF_FIRE info=6 }
+
+-- Trees
+map.symbol{ symbol='T' feat=FEAT_TREES info=6 }
+
+-- Mountain
+map.symbol{ symbol='^' feat=FEAT_MOUNTAIN info=6 }
+
+-- Grass
+map.symbol{ symbol='-' feat=FEAT_GRASS info=6 }
+
+-- exit
+map.symbol{ symbol='<' feat=FEAT_LESS info=6 }
+
+-- Entrance to Ox King's House
+map.symbol{ symbol='>' feat=FEAT_MORE info=6 }
+
+-- Hikui Bird Cave
+map.symbol{ symbol='h' feat=FEAT_MORE info=6 dungeon=DUNGEON_HIKUI_BIRD_CAVE }
+
+
+-- Dungeon layout
+map.map
+{
+[[XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX]],
+[[X----T-----------T--T----T-----T------T-T----T-TT---T----TT--------T--T---T-TX]],
+[[X--T---T---T---T------T-T--T-T-T----T----T-T-----T----TT-T-T---T-T---T--T-T--X]],
+[[X-T----TT---T--T--T--T-T----T--TTTT--T-T-T-T-T-T---T-----T-----TTT-T--T---T--X]],
+[[X----T----T--T------T-T----T-TT------------------TT-T-T----T-T-------T-T-----X]],
+[[X-T---------T----T------T-T--------------------------TT-------T----------T---X]],
+[[X---T--T-T-T-T-T---TT--T-------------------------------TT-T-T----T-TT-----T--X]],
+[[X---T------T--T-T--T--T----------------------------------T---T-------T-T-----X]],
+[[X-T-----T---T---T---T------------------------------------TT----TT--T-----T---X]],
+[[X--T-T-----T-----TT---------------------------------------T--T---T---T-T----TX]],
+[[X------TT-T-----T-------------------------------------------TT--T---------T--X]],
+[[X--T-T--T---T-----------------------------------------------T-TT-T--T---T----X]],
+[[X------T-----T--T-------------------------------------------T---------T--T---X]],
+[[X-T---TT--TT----T------------------------------------------T---T---TT--T-----X]],
+[[X-T---------T---T------------------------------------------T---------T---T---X]],
+[[X----T--T---T----------------------------------------------T---T--T---T--T---X]],
+[[X--T--T---T-T----T----------------------------------------T--T-T--T--------T-X]],
+[[X--T----T-----T---T--------------------------------------TT------T--T--T-----X]],
+[[X---T-----T--T--T-TT-------------------------------------T---T--T-----T--T---X]],
+[[X-T--TT-----T------TTT----------------------------------T----T-----T---T--T--X]],
+[[X----T---T---T-----T--TT--------------------------------T--T------T--T-------X]],
+[[X-T---T--T------T-----T-TT----------------------------TT--T-T-T-T-----TT-TT-TX]],
+[[X--T--T-----T-----T-T--T--T--------------------------TT--TT--TT---T--T----T--X]],
+[[X---T-T---T-T--T----T---T--TTT--------------------T-T--T--------T----TT-T-T-TX]],
+[[XT---T----T----T-------T--T---T-----------------TT---------T-----T-----------X]],
+[[X----T-----T---T----TT---T-T------------------TT------TTT-TT---T--T--T--T----X]],
+[[X--T-T---T--T---------------T--T---------TT---------TT----T-----T-----T---TT-X]],
+[[X---T---T-T---T-T--T--T-----T--T--T--T---TT--------T--T---T----TT---T-------TX]],
+[[X-TT---T-----T--T--T-T---T----------T---TT-T-----TT-----T----------T-T-----T-X]],
+[[X----------T-------T---T---T----T-----T---T-TT-TT--T-T-T------TT---T-----T---X]],
+[[X---T-T--------T-----T-----T-T---T-TT--T--T--T-TT----T-------T--T----T-T----TX]],
+[[X-T---T--T----T--T--T--T-T----T----T-------T----TTT-TT----T-T------T-T-T-----X]],
+[[X--T----T---T-T--T-----T---T-----T--T--T-T-T--T-----T----TT----T-T-----T--T--X]],
+[[X----T-T----T---TT--T-T-------T---T---T--T---T---T---T----T-------T---T------X]],
+[[X--T-T----T--T---T--T---TT-TT-T-T------------T-------T-----TT--TT---T-----T--X]],
+[[X-T---T-T------T---TT-T-T--T-TT---T-T-T-T--T--T---T--T------T-T--TTT--T-T----X]],
+[[X---TT------T-T---T--T-TT-------T----T----T-T-----TT--T----------------T--T--X]],
+[[X---T--T------T--T-T------T--TT----T-T-T------------T-T-TT-------T--------T--X]],
+[[X--T-T--T--T-------T--T--T-T--T--T-T-T---T-T-T--TT-------TT-TT--T-TT----T----X]],
+[[X----T-TT--T--T-T--T-T--T--T-T-----TT-T-T-----T-----TT-----T--TT-T--T----T-T-X]],
+[[X--T----T-----T-------TT---T-T---T--TTT--T---T--T-T----T---------T-T-T-----T-X]],
+[[XTT-T-T-----T-----T-T----T-----T-------T---T----T----T-----T--T-T------T-----X]],
+[[XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX]],
+}
+
+-- Starting position
+map.set_player(52, 39)

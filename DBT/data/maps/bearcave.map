@@ -1,0 +1,39 @@
+-- Bear Thief and traps placed in dungeons.lua
+
+map.define("bearcave.map")
+
+map.symbol{ symbol='.' feat=FEAT_DIRT info=3 }
+map.symbol{ symbol='X' feat=FEAT_GROTTO info=3 }
+map.symbol{ symbol='<' feat=FEAT_LESS info=3 }
+
+-- Bear Thief is placed by the level gen
+--map.symbol{ symbol='a' feat=FEAT_FLOOR info=3 monster=RACE_BEAR_THIEF }
+
+-- Dungeon layout
+map.map
+{
+[[XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX]],
+[[XX...XXXXXXXXXXX.....XXXXXX....XX]],
+[[X....XX....XXX....XX..XXXX......X]],
+[[XX......XX..XX.....XX..XX.......X]],
+[[XXXXX..XXXX..XX.....XX....XX.XX.X]],
+[[XX....XX.....XXX..X..XXXX..XXX..X]],
+[[XX.XXXX.......XXXXXX..XXXX...X..X]],
+[[X.....XXX....XXX..XXX..XXXX..XX.X]],
+[[X.......XXXXXX.....XXX..X...XX..X]],
+[[XX..XX..XX...XX....XXX..X.XXX...X]],
+[[XXXXX..XXX....XXX..XX..XX..XXX..X]],
+[[XXX...XXXXXXX..X..XXX.XXXX...XXXX]],
+[[X......X....XX...XXXX....XXX..XXX]],
+[[XX..X.....X.......XX..XX.XXXX...X]],
+[[XX..XXX.XXXXXXXX.....XXX.XXXXXX.X]],
+[[XXX...XXXX..XXXXX......X...XXXX.X]],
+[[XXXX...X.......XX......X....X...X]],
+[[XXXXX....XXXX...XX....XX...XX...X]],
+[[XXXXXXXXXXXXXX....XXXXX....X...XX]],
+[[XXXXXXXXXXXXXXX.<.XXXXXX..XXX.XXX]],
+[[XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX]],
+}
+
+-- Starting position
+map.set_player(19, 16)

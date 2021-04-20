@@ -1,0 +1,347 @@
+#####G Dragonball T: Frequently Asked Questions                                
+                                                                               
+~~~~~1                                                                         
+*****/afaq.txt*1[(a) Menu]                                                     
+*****/bfaq.txt*2[(b) This game is way too hard!]                               
+*****/cfaq.txt*3[(c) How can I make the early game easier?]                    
+*****/dfaq.txt*4[(d) Does it matter which gender I play?]                      
+*****/efaq.txt*5[(e) Do I need to put points into charisma?]                   
+*****/ffaq.txt*6[(f) Why is the Martial Arts skill the way it is?]             
+*****/gfaq.txt*7[(g) Chi skills are too expensive and underpowered!]           
+*****/hfaq.txt*8[(h) Barehand or weapons?]                                     
+*****/ifaq.txt*9[(i) Which school should I study at?]                          
+*****/jfaq.txt*10[(j) I have all seven dragonballs. What should I wish for?]   
+*****/kfaq.txt*11[(k) I have Chi skill, why is my Chi pool still zero?]        
+*****/lfaq.txt*12[(l) When should I enroll in the World Tournament?]           
+*****/mfaq.txt*13[(m) I'm poor! How do I make money in this game?]             
+*****/nfaq.txt*14[(m) I just killed so-and-so and he didn't drop a dragonball!]
+*****/ofaq.txt*14[(o) I don't understand the Ballet quest]                     
+                                                                               
+~~~~~2                                                                         
+#####GQ. This game is way too hard!                                            
+                                                                               
+A. Dragonball T is total conversion module. Lots of things work differently    
+from the ToME module, there are a lot of new things to do, and new things      
+to know. Once you get past the learning curve, I think you'll find that it     
+isn't as difficult as it ay seem at first. In fact, there are a lot of little  
+tricks that can make even the early game very easy. You just have to find      
+out what they are.                                                             
+                                                                               
+~~~~~3                                                                         
+#####GQ. How can I make the early game easier?                                 
+                                                                               
+A. Most of these problems come from initial stat point allocation and          
+choice of school. If you start with a charisma of 8, and try to play           
+a Barehanded fighter, you're going to have a VERY hard time of things.         
+Here's a simple recipe for an easy start:                                      
+                                                                               
+ 1)  Start a new character with 12 charisma (And thus, 1000 zeni)              
+ 2)  Press 'S' and change to movement mode 'd' 'Running                        
+ 3)  Stop by the Megamall '1' and buy a flashlight                             
+ 4)  If you are planning on dungeon delving, then you need a one               
+     handed weapon so you can wield your flashlight at the same time.          
+     Head north, past the World Tournament building off the edge               
+     of the map, and find the Martial Arts Supply Store '3'. Buy a             
+     a one handed weapon, like sai, tonfa, nunchaku or an escrima              
+     stick.                                                                    
+ 5)  Hunt white belts in town, and you should be able to make level            
+     three in a few minutes.                                                   
+ 6)  Pick a style. Karate and Kungfu are both good choices for a               
+     beginner. Both may be found directly south of the World Tournament        
+     building near where you started. Look for the '4's. Enroll in some        
+     basic classes. In particular, martial arts, and either weapons            
+     or barehanded, depending on which sort of fighter you'd prefer to         
+     play. Weapons fighters are easier for new players.                        
+ 7)  Follow the road west from the Karate school to Aru village. The           
+     villagers there are having a number of problems you may be able           
+     to help with.                                                             
+ 8)  There is a Rabbit Hole in the woods west of Aru. Perhaps the Rabbit       
+     Imelda speaks of is in there?                                             
+                                                                               
+~~~~~4                                                                         
+#####GQ. Does it matter which gender I play?                                   
+                                                                               
+A. Yes. Gender significantly affects a number of things, including:            
+                                                                               
+ * Available schools                                                           
+ * Dialogue options                                                            
+ * Access to certain quests                                                    
+ * Equipment allowances                                                        
+ * Marriage options                                                            
+                                                                               
+~~~~~5                                                                         
+#####GQ. I don't really need to waste points in charisma, do I?                
+                                                                               
+A. Skimping on charisma is not recommended. As a measure of how good           
+ou are with people, charisma will affect which dialogue responses you're       
+able to choose from. And time you see an option marked (Persuade) this         
+is an option that only exists for characters with a certain minimum of         
+charisma. In particular, the various marriage options will generally           
+only be available to characters with charisma of at least 15, and some         
+dialogue options will require a charisma as high as 20 to gain access.         
+                                                                               
+~~~~~6                                                                         
+#####GQ. What's the deal with the Martial Arts skill?                          
+                                                                               
+A. Stop thinking of it as solely a to-hit bonus. It is that, but it's          
+also supposed to represent knowledge of martial arts as a whole. Students      
+of a school which focuses exclusively on a single aspect of martial arts       
+may know a lot about that aspect, but at the expense of everything else.       
+A school which only teaches weapons, or only teaches barehanded fighting,      
+for example, is right away cutting out an entire field of possible knowledge.  
+Consequently, the more specialized the school, the less of a Martial Arts      
+skill bonus it is likely to offer.                                             
+                                                                               
+~~~~~7                                                                         
+#####GQ. The Chi skills are way too expensive and seriously underpowered!      
+                                                                               
+A. No, they aren't. Chi system is potentially game-shatteringly powerful.      
+You just haven't learned how to use it effectively yet. It is, however,        
+balanced heavily in favor of the end-game. Chi requires a high skill           
+investment before it becomes very practical, and you will need to raise        
+several Chi skills to moderate levels and learn some abilities before          
+the system is likely to be of any value.                                       
+                                                                               
+ * Don't bother investing points until you can raise MULTIPLE Chi              
+   skills. The Chi skills work cooperatively with one another, and             
+   even an extremely high skill value in a single Chi skill, even 100,         
+   will be worthless unless you have points in other Chi skills as well.       
+                                                                               
+ * Don't bother investing points until you have access to a Chi ability        
+   that you want to use. Chi skills determine the operation of Chi             
+   abilities. If you have no abilities, your skills won't be able to           
+   do anything useful. Waiting will also prevent mis-investing of              
+   points. For example, raising Chi defense to 100 is useless if your          
+   only Chi ability is an offensive one.                                       
+                                                                               
+ * For instant effects, you'll generally need at least five points             
+   in at least two or three Chi skills if you expect to see even a             
+   modicum of usefulness from the ability. For constant effects,               
+   it will be at least 10 points, and soemtimes as many as twenty              
+   before the abilities become useful. To see the true power of                
+   the Chi system, you'll need to invest a signifncant percentages             
+   of your total allotted skill points. Fifty skill points worth               
+   of Chi skills will be useful, but expect to spend well over a               
+   hundred before you truly start to become powerful from it.                  
+                                                                               
+ * Be willing to micro manage your constant effects. Don't expect              
+   to be able to turn everything on and just leave them on all the             
+   time. Remember that there is no energy cost or delay associated             
+   with changing your settings.                                                
+                                                                               
+ * If you're short on skill points, remember that point for point,             
+   Intelligence is worth just as many Chi points as the Chi skill,             
+   and there are twenty free Intelligence points available in the              
+   game. With careful planning, it should theoretically be possible            
+   to have 33 Chi available without ever spending a single skill               
+   point in Intelligence, Willpower or Chi.                                    
+                                                                               
+ * You might consider reading through the spoilers for Chi.                    
+                                                                               
+~~~~~8                                                                         
+#####GQ. Should I go barehanded or weapons combat?                             
+                                                                               
+A. There is much to be said either way. Both styles are extremely              
+playable, and it's probably best to decide for aesthetic reasons               
+rather than mechanical ones.                                                   
+                                                                               
+#####B Weapons Fighters                                                        
+                                                                               
+#####y  Good                                                                   
+   * Can easily deliver lots of damage by using a hard hitting weapon          
+   * Easily ID weapons, which generally sell for a lot of money                
+   * Can wield a flashlight at low levels with no penalty                      
+   * The majority of artifacts in the game are weapons                         
+   * Benefits from weapon to hit and damage bonuses                            
+   * Access to poison and vorpal effects                                       
+                                                                               
+#####R  Not-So-Good                                                            
+   * Are only as good as their weapons, which are expensive and can            
+     be lost                                                                   
+   * With twice as many skills directly relating to weapons combat             
+     as barehanded, there are rarely enough skill points to go around          
+   * Due to the mechanics of the combat skills, while weapons fighters         
+     will be capable of having an armor class comparable to that of            
+     a barehanded fighter, it will generally be more difficult and             
+     more expensive to do so.                                                  
+   * Optimizing skill point expenditures can become complicated                
+   * Weapons fighters in the afterlife may be seriously handicapped            
+     due to the inability to use any non-artifact weapons                      
+                                                                               
+#####B Barehanded Fighters                                                     
+                                                                               
+#####y  Good                                                                   
+   * With fewer combat skills to worry about, barehanded fighters will         
+     generally have more skill points available to spend                       
+   * It is generally easier for barehanded fighters to have a high             
+     armor class                                                               
+   * No need to ever worry about losing a weapon and being helpless.           
+   * Barehanded fighters have a tremendously easier time in the                
+     afterlife due to the lack of reliance on equipment                        
+                                                                               
+#####R  Not-So-Good                                                            
+   * Inability to carry a flashlight and fight barehanded at the               
+     same time at low levels                                                   
+   * Inability to use most artifacts                                           
+   * Lower damage potentials. Proper skill management will completely          
+     alleviate this problem, but carelessness can lead to situations           
+     in which, for example, a level 12 Barehanded fighter averages             
+     about 11 damage per turn, whereas a weapons fighter can average           
+     19 damage (even at level 1) with a store-bought weapon.                   
+                                                                               
+~~~~~9                                                                         
+#####GQ. Which school should I study at?                                       
+                                                                               
+A. The enrollment system is rather complicated, but the simplest               
+answer is to study at as small a variety of schools as possible to             
+get the skill coverage that you want. Once you reach the maximum level         
+of training for the 'primary' skill of any school, you'll be issued a          
+quest to challenge the schools rival to a duel. Once you succeed, that         
+school will close  and the training caps at the school that issued the         
+quest will increase. Once the Challenge quest has been completed, every        
+time you close any other school, the training caps will increase again.        
+                                                                               
+Note that because of the closures, it is not possible to study at both         
+of any pair of rival schools. These are:                                       
+                                                                               
+ * Karate with Kickboxing                                                      
+ * Kungfu with Fencing                                                         
+ * Judo with Sumo                                                              
+ * (As of V083: Ballet, TaeKwonDo, Ninjutsu and Marksmanship are 'pending')    
+                                                                               
+Again, the system is flexible, and skilled players will be able to             
+devise all sorts of completely viable builds, but as a simple overview,        
+in general you'll usually want:                                                
+                                                                               
+ * A fighting skill (barehanded or weapons, usually)                           
+ * A source of hit points (con from Ballet or Sumo, usually)                   
+ * A source of speed (speed from Judo, Kickboxing or fencing, or dexterity     
+                      from Ballet or Kungfu...usually)                         
+ * Useful abilities to complement your fighting style                          
+ * A secondary source of to-hit bonuses                                        
+                                                                               
+For a barehanded fight, for example, any combination of Karate, Kickboxing,    
+Judo and/or Sumo usually works pretty well. For a weapons fighter, you'll      
+want to pick either Kungfu or Fencing, and then either Sumo or Ballet. But,    
+again, lots of viable combinations exist. To gives some obious examples:       
+                                                                               
+Kickboxing + Sumo (The walking tank)                                           
+Kickboxing gives access to Barehanded, Speed, and the extremely useful         
+Double Attack ability, while Sumo gives terrific constitution and strength,    
+for high hit points and damage. Absolutely devastating at early levels,        
+but this build will suffer from poor to-hit odds and have a tough time         
+identifying useful equipment.                                                  
+                                                                               
+Kungfu + Ballet (The unstoppable blade)                                        
+Kungfu gives access to all the weapon skills, as well as the Paired Weapon     
+ability. Ballet gives dexterity for good to hit and running speed bonuses,     
+and constituion for lots of hit points. Since the running speed bonus maxes    
+at +10, this build will suffer from a low maximum speed potential, and the     
+lack of strength will limit the damage potential, but otherwise this pair      
+should also do well. Especially by maxing martial arts, weapons and dexterity, 
+this build should fairly easily be able to get a to-hit bonus in the +300      
+range, at which point the low damage isn't such an issue.                      
+                                                                               
+~~~~~10                                                                        
+#####GQ. Woohoo! I've collected all the Dragonballs! What should I wish for?   
+                                                                               
+A. Anything you'd like. No, really! Wish for anything!                         
+                                                                               
+~~~~~11                                                                        
+#####GQ. I have skill in Chi, but my Chi pool is zero! What's going on?        
+                                                                               
+A. Your available Chi pool is calculated as your Intelligence, plus your       
+willpower, plus your Chi skill, minus 20. One point of Chi skill is only       
+worth one point in your reserve pool if Int and Will are both 10. If you       
+start the game with Int and Will both at 8, and never raise them, you'll       
+have to raise your Chi skill to 5 before you'll get to see a single point      
+of it. Try spending some time studying at the library. That should help        
+increase your Intelligence.                                                    
+                                                                               
+~~~~~12                                                                        
+#####GQ. When should I enroll in the World Tournament?                         
+                                                                               
+A. Well, anytime you'd like, really. The matches start out quite easy,         
+and become progressively more difficult, but even a level 1 character          
+should be able to win the first two matches. Also, you'll be prompted          
+before each match if you'd like to proceed, and you may freely leave           
+for as long as you'd like between matches, with no penalty. Just be aware      
+that the Tournament is televised world-wide, and the further you progrss       
+in the Tournament, the more likely it is that people will recognize you        
+outside the Tournament. That could be good. That could be bad. In particular   
+once you've won the Tournament, instructors will no longer accept challenges   
+from you. This can have a tremendous affect on your potential skills and       
+abilties, so be careful aboit that.                                            
+                                                                               
+~~~~~13                                                                        
+#####GQ. I'm poor! How do I make money in this game?                           
+                                                                               
+A. Money is somewhat more rare and valuable in Dragonball T than it is         
+in most other roguelikes. Here are some possible solutions:                    
+                                                                               
+ * Don't start the game with an 8 charimsa, for starters. Not only does        
+   charisma determine starting money (which can range from 0 to 1000) it       
+   also affects your buy/sell prices from stores, and the monetary value       
+   of certain quest rewards                                                    
+ * Both the Pawnshop, and R-Vac will buy items. R-Vac offers better prices     
+   but the Pawnshop will buy anything.                                         
+ * Be sure to identify things before you sell them. Unidentified items sell    
+   for 1 zeni. You will need skill, or the ability to use a laptop to identify 
+   things.                                                                     
+ * Play a weapons fighter. Barehanded fighters generally have a more difficult 
+   time identifying anything worth selling.                                    
+ * Experiment with different items to see what is worth selling. Wine bottles, 
+   for example, are fairly common even at low levels, and sell better than     
+   many other items.                                                           
+ * The prize for winning the World Tournament is a million zeni                
+                                                                               
+~~~~~14                                                                        
+#####GQ. I just killed so-and-so and he didn't drop a dragonball!              
+                                                                               
+(Note that this answer explains how the system is *intended* to work. It is    
+ not functioning 100% as intended, yet.)                                       
+                                                                               
+A. Yes, that can happen. There are exactly seven dragonballs. No more!         
+There are a few monsters who are 'gaurunteed' to drop dragonballs, but         
+that gauruntee is completely contingent on a dragonball actually being         
+available. It may or may not be! The most obvious example, of course, would    
+be when you have all seven dragonballs in your possession. If you then kill    
+a uniques that is 'gaurunteed' to drop one, the system will quickly check      
+and see that there aren't any available dragonballs, and your unique will      
+drop nothing. However, just because there are dragonballs you don't have       
+doesn't mean that they're available. For instance, nearly every monster in     
+the game has at least a 1:1000 chance of spawning with a dragonball on it.     
+That's why you find them so often. Kill a few hundred monsters and you've      
+a decent chance of finding a dragonball. But...for every dragonball you        
+actually find on a random white belt in town, think about how many monsters    
+you DIDN'T kill. Odds are quite good that every game you play, the occassional 
+dragonball will spawn on a monster that you don't bother to fight. Or may      
+not even see. It is very possible for a 'gaurunteed' dragonball drop monster   
+to be 'denied' their dragonball drop request simply because random monsters    
+spawned on the same level with a dragonball. Also, dragonballs have a          
+tendancy to move around. Just because a certain monster is carrying a          
+dragonball in one games doesn't mean he'll necessarily be carrying it in the   
+next. This applies both to spawning *as well as to dialogue!* There are *NO*   
+absolutely gaurunteed dragonball locations! Oh, there are many places where    
+you'll consistantly be able to find a dragonball, as well as many uniques who  
+will consistantly drop them. But, every single one of them is completely       
+reliant on the dragonball tracker to give it permission to actually have       
+a dragonball. No exceptions.                                                   
+                                                                               
+~~~~~15                                                                        
+#####GQ. I don't understand the Ballet quest.                                  
+                                                                               
+A. What? Missing dancers? Cute little mice running around everywhere?          
+An elegant King Mouse with a great big nasty sword? Ballet? Don't you          
+get it? No? <sigh> The entire quest for Ballet is a reference to               
+Tchaikovsky's Nutcracker Ballet. You know...the one where the little           
+girl (Clara) runs around with her Nutcracker prince for about two hours        
+doing nothing in particular? The music is good, the dancing is usually         
+good, and who doesn't absolutely love the Sugar Plum Fairy? Still, the         
+story itself is really pretty dumb, and unfortunately it's an obligatory       
+Christmas-time performance, so anybody who's ever studied Ballet has           
+probably had to do the show about a zillion times. The quest should            
+get a good laugh from anyone who's knows anything abotu Ballet, but            
+it does seem to come up as a bizarre non-sequitor to everyone else.            
+                                                                               
+                                                                               

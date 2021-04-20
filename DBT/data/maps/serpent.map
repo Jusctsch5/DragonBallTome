@@ -1,0 +1,95 @@
+-- Dragonball T: The Serpent's Path
+
+map.define("serpent.map")
+
+map.symbol{ symbol='.' feat=FEAT_SERPENT_PATH info=3 }
+map.symbol{ symbol=' ' feat=FEAT_SERPENT_CLOUD info=6 }
+map.symbol{ symbol='*' feat=FEAT_MAP_BORDER info=3 }
+map.symbol{ symbol='#' feat=FEAT_BUILDING info=3 }
+map.symbol{ symbol='<' feat=FEAT_LESS info=3 dungeon=DUNGEON_KARIN
+	flags = {
+		MOVE_POST_DEST=function()
+			-- Prep for teleport to Kaio's World
+			dball_data.teleport_dungeon = 100
+		end
+	}
+}
+map.symbol{ symbol='K' feat=FEAT_SERPENT_KAIO info=3
+	flags = {
+		MOVE_POST_DEST=function()
+			-- Prep for teleport to Kaio's World
+			dball_data.teleport_dungeon = 100
+		end
+	}
+}
+-- map.symbol{ symbol='a' feat=FEAT_FLOOR info=3 monster=RACE_PRINCESS_SNAKE }
+map.symbol{ symbol='b' feat=FEAT_FLOOR info=3 monster=RACE_EMMA_DAIO }
+
+map.map
+{
+[[***************************************************************************************************************************]],
+[[*                                                                                                                         *]],
+[[*                                                                                                                         *]],
+[[*                                                                                                                         *]],
+[[*                                                                                                                         *]],
+[[*                                                                                                                         *]],
+[[*                                                                                                                         *]],
+[[*                ....     ...............   ...                            .    ..    ..    ..   .... ..   .  K           *]],
+[[*               .    .   .               . .   .                          . ....  .  .  .  .  . .    .  . . . .           *]],
+[[*               .     .  .                .    .                          .       . .   .  .  .  .     .  . . .           *]],
+[[*            ....    .    ...............   ...                            .    .  .     ..   . .       . . . .           *]],
+[[*            ##..   .                    . .                               .  .. .             .    ..  . . . .           *]],
+[[*            #...    ..                  . .                              .  .   . .   .. ..       .  ..  . . .           *]],
+[[*            ##..      .  ...............  .                               ..     . . .  .  .    . .      . . .           *]],
+[[*            ....      . .                .                                   .     .  .   .  . . .   ..  . . .           *]],
+[[*               .    ..  .                 .                                 . .    .  .   . . .     .  . . . .           *]],
+[[*              .    .     ...............   .                              . .  .  .  .  ..  .     ..  .  . . .           *]],
+[[*            ..     .                    .   .                            . .    . . .  .    .    .     . . . .           *]],
+[[*           .        .....      .    ....   .                            .      .   .    .    ..   .  ..  . . .           *]],
+[[*           .   ..        .    . .  .      .                             . .    .      ..       . .  .    . . .           *]],
+[[*            ...  ......   . . .  ..   ..  .                              . .    . .  .    ...   .    ..  . . .           *]],
+[[*                       .   . .       .  .  ..           .......             .    . .  .  .   .         . . . .           *]],
+[[*            ..........  .            .  .    . .        .......              .      . . .  ..  .   ....  . . .           *]],
+[[*           .          . .  ..  ..  ..  .      . ....    .......         ..  .      .   .  .   . . .      . . .           *]],
+[[*            ..   .....   ..  ..  ..     ....        .......b............  . .    ..       .  .   .  ...  . . .           *]],
+[[*              . .                           .           .......          .  .   .    ..    .  .    .   . . . .           *]],
+[[*              .  .  ..... . . . . .  ..  ..  .          .......         .    ..  .  .  .    .  .  .    . . . .           *]],
+[[*            .  . . .     . . . . . ..  ..  .  .         .......         .      .  .  .  ....   .   .   . . . .           *]],
+[[*           . . . . .  ..                  .   .                          .    .    . .       ..   .  ..  . . .           *]],
+[[*           . . . . . .  ..    .......    .  ..                            .  .    .  . ..   .    .  .    . . .           *]],
+[[*           . . .  .  .    .  .       .  .  .                               .  .  .    .  .  .   .    ..  . . .           *]],
+[[*           . . .    .    .    ....   . .  .                               .   .  .      .    .   .     . . . .           *]],
+[[*           . .  .  .   .  ...     .  .  .  .                              .    .  . .   .   .    .   ..  . . .           *]],
+[[*           . .   . .  . .    .    . .    .  .                            .  .  .   . .   . .  .. .  .    . . .           *]],
+[[*           .  .  .  . . .  .  ....   .    .  ....                        . . ..      .  .  . .  .   .    . . .           *]],
+[[*           .   . .   .  . . .         .   .      .                        .     ... .  .  .   .   .  ..  . . .           *]],
+[[*           .  .   .    .  .  .......   .  .      .                          .. .   .  ..   .   ... .   . . . .           *]],
+[[*           . .     .  .  .          .  .  .  ....                          .  .  .   .      .      .   . . . .           *]],
+[[*           . .  .  . .   .   .......   .  . .                              .    . . .  ..    .    .  ..  . . .           *]],
+[[*           . . . . . .    . .        .  ..  .                              .  . . .  ..  .   .   .  .    . . .           *]],
+[[*           . . . . . .  . . . . . . . .      .                            .  . .  .       .   .  .  .    . . .           *]],
+[[*           <  .   .   .. .   . . . .   ......                              ..      .......     ..    ....   .            *]],
+[[*                                                                                                                         *]],
+[[*                                                                                                                         *]],
+[[*                                                                                                                         *]],
+[[*                                                                                                                         *]],
+[[*                                                                                                                         *]],
+[[*                                                                                                                         *]],
+[[***************************************************************************************************************************]],
+}
+
+-- Starting position
+if dball_data.serpert_teleport == 1 then
+	-- return portal placed in dungeons.lua
+	map.set_player(27, 60)
+elseif dball_data.serpert_teleport == 2 then
+	map.set_player(7, 110)
+elseif dball_data.serpert_teleport == 3 then
+	-- Is there ever any case that delivers us to the bottom left?
+	map.set_player(41, 12)
+else
+	-- Was: if dball_data.emma_state == 2 or dball_data.emma_state == 3 or dball_data.hell_escalator_state == 2 then
+	dball_data.hell_escalator_state = 0
+	map.set_player(25, 60)
+end
+dball_data.serpent_teleport = 0

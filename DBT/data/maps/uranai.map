@@ -1,0 +1,51 @@
+map.define("uranai.map")
+
+map.set_default_symbol_attributes{ inventory_size=2 }
+
+map.symbol{ symbol='.' feat=FEAT_FLOOR info=8 }
+map.symbol{ symbol=',' feat=FEAT_FLOOR info=6 }
+map.symbol{ symbol='|' feat=FEAT_LAMP info=6 on_walk="This old lantern provides some illumination" }
+map.symbol{ symbol='*' feat=FEAT_MAP_BORDER info=6 }
+map.symbol{ symbol='X' feat=FEAT_PERMA_WALL info=6 }
+map.symbol{ symbol='d' feat=FEAT_DOOR info=6 inventory_size=0  }
+map.symbol{ symbol='<' feat=FEAT_LESS info=6 inventory_size=0 }
+
+map.symbol{ symbol='a' feat=FEAT_SIGNPOST info=3 on_walk="A placard reads 'Visitors will be turned to goo!'" }
+map.symbol{ symbol='b' feat=FEAT_FLOOR info=8 monster=RACE_URANAI_BABA inventory_size=0 }
+
+map.quest_symbol
+{
+	quest = QUEST_TENTACLE_DEMON
+	symbol = 'c'
+	symbols =
+	{
+		[{QUEST_STATUS_TAKEN}] = { feat=FEAT_MORE info=6 }
+		default = { feat=FEAT_FLOOR info=8 }
+	}
+}
+
+
+-- Dungeon layout
+map.map
+{
+[[********************]],
+[[*XXXXXXXXXXXXXXXXXX*]],
+[[*XXXXXXXXX<XXXXXXXX*]],
+[[*XXXXXXXXX,XXXXXXXX*]],
+[[*XXXXXXXXX,XXXXXXXX*]],
+[[*XXXXXXXXX,aXXXXXXX*]],
+[[*XXXXXXXXXdXXXXXXXX*]],
+[[*X,,,..........,,,X*]],
+[[*X,|,..........,|,X*]],
+[[*X,,,..........,,,X*]],
+[[*X................X*]],
+[[*X........b.....c.X*]],
+[[*X................X*]],
+[[*X,,,..........,,,X*]],
+[[*X,|,..........,|,X*]],
+[[*X,,,..........,,,X*]],
+[[*XXXXXXXXXXXXXXXXXX*]],
+[[********************]],
+}
+
+map.set_player(2, 10)

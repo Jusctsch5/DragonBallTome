@@ -1,0 +1,174 @@
+#####R                 /------------------------\                              
+#####R                <  DBT V089 Release Notes  >                             
+#####R                 \------------------------/                              
+                                                                               
+Summary:                                                                       
+*****/abook-33.txt*1[(a) V089 Status]                                          
+*****/bbook-33.txt*2[(b) Summary of Changes]                                   
+*****/cbook-33.txt*3[(c) Newly observed (or created) issues]                   
+*****/dbook-33.txt*4[(d) General Problem Areas]                                
+                                                                               
+~~~~~1                                                                         
+#####G(a) Status                                                               
+Version 0.8.9                                                                  
+                                                                               
+   Wow! It's been six months since the last release. I've only spent about     
+   two weeks of that time doing any work on Dragonball T, but all the same     
+   looking over the change log it's possible this may be the largest release   
+   ever. The change log is over twice as long as the log for V0.8.8 anyway.    
+   Most of it is bugfixes, but there's some significant new middle-late game   
+   material as well. Mostly past character level 35 or so.                     
+                                                                               
+   Enjoy!                                                                      
+                                                                               
+   November 14, 2007                                                           
+   Bucket Man                                                                  
+   lordbucket@hotmail.com                                                      
+                                                                               
+                                                                               
+~~~~~2                                                                         
+#####G(b) Summary of Changes                                                   
+#####BSystems:                                                                 
+ * Updated to alpha17                                                          
+ * Partial implementation of Party system. Don't even worry about it. It's     
+   not ready to be used yet, but this needs to be in place before the          
+   Rosshi or Oolong quests are completeable, so it's a step in the right       
+   direction.                                                                  
+ * Object Theme changes: I have ''finally'' figured out how to generate        
+   random objects by flag, and object themes have been very redesigned.        
+   Objects should now generally be more appropriate to dungeon location and    
+   level. Nakamura will generally not drop Chinese items. Namekians will no    
+   longer drop earth items. Ballet and ninja items will no longer be found     
+   in Mr Satan's Estate. Additionally, object generate now ''does'' consider   
+   dungeon level in generation. Previously, in most dungeons other than the    
+   Rabbit Hole you were exactly as likely to find a high-level item on the     
+   top level of a dungeon as on the bottom level. ''This is no longer true''.  
+   Additionally, for monster drops, the LEVEL of the monster will influence    
+   the quality of the items they're capable of carrying. A Level ten monster   
+   on dungeon level 1 will generally drop better items than a level 1 monster  
+   on the same dungeon level. Consequently, the relative rarity of pretty much 
+   everything has changed. Let me know if anything strange turns up.           
+                                                                               
+#####BNew Material:                                                            
+ * New Mega-Dungeon: The Supreme Headquarters of the Red Ribbon Army           
+   You thought Muscle Tower was scary? Ha!                                     
+ * Five new special levels                                                     
+ * Two new quests on planet Namek                                              
+ * 30K new dialogue                                                            
+ * New AI's: Tenshinhan, Chaozu, leviathan, ai.NAMEK                           
+ * New store: Candy store                                                      
+ * White Wolf quest has been restored                                          
+ * Several new items                                                           
+ * A variety of cosmetic changes                                               
+                                                                               
+#####BRulechanges and Balance:                                                 
+ * Damage from bleeding has been cut in half. That still doesn't mean you      
+   can expect to simply wait for bleeding to go away. It is still very         
+   possible to acquire cuts that will require a thousand hit points to         
+   recover from, but it should be slightly more difficult to acquire those     
+   230hp/round cuts                                                            
+ * Missile Turrets are no longer quite so deadly                               
+ * Movement mode Running now:                                                  
+   * Pretty much destroys your searching ability                               
+   * Halves your natural healing rate                                          
+   * Halves any AC bonuses from Dodge                                          
+   * Halves any AC bonuses from high dexterity                                 
+   * Double any AC penalties from low dexterity                                
+ * Kinto Un may no longer appear off-planet by any means short of a dragonball 
+   wish. This has many balancing effects.                                      
+ * The Nyoi-bo is now special generation only, and only Turtle students receive
+   the Nyoi-bo quest. Consequently, while it is still possible, it is extremely
+   unlikely for anyone to keep the Nyoi-bo through to the end-game.            
+ * Crane once again requires a quest prior to study                            
+ * Re-smoothed the xp ladder. It's about the same to level 20, but between 20  
+   and 30 you'll feel a big difference. Also, only 12.4 million to level 100,  
+   not 15                                                                      
+ * Ox King's helmet now grants blindness resistance (theme)                    
+                                                                               
+#####BKinto Un                                                                 
+ * A variety of changes have been implemented for Kinto Un, including bugfixes,
+   rebalalancing, quest clarifications, and automatic help texts.              
+                                                                               
+#####BBugfixes:                                                                
+ * Outer space is no longer horribly broken                                    
+ * Buruma no longer prohibited from appearing once her quest is issued         
+ * Yemma now properly transports you to earth upon ressurection                
+ * GPS no longer grants light                                                  
+ * Fixed some issues making it impractical to visit the North Kaio             
+ * General White no longer presses buttons if he's dead                        
+ * Uranai Baba code fixed....''again''                                         
+ * Shovels and mouthgaurds no longer allow you to breathe without air          
+ * It is once again possible to ride motorcycles                               
+ * Mr Satan's reception area now has item decay                                
+ * Lunch no longer spawns in safe zones                                        
+ * Fixed a LUA error when running with exactly 10 dexterity                    
+ * Never moving monster now never move                                         
+ * Updated maps to a17 edge convention                                         
+ * Fixed store dialogues as per DarkGod: term.gotoxy(0, 0)                     
+ * Character Sheet page 2 no longer generates LUA errors                       
+ * Yamcha runaway message now only appears once                                
+ * Volcano door weirdnesses have been resolved                                 
+ * Issues relating to Kinto-Un have, in theory, all been fixed (Except the     
+   infinite Kinto Un bug)                                                      
+ * Some of the Chi masters had duplication in their menu keys                  
+ * It is no longer possible to get multiple Nyoi-bos, and it is unlikely to    
+   keep it to the end-game                                                     
+ * The Curious Hole quest dialogues have been clarified                        
+ * Friendly Ninja Turtles no longer trap the player                            
+ * No more -more- prompt from changing stats during character creation         
+ * Fixed weirdness from increasing intelligence at Robbins institute           
+ * Rosshi no longer insta-kills Crane students                                 
+ * Restored ID skill requirement messages when examining items                 
+ * WT ring border no longer interferes with throws or chi bursts               
+ * Rosshi no longer insta-kills Crane students                                 
+ * Nyoibo quest is now exclusive to Rosshi's students                          
+ * term fix for failed rival enrollment attempts                               
+ * Joke quest for the North Kaio is now only issued once                       
+ * Fixed screen corruption when failing to open the Denshi Jar                 
+ * Muscle Tower patrol no longer ignores ranged attackers                      
+ * Some issues with monster drops have been resolved                           
+ * ITEMS IN STORES ARE IDENTIFIED!!!! WOOT!                                    
+ * The paralysis display bug should no longer occur                            
+ * Resmoothed the exp ladder                                                   
+ * Immovability mode must be engaged to be immovable                           
+ * Iron Monkey now correctly appears in the WT                                 
+ * Ballet and Ninjutsu are now mutually exclusive                              
+ * Designer and Studded ego types now properly add resistance instead of       
+   replace it                                                                  
+ * Fixed crashes from flying off map edge in Land of Karin                     
+                                                                               
+~~~~~3                                                                         
+#####G(c) Newly observed issues:                                               
+ * There is a dialogue sequence that allows you to kill all the Nameks, but    
+   still have the Namekian Elders willingly give you the dragonballs.          
+ * Battle Jackets do not properly distinguish melee vs. powered combat         
+   fighting modes                                                              
+ * It is possible to summon infinitely many Kinto Un. There doesn't appear     
+   to be any way to abuse this, but it is incorrect                            
+ * Artifact display shows ffffff] in front of every artifact for some reason   
+ * Walking on RRA SHQ says "There is". After save and load, it gets weird      
+                                                                               
+~~~~~4                                                                         
+#####G(d) General Problem Areas                                                
+ While this release appears to be mostly devoid of LUA errors and nasty        
+ crashes, there are several areas that are very incomplete, and are            
+ probably best avoided with 'live' characters being played for real:           
+                                                                               
+ * Master Rosshi                                                               
+ * The Dinner Quest for the Ox King                                            
+ * The Turtles                                                                 
+ * Kami. Piccolo and the North Kaio                                            
+ * Namek                                                                       
+                                                                               
+ As with all pre-release games, characters may be subject to horrible,         
+ permanent death and/or savefile destruction from bugs.                        
+                                                                               
+ Players wishing to explore these areas may wish to back up their savefiles.   
+                                                                               
+November 14, 2007                                                              
+Bucket Man                                                                     
+lordbucket@hotmail.com                                                         
+                                                                               
+                                                                               
+                                                                               
+                                                                               

@@ -1,0 +1,35 @@
+	Barometer
+		Use for detect stairs?
+	Spatial Coordinate Marker
+		Used to MARK a spot for subsequent recall
+	Transdimensional Atomic Remoleculurizer
+		Used to Teleport?
+	Fold Generator
+		Allows spaceship to teleport between planets
+
+
+	Blood Purifier
+		Use to eliminate poison/hallucinate
+		1 piece of tubing, 1d2 bulk material, 1d4, chemistry, 1d4 chemistry
+
+	Rife Generator
+		Use to cure disease (restore stat?)
+
+	Blood Monitor
+		Worn for immunity to poison, sust con
+
+	Jet Pack (cloak slot)
+		Worn for flying
+
+	Geiger Counter (amulet? hand?)
+		ESP for radioactive monsters?
+
+	Palm Pilot
+
+	plane
+	spaceship
+
+	grenade
+	smoke bomb
+	lightsaber
+	

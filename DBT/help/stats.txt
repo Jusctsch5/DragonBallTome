@@ -1,0 +1,73 @@
+#####GStats Overview                                                           
+                                                                               
+Stats in Dragonball T may range from 8-12 at the start of the game,            
+and may be increased by spending skill and zeni to enroll in the               
+an appropriate class.                                                          
+                                                                               
+~~~~~1|Strength                                                                
+[[[[[BStrength] is a measure of your ability to apply physical force with      
+your body.                                                                     
+ * Every point above or below ten will modify your melee damage                
+ * It determines your carrying capacity. Every point of strength allows        
+   you to carry ten pounds without any difficulty. Every five pounds           
+   over the limit will give you a -1 speed penalty.                            
+                                                                               
+~~~~~2|Intelligence                                                            
+[[[[[BIntelligence] is a measure of your ability to think and understand       
+things.                                                                        
+ * It is the sole factor determining your searching ability                    
+ * It affects your ability to identify items. For every point above or         
+   below ten, intelligence will modify the identify skill requirement          
+   in, or out of your favor.                                                   
+ * It determines the limit of Technology training you'll be able to receive    
+   from Dr Briefs. This limit will be your intelligence, minus seven.          
+                                                                               
+~~~~~3|Willpower                                                               
+[[[[[BWillpower] is a measure of your ability to focus and see something       
+through without being distracted or discouraged.                               
+ * Your maximum Chi pool will be equal to your Willpower * Chi skill           
+ * Willpower grants a limited ability to resist negative mental effects        
+ * When playing as a discarnate spirit, your hit points will be equal to       
+   your Willpower * your level.                                                
+                                                                               
+~~~~~4|Dexterity                                                               
+[[[[[BDexterity] is a measure of your agility and coordination. It directly    
+affects your chances of hitting, and being hit in combat. Every point of       
+dexterity above or below 10 will alter your to-hit and armor class by an       
+equal amount. For example, with a 14 dexterity, you would receive +4 tohit     
+and armor class, whereas with a 7 dexterity you would receive a -3 tohit and   
+armor class. Dexterity also affects your ability to avoid traps and            
+pickpockets, contributes to your rate of speed when running, and affects       
+your success rates with certain abilities.                                     
+                                                                               
+~~~~~5|Constitution                                                            
+[[[[[BConstitution] is a measure of your general physical health and stamina.  
+It is largely responsible for determining the number of hit points you have,   
+how much damage you can sustain before death. For every experience level you   
+gain, you will gain a number of hit points equal to your constitution. Thus,   
+at 5th level, with 12 constitution, you would have 60 hit points.              
+                                                                               
+~~~~~6|Charisma                                                                
+[[[[[BCharisma] is a measure of your good looks and charm. The higher your     
+charisma, the more likely the people you meet are to like you. The lower it    
+is, well, the less likely they'll like you. When it comes to buying and        
+selling goods, every point of charisma below 10 adjusts prices out of your     
+favor by 10%. Every point of charisma above 10 affects the prices 1% in your   
+favor. Thus, at 8 charisma, you would be paying 20% more for everything you    
+buy, and receiving 20% less for items you sell. At 15 charisma, you would be   
+paying 5% less, and receiving 5% more. And yes, at 100 Charisma, everything    
+you find at a store is free. Additionally, a high charisma provides social     
+lubrication, thus affecting the value of rewards people are willing to give    
+you for completeing quests for them and occassionally a high charisma will     
+will even open up dialogue options unavailable to the less charismatic.        
+Dialogue options made available due to high charisma will be marked:           
+(Persuade)                                                                     
+                                                                               
+~~~~~7|Speed                                                                   
+[[[[[BSpeed] is the primary factor which determines your movement rate. With a 
+ten speed, your movement rate will be 'normal.' For every point of speed above 
+or below ten, your movement rate will be affected by that much also. Thus,     
+with 5 speed, you would move with a -5 penalty, and with 12 speed you would    
+move at +2. Note that net movement values work in increments of 10. At +10     
+movement speed, you would be moving twice as fast as a movement rate 0. At     
+30, you'd be moving three times as fast.                                       

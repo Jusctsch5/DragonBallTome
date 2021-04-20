@@ -1,0 +1,27 @@
+#####yQuick Command Reference                                                  
+                                                                               
+#####BMovement             Important                 Visuals / Screens         
+ Arrow keys to move   ctrl-x : Save and exit    C - Character sheet            
+ < - Go up            ctrl-q : View quest log   M - Overhead map               
+ > - Go down          ? for help                G - Skill screen               
+ Shift+dir to run                               N - Abilities screen           
+                                                = - Options                    
+                                                ~ - Extra information          
+#####BItem Handling               Other                                        
+ i - Inventory               l - Look                                          
+ e - Equipment               ? - Help                                          
+ g - Get                     o - Open a door                                   
+ d - Drop                    c - Close a door                                  
+ w - Wear/Wield              s - Search                                        
+ t - Take off                S - Change movement mode                          
+ r - Read                    n - Repeat last command                           
+ u - Use item                Q - Quit (abandon character)                      
+ k - Destroy                 U - Use ability                                   
+ f - Fire a gun              m - Manipulate constant effects                   
+ a - Reload ammo             D - Disarm a trap                                 
+ E - Eat                     Y - Talk to someone                               
+ q - Quaff (drink)           y - Give an item to someone                       
+ F - Refill/refuel           R - Rest for a while                              
+ I - Inspect an item         T - Tunnel (not implemented)                      
+                                                                               
+                                                                               

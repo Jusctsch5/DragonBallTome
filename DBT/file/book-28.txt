@@ -1,0 +1,296 @@
+#####R                 /------------------------\                              
+#####R                <  DBT V085 Release Notes  >                             
+#####R                 \------------------------/                              
+                                                                               
+Summary:                                                                       
+*****/abook-28.txt*1[(a) This is an UNstable release!]                         
+*****/bbook-28.txt*2[(b) Summary of Changes]                                   
+*****/cbook-28.txt*3[(c) Alpha14 issues]                                       
+*****/dbook-28.txt*4[(d) Newly Observed Bugs]                                  
+*****/ebook-28.txt*5[(e) COMPLETE Change Log]                                  
+                                                                               
+~~~~~1                                                                         
+#####G(a)Unstable Release!                                                     
+                                                                               
+#####y If you are running windows, and are experiencing game crashes, delete   
+#####y the win.cfg file in .tome/3.0/settings!                                 
+                                                                               
+ V085 is not entirely stable. Alpha14 has changed a LOT of things. Some        
+ for the better, so maybe not so much. And, unfortuantely, in some cases       
+ features that Dragonball T was making heavy use of have been completely       
+ removed from the engine. In any case, the upgrade has been very slow,         
+ and IS NOT COMPLETE as of this release. I recommend backing up your save      
+ files.                                                                        
+                                                                               
+ But, this aside, this release does have some nifty features, and significant  
+ revisions to both Chi and Technomancy. Perhaps not as complete as I would     
+ have liked, but it is what it is.                                             
+                                                                               
+ Enjoy!                                                                        
+                                                                               
+~~~~~2                                                                         
+#####G(b)Summary of Changes                                                    
+Systems:                                                                       
+ * Implemented skillcap bonuses                                                
+ * Implemented ranged to-hit penalties for firearms                            
+ * Slight development of ammo system                                           
+ * Dialogue no longer reveals 'hidden' dialogue options                        
+                                                                               
+Bugfixes:                                                                      
+ * Killing Kami now correctly renders the dragonballs useless                  
+ * Fixed the 'capsule ego item' weight bug                                     
+ * Secret door in Orinji Temple is now 'secret'                                
+ * High Tech Components are now flavored                                       
+ * It is now possible to recharge maglights                                    
+ * Rapiers are now bladed                                                      
+ * One of the two Steel ego weapon bugs has fixed (I think)                    
+   Weird steel items will still spawn, but fantastically overpowered           
+   "+200" weapons shouldn't be generated. (Again...I think.)                   
+ * Hasuki and Bear Thief quests should work properly now                       
+ * Lite source fuel use should be more consistent now                          
+ * Gym/Library allowances/quest notices now at correct character levels        
+ * Jacque no longer sells to non-students                                      
+ * Uniques no longer resist disintegration                                     
+ * Capsules may no longer be encapsulated                                      
+ * Chi constant effects may no longer be set negative to induce regeneration   
+ * Fixed two somewhat obscure fatal crash bugs                                 
+ * Fixed the White Wolf quest                                                  
+ * Fixed the 'drop item in house' bug                                          
+                                                                               
+Rulechanges/Balance:                                                           
+ * Significant changes to Technomancy and Chi. Both have received significant  
+   power level upgrades, rebalancing, and some rule changes. Reading the       
+   release notes and/or spoilers is recommended.                               
+ * First aid kits are now deeper items. Blood coagulant takes their place.     
+   Coagulant is 'used up' when used. First aid kits are not.                   
+ * Barehanded ability requirements have been lowered                           
+ * Armor Piercing ballistic effect now only applies to Armor Piercing ammo     
+ * Eating corpses now potentially incurs alignment loss/poison effects         
+ * The experience ladder is more intelligent, and that terrible wall around    
+   levels 25-30 is gone                                                        
+ * All devices that previously required abilities are now usable by characters 
+   with sufficient Technology skill (motorcycles, first aid kits, guns, etc)   
+   and the list of items reserved exclusively to Technomancers has grown. See  
+   the spoilers. Note that the check only considers actual skill, not whether  
+   you' re formally a Technomancer. Thus, it would be possible (though         
+   innefficient) for a player to gain these benefits via Dragonball wishes.    
+                                                                               
+New Content:                                                                   
+ * New Items: Capsule Spaceships, nailguns, nails, zheng gu shui,              
+   blood coagulant, grenades, shuriken, jackhammer, white and brown rice       
+   regular and heavy turtle shells                                             
+ * New maps: Fencing Duel, Lair of the Phoenix, Duel vs Judo                   
+ * New Option: "Prevent reload until ammo is empty"                            
+ * Some development of planet Namek. probably not enough to warrant the trip   
+   yet, though.                                                                
+ * New unique: Giran                                                           
+ * Substantial development of the Volcano                                      
+ * There is now a hotel at the airport that anyone can stay overnight at       
+ * A few new spoilers have been added                                          
+                                                                               
+chi changes:                                                                   
+ * chi pool = Willpower * chi skill. Intelligence is no longer a factor.       
+ * All math, anywhere, having anything to do with chi has had a 'going over'   
+ * Implemented damage absorbtion                                               
+ * Implemented chi based spaceflight                                           
+ * New ability: Aura light                                                     
+ * Lite radius from battle aura now increases with the size of your chi pool   
+                                                                               
+Misc:                                                                          
+ * Dr Tofu now stocks items he reasonably should                               
+                                                                               
+                                                                               
+~~~~~3                                                                         
+#####G(c)Issues relating to migrating DBT to alpha14                           
+ * Special attack types don't register in monster memory                       
+ * Armor display is weird                                                      
+ * Verbose descriptions of *ID*'d items sometimes do not display correctly.    
+   In particular, Technomancers using laptops may have issues.                 
+ * Tunneling not implemented                                                   
+ * win.cfg causes crashes after a game has been saved                          
+ * No FEAT functions have been migrated to the new cave flag function metho    
+   So far as I can tell, this new alpha14 feature simply doesn't work.         
+ * FLAG_PERSISTENT has been removed from the engine, so I've replaced about    
+   fifteen maps that were using it with SAVE_LEVEL=true. Consequently some     
+   WEIRD stuff  is going to happen in regards to special levels.               
+ * Knowledge menu has not been DBT'ified                                       
+ * map.level_size_to_map() has not been added                                  
+                                                                               
+~~~~~4                                                                         
+#####G(d)General Newly observed Issues:                                        
+ * Wizard mode cureall no longer restores chi                                  
+ * Technomancers really do need to be able to make ego items <sigh>            
+ * Not possible to have missile ball effects of variable radius                
+ * "Beam" weapons don't actually "beam"                                        
+ * Scopes need to be implemented                                               
+ * It is not possible for ammo to specify the ball/bolt/beam type              
+ * It would be neat to have the chi light effects of evil players radiate      
+   red                                                                         
+ * Chi constant effects turn off when chi pool < 1, not <= 0, which is not     
+   quite the same                                                              
+ * If you are removed from the ring by Giran's tailwhip, you're not            
+   disqualified *properly*                                                     
+ * Looks like some dialogue paths of the Trunks early Android option has some  
+   issues                                                                      
+                                                                               
+~~~~~5                                                                         
+#####G(e)COMPLETE change log:                                                  
+Thursday February 1, 2007                                                      
+* Made a bunch of abilities available from Master Trainers                     
+* chi                                                                          
+        * Enabled Aural Absorbtion effect                                      
+        * Doubled all chi regeneration rates                                   
+        * Halved drain rate of Battle Aura and Flight                          
+        * Enabled chi based spaceflight                                        
+        * Constant effects now turn off when you've insufficient chi           
+        * No longer using a counter for chi (they were really annoying)        
+        * chi is now = Willpower * chi skill (Bigger numbers)                  
+        * Surviving death now requires 300 max chi pool, not 20 willpower      
+        * You now regenerate chi even without any regeneration skill (slowly)  
+                                                                               
+Sunday February 4, 2007                                                        
+* Fixed some chi calculations                                                  
+* Fixed lite effects                                                           
+* Lite from battle aura now increases with chi pool                            
+* Killing Kami now correctly renders the dragonballs inert                     
+* Added Capsule Spaceships                                                     
+* Master Trainers may now increase skillcaps                                   
+* Skill wishes now also increase relavant cap                                  
+* Minor rearrangments on Kami's Lookout                                        
+* Buddhist secret door is now 'secret'                                         
+* Fixed weight corruptions when encapsulating items                            
+* Krillan now teaches Double Attack and Blocking                               
+                                                                               
+Tuesday February 6, 2007                                                       
+* Library/Gym level progression is now corect: 1, 5, 10, 15, etc               
+* Dialogue answers no longer 'skip letters'                                    
+* Jacque now has a custom map, no?                                             
+* Barehanded ability requirements adjusted                                     
+* Added a hotel in the airport                                                 
+* TV_BOTTLE --> TV_SALVE                                                       
+* Added blood coagulant and zheng gu shui root extract                         
+* Some changes to flavours                                                     
+* Dr Tofu's store is now better stocked                                        
+* Flame throwers now have directional muzzles instead of directional           
+  nuzzles :)                                                                   
+* Balance: First Aid kits are now deeper                                       
+* Added nailguns and nails                                                     
+* Fantastically overpowered steel weapons should no longer spawn (I*think*)    
+   (For some reason ON_MAKE was being applied twice, so the damage calculation 
+   was benefitting from an additional multiple of 10 based on the weight       
+   increase)                                                                   
+* Rapiers are now 'bladed'                                                     
+* Fixed Bear Thief/Hasuki                                                      
+                                                                               
+Wednesday February 7, 2007                                                     
+* Firearms:                                                                    
+        * Implemented range to-hit penalties                                   
+        * Additional development of the ammo system (mostly invisible to       
+          player)                                                              
+        * Standard rounds no longer receive armor piercing                     
+        * New option: allow/disallow reloading when ammo remains               
+          (You might want to reload a gun with a different ammo type)          
+* It is now possible to recharge maglights                                     
+* Lite fuel usage moved from MOVE to PROCESS_WORLD                             
+* Jacque no longer sells to non-students                                       
+* Uniques no longer resist disintegration                                      
+* Implemented align/poison effects from eating corpses                         
+                                                                               
+Thursday February 8, 2007                                                      
+* Runnign --> Running                                                          
+* Mountain lions no longer spawn after quest completion                        
+* Fixed several rather silly bugs relating to eating pizza                     
+* In theory, doors should no longer spawn in the volcano                       
+* Maglights may now be used as non-weapons by weapons fighters lacking         
+  the Paired Weapons ability                                                   
+                                                                               
+Saturday February 10, 2007                                                     
+* Gahhhh! A bunch fo fatal crashes! The game won't even load! What happened?   
+* Reenabled preserve mode                                                      
+* Fixed several bugs relating to placement in the universe                     
+* Added a placeholder for the Potara Earings                                   
+* Capsules may no longer be encapsulated                                       
+-- * Imelda now rewards designer shoes instead of +to_a shoes                  
+  (What? Does she???)                                                          
+* Removed Bobidi's ship                                                        
+* Further development of Namek land and quests                                 
+* Added placeholders for the Elders, Nail and Dende                            
+* Developmnet on the Volcano                                                   
+* You are no longer affected by gaze attacks while blind                       
+* Smoothed out the experience ladder, and made the late game less ridiculous   
+                                                                               
+        Lev     Previous        New             Multiplier                     
+        5       70              100             Base                           
+        10      380             370             ~3.7                           
+        15      1400            1300            ~3.6                           
+        20      4400            4500            ~3.5                           
+        25      12,500          16,000          ~3.4                           
+        30      75,000          52,000          ~3.3                           
+        35      350,000         165,000         ~3.2                           
+        40      1,000,000       500,000         ~3.1                           
+        45      2,400,000       1,500,000       ~3.0                           
+        50      4,500,000       2,000,000       linear: +100K/level            
+        51-90                                   linear: +200k/level            
+        100     30,000,000      15,000,000      linear: +300k/level            
+                                                                               
+* Reworked Technomancy/Technology requirements                                 
+* Extensive work on Technomancy spoilers                                       
+* Added: 3 types of grenades, shuriken, jackhammer                             
+                                                                               
+Tuesday February 13, 2007                                                      
+* New ability: Aura Light                                                      
+* Bugfix: Constant effects may no longer be set negative                       
+* Krillan now teaches Meditation                                               
+* Rulechange: Battle Aura now adds +2 AC per point of Chi Defense              
+* Unified chi drain rates from chi_constant and dbtstuff into a single         
+  function                                                                     
+* Eliminated all the 'no divide by zero' nonsense from the chi system          
+* Implemented the Remote Stop Device                                           
+                                                                               
+Thursday February 15, 2007                                                     
+ * Tracked down an extremely weird, sporadic fatal crash to the corruption     
+   system. It's not being used yet...so I commented it out.                    
+ * Fixed a silly crash bug related to Dr Briefs                                
+                                                                               
+Friday February 16, 2007                                                       
+* Reimplemented chi masters                                                    
+* Added some simple dialogue for Chaozu and Tenshinhan                         
+* Clarified Techno quests somewhat                                             
+* Added and implemented rice                                                   
+                                                                               
+Sunday February 17, 2007                                                       
+* Hmm. Alpha14. Hmm.                                                           
+                                                                               
+Tuesday, February 20, 2007                                                     
+* RRA Cameras now trigger alarms                                               
+                                                                               
+Thursday, March 1, 2007                                                        
+* Upgraded Mai and Shuu                                                        
+* Uncommented catnip and Videl follow option                                   
+* Added turtle shells for Master Rosshi's students                             
+                                                                               
+Friday, March 2, 2007                                                          
+* Basic setup of the knowledge menu                                            
+* Converted quest descriptions to the alpha14 convention (which admittedly is  
+  much better)                                                                 
+                                                                               
+Thursday, March 8, 2007                                                        
+* Fixed an auto ID bug                                                         
+                                                                               
+Friday, March 9, 2007                                                          
+* Fixed bug relating to dropping items in homes                                
+                                                                               
+Saturday, March 10, 2007                                                       
+* Finalized map wrap workaround -- UNKNOWN SEMI_RELATED SAVEFILE CRASH BUG     
+  NO ERROR LOG!!! ARGHHH!!!!                                                   
+                                                                               
+Sunday, March 11, 2007                                                         
+* Added Giran and his tail whip                                                
+* Extensive updates to the spoilers                                            
+* Unconditionally replaced FLAG_PERSISTENT with SAVE_LEVEL=true (sigh)         
+* General cleanup for release (yay!)                                           
+                                                                               
+Enjoy!                                                                         
+#####Glordbucket@hotmail.com                                                   
+                                                                               
+                                 

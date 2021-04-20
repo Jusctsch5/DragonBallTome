@@ -1,0 +1,120 @@
+#####R               /------------------------------\                          
+#####R              <  DBT V075 (094) Release Notes  >                         
+#####R               \------------------------------/                          
+                                                                               
+Summary:                                                                       
+*****/abook-18.txt*1[(a) Hello!]                                               
+*****/bbook-18.txt*2[(b) Bugfixes]                                             
+*****/cbook-18.txt*3[(c) New Material]                                         
+*****/dbook-18.txt*4[(d) Balance/Rule Changes]                                 
+*****/ebook-18.txt*5[(e) Systems]                                              
+*****/fbook-18.txt*6[(f) Playability Improvements]                             
+*****/gbook-18.txt*7[(g) Old, Unresolved Bugs]                                 
+*****/hbook-18.txt*8[(h) Fresh, New Bugs]                                      
+                                                                               
+~~~~~1                                                                         
+#####G(a)Hello!                                                                
+                                                                               
+This is a moderately sized release. Not a lot of new material, but several     
+major systems changes, and a few toys. In general this release is somewhat     
+less stable than the previous release, and contains far more bugs, including   
+one fatal-crash situation pertaining to screen size (please see 'new bugs'     
+for details)                                                                   
+                                                                               
+But don't let that scare you. It's still quite possible to play up to          
+level 40 or so without ever seeing a LUA error. So, sit back, relax...         
+                                                                               
+...and enjoy!                                                                  
+                                                                               
+~~~~~2                                                                         
+#####G(b)Bugfixes                                                              
+Bugfixes:                                                                      
+ * Some AI's have been fixed. Not all.                                         
+ * Maximum level and stats are now correctly set to 100                        
+                                                                               
+~~~~~3                                                                         
+#####G(c)New Material                                                          
+ * New item: MRE                                                               
+ * New artifacts: wedding rings                                                
+ * Implemented catnip!                                                         
+                                                                               
+~~~~~4                                                                         
+#####G(d)Balance/Rule Changes                                                  
+ * You may now study martial arts every 10 levels instead of every 15          
+ * Last-level checking for studio enrollment has been eliminated!              
+ * A few instant-go-from-level-one-to-level-thirty tricks have been removed    
+ * Challenge Quests are TOUGHER than they used to be!                          
+                                                                               
+~~~~~5                                                                         
+#####G(e)Systems                                                               
+ * Technomancy is pretty much done. It is now possible to dismantle items,     
+   learn recipes, and build new things from them. There are some 'issues'      
+   still. See the 'known bugs' but it's plenty far enough along to play        
+   with. Please do.                                                            
+ * The World Tournament oponent selection system has been completely           
+   reworked. In a nutshell, opponents are now randomized, but it's a bit       
+   more complicated than that.                                                 
+                                                                               
+~~~~~6                                                                         
+#####G(f)General Playability Improvements                                      
+ * It is now possible to heal companions by 'y' giving them senzu beans.       
+                                                                               
+~~~~~7                                                                         
+#####G(g)Old, Unresolved Bugs                                                  
+                                                                               
+ * Poisoning display is weird, and not entirely correct. It is, however,       
+   only the display text. Poisoning itself seems to work as intended.          
+ * AI Swapping doesn't seem to work for certain factions                       
+   (Oolong and Pilaf, most notably...compare to Neutral                        
+   (or Kami factions, which work properly)                                     
+ * Rosshi's dialogue cannot handle characters who are girls                    
+ * Lunch's AI temporarily set to NEVER_MOVE                                    
+ * check_faction() handling is not yet correct                                 
+                                                                               
+~~~~~8                                                                         
+#####G(h)Fresh, new bugs!                                                      
+ * At certain screen sizes, it is possible for in-store dialogue to            
+   overflow the available space on the screen. Curiously, this appears to      
+   lock the game. Out-of-store dialogue does not have this problem. You're     
+   only likely to ever encounter this problem if you play in a window, or      
+   if you're playing on an 80 character screen mode.  At present, the only     
+   likely culprits for this problem are: George, Akira, Dr. Briefs, and        
+   the Widget Factory. If you're playing with a relatively small display       
+   you might try to avoid those dialogues.                                     
+ * Friendly WT opponents don't properly adjust their AI's for the Tournament   
+ * Life/Death handling for the World Tournament is not yet as intended         
+ * OOPS! Major, big time Dragonball bug. There is a leak that allows           
+   Dragonballs to be permanently, forever, irrecoverably lost. It's not        
+   supposed to be like this. You should be able to deliberately throw them     
+   away, sell them, leave them in random dungeon levels...anything you want,   
+   and still find them again later. This is not yet possible.                  
+ * Technomancy: interface isn't very pretty.                                   
+ * Technomancy: does not properly 'use up' ingredients                         
+ * Technomancy: explosive failure damage is currently irresistable             
+ * Technomancy: I have no idea how the system will handle multiple-stacking    
+   issues. I simply haven't gotten around to testing it yet.                   
+ * Technomancy: There is a particular, if somewhat rare, sequence of           
+   of circumstances that can lead to a non-fatal, but somewhat unfortunate     
+   error while building items. It relates to the ingredient randomization      
+   process. To avoid tripping the bug, any time you see a recipe which has     
+   multiple instances of the same ingredient, make sure you have enough of     
+   the item in question before attempting to build it.                         
+ * In-store dialogue changes unreasonably convey to a player when there        
+   are dialogue options that are 'unavailable'                                 
+ * Recent skill changes create some balance issues which have not even         
+   been looked at, yet. For example, with 11 possible enrollments instead      
+   of 7, there are now almost twice as many skill modifier bonuses available,  
+   but no other modifier bonuses have been modified. So, for example,          
+   Dragonball wishes for skill mods are now relatively about half as           
+   valuable as they used to be. Other similar issues may exist.                
+ * The enrollment help files are no longer numerically accurate.               
+ * There is at present NO WAY to 'I' view detailed object descriptions.        
+   This relates to the new inventory subsystem, and presumably will be fixed   
+   soon                                                                        
+                                                                               
+Enjoy!                                                                         
+                                                                               
+Bucket Man                                                                     
+                                                                               
+                                                                               
+                                                                               

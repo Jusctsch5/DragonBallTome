@@ -1,0 +1,56 @@
+-- Dragonball T: Duel vs Jacque, the Fencing Master
+-- Not based on a real school, but I've had the book
+-- 'The Fencing Master' in mind with Jacque's quest.
+-- That, and the jokes about French Restaurants.
+--
+-- Haven't heard them?
+--
+-- P1: Why are French restaurants so poorly lit?
+-- P2: But, sir! It is to create atmosphere, no?
+-- P1: No. It's so patrons don't have to see the
+-- rats.
+--
+-- And the second one:
+--
+-- P1: Why are French restaurants so poorly lit?
+-- P2: But, sir! It is so the patrons do not have to
+-- see the rats, no?
+-- P1: No. It's so american girls will think
+-- they're in a classy resturant with terrific
+-- atmosphere.
+
+map.define("duel_fencing.map")
+
+map.symbol{ symbol='.' feat=FEAT_FLOOR info=8 }
+map.symbol{ symbol=',' feat=FEAT_FLOOR info=6 }
+map.symbol{ symbol='*' feat=FEAT_MAP_BORDER info=6 }
+map.symbol{ symbol='X' feat=FEAT_PERMA_WALL info=6 }
+map.symbol{ symbol='a' feat=FEAT_FLOOR  info=8 monster=RACE_JACQUE }
+map.symbol{ symbol='d' feat=FEAT_DOOR info=6 }
+map.symbol{ symbol='<' feat=FEAT_LESS info=6 }
+map.symbol{ symbol='-' feat=FEAT_GREEN_CARPET info=6 }
+map.symbol{ symbol='w' feat=FEAT_GLASS_WALL info=6 }
+-- map.symbol{ symbol='m' feat=FEAT_MIRROR info=6 }
+
+map.map
+{
+[[***************************]],
+[[*XXXXXXXXXXXXXXXXXXXXXXXXX*]],
+[[*X,,,,,X-----------------X*]],
+[[*X,,,,,d-...............-X*]],
+[[*X,,,,,X-...............-X*]],
+[[*XXXXXXX-...............-X*]],
+[[*X<X,,,w-....a..........-X*]],
+[[*X,X,,,w-...............-X*]],
+[[*X,X,,,w-...............-X*]],
+[[*X,XX,XX-...............-X*]],
+[[*X,,,,,d-----------------X*]],
+[[*XXXXXXXXXXwwwwwwwwwwwwXXX*]],
+[[*XXXXXXXXXX............XXX*]],
+[[*XXXXXXXXXX............XXX*]],
+[[*XXXXXXXXXXXXXXXXXXXXXXXXX*]],
+[[***************************]],
+}
+
+-- Starting position
+map.set_player(6, 19)

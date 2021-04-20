@@ -1,0 +1,104 @@
+102
+******** BUFFER LINE *********************************** DO NOT REMOVE *******
+They say that you can't trust rumors.
+Throw a Potion of Blindness at a monster and it cannot cast any spells!
+They say that Sauron has forged an all-powerful Ring.
+There are Black Market stores hidden deep in the dungeon, with COOL stuff!
+What a pity, you cannot read it!
+You will encounter a dark, tall stranger...
+A Mithril mail will not rust.
+An Adamantite mail will not rust.
+A Rusty Chain Mail cannot rust any further.
+Try taking off your armor before fighting a Gelatinous Cube!
+This rumor is not true.
+You don't always have to kill everything you meet!
+If you can't beat it, leave it alone!
+There *is* a good use for Potions of Detonations, Ruination and Death...
+Watch your step!
+It's a bad idea to throw away a Longsword (4d5).
+It's a bad idea to wield a Longsword (4d5).
+The richer the victim the happier the thief.
+There is a way to turn a Ring of Speed (-20) into a Ring of Speed (+20).
+There is no way to turn a Ring of Speed (-20) into a Ring of Speed (+20).
+When all else fails, read the instructions.
+No poison is immediately deadly.
+I have seen a Ring of Speed (+50) in the Black Market!
+Telepathy works like a two-way door.
+Elvish waybread might negate the effects of poison.
+You feel your luck is turning...
+A creature made of stone can be slain by a spell that turns stone to mud.
+It is often a good idea to throw items that you don't want to eat or drink.
+The faster you run the more food you will burn.
+Invisible monsters will often expose themselves if you drop items around you.
+They say that the key to killing tougher monsters is called "hit&run".
+They say that there is no such thing as free advice.
+Afraid of your valuables getting stolen? Carry more junk!
+Afraid of your money getting stolen? Invest it!
+Selling unidentified potions to shopkeepers might be safer than quaffing them.
+The One Ring is powerful, but will eventually destroy its owner.
+If it can't see you, it can't hurt you!
+If it can't see you, you might still be able to hurt it...
+One Ring to rule them all, One Ring to find them.
+One Ring to bring them all and in the darkness bind them.
+Three Rings for the Elven-kings under the sky...
+Each shall itch to possess the Ring, but none in it shall find pleasure!
+The fortress of Angband is impenetrable! Only a Vala could possibly break in.
+When the mighty sorcerer Feagwath was buried, his sword was sealed inside his sarcophagus.
+There is a great subterranean lake somewhere deep in Moria.
+Hobbits may be hardy, but their small stature renders them vulnurable.
+Being corrupted by Morgoth can make you strong, but there is always a price to pay...
+I hear the orcs in the cave north of Bree have gotten hold of some nifty relics.
+When the elves passed westward, Tom was there already...
+Some of Ungoliant's brood can make you see what is not there.
+They say that a evil elven witch queen lives in Lothlorien, don't go there!
+They say that there is a way to destroy the one ring down in the mines of moria.
+There is a rumor going on that the heir to the throne of Gondor has been seen drinking at the prancing pony!
+Hobbits feets are so hairy they don't need boots.
+Nazguls aren't so bad once you get to know them.
+Not all phials are good.
+If you see a pack of Water Hounds, RUN!
+Want to breath fire? Wield a torch and drink a flask of oil.
+Morgoth is really fighting because he want to controll the oil fields in Rohan.
+You are what you eat.
+If you cut down too many trees, the Ents might come after you.
+If you go to Z'ha'dum, you will die!
+Morgoth is asleap between 3:00 am and 5:00 am.
+Manwe always loses to Ulmo in chess.
+There is no way to kill a Nazgul dont even bother trying.
+They say that not all balrogs like fire.
+Fireproofed books aren't indestructible.
+Maggot is hiding a dark secret in his mushroom fields...
+There is more than one use for a flask of oil.
+The War of the Ring has just begun.
+Slime molds are tasty, but that's not the only reason to eat them.
+A lembas can save your life.
+Lost & Found: One sword found in Barrow-downs. See Orfax, Son of Boldor.
+Lost & Found: One princess lost near Mirkwood. Reward offered. Spiders need not apply.
+You call yourself an Unbeliever? I'll bet you're lying!
+Bard's bards don't wield Bard's bow.
+Wanted: Elves, Ents for medical experimentation. Apply to Melkor, Angband.
+Wanted: Orcs, Trolls. We can rebuild you. We have the technology. Apply at Isengard, Orthanc.
+Lost & Found: One Precious. Reward offered. We promises we won't eatses you. See Smeagol, Barrow-downs.
+Runecrafters: Cast Fire+Self for job security!
+They say that only a Warper knows all the angles.
+They knew how to make swords in old Westernesse.
+The great king Ar-Pharazon decided to attack Valinor - big mistake.
+A piper came and solved Bree's rat problem. Yavanna loved it.
+They say Orc kids don't have any manners.
+We serve Death Molds but they have to pay extra.
+Everyone knows Ents do not exist.
+The roads have become dangerous of late.
+Gondolin must be the only place safe from the Ennemy.
+I had been friends with this Dwarf for a year before I realized she was a girl.
+Barliman Butterbur's beer is the best I have ever had.
+Hobbits have an unhealthy fascination with mushrooms.
+They say, the Broken Sword will be whole again.
+The deep waters dangerous even for the one who can swim.
+The Greenwood used to be such a nice place, but since the Necromancer moved in the whole area's gone to the nether realm.
+They say the dwarves of Moria have awakened some sleeping evil.
+Gondolin? Never heard of it. Turgon's folk never left Nevrast, Morgoth destroyed them.
+If you see someone with a black sword and a dragon crested helm, try not to look friendly or you'll end up like poor Beleg.
+They say Beren and Luthien have returned from the dead and are living in southern Lindon.
+It is said that sentient weapons inevitably betray their owners.
+Mighty was Numenor before its fall. I'd pay good money for the Tar-Palantir's curry recipe.
+Saruman is wise. If you take him the One Ring I'm sure he can help you.

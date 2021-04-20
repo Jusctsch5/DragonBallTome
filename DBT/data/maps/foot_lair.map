@@ -1,0 +1,98 @@
+-- The Inner Sanctum
+map.define("foot_lair.map")
+
+map.symbol{ symbol='.' feat=FEAT_FLOOR info=6 }	-- Lit Floor
+map.symbol{ symbol='*' feat=FEAT_MAP_BORDER info=6 }
+map.symbol{ symbol='X' feat=FEAT_PERMA_WALL info=6 }
+map.symbol{ symbol='<' feat=FEAT_LESS info=6 inventory_size=0 }
+map.symbol{ symbol='d' feat=FEAT_DOOR info=6 }
+map.symbol{ symbol='w' feat=FEAT_GLASS_WALL info=6 }
+map.symbol{ symbol='D' feat=FEAT_DOOR_LOCKED_HEAD+6 info=6 }
+map.symbol{ symbol='-' feat=FEAT_GREEN_CARPET info=6 }
+map.symbol{ symbol='r' feat=FEAT_LADDER_RIGHT info=6 inventory_size=0  }
+map.symbol{ symbol='l' feat=FEAT_LADDER_LEFT info=8 inventory_size=0  }
+map.symbol{ symbol='s' feat=FEAT_DBT_SECRETDOOR info=4 }
+
+-- 
+map.symbol{ symbol=' ' feat=FEAT_FLOOR info=8
+   flags = {
+	MOVE_POST_DEST=function()
+		-- If no contact, or player violates terms issued by the Greeter
+		-- The Foot become aggressive
+		if dball_data.foot_clan_rapport < 3 then
+			dball_data.foot_clan_rapport = 999
+			dball.faction_annoy(FACTION_FOOT)
+		end
+      end
+   }
+}
+
+-- Foot Ninja
+map.symbol{ symbol='N' feat=FEAT_FLOOR info=8 monster=RACE_FOOT_BASIC }
+map.symbol{ symbol='O' feat=FEAT_FLOOR info=8 monster=RACE_FOOT_MIDDLE }
+map.symbol{ symbol='P' feat=FEAT_FLOOR info=8 monster=RACE_FOOT_HIGH }
+
+map.symbol{ symbol='Q' feat=FEAT_GREEN_CARPET info=6 monster=RACE_FOOT_HIGH }
+map.symbol{ symbol='R' feat=FEAT_FLOOR info=6 monster=RACE_FOOT_HIGH } -- Greeter is lit
+
+map.symbol{ symbol='a' feat=FEAT_FLOOR info=6 monster=RACE_JUVINILE_RED }
+map.symbol{ symbol='b' feat=FEAT_FLOOR info=6 monster=RACE_JUVINILE_GREEN }
+map.symbol{ symbol='c' feat=FEAT_FLOOR info=6 monster=RACE_JUVINILE_YELLOW }
+-- 'd' used by door
+map.symbol{ symbol='e' feat=FEAT_FLOOR info=6 monster=RACE_DELIVERY_BOY }
+
+-- The Shredder
+map.symbol{ symbol='S' feat=FEAT_FLOOR info=6 monster=RACE_SHREDDER }
+
+-- Bob, the Welcome Ninja
+map.symbol{ symbol='B' feat=FEAT_FLOOR info=6
+   flags = {
+	MOVE_POST_DEST=function()
+		if cave(19, 2).m_idx == 0 then
+			-- No dialogue if the Greeter Ninja has been killed at range
+		else
+			if dball_data.foot_clan_rapport ~= 3 and dball_data.foot_clan_rapport ~= 999 then
+				dialogue.NINJA_GREETER()
+			end
+		end
+		cave(19, 2).flags[FLAG_MOVE_POST_DEST] = nil
+      end
+   }
+}
+
+map.map
+{
+[[************************************]],
+[[*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*]],
+[[*X    X                           X*]],
+[[*X    D XXXXXXXXXXXXsXXXXXXXXXXXX X*]],
+[[*X    X X....a.aw       wa.a....X X*]],
+[[*XXXXXX X....b.bw   S   wb.b....X X*]],
+[[*X    X X....c.cw   .   wc.c....X X*]],
+[[*X    D X..e.a.aw   .   wa.a....X X*]],
+[[*X    X X....b.bw   .   wb.b....X X*]],
+[[*XXXXXX X....c.cw   .   wc.c....X X*]],
+[[*X    X X<......w   .   w......<X X*]],
+[[*X    D XXXXsXXXXXXX.XXXXXXXsXXXX X*]],
+[[*X    X XXXXlXXXXXX . XXXXXXlXXXX X*]],
+[[*XXXXXX XXXXsXXXXXX . XXXXXXsXXXX X*]],
+[[*X    X XXXXPXNXPXP . PXXXXXPXXXX X*]],
+[[*X    D XXXX     sP . Ps          X*]],
+[[*X    XPXXXXXXXXXXP . PXXXXXXXXXXsX*]],
+[[*XXXXXXXXXXXXXXXXXP . PX          X*]],
+[[*XXXPPPPPPPPPPPPPPP . PX -------- X*]],
+[[*XRX                . PX -------- X*]],
+[[*XBX................. PX Q---Q--- X*]],
+[[*XrX                  PX -------- X*]],
+[[*XrXPPPPPPPPPPPPPPPPPPPX --Q---Q- X*]],
+[[*XrXXXXXXXXXXXXXXXXXXXXX -------- X*]],
+[[*X<XX  DO              s          X*]],
+[[*XXXX  XXXXXXXXXXXXXXXXXXXXXXXXXXXX*]],
+[[*XXXX  XXXXXXXXXXXXXXXXXXXXXXXXXXXX*]],
+[[*XXXX  XXXXXXXXXXXXXXXXXXXXXXXXXXXX*]],
+[[*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*]],
+[[************************************]],
+}
+
+-- Starting position
+map.set_player(24, 2)

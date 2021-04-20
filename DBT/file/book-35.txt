@@ -1,0 +1,158 @@
+#####R                 /------------------------\                              
+#####R                <  DBT V091 Release Notes  >                             
+#####R                 \------------------------/                              
+                                                                               
+Summary:                                                                       
+*****/abook-35.txt*1[(a) V091 Status]                                          
+*****/bbook-35.txt*2[(b) Summary of Changes]                                   
+                                                                               
+~~~~~1                                                                         
+#####G(a) Status                                                               
+Version 0.9.1                                                                  
+                                                                               
+And so it came to pass that V091 of Dragonball T was released.                 
+                                                                               
+Please note: Over the past four months since V090 was released,                
+there have been some long stretches where no development has                   
+actually been done. In particular, at one point I didn't even                  
+so much as look at DBT for almost five weeks. Consequently,                    
+when going through the changelog I notice that there are a few                 
+things that I don't actually remember doing. Also some things                  
+that I remember doing, but don't remember quite finishing...                   
+even though the changelog implies that they were finished.                     
+                                                                               
+As usual, I am aware of no fatal crashes or game ending behavior               
+as of time of release, but it's quite possible that there may                  
+be some awkward loose ends that didn't quite get tied up all                   
+nice and neat.                                                                 
+                                                                               
+That having been said, hopefully there are some nice new things                
+to play with.                                                                  
+                                                                               
+Enjoy!                                                                         
+                                                                               
+Bucket Man                                                                     
+lordbucket@hotmail.com                                                         
+                                                                               
+                                                                               
+~~~~~2                                                                         
+#####G(b) Summary of Changes:                                                  
+                                                                               
+Systems:                                                                       
+ * Stores now refresh                                                          
+ * The cloth-type item enhancement system has been                             
+   heavily clarified                                                           
+                                                                               
+New Content:                                                                   
+ * Roughly 60K of new dialogue                                                 
+ * The Ninjutsu Challenge quest has been implemented                           
+ * New ego type: Wildly inaccurate                                             
+ * New items: scopes, cloth, scissors, single and double                       
+   barreled shotguns, scattershot, lead slugs, capsule boats                   
+ * Buruma may now encapsulate and carry objects for the player                 
+ * The Buddhist Temple has been converted into a late-early                    
+   game dungeon of levels 17-23. New dialogue, monsters and                    
+   quests accompany this.                                                      
+ * New quest: Save the Temple                                                  
+ * Several more (but not all) marriage permutations are now                    
+   possible amongst Oolong, Rosshi, Chichi, Videl, Lunch and                   
+   Buruma. If you think it might work, try it. It might.                       
+ * It is now possible for male characters to get training                      
+   from Rosshi. There may be more solutions than is                            
+   immediately obvious.                                                        
+                                                                               
+Rulechanges and Balance:                                                       
+ * Any player who makes it to level 25 may now survive death                   
+   as a spirit                                                                 
+ * Increased Kungfu parrying skill gains from 1.2 to 1.5                       
+   Increased kungfu paired skill gains from 1.5 to 2.0                         
+ * As per Sirrocco's suggestion, certain monster changes                       
+   have been made to create a broader variety of monster                       
+   'danger' relative to monster 'sturdiness.' There are now                    
+   some monsters which are quite deadly, but relatively easy                   
+   to kill, as well as monsters which are not very                             
+   dangerous, but hard to kill.                                                
+ * Krillan has been made much less powerful, and is no longer                  
+   a trainer. The temple Abbot takes his place as Chi Master.                  
+ * Dungeon item drop quantities have been generally reduced,                   
+   and in some cases eliminated. Monster drop quantities have                  
+   generally been increased. This should reduce incentive for                  
+   stair scumming in palces like Mr. Satan's Estate.                           
+ * Gym and library no longer accept "donations" from members                   
+                                                                               
+                                                                               
+Firearms:                                                                      
+ * New firearms: shotuns, double barreled shotguns                             
+   Shotguns fire all loaded rounds in volleys                                  
+   high capacity double barreled shotgun = LOTS of damage                      
+ * New shotgun ammo: scattershot, lead slug                                    
+ * Implemented semi/fully automatic toggles for machine                        
+   guns. While firing at range while in fully automatic mode,                  
+   a machine gun will fire a five round burst, with each round                 
+   targetting any of the nine spaces within one space of the                   
+   intended target. Shots fired at point blank range are                       
+   targetted normally.                                                         
+ * Scopes have been implemented. Any firearm with a scope                      
+   is treated as being five spaces closer to target for                        
+   range penalties. Thus, anything up to five spaces away is                   
+   terated as point blank range, a target at seven spaces                      
+   would be treated as if at only two, etc.                                    
+ * Firearm subsystem can now handle variable reload types                      
+ * Damage information is now more properly stored in                           
+   ammunition rather than firearms. Consequently, each                         
+   individual ammo SVAL may now specify its own damage                         
+   range, type and area of effect                                              
+ * Fixed AP. Only armor piercing ammo will reduce targets                      
+   AC in half.                                                                 
+ * Migrated FIXED_PROJ weapons to LOOKUP_PROJ                                  
+ * Firearms now indicate what type of ammo they have loaded                    
+   when inspected                                                              
+ * Machine guns may now toggle between single burst and                        
+   fully automatic firing modes                                                
+ * Firearm range, damage and ammo capacities have generally                    
+   been increased                                                              
+ * New firearm ego: wildly inaccurate                                          
+                                                                               
+New issues:                                                                    
+ * Inspecting ammunition really should indicate whether it is                  
+   armor piercing. (AP clips and lead slugs may peirce armor)                  
+ * Krillan has been toned down, but his placement in the World                 
+   Tournament has remained the same. Consequently you may get                  
+   a really easy final match.                                                  
+                                                                               
+Bugfixes:                                                                      
+ * Trunks training updated to the enrollment system                            
+ * Kinto Un now leaves when removed (Gah! Hours!!!)                            
+ * Random items may now receive pluses again                                   
+ * Items should auto-id again                                                  
+ * There should be no more double egos, though I've never seen one so it's     
+   difficult for me to check                                                   
+ * Inventory letters for ego items should now always highlight in blue         
+ * I belive I have fixed issues relating to ego and artifact generation        
+ * It is once again possible to enroll in ninjutsu                             
+ * Fixed some screen corruptions relating to Oolong's marriage                 
+ * Disarming traps no longer causes your strength skill to increase            
+ * Corrected Sakura's misleading challenge dialogue                            
+ * Applied NerdanelVampire's add_flag fix, thus fixing fur-lined, studded      
+   and designer egos. Ego bonuses now ''add'' instead of ''replace'' item      
+   bonuses                                                                     
+ * Updated some quest descriptions that were still using the alpha14           
+   convention                                                                  
+ * Fixed an error relating to Trunks' enrollment                               
+ * Applied EtMarc's solution for FS#108. It seems to work! Yay! :)             
+ * Fixed a LUA error in Yamcha's AI                                            
+ * Fixed: Can eat from corpses again                                           
+ * Fixed: can no longer eat from a corpse infinitely many times                
+ * Fixed: The 'z' LUA error bug                                                
+ * Fixed: Imelda now properly gives desinger shoes, when appropriate           
+ * It is now possible to train/speak/challenge the Ninja instructor            
+ * Entering stores should no longer occassionally generate LUA errors now      
+ * Ahhhaaa!!!! Fixed the LUA error in the Foot Lair                            
+ * Fixed Tenshinhan and Chaozu's AI's                                          
+ * Fixed a screen corruption in Videl's dialogue                               
+ * ...and I quote from the change log... "Fixed a bunch of stuff that was      
+   broken."                                                                    
+                                                                               
+                                                                               
+Enjoy!                                                                         
+lordbucket@hotmail.com                                                         

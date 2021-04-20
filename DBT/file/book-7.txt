@@ -1,0 +1,68 @@
+#####R                  /---------------------------\                          
+#####R                 <        Weapons Guide        >                         
+#####R                  \---------------------------/                          
+                                                                               
+*****/abook-7.txt*1[(a) Weapon Types]                                          
+*****/bbook-7.txt*2[(b) Special Effects]                                       
+*****/cbook-7.txt*3[(c) Poison]                                                
+~~~~~1                                                                         
+#####G(a)Weapon Types                                                          
+                                                                               
+#####BSwords                                                                   
+This is an extremely general category describing any of a number               
+of weapons of medium length used with one or both hands. Some                  
+are bladed, as the katana and ninja-to. Others are not, as the                 
+shinai and the bokken.                                                         
+                                                                               
+#####BPolearms                                                                 
+Polearms are essentially big, long sticks which may or may not                 
+have something pointy on the end. All polearms require two hands               
+to use, but have the benefits of delievring excellent damage while             
+at the same time generally beign cheaper than many other weapon                
+types. Wood is cheap.                                                          
+                                                                               
+#####BEntangling Weapons                                                       
+Only two weapons qualify as entangling weapons: the whipchain and              
+the rope dart. These are amongst the most difficult weapons to use,            
+and require two hands. They are capable of delivering tremendous               
+damage however, and skilled weapons fighters have a chance of                  
+temporarily disabling their opponents with every succesful hit.                
+                                                                               
+#####BSmall Weapons                                                            
+Any small, lightweight weapon which doesn't easily fit into any                
+of the other categories is a small weapon. These are generally                 
+lightweight, soft-hitting weapons. However, several of them, such              
+as the sai and tonfa are designed to be used in pairs, and thus                
+allow a fighter to deliver two attacks per round without any                   
+to-hit penalties.                                                              
+                                                                               
+#####BFirearms: Guns                                                           
+Coming in both single-hand handguns, as well as two-handed rifles,             
+guns may deliver tremendous damage even at range, but only skilled             
+marksmen are likely to hit their targets with any frequency.                   
+Fortunately, while it is difficult to hit a target, bullets are                
+very good at piercing armor.                                                   
+                                                                               
+#####BFirearms: Rocket Launchers                                               
+Any shoulder mounted projectile launcher may be considered a                   
+rocket launcher. This class of weapons requires two hands to wield.            
+Launchers typically have a single round capacity, and are capable              
+of delivering a tremendous amount of damage with area effect.                  
+                                                                               
+~~~~~2                                                                         
+#####G(b)Special Effects                                                       
+Certain weapons have the ability to deliver special effects beyond             
+mere damage. These are:                                                        
+                                                                               
+Whipchain: stun                                                                
+Ropedart : stun                                                                
+Katana   : cut (Not certain if this is implemented yet...)                     
+                                                                               
+~~~~~3                                                                         
+#####G(c)Poisoning                                                             
+Any bladed weapon may have poison applied to it for extra damage.              
+One vial of poison will provide enough poison to deliver poison                
+damage for anywhere from 5 to 7 applications. As of Version 0.8.0              
+poison damage for any attack is equivalent to the amount of the                
+melee damage. Meaning, your damage will be DOUBLED for each succesful          
+attack.                                                                        

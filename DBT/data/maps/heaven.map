@@ -1,0 +1,62 @@
+-- Dragonball T: Heaven!
+
+map.define("heaven.map")
+
+-- map.symbol{ symbol='<' feat=FEAT_LESS info=3 }
+-- map.symbol{ symbol='>' feat=FEAT_MORE info=3 }
+map.symbol{ symbol='r' feat=FEAT_RED_CARPET info=6 }
+map.symbol{ symbol='X' feat=FEAT_PERMA_WALL info=6 }
+map.symbol{ symbol=' ' feat=FEAT_SKY info=3 }
+map.symbol{ symbol='c' feat=FEAT_CLOUD info=3 }
+
+map.symbol{ symbol='d' feat=FEAT_SIGNPOST info=3 on_walk="The sign says 'Welcome to Heaven!'" }
+
+-- Dungeon layout
+map.map
+{
+[[                                                                                                             ]],
+[[                       ccccccccccccccccc                                                                     ]],
+[[                   ccccccccccccccccccccccccc                    ccccc                                        ]],
+[[              ccccccccccccccccccccccccccccccccccc             ccccccccc               cccccc                 ]],
+[[         ccccccccccccccccccccccccccccccccccccccccccc             cccc           cccccccccccccccccc           ]],
+[[       ccccccccccccccccccccccccccccccccccccccccccccccc                      ccccccccXXccccccXXcccccccc       ]],
+[[     cccccccccccccccccccccccccccccccccccccccccccccccccc                   ccccccccccXXXXXXXXXXcccccccccc     ]],
+[[    cccccccccccccdcccccccccccccccccccccccccccccccccccccc                  cccccccccccXXXXXXXXccccccccccc     ]],
+[[    cccccccccccccccccccccccccccccccccccccccccccccccccccc                  ccccccccccXXXXXXXXXXcccccccccc     ]],
+[[    cccccccccccccccccccccccccccccccccccccccccccccccccccc                    ccccccccXXcccrccXXcccccc         ]],
+[[    cccccccccccccccccccccccccccccccccccccccccccccccccccc                         ccccccccrccccccc            ]],
+[[     cccccccccccccccccccccccccccccccccccccccccccccccccc                               cccrcccc               ]],
+[[        cccccccccccccccccccccccccccccccccccccccccccccc                                                       ]],
+[[          cccccccccccccccccccccccccccccccccccccccccc      cccccccccc                                         ]],
+[[              cccccccccccccccccccccccccccccccccccc    ccccccccccccccccc               cccccc                 ]],
+[[                   ccccccccccccXrXcccccccccccc      ccccccccccccccccccccc          ccccccccccc               ]],
+[[                       cccccccXXrXXccccc            cccccccXrXccccccccccc        ccccccccccccccc             ]],
+[[                              XXrXX                 ccccccXXrXXccccccccc         cccccccccccccc              ]],        
+[[                              XXrXX                   ccccXXrXXcccccccc           ccccccccccc                ]],
+[[                              XXrXX                     ccXXrXXccccc                  ccc                    ]],
+[[                              XXrXX                       XXrXX                                              ]],
+[[                              XXrXX                       XXrXX                                              ]],
+[[    cccc                      XXrXX                  cccccXXrXXcccccc                                        ]],
+[[   ccccccc                    XXrXX        ccccccccccccccccXrXccccccccccccccccccc                            ]],
+[[     ccc                    ccXXrXXccccccccccccccccccccccccccccccccccccccccccccccccccccc                     ]],
+[[                        cccccccXrXcccccccccccccccccccccccccccccccccccccccccccccccccccccccccc                 ]],
+[[                     ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc               ]],
+[[                    ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc              ]],
+[[                    ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc              ]],
+[[                     cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc                ]],
+[[                        ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc                  ]],
+[[                               cccccccccccccccccccccccccccccccccccccccccccccccccccccc                        ]],
+[[                                    ccccccccccccccccccccccccccccccccccccccccccc                              ]],
+[[               ccc                                  ccccccccccccccccccccc              cccc                  ]],
+[[              cccccc                                                                  cccccc                 ]],
+[[                cc                                                                      ccc                  ]],
+[[                                                                                                             ]],
+[[                                                                                                             ]],
+}
+
+-- Starting position
+if dball_data.level_tracker == 1 then
+	map.set_player(15, 15)
+else
+	map.set_player(9, 17)
+end

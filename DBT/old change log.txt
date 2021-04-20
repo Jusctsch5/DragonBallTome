@@ -1,0 +1,2883 @@
+Dragonball T! Module for the T-Engine
+
+Jul 20, 2006
+Started from the ToME Module V3.0.0Alpha4
+
+
+(Nov 14, 2007 Note: This version format is only accurate up to V0.6.5 at which point the format changes)
+
+Version Format:
+Va.b.c
+
+"a" Denotes major conceptual implementations.
+"b" Denotes either arbitrary groupings of changes that I personally feel deserve a version change
+	or a reworking or addition of a major subsystem. More likely the first of the two.
+"c" Denotes actual days worked. If I spend 12 hours working on a bunch of things on Tuesday...that's .1
+	If I take two minutes on Wednesday and make a spelling correction, that's .2
+
+Version numbers increment...colums are ignored. V 0.0.11 is nine revisions from V 0.0.2
+
+
+
+V 0.0.1 Let's Begin, Shall We?
+
+Stat Changes:
+	Wisdom is now Willpower
+	Speed added as a primary stat
+	Max stat values set to 100
+	(Note: Wisard mode doesn't display "speed" correctly when using ctrl-e)
+
+Skills
+	Removed Mimicry
+
+Race/Class
+	Trimmed down the available race/class list. Eventually there will be none to choose from.
+	Race and class being things that change in game, but it seems the engine freaks
+	out if there isn't at least two of everything.
+
+calc.lua math
+	HP = Constitution * Level
+	Sanity = Level + Intelligence + Willpower
+	Weight limit = Str * 10 pounds (or rather, Str * 100 decapounds)
+	eliminated gloves for chi (mana) computation and change messages
+
+	Dex to-hit bonus is now dex - 10
+	str to-dam bonus is now str - 10
+	str no longer gives a to-hit bonus
+	(...should str really affect missile damage...?)
+	(More to the point...will missile weapons continue to exist?)
+
+	Charisma price modifer is now as follows
+	Every point of charisma below ten adjusts prices 10% out of your favor (Maybe this should be 20%?)
+	Every point of charisma above ten adjusts price 1% in your favor
+	(Thus, in theory, at 100 charisma, everything is free?)
+	(Charisma math not verified at stores...but it compiles ok)
+
+	(At this time the display is incorrect during character creation...
+	 but the in-game values are correct.)
+
+Birth.lua
+	Changed starting stat method...now:
+	All 7 stats "start" at 10, and players may rearrange points as desired.
+	Nothin less than 8, nothing greater than 13
+	(Maybe should max at 12?)
+	AND IT WORKS!!!
+	(Though chp doesn't adjust with mhp. *shrug*)
+
+	Doing this, incidentally fixed the above-mentioned display problem.
+	(Some old data structures remain...could stand to be cleaned up)
+
+Towns
+	Replaced bree.map with earthcity.map
+
+Quest/Monsters/Artifacts
+	Eliminated all original Quests, uniques, and artifacts
+	(EDIT: Missed Galadriel...she's still there.)
+
+Sentients
+	Eliminated Sentient items
+
+Magic
+	Removed the schools of Necromancy and Music
+
+Options
+	Changed default "center view on player" to true. (I like it this way.)
+
+Monster Ego Types
+	Removed the townpeople_can_elf/dwarf/hobbit/human flags from all monsters
+	(Note that the flags themselves still exist)
+
+Help
+	Removed some of the more annoying newbie help messages
+
+July 21, 2006 V0.0.2 Weapons Are Good
+
+Items
+	TV_SWORD   => TV_SWORDARM
+	TV_KNIFE   => TV_SMALLARM
+	TV_HAFTED  => TV_ENTANGLEARM
+	TV_POLEARM => TV_POLEARM (unchanged)
+	TV_AXE     => Eliminated
+	TV_MSTAFF  => Eliminated
+	All around thematic weapon changes
+	All melee weapons moved from specific master to Weaponmastery (temp)
+
+	(Weapon damages, costs, levels, etc need to be adjusted in many places)
+	(Still need to add: sai, tonfa, butterfly knife, *butterfly knife*
+	(...brass knuckles, hooksword, nightstick, nunchaku, escrima stick)
+	(Still need to thematically replace polearms, too.)
+	(Need to address paired weapons. Should be a flag.)
+
+Weapon Functionality
+	Added WEAPON_DIFFICULTY flag
+	Added WEAPON_PAIRED flag (though the *butterfly knife* is the only one so far)
+	Made the WEAPON_PAIRED flag visible in desc.lua
+	Eliminated SKILL associations from all weapons
+	Eliminated ARM slot from descriptors.lua
+	Added a second WIELD slot
+	Made shields equip to the WIELD slot (See where I'm going?)
+	(Yes, you can wield two shields...but combat.lua will be changed so you
+	(...can't attack.)
+	(Interestingly, all of the above seems to work. Just need to reflect...
+	(...actual combat rules, and also display damage in charsheet.lua)
+
+Junk
+	Thematic Junk added: comic books, manga, baseballs, kung fu videos.
+	(Incidentally...how do we see the descriptions without having ID?)
+	(...Easy_know doesn't seem to do it.)
+
+Food
+	Thematic food added
+	(Ahhh! here's our answer...food shows text...will have to investigate later.)
+
+Stores
+	Added Akira, the Sushi Chef
+	Added the Sushi Bar
+
+Skills
+	Added skeleton for Str/Int/Wil/Dex/Con/Chr/Spd skills
+	(Though they're not actually functional yet)
+
+Items
+	Enabled SHOW_AC_MODS on Tai Chi Swords (though they're defaulting to zero...?)
+
+Shops
+	1 General Store => The Mega Mall
+	2 Armor Store   => Clothing Store
+	3 Weapons Store => Martial Arts Supply Store
+	4 Temple	=> ??? (Unchanged for now)	(EDIT: Temple is now Gun Store. :) )
+	5 Alchemy Shop	=> RVac
+	6 Magic Store	=> Electronics Store
+	7 Black Markey	=> Pawnshop
+	Bree_Mayor	=> The World Tournament!
+	
+	Eliminated: Prancing Pony, Beastmaster, Pet Store, Book Store, Soothsayer
+
+	General Thematic Changes to Store_Owners
+	Created the Various Schools (Martial Arts Schools, not magic schools)
+
+Items
+	Added a whole slew of items:
+
+	polearms:	(removed old)
+			spear, bo staff, waxwood staff, three sectional staff
+
+	Smallarms:	escrima stick, nunchaku, butterfly knife, sai, tonfa
+			ninja, claw
+
+	swords:		ninja-to, hooksword
+
+	helm:		sunglasses, mirrowed shades, blindfold, ninja hood, samurai helm
+			motorcycle helmet
+
+	(Eliminated "light_helm" / "heavy_helm" replaced with "headpiece")
+
+	boots:		ninja boots, tennis shoes, steel-toed shoes, high heels
+			ballet slippers, toeshoes
+
+	Gloves:		light boxing gloves, heavy boxing gloves, ninja gloves
+			golfing gloves, silk gloves, welding gloves
+
+	body armor:	lightweight gi, heavyweight gi, streetclothes, qipao
+			boxing shorts, tutu, leather jacket, fancy dress, tuxedo
+			power armor, bathrobe
+			(I just love how bathrobe came right after "power armor.")
+
+Stores:		Added Arnold/Miss Eliott
+		Added 24/7 Fitness/Library
+
+July 22, 2006 V0.0.3 A Few Changes
+
+Items
+	New:	TV_JUNK: Umbrella, Dojo Sign
+	Misc. Changes from the FixMe log, pertaining to item attributes. 
+
+Artifacts
+	New:	Jagged-Edged Sword of King Mouse
+	New:	Claw of The Shredder
+	New:	Wong-Fei Hong's Umbrella
+	New:	The Straightsword 'Green Destiny'
+	New:	Wine of The Drunken Master
+	New:	Yamcha's Baseball
+	(Also added potion:wine and swordarm:jagged_sword to accomodate)
+
+Monsters
+	(...flag changes?)
+
+July 23, 2006 V0.0.4 The Big Purge
+
+General Purges
+	Runecraft and Runes (For some reason this fixed a bug that had me baffled
+				for hours yesterday and gave up on...monsters are
+				once again appearing in town. Huh? Runecraft...?)
+	Geomancy
+
+Skills
+	All Masteries, knife, crits and stun gone
+	Combat becomes martial arts
+	Weaponmastery becomes weapons
+	New: Parrying and Paried, subskills under Weapons
+	Dodge and Stealth go under Martial Arts
+	Necromancy/Mimicry/Music gone (for real this time)
+	Sorcery Gone
+	Summoning/Symbiosis Gone
+	Sneakiness/Steal/Backstab Gone (Inetlligence replaces Sneak: perception relation)
+	Sling and Bow Mastery Gone
+
+General Purges
+	Purged the monster lists
+	Eliminated Gods, God and and Udun magic and books, and piety
+	Elimiated Prayer and Spirituality (Willpower replaces Spirituality's Saving Throw mod)
+
+Skills
+	Added Technology, Construction and Disassembly
+	Technology replaces SKILL_DEVICE
+	Disassembly replaces SKILL_DISARM   (Unresolved Implications for movement modes...)
+	Added Chi, Chi-Attack, Chi-Defense, Chi-Regeneration and Chi-Gung
+	Moved mana from Magic to Chi. *IF* you have a Chi skill, you Chi is Skill+Int+Will-20, else zero.
+
+Help
+	Cleaned up the help a bit
+	Updated symbols.lua
+
+Monsters
+	Added some monsters
+	Added Drainage Ditch special_gene monsters
+
+Maps
+	Exchanded Middle Earth for Space, changed maps accordingly
+
+July 23, 2006 V0.0.5 Yet More Purges
+
+General Cleanup
+	Eliminated the last of the out-of-theme shopkeepers
+	Eliminated Lothlorien, Bree and Destroyed Bree
+	Eliminated scrolls. (Seriously. Gone. Parchments remain, however. And will continue to.)
+
+
+July 26, 2006 V0.0.6 Progress is!
+
+General
+	Well...I found some absolutely nasty bugs that had been creeping around since V.0.0.2,
+	and unfortuantely some of them I couldn't resolve even after four or five hours of
+	trying to find them. Yes...even just to find WHERE they were. So, ultimately I ended up
+	giving up completely and reverting to a previous version. I did manage to track down 	
+	few of them, so I didn't have to completely revert to version 2 (that would have been...
+	sad.) The V002 problem was that placing a dungeon anywhere caused the town to fail to load.
+	Eventually it turnedout that it was a problem with object themes. (?) I'm not exactly
+	clear on the details...actually, but at this point I'm happy it's fixed and running again.
+	Unfortuanetly it looks like I'm going to have to go back and purge alchemy/thaumaturgy/
+	gems/orbs/rods...I think for the third time now. But...we can get to that. After having
+	done it succesfully once, it should be easier next time, right?
+
+***NOTE***
+	There appears to be something horribly wrong with the object themes. I'm not
+	sure what...since it really doesn't look that complicated, but please keep in mind the
+	danger of proceeding onward withotu entirely figuring out what the problems is. We don't
+	want another revert!
+
+Towns
+	Restored the towns, stores and owners from prior to the revert. There are now four
+	"towns" again.
+
+NOTE
+	Figured out the problem with Object Themes. Apparantly I had left TVALs for both light
+	and heavy armor in the combat section, even though neither of them exist anymore.
+	Even when I called other object themes, that one still caused a crash. Fixed.
+
+Dungeons
+	New:	The Warehouse
+	New:	The Sewers (The Ninja Sewers, at that.)
+
+***KNOWN BUG***
+	Can't add monsters to special dungeon levels. But hey, at least I can have special levels now,
+	right? I mean...I couldn't even have DUNGEONS not that long ago.
+
+Items
+	New TVAL: Drink
+	New Drinks: Water, Perrier, Dr. Pepper, Mountain Dew, Jolt
+	"Wine" moved from potions to drinks
+	Purged the potion list
+	New potions: poison, antidote, nuclear waste
+	Eliminated Yamcha's Baseball (Wasn't an awful idea, but there are much better ones)
+
+
+	Bows => Guns
+	Eliminated Slings and Shots 
+	New Guns: Pistol, Rifle, Machine Gun, Bazooka
+	Temple => Gunstore
+	New Tools: Mechanical toolkit, electrical toolkit, chemistry kit, lathe
+	Created the various Tecn materials:
+	TV_CIRCUITRY: resister, capacitor, circuit board, wire, solder, eprom
+	TC_CHEMISTRY: iron, sulfer, sodium permangananate, hydrogen tetrachloride,
+			aluminum dioxide, assorted hydrocarbons
+	TV_BULK_MATERIAL: steel, aluminum, titanium, plastiform, fiberglass, tubing
+	TV_FANTASY_PARTS: particle accelerator, plasma diode, maglev tube, nanites,
+			tachyon streamer, positronic relay
+
+	(Please no diparaging remarks from the more technically inclined. 
+
+Bugfix
+	Weight limit should be correct now. For some reason the "weight limit" isn't a
+	measure of 1/10th poounds, but rather of 1/20th pounds. *shrug*
+
+Items
+	New Armor: camoflague outfit, ninja uniform
+
+Gods
+	Whoops! Purged some "Yavanna piety loss for killing trees" references from scripts
+
+Jul 27, 2006 V 0.0.7 Small details That Become Major Breakthroughs
+
+Note
+	I notice it takes nearly four seconds for a wilderness panel to load. It only
+	takes the ToME module about a second and a half. What's going on? DB is about a third the sixe.
+
+Combat & math
+	Made barehanded available even at zero skill
+	Eliminated "dodge chance" Dodge now just directly adds to AC
+
+Race/Clas/Birth
+	Created the various races & classes and...more importantly:
+		FIXED BIRTH.LUA SO IT DOESN'T ASK FOR THEM! YAY!
+		Now I just need to figure out how to assign them myself.
+		tinsert? descriptors? I see a player_get.descriptor...but
+		how to you SET one?
+Items
+
+	New: Nightvision goggles, infrared goggles
+	Broke artifacts *sigh*
+
+Map
+	Cleaned up, added Ballet school and Military surplus near capsule corp HQ
+
+Quests
+	Lots of background setup for Tournament and Dojo quests
+	It is now possible to learn any of the six styles!
+	Restricted studio stores to students only (Except Elizabeth)
+
+
+Jul 28, 2006 V 0.0.8
+
+Misc
+	Added Perrier to Eau De France
+	Added drinks to Pizza Kitchen
+	Graphical Map Changes
+	Made the Martial Arts SUpply Store less accessible
+	Enabled lessons at: Kickboxing, Ninjutsu, TaeKwonDo, Ballet schools
+	Resolved race/class issues, but...
+
+???????????????????
+	Huh? I can declare constants in /quest/*.lua, but not /script/*.lua??????
+
+	?????
+	?????
+	?????
+	This is why this has been so frustrating. Two LUA files...both being loaded with
+	via same do_file method, I copy and paste some constant declarations in one, and
+	it works FINE. Put it in the other instead and it DOESN'T. The only difference I
+	can tell is that the two files have different names and are in different directories.
+	Seriously!!! WHAT'S THE DEAL!?!?!?!?
+
+	So I guess I'll declare stuff in the dojo quest file. It seems to work from there.
+
+	Oh...also, using loadsave with the ", 0" without really knowing what that means.
+	Dangerous.
+
+More Misc
+	Changed starting zeni in calc.lua
+	Reduced starting stat limit from 13 to 12
+
+Items:
+	New: flashlight, safety flashlight, maglight
+
+Maps
+	Added in Yamcha's Bridge
+
+Quests
+	Added the six "challenge" quests for the various schools, and accompanying dialogue
+	(note, the ctrl-Q and ~ quest lists aren't working in this version, so testing
+	(is a little difficult.)
+
+Artifacts
+	Added the Seven dragonballs. I'd like to test them, but artifacts still seem to be
+	broken.
+
+Stores
+	Added a class at the shooting range
+	Added Dialogue for the OTHER five schools
+
+V 0.1.0		A New Version number! yay!
+
+Eomments:
+	I've kind of just been incrementing the numbers. Honestly, we probably deserve a 0.3.0
+	right now with everything I've added, but well...*shrug*
+
+	Also, note that for reasons I'd rather not get into, there is a lot of data structure
+	quests/dojo.lua there doesn't really *belong* there, but it's there, and it works...
+	and I kind of don't want to move it out, so...for now, it's there.
+
+Stores
+	Gym and Library memership and training now functional
+	(Still need to add the "quest" descriptors so people know when to go train/read)
+
+Items
+	Added starting equipment
+	Added FLIGHTLIGHTS to the Megamall. (Wow...game was tought to start without those)
+	Eliminated Ego items
+
+Flags
+	Eliminated Ego monster flags
+	changed ALLOW_IN flags a bit, "townspeople" can now appear in town
+
+Monsters:
+	New monster spell: Buzz (aggravate)
+	New monsters for the sewers: dragonfly, large cochroach, small rat, large rat (Yes, it's an ROUS)
+
+Major Bug:
+	Hmm. Looks like monsters cannot be madeto cast spells. Wonder how long this has been floating
+	around. Probably a LONG time.
+
+Stats
+	Got rid of those silly stat.adj tables. Everything is using math now.
+	Increased stat limits to 100
+
+Misc
+	Changed calendar to standard/modern
+	Added some parchments, put in library
+
+Quests
+	Added Stores: Airport and Hanger
+	Added Hanger "quest" (Basically, you can rent a hanger for use as a house)
+
+Items
+	Purged old item/artifacts activations
+	removed eternity object from desc.lua
+
+COmbat
+	Spent about 4.5 hours trying to get a combat system working. Of that...about 4 hours were spent
+	being absoutely baffled in sheer frustration over what seems like amazing stupidness. Weapons
+	combat basically works, I just need to change the to hit and damage math. Barehanded is broken.
+	I'd like to be able to say why. Project() doesn't seem to want to accept any damage type I
+	can feed it. I've looked at plenty of functional examples in the code...even copied and pasted
+	from them, and it doesn't seem to want to work. I've gone line by line commenting and substituing
+	lines from the functional weapons side of combat, and when I substitute the type line, I can
+	reproduce the error. But...why does:
+
+			local dams = player.inventory[INVEN_WIELD][1].flags[FLAG_DAM]
+			typ = flag_max_key(dams)
+
+	Work fine...but any sort of direct damage: dam.PURE, dam.CRUSH, dam.etc not? Again...I can see lots
+	of examples in the ToME module that do exactly that. I've confirmed that the damage types I'm
+	referring to do exist in dam_types.lua. They do. I've tried lookign up project() to try to figure
+	out what it's looking for, but the function appears to be hard coded. Not sure what to try next.
+	Sleep, maybe.
+
+July 31, 2006 V 0.2.0 Combat Complete
+
+Combat
+	Fixed barehand. Here was the solution: typ = flag_max_key(getter.damages{CRUSH = {1,2}})
+	Not elegant...and I don't understand why it's necessary, but it works.
+	Cleaned up combat in general
+	Created/Added weapon difficulty values for all weapons
+
+Help
+	Put in some help files
+
+Combat
+	DONE!!! CLEAN HEALTHY AND ALIVE!!! YAY! YAY! YAY!
+
+Lites
+	Eliminated lite slot. Flashlights are now wielded in hands
+	(Though this introduces problems: fuel no longer goes away)
+
+Misc
+	No more going to wilderness map, but oh, aren't the stars lovely?
+
+July 31, 2006 V 0.2.1
+
+Acupuncture
+	Added Dr. Tofu, acupuncture clinic, acupuncture ability, and needles.
+
+Tools
+	Implemented tools at a basic level
+	Implemented acupuncture needles(heheh..."self mutilation" :P)
+		(note, delay not implemented)
+
+Misc
+	Minor costemtic changes to features.lua
+	Corrected dark walls in dungeons
+	Wrote some parchments
+	World Tournament infrastructure (broken?)
+
+Grr-ness
+	Performed a revert on features.lua. Copy and pasted in FIGHTING_RING and DISQUALIFIED again
+
+Bugfixes and misc
+	Can enter stores again
+	WT brochure available at the WT
+	Added Miss Elliott and Arnold to the chat list
+	Rearrnged the actions at the gym so they didn't overlap
+
+Auguest 2, 2006 V 0.2.2
+
+Quests
+	Restored and fixed the basic George/Pawnbroker dialgue re: stolen goods quest
+
+Misc
+	added sanjobang & put in Korean school
+
+Misc
+	Reduced sale value of high heels
+	The pawnshop and electronics stores now no longer sell sushi
+	The pawnshop no longer pays full value for items
+	DOjo signs now have a description
+	Damage is now applied AFTER the "you hit it" message to prevent "You kill it. You hit it"
+	
+August 3, 2006 V 0.2.3
+
+Bugfix
+	Corrected the inability to '?' query character types.
+
+Items
+	Eliminated TV_FLASK
+	Fixed wine at Eau De France
+	New Item: Batteries, put in RVAC and electronics
+	Removed pizza from the warehouse(s), shooting range and capsule corp
+	Removed comic books from the Briefs' Lab
+
+Dungeons
+	Populated Nutcracker dungeon with monsters
+	Removed dark walls in City Sewers
+
+Misc
+	Warehouses now display 'There's nothing here.' insetad of 'A Shopkeeper'
+
+Bugfix
+	Fixed arifacts! (I have no clue what the problem was.)s
+
+Artifacts
+	Added descriptions and powers to several
+	New: The Z-Sword (and base type to support it)
+	New: Iron Umbrella (hahah!)
+	New: Mike Tyson's Boxing Gloves
+
+August 4, 2006 V 0.2.4
+
+Dialogue
+	Restored the Challenge Quest dialogues (Though the quests themselves are not completable)
+
+Misc
+	Started thematizing gold names. May need engine fixes to finish. (Or completely re-do gold myself)
+	Cleaned up help some
+	General preparation for release
+
+Auguest 5, 2006 V 0.2.5
+
+Items
+	New Item: dobak, pudao
+	Sushi given it's own TVAL
+	New Sushi: takko, anago, uni, fugu
+	New TVAL: Launcher, and Bazooka moved to it
+	New flags: AMMO_CAPACITY, AMMO_CURRENT
+	Missile Weapons now display their ammo
+	TV_ARROW => TV_CLIP
+	New TVAL: TV_MISSILE
+	Guns now fire bullets from clips, launchers now fire missiles
+	Added a Firearms Guide
+	(Need to build a new archery system)
+
+Calc.lua changes
+	Eliminated everythign to do with heavy bows: tohit penalities and 'haeavy bow' messages
+	Got rid of 'icky wield' (we don't have sorcerors or Eru priests, do we?)
+	(Left heavy weapon wield for now...will probably go eventually)
+	Sped up the hp regen rate
+	Eliminated some of teh remaining to hit modifiers
+	Eliminated the +30 stealth testing bonus I've been using
+	Eliminated Chi penalties from heavy armor
+
+Purge
+	Started Purging the old abilities
+
+Wow!
+	Discovered a bug: MUST2H weapons no longer take up both hands when you equip them.
+	Checked the history...and this has been around since VERSION 002!
+
+	Wow.
+
+	No idea why. Put it a temporary fix to prevent a second weapon from attacking if the first
+	is MUST2H. You can still equip two...but only the first will actually attack, and non-matched
+	weapon tohit penalties will still be applied, so...while not *correct* at least it's not something
+	anyone is likely to be taking advantage of.
+
+
+Purge
+	Eliminated corpse preservation. Fixed corpse drop rate at 10%. Not sure what I want to do with corpses.
+	Removed All old abilities, put in a placeholder
+	Removed an old ALLOW_IN_BARROW_DOWNS flag from vaults.lua
+	Removed tha MAGIC skill from skills.lua? Wow...
+
+Store Actions
+	Chat => Talk
+	New action: Challenge
+
+Monsters
+	New: orange/green/brown/black belt, policeman
+
+Quests
+	Criminal Quest assignable, police now spawn
+
+Bug
+	First observation of the "Too much Con crash" bug
+
+August 6, 2006 V 0.2.6
+
+Balance Change
+	Give 10 exp for studying a martial arts style. This simplifies the early game
+
+Bugfix
+	Fixed Ballet challenge quest
+
+Marksmanship/New Command
+	It is now possible to load guns (not launchers) with the 'a'mmo command
+		(Note that at present the gun must be identified for the ammo to display correctly)
+
+Display
+	Fixed ranged tohit display
+	Adjusted display widths
+
+New Ability: Swimming
+
+Electronics/Technology
+	Added: Compass, GPS, cell phone, metal detector, laser pointer, SCUBA gear, laptop
+	New Activations: Laptop, Compass, GPS
+	New flag: TECH_REQUIRE
+	Implemented: require TECHNOLOGY skill to wield/use certain items
+
+Features
+	No walking on deep water unless have MAGIC_BREATH (yes, yes...add water walking and water breath)
+
+Purge
+	Wands are now gone!
+
+Technology Requirements
+	completed tech_require functionality for tools
+	Added it to nightvision and infrared goggles
+
+Abilities
+	Actually implemented AB_SWIM. (It's just a check for it at deep_water in features.lua)
+
+Marksmanship
+	PURGED the old archery system...and it *appears* to be clean! Yay!
+	New Abilities: Paired firearms, multi-target firing mode
+	Partially implemented close range firearm combat
+
+Game COncepts
+	Made some conceptual changes to combat.
+
+Combat
+	Added a bunch of constants to support the new *variable combat* system
+	(Did those make it past the revert?)
+
+Hooks(Wield_pre)
+	Implemented my own MUST2H checking
+	
+Combat
+	Oooofff!
+	Ok...ther are now 16 permutations, and...umm "several" sub-possibilities" of ways in which
+	combat can be computed based on any of four possible types of items in either hand. (Yes, that's
+	only 8. But sadly, it's x2 because I computed separately depending on hand to accomodate weapon
+	bonuses. *shrug*) Anyway...it works! And it's mostly complete. A few things are missing. But,
+	I'm happy. We're good. Cuddles and tits for everyone! Yay!
+
+August 8, 2006 V 0.2.7
+
+Combat
+	Hmm. Rethinking this...making some conceptual changes.
+	Added DIFFICULTY for all firearms
+	Rule Change: If doble barehand fighting, the AC bonus is counted for EACH hand! (+200 AC, anyone?)
+
+	Hmm. Actually, the changes are complicated enugh that I don't think I'm going to itemize them.
+	Go read the various book-*.txt's on the various combat methods. That's what I've implemented over
+	the past few days.
+
+Leftovers:
+	Need to consider when (1 and 0) or (2 and 0) situations allow barehand ac bonuses
+
+	(Got tired of working on combat, and leaving it incomplete
+ 	As is...it's largely finished, but you can't actually hit anything
+	Here's the problem. In combat.lua:
+
+	local attack_barehand = function(which)
+		message("foo")
+		return true
+	end
+
+	local attack_weapon = function(which)
+		message("bar")
+		return true
+	end
+
+	attack_barehand(1)
+	attack_weapon(1)
+
+	Works fine, generates: foo bar
+	But...
+
+	local attack_barehand = function(which)
+		message("foo")
+		attack_weapon(1)
+		return true
+	end
+
+	local attack_weapon = function(which)
+		message("bar")
+		return true
+	end
+
+	attack_barehand(1)
+
+	Generates: foo LUA ERROR! etc. breaking chain etc.
+
+	Why? Don't ask me.
+
+	So I'm going to go work on something else for a while.
+
+Bugfix
+	Woohoo! Moonsters can cast spells again. Apparantly I missed a } while declaring
+	globals for player spell schools, and this caused monster spells to not load.
+
+Yamcha
+	Changed EAT_GOLD so that monsters NEVER telepoty away after stealing gold. (Is this evil? :) )
+	Placed Yamcha on his bridge. Added some on_speak for him.
+
+World Tournament
+	Restored the WT test stairway
+	WT now places a monster
+
+August 10, 2006 V 0.2.8
+
+Dragonballs
+	Added the seven dragonballs
+
+Bugfix (sort of)
+	Reduced stat limits to 99. Constitution of 100 and move causes the engine to crash.
+
+Stores
+	Added eat to full at Rusty's Pizza Kitchen
+
+Combat
+	Two new damage types: Barehanded, ballistic
+	Added the 'you thwack it' message functions
+	finished rebuilding combat...barehand and combat completed to the pont of being functional
+
+August 10, 2006 V 0.2.8
+
+Gero Lab
+	Created the lair, dungeon, unique and robots of Dr. Gero's laboratory
+
+Items
+	Added blueprints
+
+August 14, 2006 V 0.2.9 Second Unnoficial Public Release
+
+Bugfixes
+	World Tournament was a mess. Cleaned it up some.
+	Dr. Gero can speak again
+	Orange belts are now orange
+	Corrected combat related display numbers...some.
+	Black belts no longer move extremely erratically :)
+	Restored disturb and tracking to combat
+	Fixed the con/hp/leveling crash bug! (Engine Limitation! Not my fault!)
+	(Set Yamcha to rarity 100 so he doesn't apear everywhere)
+
+Marksmanship
+	Archery => Marksmanship
+	Disallowed wielding of firearms with zero markmanship skill
+	Firearms Abilities allocation migrated from default to Charleton in actions.lua
+
+Quests
+	Kind of Sort of implemented the challenge quests, almost
+	You now start the game with the WT and Dojo quests
+	Challenge Quests for Karate and Kung Fu are completeable, though still not as intended
+	Temporarily removed Yamcha from this release due to unresolved problems
+
+Release Prep
+	Added some helper texts to ease the pain of engine limitations and DBT unimplemented code
+
+August 15, 2006 V 0.3.0
+
+Challenge Quests
+	Restructured enrollment process to the effect of an 8K smaller actions.lua file (arrays are good)
+	Added Judo and Sumo, for a total of eight schools
+	Allowed for re-studying the same style multiple times
+	Rebalanced school skill awards to account for all of the above
+
+Stats/Skills/Abilities
+	Implemented Stat skills (Wow...they work! At least they appear to...)
+	Removed Moster Lore and Possession
+	Migrated Ability declarations from store actions.lua to dbstuff.lua
+	Noticed that Marksmanship is using the same code as studios, thus learning is limited by level
+		This was not intended...but...I think I'll leave it that way.
+
+Challenge Quests
+	Schools are now *destroyed* when you defeat them
+
+Stores/actions
+	Cleaned up the clutter, a bit
+	removed bounty quest action
+
+Misc
+	Sumo wrestlers now eat more
+	Cleaned up calc some
+
+Combat
+	Added in paired weapons formulas
+
+REVERT
+	LUA error on startup, coldn't find it. Reverted.
+
+Monsters
+	Added some ninja monster 'spells': poisoned darts,blindness powder, throw shuriken
+	Made Hamato Yoshi...tough.
+
+Maps
+	Put in some placeholder maps for the challenge quests
+
+August 17, 2006 V 0.3.1
+
+Items
+	Items that logically should stack can now stack
+	Removed 'potion of' from potions
+
+Revert
+	Yet Another Revert. About three hours gone
+
+Bugfixes
+	Nakamra once again appears in the Karate Studio
+
+Restored
+	The Serpent's Path, and related terrain features
+
+Monsters
+	Added Kami/Kaoi
+	Added The North Kaio
+	Added a FLAG_TAUNT (not implemented)
+
+Constructing the Cosmos
+	Woohoo! Building the North Kaio's Planet, placing on 'wilderness' map, and connecting
+	to earth via the Serpent's Path
+
+August 18, 2006 V 0.3.2
+
+New Monsters
+	Mr Popo, Bubbles the Monkey
+	Various Red Ribbon Army grunts
+
+Map
+	Redesigning maps to allow for expansion
+
+YET ANOTHER REVERT!!!
+	GGRRRRR!!!! Add dungeons and suddenly no dungeon anywhere in the world that has a unique
+	in it will load. 
+
+	Started putting things back
+
+Bad
+	Hmm. Just had a horrifying realization. For...WEEKS...there's been a LUA error that only
+	appears if I exit the game in wizard mode. Something about can't find a path. I had assumed that
+	it was because I was adding in saved dungeon levels, and related to the ~ menu bug. To check,
+	though I just made the Barrow Downs a SAVE dungeon in the ToME module...and the message doesn't
+	appear. Oh, dear. :( (Onthe bright side, this doesn't happen in the new Muscle Tower below)
+
+Muscle tower
+	Added some RRA soliders and Muscle Tower
+	New Theme: THEME_BALLISTICS
+	New Uniques: Color Violet, Colonel Silver, Liet. Green.
+	Couple new monster sbility types
+
+Alignment
+	Basic implementation of alignment
+
+Map
+	Placed the Buddhist Temple. a few monks, and moved the Serpent's Path inside it
+
+August 19, 2006 V 0.3.3
+
+Misc
+	Placed the Rabbit Hole
+	New unique: Umigame
+	Bubbles the Monkey is now a Quadruped, not a God :)
+	Added locked doors in front of the Serpent's Path
+	Changed descriptions on the Dragonballs
+	Buddhist Monks now explicity describe the exact locaton of the super-secret-hidden Serpent's Path
+	Added a cute warning sign to the path
+	New Uniques: Princess Snake and King Yemma
+	New Ability: Kamehameha
+	Rosshi can now teach Chi skill
+	New monster: Aru Villager
+	New Uniques: Ginkako and Kinkaku the thugs
+	New Uniques: Seargent Murasaki, General White, General Blue, Adjutant Black, Commander Red
+	New Unique: Captain Yellow
+	Alignement now slightly more implemented
+	Rearranged the display
+
+Hell
+	Deep Lava now actually does damage
+	Built Hell
+	New Uniques: Dabura, Hildegarn
+
+More Misc
+	The falling into Hell warning now says that falling is 'bad' instead of 'bsd.' :)
+	New Item: Senzu Bean
+	Placed Korin Tower, added Level 1 map
+
+Skills
+	Woohoo! Implemented the Chi learning system
+
+Monsters
+	Fixed Demons, added some flags
+
+August 20, 2006 V 0.3.4
+
+	Buddhist Temple is now integrated into the Serpent's dungeon
+	New Unique: Krillan
+	Completed alignment
+	Potion desc apparantly broken from a revert, half finished...eliminated the desc so no crash
+	New Unique: Kami
+	Kami, Mr. Popo, Yemma and the North Kaio now teach Chi skills
+	Placed Bubbles on the Kaio's planet
+	Wizards can once again fly through space
+	Fixed Serpent/Buddhist/Kaio connection
+	Changes to FEAT_DIM_SPACE
+	YES!!! Implemented falling to Hell! :P
+	Basic implementation of Demon Comic Dialogue. :)
+	Basic carry-over of DCD into post-death :)
+	Spirits can neither pick up nor wield items :)
+	Talking to the demons now carried over the Comic dialogue :)
+
+August 21, 2006 V 0.4.0 Implementation of Chi
+
+	Added the various Chi-Gung abilities and related variables
+	Renamed Chi-Attack to Chi-Offense (to match Chi-Defense)
+	(There are now 155 skill points with of Abilities that may be learned)
+		EDIT: 158 now that swimming is 6)
+	Rule Change: Characters with Willpower >= 20 can function as spirits
+	Rule Chenge: When dead, hp = willpower * level
+	New Item: Manual for the Recently Deceased :)
+	Made BOSS_RABBIT quest functional
+	OOLONG quest is now issuable, but not functional
+	(Wow! This game is hard!)
+	Bugfix: Potions flavours are incorrect, but no longer crash, and other desc's work
+	Bugfix: If kill moster with first blow, second blow doesn't continue anyway
+	You now actually have to LEARN abilties to use them, not just be able to
+	(Yay! Last of 'new since V024 bugs are fixed!)
+	Charsheet now shows damage range for weapons
+	World Tournament completely redesigned
+
+August 22, 2006 V 0.4.1
+
+	Implemented caffiene (not sure I want to use this, but it was original intent)
+	Fixed a bug that caused an insta-crash if attacking -1, 1
+	Come morning: "Today is the nth day of, etc." instead of "the nth day of"
+	Replaced town map file borders with #'s. Apparantly there's a buffer line.
+	New Items: Earmuffs, earplugs
+	Moved TECH_REQUIRE checks to dbstuff.lua, no longer done individually
+	Some minor alloc() tweaks. 5 zeni circuit componenets are no longer level 10 items
+	Removed Bacterium from WT lineup
+	Removed Riding skill (Woohoo! That's the LAST of the old ToME skils! Yay!)
+	Temporarily made Rosshi not Unique, to workaround the ~file engine bug (known)
+	HACK: Rosshi's quest is sort of almost kind of functional in a way, almost
+	Swimming now costs 6 skill points (Hey, it's useful!)
+	TKD and Kickboxing Challenge Quests now function correctly and are completable
+	Added several item types to stores
+	Restricted women's clothing to women only
+	Starting to rework charsheet resistances display to show in %'s
+	Some Minor rebalancing of armor AC and resistances
+	Purged the old shields
+	New Items: Medium Weight Gi, Ski Gloves, flak vest, flak jacket, crocodile boots
+	New Items: Leather trenchcoat, australian duster, riot shield, leather shield
+	Added items to stores for example: the gunstore now sells bullets :)
+	Road to Aru Village --> Aru Village
+	Eliminated the old World Tournament stores and related
+	Added shovels to mall
+	gp --> zn in stores
+	Made the monsters in the sewers and rabbit hole slightly less viscious. Hopefully.
+	Muscle Tower is now levels 6-12, adjusted RRA monsters & equip allocs
+	General cleanup for release
+
+August 24, 2006 V 0.4.2 Third Release
+
+	Negative combat damage is now set to zero. (I was healing college students!)
+	New resist types: radiation, mental (still need disease and drain)
+	Eliminated character sheet pages 2 and 6
+	Monsters in world tournament are now immediately visible
+	Pizza kitchen now deducts zeni properly
+	Bugfix: North Kaio's Planet is available again
+	Completely reworked challenge quests.
+	Added Cell
+	Kickboxing and TKD Challenge Rewards now work
+
+August 25, 2006 V 0.4.3
+
+	Increase HP_REGEN rate to 300
+	Chi Regen now tied to RGEN skill --> 1 Regen = 1chi/50 turns. 100 Regen = 2Chi/turn
+	Workaround for Engine secret door bug. Curiously, it makes things as desired, and I dont' know why
+	Started eliminating unused FEAT's
+	Commented out all traps which called spells that no longer exist
+	Consolidated all signposts, using on_walk for content
+	Shrunk dungeon feat file from 34K to 21K. I think this shortened map load times by a good second or two
+	King Mouse now drops his sword. (Wow! The Dancer is an extremely viable class.)
+	Now possible to complete the Missing Dancers quest
+	Serpent's Path now hidden behind a secret door
+	Ninja Duel now generates random traps, and generally made nastier
+	Added reward abilities for Sumo/Judo challenge Quests: Immovability and Throw
+	Enabled fleeing from Challenge Quests, along with the negative repercussions
+	Added Oolong's Castle, Oolong himself, and Aru villagers
+
+August 26, 2006 V 0.4.4
+
+	New Dungeon: RRA's Underwater Cavern, related monsters and object theme
+	Finished Korin Tower, added Korin, his house, and the roof
+	Made the RRA a bit tougher
+	Nyoibo-stuff
+	Partially implemented afterlife
+	Eliminated rubble from Muscle Tower
+
+August 27, 2006 V 0.4.5
+
+	Technology skill requirements now displayed in object descriptions
+	Implemented the DBT ID system
+	Implemented a sketchy, but sort of functional workaround for the Galadriel Shopping Spree bug
+
+August 29, 2006 V 0.4.6
+
+	No longer using the default ability system, workaround for 'Too many abilities' bug reported by NerdanelVampire
+	Barely started an entirely new character sheet
+	Wt Ticket Girl now correctly gives a brochure
+	Manually place character when exiting a teleport-only dungeon (Challenge Quests)
+	Yamcha back on the map
+	Monsters no longer drop treasure or corpses in the World Tournament
+	Uniques (who are actually killed, not just defeated) ALWAYS drop corpses (for collectors)
+	Killing Yamcha resolves the Bridge Bandit quest
+	Added professional affiliations to the new character sheet
+	Encumberance math made meaningful: Now, every 5 pounds over limit reduces speed by 1, starting at .1 pounds over
+	Flashlights now lose charge over time
+	Fixed the ID system
+	Implemented laser pointers
+	Implemented WT disqualify for illegal equipment use
+	new Item: First Aid Kit
+	Dropped regen rate to 200
+	I *think* I fixed the "(y/n) off the screen" bug as reported by NerdanelVampire
+	Umm...fixed weight allowance. For real this time. (-17 speed carrying clothes, shoes and a few parchments?)
+	Minor Acupuncture cleanup
+	Implemented NEW dialogue system
+	Extensive really cool Dr Gero Storyline development
+
+August 30, 2006 V 0.4.7
+
+	Changed some FEAT's to strchar(127) (No high ascii?)
+	Introduced Dr. Briefs
+
+September 1, 2006 V 0.4.8
+
+NOTE: Three days spent trying to upgrade to the new alpha5, to no avail. Waiting for to chance to ask the
+mailling list.
+
+	Put together a nifty intro screen
+	Filled out Briefs dialogue by about 8K, incorporated some quests
+
+September 2, 2006 V 0.4.9
+
+	Rearranged northeast map, placed Yoshi's and Pilaf's Castle
+	Added the RRA Guardsmen
+	New special level: Tower Headquarters
+	Some monsters now drop Dragonballs
+
+September 4, 2006 V0.4.10
+	New Map: Pilaf's Castle
+	New Uniques: Emperor Pilaf, Shuu and Mai
+	New Factions: RRA and Pilaf
+	Wow...kind of went overboard, and added a 42K dialogue for Pilaf/Shuu/Mai
+	New: Joe and Joesephine, Aru Village
+	Implemented 'Thugs' Quest
+
+September 5, 2006 V0.5.0 Fourth Release
+	Converted to alpha5!!!
+		After receiving an offer for help from DarkGod, I was cleaning up and prepping a copy to send to him
+		and in the process found the problem: it seems the symbiote carry slot has been floating around all
+		this time in display.lua, and I neglected to remove it when the CARRY slot went away. Why this
+		caused a random number of errors with every step I'm not sure...I'd have thought one when the
+		display was called, but hey...it works! Yay! Thank you everyone!
+
+	Redirected 'Y' to point to DBTCHAT so I can properly allow attacking friendly monsters
+	Completely redesigned the Chi enrollment and skill gain system, gave it its own function
+
+	Misc cleanup for fourth release
+
+	Umm...townspeople no longer have a 99.9% chance of dropping Dragonballs. :/
+
+September 7, 2006 V0.5.1
+
+	Bibidi's Spaceshop town map
+	Fixed Briefs Dialogue and item handover
+	Wow! As per DarkGod's input, renamed dam variables is combat.lua and designer thwack-it messages now work! Yay!
+	Decimals mods in learn_chi now display correctly (May also have tweaked some other things in dbtstuff...)
+	Items now identify_fully Yay!
+
+September 8, 2006 V0.5.2
+
+	New Items: Panzer Faust, Denshi Jar
+	Additional work on the Briefs random quests
+	Added a function to check if the player is on earth
+	New items: Megaphone, Road Flare, Fire Extinguisher
+	Added EXPLOSIVE flag, eliminated NEVER_ID
+	Added some ego types...but how do we actually create them?
+
+	ADDED AN ERROR LOG FROM COPY ON THE WIKI! WOW!!!
+	It is SOOOOO much easier to have a little list pop up and say "Gee, Bucket Man...you have an error! It appears
+	to be that you forgot to remove a reference to TV_WAND from the flavours file. That's not so good. Maybe you
+	should fix that?"
+
+	Wow. Do you guys realize that up 'til now I've been debugging by doing things like removing systems...loading
+	DBT and seeing if the error still occurs...narrow it down to a file...comment out half the file...load up DBT...
+	rise, lather, repeat until I track it down to a line? Wow! This is great! Thank you!
+
+	(Sigh...and after an hour of just trying to pull a monster name from a m_idx....*shrug* Stuff that works in
+	some places sometimes just don't work elsewhere. It's really frustrating not havign the slightest clue what
+	is really going on.)
+
+	Disallowed Compass/GPS/Cellphone/Laptop when not on earth
+
+	Spent 2.5 hours to conclude THAT LUA IS STUPID!!!!!!!
+
+	Added a Seiyan name generator
+	Placement when transitioning between fixed dungeon levels is now correct
+	Added Radditz Dialogue and Impending Doom quest	
+
+September 9, 2006 V0.5.3
+
+	Eliminated: Mushrooms, Cloaks of Mimicry
+	Electronics now have a 'flavour'
+	Trimmed down the rings list
+	Mount --> capsule
+	Implemented Vehicles
+	Placed Capsule bikes & motorcycle helmets at capsule corp (Wow, that's been pending a while)
+	Generally cleaned up help
+	Added: Planet 79
+	More work on Rosshi Dialogue
+	Added Radditz/Vegita/Freeza to Chi Master list
+	Made the Nyoi-bo slightly more functional
+	Re-enabled the Quest menu, set up starter quests
+	Map Changes
+	Added Mr. Satan's Estate
+	Added some Uniques: Mr. Satan, Freeza, Tama, Iruka, Seargent Metallic, Hasuki, Tao Pai Pai
+	Added a 'safe zone' spaceport on planet 79 (though only semi-safe)
+
+September 10, 2006 V0.5.4
+
+	Akira dialogue, Sushi quest, delivery boy quest, sushi duel
+
+September 11, 2006 V0.5.5
+
+	New monsters: Leonardo, Donatello, Michaelangelo, Raphael, Splinter, Shredder, Shenron, Space Debris
+	New monsters: Androids: #8, #16, #17, #18, #19, #20
+	No aligment change for winning tournament duels
+	Radditz now actually uses your Seiyan name
+	Gave resistances to monsters
+	RRA Supreme HeadQuarters and related dialogue and quests
+
+September 13, 2006 V0.5.6
+
+	Added placeholders for Buruma and Dragon Radar
+	Moved Whirligigs from Uniques to Androids
+	Added Freeza Spaceship
+	Marcos moved to dialogue
+	Bunches of minor cosmetic tweaks
+	Started capsules...is it possible to implement as intended?
+	Made Briefs random quests actually work
+	Player in now informed when he can re-enroll for new classes
+	Fixed gender pronouns in DCD and Gero dialogue
+	Tweaked movement mode math
+	Added some Tournament fighters
+	Fixed Kami's Lookout
+	YES!!! IMPLEMENTED CAPSULES!!!
+	Additional work on Briefs dialogue
+	THEME_RRA now level checks
+
+September 14, 2006 V0.5.7 Fifth Release
+
+	Dancers now have innate free action
+	fugu now has a poisoning chance
+	Added faction_neutral handling
+	New unique: Snuggles, the 9-headed hydra
+	Oolong dialogue
+	Migrated the various dojo/dball/etc data structures into a more logical format
+	General preparation for release
+
+September 16, 2006 V0.5.8
+
+	Set up location checker
+	Set up for level feelings
+	Cleaned up Briefs Random quests
+	Began Implementing Technomancy
+	Assigned ingredients for everything
+	Restored TV/SV Battery? When did that go away?
+	Added a placeholder for Trunks
+	Korin Tower is now accessible to anyone, but the climb is very tiring
+	Cleaned up DCD
+	Added Korin dialogue, explains the Celestial Hierarchy
+	Changed shape of Radditz WT blast
+	Added on_walk for Kickboxing/TKD closed
+	Gym/Library now allows once per 10 levels rather than 10 times per one level :)?
+
+September 17, 2006 V0.5.9
+
+	Cleaned up dialogue some (still much to go)
+	New: Briefs Tourny reward quest, and corresponding reward artifact
+	Fixed the Underwater Caves special level, it was broken
+	Can no longer open/close doors while riding a motorcycle	
+	New Dungeon: Volcano on Fire Mountain
+
+September 19, 2006 V0.6.0
+
+	Rebalanced allocs and object themes
+	Implemented charge use and refueling: flashlightes, megaphones, SCUBA gear, fire extinguishers, etc.
+	Basic implementation of Marksmanship
+	Fixed a rather unfortunate insta-crash bug related to THEME_RRA and nightvision/infrared goggles
+	Purged a bunch of unused trap types
+	Added placeholders for Videl, Chichi, Ox King and Bra
+	Added Mount Frypan, Ring of Fire quest, and the exterior of the Ox Kings castle
+
+September 21, 2006 V0.6.1
+
+	Implemented ballistic plates
+	Added in Hikui bird and cave
+	Restored monster breath attacks
+	Added some cute animals
+	Added catnip (what's the give hook so we can give it to kitties?)
+	Added Fan Lady
+	Changed store display settings
+	Purged: Land of Rhun dungeon generation, wilderness ambushes
+	Purged unused monster attack types
+	Fixed stat drain
+	Gender noun assignment moved to hook
+	Dialogue migrated to its own subsystem
+
+September 22, 2006 V0.6.2
+
+	New items: sumo suit, sparring gear, kama, paint ball mask, infantry helmet, cape
+	Fixed some incorrect wield slots
+	Added bhand, crush, slash, pierce resists to display
+	Basic implementation of faction attack handler
+	Added the End-Game Uniques: Buu, Evil Buu, Good Buu (and some absolutely nasty spells to match)
+	Added placeholders for the end-game quests
+	Placed Buruma, cleaned up wilderness placement
+	Kaio's Planet now has increased gravity
+
+September 23, 2006 V0.6.3
+
+	Spent about four hours fixing the bugs I created yesterday
+	Cleaned up Rosshi dialogue
+	Duster/Trenchcoat moved to cloaks
+	Added Babidi, Piccolo, Demon King Piccolo
+	Added placeholders for the eight or so MAJOR dialogues I still need
+	Haha! fixnotes.txt down to 7K!
+	Technomancy about 1/3 done: up to: can dismantle items
+
+September 24, 2006 V0.6.4
+
+	Added: Bojack, Chaozu
+	Fleshed out Imelda dialogue, slightly
+	Expanded on Technomancy
+	Added a placeholder for the 22 corruptions
+
+September 26, 2006 V0.6.5
+
+	Rebalanced dungeon leveling
+	Entrance to the Serpent's Lair from the North Kaio's planet no longer says 'entering Buddhist Temple'
+	Added Bear Cave
+	Purged old dball_data.ab_ references
+	Rebalanced RRA again. They keep getting tougher.
+	Implemented Sumo Immovability (though nothing can teleport the character as of yet)
+
+
+*** Begin new version numbering ***
+
+September 28, 2006
+
+	I feel like I'm running out of version numbers, so I'm changing the convention.
+	I'm still going to list dates, but I'm only going to increment number when I feel
+	like it instead of every 'day' I change something.
+
+	Moved to alpha7
+	Resists are now cumulative
+
+September 29, 2006
+
+	Added a Capsule Corp 'about us' dialogue	
+	Hanger now refreshes the first time you buy-in
+	Hid the abilities
+	Implemented SCUBA gear
+
+September 30, 2006
+
+	New item type: Bracers	
+	Added money to some themes
+	Implemented map wrap!
+	Massive, tremendous map changes to accomodate map wrap
+	Assigned a zillion or so ai's
+	Redesigned the Bridge Bandit situation
+	Tohit/dam bonuses can now be made to apply only to certain combat modes
+	Implemented tohit and dam bonuses for equipment: Yay!
+	Pasted together an ai for the RRA
+	Kind of sort of almost implemented spaceships a little bit
+
+Oct 1, 2006
+
+	Mountain Lion quest
+	Deep water now properly blocks monsters
+
+Oct 2, 2006
+
+	World Tournament monsters now delete when Tournament is lost
+	Fixed Mountain Lion quest
+	Wall-mount cameras now spawn in Muscle Tower
+	Adjusted gold drop rates
+
+*** Release Version 0.6.6 ***
+
+Oct 2, 2006
+
+	Dialogue options that are only visible to characters with high charisma are now marked (Persuade)
+	New special level: Mr Satan's training room
+	New ability: Martial Arts Sushi Eating
+	New dialogue: Mr. Satan
+	Clarified dragonball drop system
+	New TVAL: Misc
+	New item: Mr. Satan's Autograph
+	Finished quests: electronic stimulator, martial arts delivery service
+	Added a semi-functional DBt ID system hook.OBJECT_DESC
+
+Oct 3, 2006
+
+	Cleaned up the gate to Mr. Satan's Estate
+	DBTChat now allows diagonal conversations, and is about 12 lines smaller
+
+Oct 4, 2006
+
+	Sumo Suit --> Mawashi
+	Honda now only accepts male studentsa
+	Ballet is now +.1 con, +.2 dex instead of +.2 con, +.1 dex
+	Korin's Celestial dissertation now mentions the Kaioshin
+	Excessive Nyoi-vaulting now delivers falling damage
+	Items capitalization defaults to ALL
+	Cleaned up afterlife slightly
+
+*** Calling this V.0.6.7 ***
+
+	Implemented Martial Arts Eating!
+	hunger.lua --> dbthunger.lua, general tweaks, thematic messages, etc.
+
+Oct 5, 2006
+
+	Added to Pilaf dialogue
+	Items now check id when picked up, so no more dropping stuff to group like items
+	New: THEME_POLICE
+	Filled in some missed monster drop themes
+	Fixed caffeine
+	Added Uniques: Guldo, Captain Ginyu, Burtur, Geice, Recoome
+	Rule Change: Students of Ninjutsu no longer lose faction standing with 'good guys'
+	Added: Swordsmith, Manufacturing Plant, Museum
+	Replaced non-functional RRA map.RANDOM monsters with some fixed ones
+	New Map: Juvinile Playground
+	Basic set up of the Foot Clan dungeon and monsters
+	Implemented Chi Bursts
+
+Oct 6, 2006
+
+	Extensive development of the ninja quest tree
+	Migrated uniques map.symbols out of the default symbols file
+	Monsters now have two AI's. The default, and the second is when they've been attacked
+	Fixed the various ai's, I think
+	Purged ego's and mimics from the default monster drop generator
+	Fixed the Dragonball Drop System (and no more infinite dragonballs)
+	Implemented the Dragon Radar
+
+*** Calling this V.0.6.8
+
+Oct 7, 2006
+
+	Purged /file
+	It is no longer possible to challenge instructors more than once
+	Customized studio maps for: karate, kungfu, taekwondo, kickboxing
+	Store actions severely restricted to discarnate spirits
+	Set up the basic infrastructure for using dragonballs
+	Tweaked reload/refill rules
+	New: Inline skates
+	Reload/Refill now consume energy
+	Marksmanship Changes:
+		If first hand guns a monster, second hand gun doesn't fire
+		'Out of ammo' messages are now correct
+		Reloading now consumes energy
+		Firing now consumes energy more correctly
+		Weapon difficulty penalties are now applied to to_hit numbers
+	Resistances are no longer obvious()
+	Some more work on the Foot/Goods/Ninja/Shredder quest tree and related special levels
+	Added: Fans, Bansho fan
+	Added: The East Kaioshin
+	Added another 6K to the Pilaf dialogue, and two more 'joke' quests
+
+Oct 8, 2006
+
+	Implemented 'Execute...you?' quest. :)
+	Added an atra 15K or so to the Pilaf dialogue (Almost done!)
+
+Oct 10, 2006
+
+	Fixed Gym/Library quest texts, and level updates
+	Fixed 'Challenge studio without taking challenge quest'
+	Added Placeholders for: Planet Namek, the Ruins of Planet Plant, Babidi's Spaceship
+	Eliminated the rod of house summoning
+	Rearranged the Galaxy
+	Implemented Planetary Teleport
+	Implemented regular Teleport
+	Added about 10K of dialogue to the Oolong quest tree
+	Additional development of The Foot Lair
+
+Oct 13, 2006
+
+	Aded placeholder dialogues for the remaining four Chi instructors
+	Implemented 'past due' for Pilot's Club membership
+	Implemented Chi 'Cure Conditions'
+
+*** Calling this V.0.6.9
+
+	Changed dialogue: Now must press 'space' to continue rather than any key
+
+Oct 14, 2006
+
+	Stores now ID things when you sell them
+	Implemented Chi Healing
+	Cleaned up calc some
+	Removed TV_DIGGER and TV_SPIKE
+	Increased regen rates (Looks like the bug has been fixed since alpha4)
+	Dead people can no longer eat or drink
+	Skill/Lev is now 6
+	Cleaned up Self_knowledge slightly
+	Implemented metal detectors as 'detect traps' Not original plan...but, *shrug*
+	Basic Implementation of fan lady
+	Imelda now gives a quest reward
+	Choose a Studio quest description now updates with each subsequent training
+	New item: Iron fans
+	Fixed Paired Weapon wielding
+	Maglights now display damage
+
+Oct 15, 2006
+
+	Basic implementation of non-standard ammunition
+	Began migrating DBT firearm combat into its own subsystem
+	ELIMINATED: trapkits, chests
+	Corpses no longer drop in the World Tournament
+	Dragonball ID system migrated to its own subsystem
+	ELIMINATED: Void jumpgates, fountains
+	World Tournament handling revisions
+	Treasure no longer drops in the WT
+	Food: Rotten meat now poisons; removed skeleton references from food
+	Fan lady can now make the Bansho fan
+
+Oct 16, 2006
+
+	Nyoibo can no longer teleport through walls
+	Fan lady can now make iron fans
+	Fortune cookies now give fortunes
+	Basic implementation of wishing
+	Basic Impementation of the Chi: Constant Effect System
+	Implemented: Battle Aura, Haste, Regeneration, Flight
+	Rebalanced wishing for willpower
+	Added placeholder for Spirit Bomb
+
+(Note: This would be V.0.8.4 by the old numbering system)
+
+Oct 17, 2006 (085)
+
+	Only a single AC is displayed, no more 0 + 23
+	Cleaned up flavours a bit
+	Amulets -> Bracelets; NECK -> WRIST
+	Implemented watches
+	Eliminated THEME_MAGIC
+	Eliminated QUIVER and AMMO slots
+	Added Chemistry flavours
+	Enrollment progression now allows second class at level 15
+
+*** Calling this V.0.7.0
+
+Oct 19, 2006 (086)
+
+	Implemented wishing for items
+	Implemented travel wishes
+	New artifact: Ruby Slippers
+	Added a wish spoiler
+	Implemented poisoning
+	Implemented food poisoning
+	Added some help files
+	Implemented Immortality
+	Doubled all Chi modifier gains
+	Implemented the metal detector properly
+	Implemented: Flame Thrower, Propane Tank
+	new: Radiation suit, EVA suit, gas mask
+	Clarified Oolong Quest slightly, and Marcos now gives a quest reward
+	Clarified Yamcha Quest
+
+Oct 20, 2006 Dragonball T Version 0.7.1 (087)
+
+	General cleanup for release
+	Reworked Red Ribbon Army drop themes
+	Added to Widget dialogue
+	Implemented Widgets
+
+Oct 22, 2006
+
+	Oops. Restored the Northwest section of earth.
+	Rebalanced schools just a bit
+	Added a decriptive module blurb
+
+Oct 23, 2006 2006 Dragonball T Version 0.7.2
+
+	Oops. Briefs 'Technical Assistant' quest is once again completeable
+
+------------------------------------------------------------
+Changes from previous Version 0.7.2 to current Version 0.7.5
+------------------------------------------------------------
+Nov 11, 2006
+	Wow! It's been weeks since I've touched Dragonball. Ok.
+	Beefed up the Challenge Quest Uniques, and upped the Quests themselves to level 20 quests
+	Excellent! Started migrating 'house' dungeons to PERSISTENT=true Yay! Thank you, DarkGod!
+	Extended max level and stats to 100
+	Cleaned up display slightly
+	You may now take classes every ten levels instead of every 15
+	XP gain for taking classes now increases with subsequent classes: 10 * no of classes: 10, 20, 30, etc.
+	New item: MRE
+
+Nov 17, 2006
+	Bridge Bandit quest now completes if you kill Yamcha
+	Fixed fans: they're now equippable
+	Tinkered unsuccesfully with check_faction()
+	Completely revamped the World Tournament Opponent selection process
+	WT Audience no longer chases the character
+	Migrated worldtour to dball_data
+
+Nov 26, 2006
+	Added babyface/score information
+	Rule Change: No more waiting for classes
+	Alpha 11: Added dam.BLIND
+	Rebalanced classes slightly
+
+Nov 27, 2006
+	Dialogue subsystem now accepts ANY character instead of just numbers (From Bard's Tale)
+	Moved dialogues from numbers to letters
+	Implemented Technomancy: 'View recipe'
+
+Nov 28, 2006
+	Wizards now know all technomancy recipes
+
+Nov 29, 2006
+	Removed RES_BLIND to be compatible with alpha11
+	Implemented Technomancy construction (Yay!)
+	Implemented catnip
+	You can now give senzu beans to companions to heal them
+	Added wedding rings
+
+Dec 1, 2006
+	General Cleanup for release
+	General compatibility testing for alpha11
+	Rearranged birth clearing into BIRTH_PRE. It still doesn't work. *shrug* It's possible it's just the CALC hook in dbtstuff that handles stats, but this is a low priority for me. All of this shuffling for monster memory just isn't that important at this stage.
+
+--------------------------------------------
+Changes from Version 0.7.5 to Version 0.7.6:
+--------------------------------------------
+Dec 3, 2006
+	Whoops. Fixed the RES_BLIND issue reported by NerdanelVampire on the Wiki
+	Fixed save file data clearing at birth
+
+--------------------------------------------
+Changes from Version 0.7.6 to Version 0.7.7:
+--------------------------------------------
+
+Tuesday, Dec 12, 2006
+* Hack:	Temporarily eliminated duplicate dragonball checking
+	This effectively trades the BIG bug, of more or less being
+	unable to collect the dragonballs for the relatively LITTLE
+	bug of being able to find duplicates of the same dragonball,
+	as well as being able to collect more than seven at a time.
+	So, feel free to throw away, sell and abandon dragonballs
+	to your hearts content. You will ALWAYS be able to find them
+	again.
+* Added a 'not implemented' level feeling to the Turtles lair
+* Commented out Splinters dialogue, replaced with 'Implement me'
+* Hack: Added a temporary solution for the store refresh problem
+* Iruka, Buruma and Lunch no longer spawn, so people won't
+	encounter them and expect them to work properly
+* Fixed about twenty items that weren't properly appearing in stores
+	SDL version seems to have better error logging
+* World Tournament disqualification bugfixes/changes:
+	* Landing a hit with a poisoned weapon now disqualifies you
+	* Attempting to fire a firearm AT ALL during the Tournament
+	  disqualifies you. Don't even think about using splash damage
+	  from your bazooka to win a round.
+	* However, ANYTHING GOES in a battle to the death: Poison, firearms,
+	  tools, summoned friends...anything you'd like. (Note: this is
+	  fine for the duels with Androids 16 and 17, but may have to be
+	  reconsidered for Demon King Piccolo)
+	* Except: You may no longer exit the WT building during
+	  fights to the death
+	* Monsters are now deleted if you are disqualified. No more
+	  running out of the ring and dying anyway. Note that you can
+	  still die from secondary effects.
+* In theory, you should no longer fight the same Unique multiple times
+	in different Tournament rounds
+* The WT Backstage Guard can speak again
+* The WT Ticket girl no longer generates 'name' errors
+* Added a placeholder so people may study Kendo
+* Added help files: command list, abilities descriptions
+* Adjusted barehanded skill gains from karate/taekwondo
+* Revamped the schools spoiler and made it current
+* Oolong:
+	* Once the village girls have been 'sent away' they no longer
+	  spawn in the castle
+	* Marcos now rewards you properly if you kill Oolong
+	* Castle Oolong is no longer a 'saved' level, so no more storing
+	  equipment there.
+	* Oolong quest dialogue no longer re-writes itself to previous
+	  quest states if you talk to the village girls a second time
+	  after informing Marcos of what's going on
+	* If you marry Oolong:
+		* He now gives you a ring
+		* His castle becomes a home
+
+Wednesday, Dec 13, 2006
+
+* Afterlife:
+	* Hunger display no longer appears when dead
+	* HP are now recalculated instantly upon death
+* Fixed Imelda's Shoe problem, I think...
+* I think I've fixed the Mr. Satan bug with the World Tournament
+* Wishing:
+	* Fixed a nasty bug which caused certain skills in some cases to
+	  be SET to an amount, instead of being INCREMENTED by that amount. Oops.
+	* Implemented some new wish types
+	* Here's the big one: Shenron now (generally) asks for confirmation of
+	  your wish instead of just making a best guess and granting it blindly.
+	  This was sort of a pain, and bloated the wishing script with about 15K
+	  of totally redundant code and confirmation texts, but...no longer will
+	  you wish for a stealth bomber and have your stealth skill increased.
+	  Certain wish types (items, most notably) do not require confirmation.
+	* Skill gain wishes are now rounded off. Instead of a 3.617 gain you'll
+	  get 3.6. Obviously this does decrease the net value...but it's so much
+	  prettier.
+* Yawara and Honda no longer drop corpses when you defeat them in a 'friendly' match	  
+* Implemented experience modifiers from weighted clothing
+* Implemented marriage with Rosshi. (Though Rosshi's dialogue still has a lot of
+  unimplemented branches. If you want to get married, marry Oolong. He's less buggy.)
+
+Wednesday, Dec 13, 2006
+* Dr. Briefs' store is now a dungeon. This works around the Briefs dialogue
+  overflow error, and allows me to place Tama, as well as some other cute tidbits
+* Added Tama's Quest :)
+* Adjusted treatment of catnip
+* Implemented the muscle stimulator
+
+Saturday, Dec 16, 2006
+* Updated to alpha12
+* Fixed the skill overage bug (apparantly skill_overage isn't being used anymore)
+* It is now possible for evil characters to prematurely bring on the arrival on Androids 16 and 17
+* Fixed the store dialogue bug (Completely, I *think*)
+* Started resizing the various dialogues for 24x80 character displays
+* Cleaned up some dialogue dead-ends
+* Net about 30K more dialogue since last release
+* Fixed some bugs with Technomancy
+* ...ok...no more duplicate WT opponents. No, really! (I think...)
+* No more Dragonballs, or item drops in WT matches, either.
+* Friendly Uniques are now set to the 'Duel' faction for WT matches
+
+Sunday, Dec 17, 2006
+* Fixed an absolutely nasty bug that caused Dancers save files to fail to load. :/
+* Juvinile Playground is now a "decaying" SAVE_LEVEL
+* Foot Ninja now drop items
+* Yawara may no longer participate in the Tournament if her wrist is broken
+* The Ninjutsu school now sells poison
+* Temporarily disabled Rosshi's Kame house (alpha12 bug???)
+* Some general cleanup of monsters, levels and ai's relating to Dr Gero
+* Migrated a few more special levels to be new alpha12-style decay levels
+* Mai and Shuu can move now
+* Temporarily allowed Shenronto be summoned so long as you have SEVEN dragonballs, whether
+  or not they are seven UNIQUE dragonballs.
+* Fixed a bug that allowed infinite wishes from a single summoning. (Haha! Oops.)
+
+--------------------------------------------
+Changes from Version 0.7.7 to Version 0.7.8:
+--------------------------------------------
+Sunday, Dec 17, 2006
+
+* Argggghhhh!!!! Fixed Imelda's shoe reward AGAIN!!!
+* You no longer have to talk to Marcos multiple times to get his reward dialogue
+  to increment properly
+* You can now construct/disassemble road flares
+* Korin:
+	* Implemented Chi training sessions 2 and 3
+	* Korin now correctly describes his specialty as 'Chi' not 'Defense'
+* Added a Chi spoiler
+* Disabled the North Kaio's house. It appears to be fatal-crash-bugged like
+  Rosshi's. I don't understand why, and it's behaving oddly...and both locations
+  were fine for alpha11. Curiously, if I swap map files, the dungeons work
+  fine, and if I place the maps in another dungeon, they also work fine. This
+  may be an engine bug.
+* Marrying Oolong
+	* Fixed the house. (This worked two days ago. What happened?)
+	* Quest for Marcos now completes properly if you marry Oolong
+	* The dialogue branch that allows you to marry Oolong is now a
+	  (Persuade) branch. Sorry ladies...free house and magic weapon
+          with zero risk at level one in thirty seconds was just too
+	  much. You can still do it, you'll just need to find a way to
+	  get 13 charisma. Shouldn't be difficult. You can even do it
+	  at level one or two, you just have to do it on purpose.
+* Pilaf:
+	* Fixed two more text-overflows (at 24x80) in dialogue
+	* For the RRA-interuption dialogue path, Mai and Shuu no longer
+	  becomes hostile, and the RRA soldiers are no longer prevented
+	  from shooting at you
+* SUmo/Judo:
+	* Multiple friendly duels no longer generate LUA errors
+	* If you actually KILL Yawara or Honda, their schools now close
+	* Hahaha!!! After an hour and a half, I think I finally have the
+          Judo/Sumo quests working as intended. Of course, there are
+	  something like 16 different ways it can work out, and changing
+	  any one affects the others...so it's complicated. Easily
+          possible I missed something. Guess we'll see.
+
+Monday, Dec 18, 2006
+* Customized the Duel vs Sumo map, complete with a cute little Easter egg :)
+* Yawara now only closes her studio in shame if you go out of your way
+  to escape the match. If you simpy exit the ring, you just lose the match.
+
+--------------------------------------------
+Changes from Version 0.7.8 to Version 0.7.9
+--------------------------------------------
+Tuesday, Dec 19, 2006
+
+* Edits to the Mr Satan dialogue. Things have been rearranged. Don't count
+  on the old dialogue rewards to be exactly what they used to be. Mr. Satan
+  is a comic relief character. He longer teaches double attack. Other changes
+  have been made as well. At the moment, it is still possible to talk him
+  into giving you a dragonball, but this might change in the future.
+* Alignment loss for evil dialogue choices have generally been increased
+* Rule Change: If your alignment is less than -99, killing evil uniques no
+  longer increases your alignment
+* added about 7K dialogue
+
+Tuesday, Dec 19, 2006
+* World Tournament trophy is now ID'd
+* It is now possible to complete the Briefs Tournament quest
+* General cleanup, rearrangement, and rebalancing of some of the quests
+  for Dr Briefs. For example:
+	* No random quests issues while Martial Arts Delivery Service
+          is pending
+	* If you use Briefs to gain access to the Satan Estate, you no
+          longer also receive Tech skills gains for the accompanying quest
+	* If you fail the delivery quest, you can no longer receive random
+          quests
+	* Etc
+	* Note: The Briefs Ballistic Bodyarmor quest tree is, and has
+          ALWAYS been intended to be entirely mutually exclusive with
+          the ENTIRE Briefs Tech branch. Even so, there have been
+          several changes since the armor was introduced that probably
+          make it unreasonably powerful. Muscle Tower is level 20-26
+          instead of 10-15, and several uniques now exist who do slash
+          damage. Might have to reconsider this one.
+
+* Nakamura no longer teaches Martial Arts Sushi eating. If you already
+  know Double Attack, instead, he increases your Barehand skill by +3, +.2
+* Fixed the 'error in Briefs random quest' bug. Curiously, looking at
+  the code, the bug should have popped up in 10% of all type 1 random quests
+* Dialogue development of Videl and Buruma (incomplete, commented out
+  in this release)
+
+Wednesday, Dec 20, 2006
+* Roads and buildings in town are now lit (Ack! Doesn't work!)
+* Tuxedo's now increase charisma by 2
+
+Thursday, Dec 21, 2006
+* Made gold drops slightly more common in dungeons
+* Basic Implementation of tohit/dam/ac bonuses on random treasure drops
+* ID Checking now occurs for every item at time of creation
+* Implemented Iaido
+* Set of price mods by th/d/ac bonuses, but hook(OBJECT_VALUE appears
+  not to function
+* Tofu Sensei now properly teaches Acupuncture
+* Updated a few of the book-n.txt parchments. (Several are OLD dating
+  from DBT 3.x!)
+* Swordsmith:
+	* Can now 're-balance' blades for to-hit bonuses
+	* May sharpen/balance to +1 starting at level 1, not at level 5
+* Weapons:
+	* Eliminated the 'can be used with two hands' display. It's not
+          being used.
+	* Fixed the poisoned weapon description
+	* A single poison application now grants 5-7 uses, instead of 1-3
+* Trunks will now teach the Paired Weapons ability to anyone, for free,
+  provided they have a weapon skill of 50 or more
+* Implemented stunning effects from entangling weapons
+
+Friday, Dec 22, 2006
+* Weapons:
+	* Implemented vorpal weapons
+	* New ability: Bleed attack
+	* Weapons abilities now have skill minimums
+* New item: Ofuda
+* Musashi is now a unique and has his own cave
+* ...added monster_effects...?
+* Pffft. Dropped the Ring of Fire quest to level 16. You can walk right
+  through the flames with 10 constitution and zero fire resistance at
+  level 15. (Still can't get credit for completing the quest)
+* It is now possible to raise/lower the drawbridge at Ox Castle
+
+Sunday, Dec 24, 2006
+* Yep...the dungeon crashing situation is definitely an engine bug.
+  Set up a bizarre workaround for ROsshi's Kame house
+* Motorcycles/Vehicles:
+	* It is no longer possible to fight barehanded from a
+          motorcycle
+	* No AC bonuses from barehand or Dodge while riding
+	* Only your right hand must be empty to ride
+	* It IS now possible to fight with a single weapon or a
+          firearm from a motorcycle
+	* Doing so conveys a -30 to hit penalty
+	* Vehicles may no longer navigate level transitions
+	* You may no longer pick things up with riding (Except
+          gold, for now...)
+	* Motorcycles now provide light (Not a cone, sorry)
+	* Movement mode modifiers are inoperative while riding
+          (though you can still change your mode, and the display
+          still shows)
+	* Motorcycles are loud. While riding your stealth will be
+          zero, and aggravate=true
+* New Item: Ninja climbing claws (Hmm. They don't seem to work yet,
+  though)
+* Silk gloves --> +1 Chr
+* New Unique: Wong-Fei Hong
+* Wong-Fei Hong and Miyamoto Musashi may now participate in the
+  World Tournament.
+* Added an EMT to the World Tournament
+* New Item: Ninja climbing Tabi (These also don't appear to work)
+* Some development of the end-game quests
+* Additional development of the Inner Sanctum map
+* Bugfix: Dragonballs are now properly scattered after use
+
+Wednesday, Dec 27, 2006
+* Added an experimental retroactive skill system
+* General preparation for release
+
+--------------------------------------------                                   
+
+Changes from Version 0.7.9 to Version 0.8.0                                    
+
+--------------------------------------------                                   
+
+Friday Dec 29, 2006                                                            
+
+* Implementated a 'Story Mode' skill system that uses NO skill modifiers       
+
+  (Chi Masters and Ninjutsu not implemented in story skillmode)                
+
+* Two new barehanded abilities: Blocking, Tameshiware                          
+
+  (Note that barehanded fighters must now learn blocking to gain their ac      
+
+   bonus, and that Tameshiware is not implemented yet.)                        
+
+* Corrected Briefs upgrade quest skill gain text                               
+
+* Added an enrollment spoiler for story mode                                   
+
+* Whoops! Eliminated a double entry for Oolong...could have odd                
+
+  ramifications...                                                             
+
+* Honda may no longer flee from the Sumo ring                                  
+
+* The Nyoi-bo may now be used to thwap monsters at range                       
+
+* Bazookas are basically functional again                                      
+
+* Clarified 'unable to fight florentine' message                               
+
+* Adjusted AC of a whole bunch of monsters. Waiting until level 20 to          
+
+  spend skill points will be more difficult now                                
+
+* Technomancy                                                                  
+
+        * Added the default 20% base construction success rate. (Oops.)        
+
+          Chance to build is now 20 + Construction skill - Item Difficulty     
+
+        * Chance of explosive failure similarly adjusted                       
+
+        * Ingredients are now 'used up' during construction                    
+
+        * Removed debug display info during disassembly                        
+
+* Fixed dragonball drops rates. The following monsters no longer drop          
+
+  dragonballs:                                                                 
+
+        * Space Debris                                                         
+
+        * Children from marriage                                               
+
+        * Monsters with PLANT or ANIMAL flags now default to zero chance       
+
+          to drop (Unique plants and animals can still drop dragonballs)       
+
+        * Mortal/Immortal checking should now be correct. (Immortal beings     
+
+          do not bother with silly little things like dragonballs)             
+
+* Implemented 'special case' alignment handling. For example, killing          
+
+  children, Buddhist monks and starving college students is bad karma.         
+
+* You may now toggle default attack/talk behavior under options '='            
+
+* You now start with 5 skill points                                            
+
+
+-------------------------------------------
+Changes from Version 0.8.0 to Version 0.8.1 
+-------------------------------------------
+Sunday, December 31, 2006
+* Data structure changes that should be totally invisible to the player
+* Reworked Story mode skills and enrollments
+         
+                                                                               
+Monday, Janurary 1, 2007
+* New skill system now uses xp instead of skill points
+* Fixed some leftover errors in dragonball drop rates
+* Bonuses from equipment are no longer applied twice...I think
+* Added abilities to  the skill system
+* Eliminated about 10K of now-irrelevant code from dbtstuff.lua
+* Eliminated a few now-irrelevant wish types
+* General purge of old math-mode skill code
+* Quest/Dialogue/Misc data relating to Dr's Briefs and Gero should be properly cleared
+  with new games now
+* Rule Change: First Aid kits now require knowledge of the First Aid ability, not
+  tech skill
+* Migrated instructor dialogues out of store actions and into dialogue and
+  disabled the dialogues relating to abilities that are now standard class material
+* Added the Robbins Foundation and YMCA
+* Wine bottles should stack properly now
+* Note: The Briefs random quest rewards are +1 for easy, and +1, +3, +5 to all, and the
+  upgrade quest is +10 to all. So, playing a Technomancer should be considerably less
+  painful now.
+* Fixed the blindfold/earmuff swapping issue
+* New artifacts: Daniel San's headband, Shaolin Soccer Ball, Ryoga's headband,
+  Ryoga's Umbrella, Trunks' Sword, Purple Jade Badger, Golden Nimbus
+* New Unique: Iron Monkey
+* Monsters may no longer steal during the World Tournament
+* Misc item changes:
+	* Spears and iron fans are now bladed
+	* New items: chinese rounded hammers, chainsaws, Seiyan battle jackets
+	  blowtorch
+	* Stun batons now, well...stun
+* Fixed ai's on Planet 79
+* Implemented the Bear Thief and his quest (Beware!!!)
+* Implemented Hasuki, and his quest (Also Beware!!!)
+* Town features are slightly more visible after dark
+* It is now possible to actually LEARN abilities! Yay! (Apparantly it's .acquired)
+* Pricing:
+	* Each +1 increases an objects value by 10%
+	* Each -1 decreases an objects value by 5%
+	* Akira now properly gives discounts to people referred by Oolong
+* Partial Implementation of Tameshiware
+
+Tuesday, Janurary 2, 2007
+* Added placeholders for: Yajirobe, Uranai Baba, Tenshinhan, Tsuru Seni'nin
+* New artifact: Uranai Baba's Crystal Ball
+* 'Fixed' the randomly spawning Gym 'bug' ('p' was my testing key.)
+* Updated skill 'unhide/learning' for the new skill system
+* Technomancers may now specify a quantity when disassembling items. Part scavenging
+  and recipe learning will be rolled separately for each item
+* It should be possible to deliver sushi to Mr Satan now
+* Starving College students are now neutral to the player
+* Temporary fix for the game locking up in Castle Pilaf and Muscle Tower. It seems to be
+  related to the 'name' field. I've removed them. Now looking at them generates messages
+  like 'You see stairs down' instead of 'You see the entrance to Castle Pilaf' but it
+  doesn't lock. Good trade.
+* Massive rearrangement of the monster distribution. Should be invisible to the player.
+* Added the Frozen Wastes
+* Sufficiently massive conceptual changes to the skill system that I'm not going to
+  list them all. 'It's different'
+* Wiped the old Chi training system, and associated dialogues
+* Migrated Korin to the new system
+* Scrapped Rosshi's dialogue and started over
+* Dead characters of mid-range alignment are now properly sent to Emma Daio on the
+  Serpent's Path
+* Reworked the Daio's dialogue. He is no longer a Chi trainer.
+* Fixed fugu
+* Hildegarn/Dabura --> Goz/Mez
+* Implemented a (Persuade) counter for character dumps (which appear to be engine-unimplemented)
+* Tsuru Seni'nin and Mr. Popo can now train skills with the new system
+* Mike Tyson's Gloves and Master Lee's Dobak artifacts now spawn randomly
+* Death
+	* Spirits may now walk through trees and mountains (not doors, yet)
+	* Spirits may no longer participate in Tourny fights
+	* Spirits may now pick up / wield artifacts
+* Added Heaven
+
+Thursday, Janurary 4, 2007
+* Panwshop/RVac no longer offer free identification
+* Most (not all) uniques now have light, so no more accidentally killing Fan Ladies
+* Corrected to-hit calculations when fighting florentine
+* Pawnshop and RVac no longer offer free ID
+* Yamcha now becomes 'aggrressive' if you choose the 'attack' dialogue
+* It is now possible to wish for a house
+* 'Stolen Goods' quest now properly completes if you Persuade George for more money
+* No more LUA error on the electronics store if it closes (How do you assign functions manually?)
+* Tourny medic no longer disappears if you're disqualified
+* Spatial Anamoly quest text fixed
+* Restored Challenge Quests for Karate and Kung fu. They have NOT been balanced for the
+  new system
+* The Foot may now send assassins for the 'Being Watched' quest
+* Stun Batons are now Technomancable
+* New items: Taser, cattle prod
+* Reworking of Rabbit Hole and Mr Satan's Estate
+* Eliminated the Briefs 'easy' quests that were frustrating
+* 3 of 5 polearms pick up +20 ac
+* Acid damage is gone. Barehand generally merged with Crush.
+* Oops! Purged old ToME damage types: nexus, force, chaos, disenchant, time, inertia, time
+  gravity, mana, valinorean fire, darkfire, nature.
+* Sneak movement mode is now an ability available to ninja
+
+Thursday, Janurary 5, 2007
+* Stealth equipment now directly increases Stealth, not your Stealth skill (No more free ID)
+* Added a stealth display to the character sheet
+* Added Pelt of the White Wolf
+
+Sunday, January 7, 2007
+* Re-tweaked the skill system
+* Completed Musashi's dialogue. (Don't annoy Musashi...'it would be bad.')
+* Wrote a basic skill spoiler	
+* Rearranged the Challenge Quest placements and texts somewhat
+
+-------------------------------------------
+Changes from Version 0.8.1 to Version 0.8.2 
+-------------------------------------------
+Thursday, Janurary 11, 2007
+* Cosmetic changes to Namek
+* Added the Namekkian dragonballs
+* Bugfixes from wiki reports:
+	* YMCA: Swimming/Skating have separate keys to learn
+	* Fixed Rosshi LUA/screen errors
+	* Monsters should no longer spawn in Korin tower
+	* Yamcha ai now properly runs from girls
+* The enrollment system may now hide classes that are unavailable
+* Dragonball thieves should now blink away more often
+* Tameshiware --> Tameshiwari
+* Muscle Stimulator, Gym and Library stat bonuses are now direct, no longer affect skill
+* Increased Judo/Sumo stat requirements to intended values
+* Partial development of the Yamcha quest
+* It is now possible to marry Videl
+* Ballet CQ migrated to new method
+* Sumo/Judo now close properly once defeated
+
+Friday, January 12, 2007
+* Artifacts:
+	* Appear more often
+	* No longer randomly have penalties
+	* No longer auto-id on generation
+* Ego items: (Lots of changes, not going to itemize them all, but in particular:)
+	* Many new ego types
+	* Rule changes for weighted armor
+	* Egos add to the required skill to identify
+* Adjusted the displayed severity names of cuts
+* Intelligence now helps with ID
+* Defeating instructors in the Tournament no longer closes their schools
+* The gunstore now buys guns and clips
+* Extensive development of the Korin/Rosshi/UranaiBaba quest tree
+
+Sunday, January 14, 2007
+* Updated the help files somewhat
+* Chi effect costs are no lonber / 1000 (oops...)
+* Minor updates and bugfixes to the Chi system (Though obviously nobody has been using it.)
+* Slight rebalancing of the skill numbers
+* Added a bunch of ego types
+* Bugfix: Android8 should now properly be removed when he self destructs
+* Added a placeholder for jetpacks
+* Implemented blueprints
+
+Monday, January 15, 2007
+* Further development of Namek
+* Added regeneration to some monsters
+* Closed about 20K worth of dead branches in the Mr Satan and Videl dialogues
+* Bugfix: Wong Fei Hong may now appear in the Tournament
+* Firearms now wake up sleeping monsters in los
+
+Tuesday, January 16, 2007
+* Cleaned up Uranai Baba Persuade thread
+* Implemented silencers
+* Good/Evil characters now go to Heaven/Hell
+* Partial Implementation of Joesephine
+* Now using my own test_hit math for monster combat
+
+------------------------------------------------------------
+Changes from Version 0.8.2 to Version 0.8.3
+------------------------------------------------------------
+Wednesday January 17, 2007
+* Made combat messages more descriptive
+
+Thursday, January 18, 2007
+* Added Fencing
+* Karate is now vs Kickboxing, Kungfu is now vs Fencing
+* Wiki bugfixes
+	* Hanger rental now becomes a house
+	* It should now be possible to read blueprints
+	* Guard should allow entrance to Satan Estate during appropriate quest
+	* It should now be possible to leave after losing a WT match
+
+Sunday, January 21, 2007
+* Ninjutsu is gone
+* Rule Change: Instructors accept challenges up until you win the Tournament
+* No more Double Int bonuses from the library
+* Sumo fighters now have to eat more, instead of more often
+
+Tuesday, January 23, 2007
+* Fixed a bunch of bugs from wiki/forum reports
+* Redesigned Kami's Lookout based on the manga
+
+Wednesday, January 24, 2007
+* Rulechange: Falling from Korin Tower deposits you at the base, with damage
+* Traps:
+	* No more PERMA stat drain traps
+	* Spirits and flyers no longer set off traps
+	* Chance to disarm is now Int + Tech + Disassmebly
+* Implemented riposte
+* You may now fly over buildings
+* Doors should be less common in the volcano
+* Implemented jump
+* General rebalancing of enrollment numbers
+* Added placeholder scripts for Shredder/Splinter
+* Slight development of the Piccolo thread
+* More work on Goz and Mez
+* General cleanup of the Challenge Quests
+
+Thursday, January 25, 2007
+* Fixed GPS
+* Characters must be at least level 10 to challenge instructors
+* Improved on the situation with Yamcha
+* Help updates
+
+Friday, January 26, 2007
+* Fixed Goz and Mez. It is now possible to escape from Hell.
+* Several monsters have acquired immunity to fear
+* Fixed several monster placement bugs in the Tournament
+* WT reward is only 100K now
+
+Sunday, January 28, 2007
+* Redesigned the Tech quests
+
+Monday, January 29, 2007
+* Some development of the Time travel plotline
+-------------------------------------------
+Changes from Version 0.8.3 to Version 0.8.4
+-------------------------------------------
+Tuesday January 30, 2007
+* Oops. Android You quest now only occurs if you HAVEN'T spoken to Dr Briefs yet
+* RUleChange: AC bonus from blocking will count for each hand as long as it is empty. You no longer need Double Attack.
+* Balance: Reduced the cost of Blocking to 10 skillpoints
+* You must now have studied at a school to receive a Challenge Quest from it
+* Technomancers may now see what tool type an item requires by Inspecting it
+* New wish type: To know everything about items
+* Dragonflies can fly again
+* Enabled wishes for death
+* Starting stat range is now 6 to 14
+* In theory, the Rabbit Hole will no longer generate stupid levels
+* New ego: High capacity flashlights
+* Generally made the Challenge Quests more robust
+	* School cap increases is now totally a function of school closures
+	  You need never be formally issued the quests
+* Starting migrating Marksmanship over to the schools system
+
+-------------------------------------------
+changes from Version 0.8.4 to Version 0.8.5
+-------------------------------------------
+Thursday February 1, 2007
+* Made a bunch of abilities available from Master Trainers
+* chi
+	* Enabled Aural Absorbtion effect
+	* Doubled all chi regeneration rates
+	* Halved drain rate of Battle Aura and Flight
+	* Enabled chi based spaceflight
+	* Constant effects now turn off when you've insufficient chi
+	* No longer using a counter for chi (they were really annoying)
+	* chi is now = Willpower * chi skill (Bigger numbers)
+	* Surviving death now requires 300 max chi pool, not 20 willpower
+	* You now regenerate chi even without any regeneration skill (slowly)
+
+Sunday February 4, 2007
+* Fixed some chi calculations
+* Fixed lite effects
+* Lite from battle aura now increases with chi pool
+* Killing Kami now correctly renders the dragonballs inert	
+* Added Capsule Spaceships
+* Master Trainers may now increase skillcaps
+* Skill wishes now also increase relavant cap
+* Minor rearrangments on Kami's Lookout
+* Buddhist secret door is now 'secret'
+* Fixed weight corruptions when encapsulating items
+* Krillan now teaches Double Attack and Blocking
+
+Tuesday February 6, 2007
+* Library/Gym level progression is now corect: 1, 5, 10, 15, etc
+* Dialogue answers no longer 'skip letters'
+* Jacque now has a custom map, no?
+* Barehanded ability requirements adjusted
+* Added a hotel in the airport
+* TV_BOTTLE --> TV_SALVE
+* Added blood coagulant and zheng gu shui root extract
+* Some changes to flavours
+* Dr Tofu's store is now better stocked
+* Flame throwers now have directional muzzles instead of directional nuzzles :)
+* Balance: First Aid kits are now deeper
+* Added nailguns and nails
+* Fantastically overpowered steel weapons should no longer spawn (I *think*)
+   (For some reason ON_MAKE was being applied twice, so the damage calculation
+   was benefitting from an additional multiple of 10 based on the weight increase)
+* Rapiers are now 'bladed'
+* Fixed Bear Thief/Hasuki
+
+Wednesday February 7, 2007
+* Firearms:
+	* Implemented range to-hit penalties
+	* Additional development of the ammo system (mostly invisible to player)
+	* Standard rounds no longer receive armor piercing
+	* New option: allow/disallow reloading when ammo remains
+	  (You might want to reload a gun with a different ammo type)
+* It is now possible to recharge maglights
+* Lite fuel usage moved from MOVE to PROCESS_WORLD
+* Jacque no longer sells to non-students
+* Uniques no longer resist disintegration
+* Implemented align/poison effects from eating corpses
+
+Thursday February 8, 2007
+* Runnign --> Running
+* Mountain lions no longer spawn after quest completion
+* Fixed several rather silly bugs relating to eating pizza
+* In theory, doors should no longer spawn in the volcano
+* Maglights may now be used as non-weapons by weapons fighters lacking
+  the Paired Weapons ability
+
+Saturday February 10, 2007
+* Gahhhh! A bunch fo fatal crashes! The game won't even load! What happened?!?!?
+* Reenabled preserve mode
+* Fixed several bugs relating to placement in the universe
+* Added a placeholder for the Potara Earings
+* Capsules may no longer be encapsulated
+-- * Imelda now rewards designer shoes instead of +to_a shoes (What? Does she???)
+* Removed Bobidi's ship
+* Further development of Namek land and quests
+* Added placeholders for the Elders, Nail and Dende
+* Developmnet on the Volcano
+* You are no longer affected by gaze attacks while blind
+* Smoothed out the experience ladder, and made the late game less ridiculous
+
+	Lev	Previous	New		Multiplier
+	5	70		100		Base
+	10	380		370		~3.7
+	15	1400		1300		~3.6
+	20	4400		4500		~3.5
+	25	12,500		16,000		~3.4
+	30	75,000		52,000		~3.3
+	35	350,000		165,000		~3.2
+	40	1,000,000	500,000		~3.1
+	45	2,400,000	1,500,000	~3.0
+	50	4,500,000	2,000,000	linear: +100K/level
+	51-90					linear: +200k/level
+	100	30,000,000	15,000,000	linear: +300k/level
+
+* Reworked Technomancy/Technology requirements
+* Extensive work on Technomancy spoilers
+* Added: 3 types of grenades, shuriken, jackhammer
+
+Tuesday February 13, 2007
+* New ability: Aura Light
+* Bugfix: Constant effects may no longer be set negative
+* Krillan now teaches Meditation
+* Rulechange: Battle Aura now adds +2 AC per point of Chi Defense
+* Unified chi drain rates from chi_constant and dbtstuff into a single function
+* Eliminated all the 'no divide by zero' nonsense from the chi system
+* Implemented the Remote Stop Device
+
+Thursday February 15, 2007
+ * Tracked down an extremely weird, sporadic fatal crash to the corruption system. 
+   It's not being used yet...so I commented it out.
+ * Fixed a silly crash bug related to Dr Briefs
+
+Friday February 16, 2007
+* Reimplemented chi masters
+* Added some simple dialogue for Chaozu and Tenshinhan
+* Clarified Techno quests somewhat
+* Added and implemented rice
+
+Sunday February 17, 2007
+* Hmm. Alpha14. Hmm.
+
+Tuesday, February 20, 2007
+* RRA Cameras now trigger alarms
+
+Thursday, March 1, 2007
+* Upgraded Mai and Shuu
+* Uncommented catnip and Videl follow option
+* Added turtle shells for Master Rosshi's students
+
+Friday, March 2, 2007
+* Basic setup of the knowledge menu
+* Converted quest descriptions to the alpha14 convention (which admittedly is much better)
+
+Thursday, March 8, 2007
+* Fixed an auto ID bug
+
+Friday, March 9, 2007
+* Fixed bug relating to dropping items in homes
+
+Saturday, March 10, 2007
+* Finalized map wrap workaround -- UNKNOWN SEMI_RELATED SAVEFILE CRASH BUG NO ERROR LOG!!! ARGHHH!!!!
+
+Sunday, March 11, 2007
+* Added Giran and his tail whip
+* Extensive updates to the spoilers
+* Unconditionally replaced FLAG_PERSISTENT with SAVE_LEVEL=true (sigh)
+* General cleanup for release (yay!)
+
+-------------------------------------------
+changes from Version 0.8.5 to Version 0.8.6
+-------------------------------------------
+Monday, March 12, 2007
+ * Added the tunneling subsystem
+ * Fixed briefs_friend LUA error
+ * Some work on Fusion
+
+Wednesday, March 14, 2007
+ * Fixed Kickboxing Challenge Quest
+ * Fixed a FLAG_ACTIVATE bug
+ * Commented out Steel egos.
+ * Nerfed the BBB
+ * 'Seiyan' --> 'Saiyan'
+ * Fixed Giran's WT appearance
+ * Monster special attacks:
+	* Tourny opponent should no longer be forbidden from using special attacks
+	* Implemented monster throws (not player throws)
+	* Willpower now resists Ranfan's charm on a sliding scale, not "yes or no"
+	* Rosshi can throw Chi balls again
+ * Fixed items that modify speed! Yay! In-line skates are useful again!
+
+Thursday, March 15, 2007
+ * Speed bonus from running is now (Speed / 5) + (Dex / 10) with no min/max
+ * Frozen Wastes no longer deposits you inside rock
+ * Jump and throw effects no longer teleport you through walls or monsters
+ * Using the Nyoi-bo now uses energy
+ * Brought back Ninjutsu
+ * Toxic River quest no longer uses the quest_desc convention
+ * Re-worked the mouse hunt quest
+
+Friday, March 15, 2007
+ * Prohibited several robot and animal types from droping dragonballs
+ * Fixed a bug in the xp ladder from levels 32-34
+ * Xp Requirements over are now displayed to level 100
+
+Saturday, March 16, 2007
+ * Made some thematic corrections as I watch episodes
+ * Added Buyon
+ * Gave Murasaki an intelligent AI
+ * Some work on capsule vehicles
+
+Tuesday, March 20, 2007
+ * Korin --> Karin
+
+Wednesday, March 21, 2007
+ * Bansho --> Basho
+ * Rulechange: Any unique bird may now be used to create a Basho fan
+ * Tsuru-Seni'nin now teaches flight
+ * The Flying Nimbus is now more discerning about who is 'pure of heart'
+ * Korin Tower is now a tower, not a spiral
+ * Added a companion follow ai
+ * New Uniques: Bosa, Oopa
+ * New Artifact: Dark Nimbus
+
+Thursday, March 22, 2007
+ * Dragonball Earth is now 9 sectors
+
+Thursday, March 22, 2007
+ * Populated earth somewhat
+ * Redesigned some map layouts
+ * Tama now follows Dr Briefs around like a good kitty :)
+
+Sunday, March 25, 2007
+ * Added a throw ai
+ * Monster skill makes throws more difficult to avoid
+ * New monsters: Anton the great, Chapao
+ * Implemented Bear hugs
+ * Reduced speed penalties for sneak/search/immovable
+ * Sumo now teaches Immovability once again
+ * More work on the new 9-sector earth
+ * Bug-fixed map-wrap on Namek
+
+Thursday, March 29, 2007
+ * Namekian dragonballs are now 300 pounds
+ * More work on Earth redesign
+ * Cosmetic changes to Namek
+ * Hikui bird moved to the Volcano
+ * Gave Yamcha his own AI
+ * Starting redesign of Yamcha quest and dialogue
+ 
+Friday, March 30, 2007
+ * More earth work
+ * Buruma is now a combatant
+ * Marrying Rosshi no longer removes Rosshi as a trainer
+
+Saturday, March 31, 2007
+ * Worked on ai.MOUSE
+ * New option: push past party members instead of talking to them
+ * Customized the RRA Patrol
+ * Fixed the speed/regeneration problem while climbing Karin Tower
+ * Improved z-axis handling while climbing Karin tower
+
+Sunday, April 1, 2007
+ * Restored CAN_SPEAK hadnling to some ai's
+ * Many monsters now have maximized hp
+ * Set up RRQ SHQ
+
+Wednesday, April 4, 2007
+ * Added Puar
+ * Some work on Yamcha dialogue
+ * Set up the Buyon trap
+ * Added dinosaurs and frogs
+ * Umm...badgers are no longer considered birds
+
+Thursday, April 5, 2007
+ * Moved to alpha15 (painless!)
+ * Started migrating terrain FEAT's to flag functions
+ * Egos now use getter.ego() which should fix a variety of bugs and weirdnesses
+
+Friday, April 6, 2007
+ * Moved to alpha16 (mostly painless)
+ * Monsters on SAVE levels are healed while the player is away
+ * Steel and Poorly made ego types may no longer riposte
+ * Redesigned the Underwater Caves climax
+ * Bunch of cleanup
+ * Added about 19K of quest dialogue for the Namek quests
+
+Saturday, April 7, 2007
+ * Implemented the Namek Dragonballs
+
+Sunday, Apil 8, 2007
+ * Hahaha! Fixed ai.MOUSE!
+ * Fixed Yamcha
+ * Fixed Capsules
+ * General preparation for release
+
+-------------------------------------------
+changes from Version 0.8.6 to Version 0.8.7
+-------------------------------------------
+
+April 15th
+ * Fixed some issues with the Nameks
+ * Restored Martial Arts Supply Store
+
+April 20th
+ * Hp now updates immediately after enrollment
+ * Removed the "item_kidx" message when attempting to purchase from empty inventories
+ * Tameshiwari now works with tools equipped (Was tripping on the chainsaw check)
+
+April 25th
+ * Several minor bugfixes from the Wiki
+
+April 26th
+ * Slight development of the Ninja quest tree
+ * Fixed Bear Thief quest desc
+ * Clarified the post-CQ condition
+ * Throwing
+	* Being thrown from a WT match instantly disqualifies you
+	* Monsters are slightly more intelligent about direction of throw
+	* Fixed LUA error relating to player-monster collissions
+ * Flying now prevents WT disqualification by ring-out
+ * You may now fly over windows
+
+April 29th
+ * Fixed the Technomancy View Recipe bug reported by Nerdanel aeons ago
+ * Damage now properly drains from chi when dead
+ * You may now wish to be taller
+ * Bumping into allies while blind no longer initiates an attack
+ * Being caught eating during a WT match now properly disqualifies you
+
+April 30th
+ * Adjusted Earth difficulties
+ * Adjusted some CAN_PASS flags
+
+May 1st
+ * General Blue's Lair now properly self-destructs
+ * Resolved some water breathing issues
+ * Giran tailwhip now checks for WT disqualification
+ * Managed to get tunneling to mostly work
+ * Pilaf
+  * Placed the castle
+  * Redesigned the world map slightly
+  * Placed mushroom
+  * Implemented the 'Rubble' quest
+ * The WT Medic will no longer heal you DURING matches
+ * Bugfixed Chi Burst
+ * The hotel now correctly deducts zeni
+ * Removed the Wolf quest requirement for Tsuru-Seni'nin (Since the Frozen Waste map is gone)
+ * Turtle and Crane are now mutually exclusive
+
+May 2nd
+ * Fixed Curious Hole quest desc
+ * Fixed bug preventing Demon King Piccolo from summoning
+
+May 5th
+ * Fixed "divide by 1000" display in enroll.lua
+ * Enrollment caps which are unattainable because of the level + 10 limit are now shown in yellow
+
+-------------------------------------------
+changes from Version 0.8.7 to Version 0.8.8
+-------------------------------------------
+
+May 11
+ * You can now buy items back from the pawnshop
+ * Restored Chi Bursts
+
+May 12
+ * Restored Tofu and Gym
+ * High capacity flashlights now start with max fuel
+ * Groundwork for allowing technomancers to apply egos
+ * Added Piloting and throwing skills
+ * YMCA and Ninjustsu now teach Throwing
+ * Partial Implementation of throwing
+ * Sewing kits
+ * High capacity tools
+ * Quest: Videl's Challenge no longer corrupts the quest log
+ * The foot ai works again
+ * Moved the Ballet quest warehouse
+
+May 15th
+ * Technomancers are now allowed to use inline skates without the skating skill
+ * Honda's Sumo Ring has been made slightly larger, to make ring-outs less certain
+ * Tao Pai Pai? Check
+ * Watches are now Technomancable
+ * Corrected Master Lee's WT description
+ * Fixed Anton's WT ai. (Check!)
+ * A single point of Dodge no longer makes you immune to Bearhugs
+ * Ballet and Ninjutsu are now properly exclusive
+ * Ninja climbing claws now actually allow you to climb
+ * WT Auto-bump now correctly advances you a round if you kill an opponent after he has already ben confirmed as your next opponent, but before you actually begin the match
+ * Fixed medium blueprint LUA error
+ * You are now informed of the required build tool when learning recipes from blueprints
+ * New Uniques: Caroni, Pirozuki, Miss Piiza
+ * Fixed the double 'b' in Karin's enrollment script
+ * Redesigned Mr Satan's Estate
+
+May 16th
+ * Added placeholder for Technomancer house actions
+ * Rebalanced weapon enrollment values
+ * Karin tower is once again dangerous to climb
+ * Fixed dam.BLIND
+ * Cute little mice are now Neutral, so they shouldn't be killed by default
+ * Rosshi now teaches strength
+ * Fixed the Dragonballs
+ * Serpent's Path Changes
+
+May 19th
+ * Briefs no longer traps the player in his lab
+ * Karin now properly gives out Kinto Un to sufficiently good or evil students
+ * Misc cosmetic changes
+ * New unique: Punter
+ * Two new boot types, croc boots offer charisma, some rebalancing
+
+May 21
+ * Fixed Pilaf LUA error when carrying Dragonballs
+ * Fixed LUA error when wielding a LITE while tunneling
+ * Implemented Chi Quest for Tsuru-Seni'nin
+ * Rosshi now has his own ai
+ * Fixed LUA error when very high level monsters throw Chi Bursts
+ * Rosshi now drops the Nyoibo and a Turtle Shell
+ * Rosshi now issues turtle shells to his students
+ * Implemented binoculars
+ * New ego: High voltage
+ * Fleshed out Miss Piiza's dialogue
+ * Elizabeth --> Sakura
+ * Slight improvement of Ninja quest tree
+ * New item: Samurai Do
+ * Akira now pays you for the sushi delivery
+
+May 22
+ * Fixed dam.TYPES note_kill LUA error
+ * Redesigned Ox Castle
+ * Monks now do stuff
+ * Reenabled Krillan's enrollment script
+ * Reenabled Buruma and Lunch
+ * Implemented 'Find Buruma' quest
+ * A bunch of implementation for the North Kaio: Hammer, gregory, quests, etc.
+
+May 23
+ * Cleanup
+ * Increased wish value of willpower from 2-4 to 4-6
+
+-------------------------------------------
+Changes from Version 0.8.8 to Version 0.8.9
+-------------------------------------------
+
+June 21
+ * Tools no longer allow the player to breathe without air
+ * It is now possible to suffocate in space
+ * Spaceships now contain air to breath
+ * The space surrounding the North Kaio's planet is no longer impassable
+   to space travellers
+ * It is once again possible to ride motorcycles
+ * Buruma is no longer prevented from spawning once you've been given the quest to
+   go find her
+ * GPS no longer provides light	
+ * Yemma now properly transports you to earth upon ressurection
+
+June 24
+ * Removed FACTION_UNDEAD
+ * Added FACTION_NAMEK
+ * Converted some maps to the new map border convention
+ * Placeholder for the Kill the Nameks quest
+
+June 26
+ * Gah! Change list for today deleted!
+
+June 27
+ * Added some Namek dialogue
+ * Removed the various VEHICLE limitations from Kinto Un
+ * General White no longer activates the Buyon trap if he is dead
+
+June 30
+ * Extensive work on RRA SHQ
+
+July 6
+ * Clarified RRA cameras
+ * Complete redesign of object themes
+ * Objects that give resistence to blindness now say so in their description
+ * Some item colors and symbols have been rearrnged. ''Most notably'' dragonballs
+   are now orange, while baseballs and soccer balls are now white. No doubt this
+   will give a bit of a shock to those who don't read change logs
+
+July 7
+ * Purged archaic object themes
+ * Some cleanup of item descriptions
+
+July 14
+ * Migrated to alpha17
+ * Purged some unused flags
+ * Movement mode Running now:
+   * Pretty much destroys your searching ability
+   * Halves your natural healing rate (but does not effect Chi regeneration)
+   * Halves any AC bonuses from Dodge
+   * Halves any AC bonuses from high dexterity
+   * Double any AC penalties from low dexterity
+
+August 29
+ * Updated corpses to a17
+ * Fixed AI for RRA SHQ Missle Turrets and Cameras
+ * Halved the effect of bleeding damage
+
+August 30
+ * Fixed Placement of SHQ Dungeon
+ * Made the RRA external missile turrets slightly less overwhelmingly overpowered
+
+September 10
+ * Fixed a LUA error when running with exactly 10 dexterity
+ * Updated a few more maps to the a17 edge convention
+ * Yay! The player can open doors again!
+ * Added the aerobics joke to Rosshi's house
+ * Never moving monster now never move
+ * Added the candy store
+ * Added cute little puppy
+
+September 23
+ * Added submarine dock
+
+November 1: Back from Japan!
+ * Updated WT map for a17
+ * New item: Television remote
+
+November 2
+ * Fixed store dialogues as per DarkGod: term.gotoxy(0, 0)
+   Woohoo! It's possible to play again!
+ * Reworked Crane Hermit's lair
+ * Added custom AI's for Tenshinhan and Chaozu
+ * Restored the White Wolf quest, and made it more evil
+ * Added trophies to Satan estate
+ * More maps to a17 convention
+ * Character Sheet page 2 no longer generates LUA errors
+ * Removed unused pages from character sheet
+ * Yamcha runaway message now only appears once
+ * Tenshinhan may now join your party
+ * Friendly turtles no longer trap player on the stairs
+ * No more -more- prompt from changing stats during character creation
+ * Fixed weirdness from increasing intelligence at Robbins institute
+
+November 3
+ * Clarified the Nyoi-bo quest dialogues
+ * Rosshi no longer insta-kills Crane students
+ * It is now only possible to ever receive a single Kinto Un
+ * Clarified Kinto Un pickup message
+ * It should, in theory, in longer be possible to take Kinto Un off planet
+ * Nyoibo is now SPECIAL_GENE
+ * Nyoibo quest is now exclusive to Rosshi's students
+ * Tentacle demon only drops Nyoibo for Rosshi students
+ * term fix for failed rival enrollment attempts
+ * Kinto Un now comes when you call via 'K'
+ * Joke quest for the North Kaio is now only issued once
+ * Fixed screen corruption when failing to open the Denshi Jar
+ * Chi Bursts and throws may now cross the WT ring border
+ * Kinto Un is now able to traverse mountains, trees and water
+
+November 4
+ * Restored ID skill requirement message when examining items
+ * Muscle Tower patrol now sounds the alarm when attacked
+ * Implemented the first Namek quest
+ * Added leviathan
+
+November 7
+ * Monster items may now be enchanted, and auto-id if known
+ * Tougher monsters are more likely to drop better items
+ * ITEMS IN STORES ARE IDENTIFIED!!!! WOOT!
+ * The paralysis display bug should no longer occur
+ * Resmoothed the exp ladder
+ * Immovability mode must be engaged to be immovable
+ * Some development of the Piccolo thread
+ * Iron Monkey now correctly appears in the WT
+
+November 9
+ * Ballet and Ninjutsu are now mutually exclusive
+
+November 10
+ * Fixed ai.NAMEK
+ * Implemented Leviathan quest
+ * Designer and Studded ego types now properly add resistance instead of replace it
+ * Eliminated map-edge crash on Land of Karin
+
+November 12
+ * Added about 12K dialogue to the Piccolo/Kami thread
+
+November 13
+ * Finished RRA SHQ CAM map
+
+November 14
+ * Hahaha!!! Finally FIXED the randomess issues with SHQ and the Intro Gong!
+ * Finished RRA SHQ INT and EXT maps
+ * Ox King's helmet now grants blindness resistance
+ * Finished RRA SHQ SHQ and Vault levels
+ * General cleanup for release
+ * Added some sound effects :)
+ 
+-------------------------------------------
+Changes from Version 0.8.9 to Version 0.9.0
+-------------------------------------------
+
+November 15, 2007
+ * Started rewriting Splinter's dialogue
+
+November 18 2007
+ * Technomancy: Learned egos now identified by name
+ * Ego items are now randomly generated
+
+November 19, 2007
+ * Fixed Lookout map
+ * Mr. Popo's dialogue
+
+November 20, 2007
+ * Fixed electronics goods in juvinile map
+ * Added better time indicators
+ * Differentiated monster Chi Reflection and Chi Deflection
+ * Finished Mr Popo's dialogue
+
+November 21, 2007
+ * The Nyoibo no longer wipes the stairs to Kami's Lookout
+ * Tournament monsters are now "defeated" rather than "killed"
+ * Trainers now regenerate properly
+ * Monster chi bursts no longer do double intended damage
+ * Implemented Kami
+ * New quests: Defeat Mr Popo, Train with the North Kaio
+ * Fixed the Joke Quest
+
+November 22, 2007
+ * Fixed Joesephine's dialogue
+ * Doubled cost of Chi Healing
+ * Implemented Chi Burst of Speed
+ * Bos/Teleport/Throw induced monster collissions now damage the monster too
+ * Fixed an off-by-one error in the throw collission code
+
+November 23, 2007
+ * Mice should no longer trap King Mouse, preventing quest completion
+ * Joesephine can speak once again
+ * Extensive development of party system
+
+November 26, 2007
+ * New salve: Body oil
+ * Standardized grappling checks
+ * Rebalanced instructors: Made Jacque and Honda slightly less powerful. Made Yoshi slightly more powerful.
+ * (Persuade) options now tell you the required charisma to access them
+ * Added about 10K to Splinter's dialogue
+ * Tweaks to resting
+ * Updated searching to alpha17
+ * Artifacts that grant flying (Iron Umbrella, Kinto Un, etc.) now allow you to fly over traps
+ * Bugfix: Blocking was incorrectly giving AC bonuses always for both hands. Blocking now only
+   gives AC bonuses for both hands if the lpayer has DOUBLE_ATTACK
+
+November 27, 2007
+ * Added dialogue.quickie() from Bubblegum Crisis
+
+November 29, 2007
+ * Implemented Toxic Sludge quest
+ * Implemented 10 Android Corruptions
+
+December 1, 2007
+ * Bugfix: No more player riposte when monsters attack monsters
+ * Fixed LUA error when monsters hit monsters
+
+December 2, 2007
+ * Implemented rice cookers (again? I thought this was done ages ago)
+
+December 3, 2007
+ * New item: Flight jacket
+ * Implemented integrated capsule craft
+ * Implemented variable altitude flight: melee monsters may no longer attack
+   high altitude flyers
+ * Fixed motorcycles
+ * Added a flight school to the airport
+
+December 4, 2007
+ * Fixed high flying
+ * Eliminated sanity
+
+December 5, 2007
+ * Removed level+10 skill limit
+ * Implemented Namek quest #3
+ * Implemented monster deflection/reflection of Chi Bursts
+ * Implemented Buruma marrying Oolong
+ * Work on Lunch
+
+December 7, 2007
+ * Performed contortions to allow uniques on saved levels to
+   also appear in the world tournament
+
+December 10, 2007
+ * Added some dragoball quirks
+ * Cleanup for release
+ * Further revision of item drop allocation
+ * Duels are now level 20-23 dungeons, instead of level 1
+
+December 11, 2007
+ * Yet more cleanup for release

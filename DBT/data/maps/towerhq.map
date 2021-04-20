@@ -1,0 +1,77 @@
+map.define("towerhq.map")
+
+map.symbol{ symbol='.' feat=FEAT_FLOOR info=6 }
+map.symbol{ symbol='X' feat=FEAT_PERMA_WALL info=6 }
+map.symbol{ symbol='D' feat=FEAT_DOOR_LOCKED_HEAD info=6 }
+map.symbol{ symbol='a' feat=FEAT_FLOOR info=6 monster=RACE_RRA_WHITE }
+map.symbol{ symbol='b' feat=FEAT_FLOOR info=6 monster=RACE_RRA_TURRET }
+map.symbol{ symbol='c' feat=FEAT_FLOOR info=6 monster=RACE_RRA_CAMERA }
+map.symbol{ symbol='d' feat=FEAT_DOOR info=6 }
+map.symbol{ symbol='w' feat=FEAT_GLASS_WALL info=6 }
+
+-- Random monster don't seem to work
+-- Random monster (up to 10 levels ood)
+--map.symbol{ symbol='e' feat=FEAT_FLOOR info=6 monster=map.ANY monster_level=26 }
+
+-- Random monster
+map.symbol{ symbol='A' feat=FEAT_FLOOR info=6 monster=RACE_RRA_PRIVATE }
+map.symbol{ symbol='B' feat=FEAT_FLOOR info=6 monster=RACE_RRA_CORPORAL }
+map.symbol{ symbol='C' feat=FEAT_FLOOR info=6 monster=RACE_RRA_LIETENANT }
+
+-- exit
+map.symbol{ symbol='<' feat=FEAT_LESS info=3 }
+
+map.symbol{ symbol='Y' feat=FEAT_FLOOR info=6
+   flags = {
+      MOVE_POST_DEST=function()
+		if race_info_idx(RACE_BUYON, 0).max_num ~= 0 and race_info_idx(RACE_RRA_WHITE, 0).max_num ~= 0 then
+			if dball_data.chi_flight_setting == 0 and not player.has_intrinsic(FLAG_FLY) then
+				dialogue.BUYON_TRAP()
+				dball.dungeon_teleport("Buyon's Lair")
+			else
+				-- Activate, but no effect
+				dialogue.BUYON_TRAP_FAIL()
+			end
+		end
+      end
+   }
+}
+
+map.symbol{ symbol='Z' feat=FEAT_FLOOR info=6
+   flags = {
+      MOVE_POST_DEST=function()
+		if race_info_idx(RACE_BUYON, 0).max_num ~= 0 then
+			message("General White glances at you with a resigned look on his face.")
+		end
+		cave(player.py, player.px).flags[FLAG_MOVE_POST_DEST] = nil
+      end
+   }
+}
+
+map.map
+{
+[[XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX]],
+[[XXXXXXXXX...............XXXXXXXXX]],
+[[XXXXXX....XXXXXXXXXXXXX....XXXXXX]],
+[[XXXX...XXXXXXXXXXXAAAAXXXX...XXXX]],
+[[XXX..XXX...d...XXXAABAXXXXXX..XXX]],
+[[XX..XXXX.C.X.B.d.dAAAAXX.a.XX..XX]],
+[[XX.XX..d...X...XdXXXXXXX.Y.XXX.XX]],
+[[X..XX.XXXXXXXXXX.XAAAAXX...XcX..X]],
+[[X.XXXdXXXXbXXXXX.XAAAAXXXZXXwXX.X]],
+[[X.X....XX...XXXX.XXXXdXXX..d..d.X]],
+[[X.X.AB.Xc...d...<...d.XXXXXXXXXXX]],
+[[X.X....XX...XXXX.XXXXXXXbXXX..d.X]],
+[[X.XXXXdXXXbXXAAX.XAAAXb...D..XX.X]],
+[[X..XXX.XXXXXXAAX.XAAAXXX.XXXXX..X]],
+[[XX.XXX.d....dAAXdXXdXXXX.XXXXX.XX]],
+[[XX..XXXX..C.XXXX....XXXXdXXXX..XX]],
+[[XXX..XXX....d..XXXXXX....XXX..XXX]],
+[[XXXX...XXXXXXX........XXXX...XXXX]],
+[[XXXXXX....XXXXXXXXXXXXX....XXXXXX]],
+[[XXXXXXXXX...............XXXXXXXXX]],
+[[XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX]],
+}
+
+-- Starting position
+map.set_player(10, 16)

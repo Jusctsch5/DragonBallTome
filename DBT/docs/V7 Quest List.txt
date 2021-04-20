@@ -1,0 +1,85 @@
+Briefs		7
+    name = "Find Buruma",
+    name = "Tournament Prize",
+    name = "Time Machine!",
+    name = "Technical Assistant",
+    name = "Battery for Mr Satan",
+    name = "Martial Arts Deliery Service",
+    name = "Errand for Dr. Briefs",
+
+Challenge	9
+	name = "Defeat the Karate School"
+	name = "Defeat the Kung-fu School"
+	name = "Defeat the Tae Kwon Do School"
+	name = "Defeat the Kickboxing School"
+	name = "Defeat the Shredder"
+	name = "Missing Dancers"
+	name = "Challenge Yawara to a Friendly Match"
+	name = "Defeat Honda in a Friendly Match"
+	name = "Criminal!"
+
+Chi Master	4
+	name = "The Lonely Master"
+	name = "The Waiting Game"
+	name = "Lost Turtle"
+	name = "Catch Bubbles"
+
+Dojo		1
+	name = "Choose a Style"
+
+Endgame		7
+	name = "Androids From the Future!"
+	name = "Salvation!"
+	name = "A Cold Future for Earth"
+	name = "Cell"
+	name = "Cell Games"
+	name = "Mighty Majin"
+	name = "Two Buud For You"
+
+Evil			1
+	name = "Impending Doom"
+
+Gero			2
+	name = "Errand for Dr. Gero"
+	name = "Evil Mastermind"
+
+Members Only		3
+	name = "Working Out is Good for the Body"
+	name = "Reading is Good for the Mind"
+	name = "Pilot's Club and Hanger Rental"
+
+Misc			2
+	name = "Mountain Lions"
+	name = "Toxic River"
+
+Ninja			5
+	name = "Solve the Thefts"
+	name = "I Feel Like I'm Being Watched"
+	name = "Destroy the Foot Clan"
+	name = "Locate the Teenage Mutant Ninja Turtles"
+	name = "Locate the Teenage Mutant Ninja Turtles"
+
+World Tournament	1
+	name = "The 21st Annual World Tournament"
+
+Uniques			20
+	name = "Bridge Bandit!"
+	name = "Bridge Boy"
+	name = "Vorpal Bunnies"
+	name = "Oolong, the Terrible"
+	name = "Oolong, the Lonely?"
+	name = "Videl's Challenge"
+	name = "Sushi Delivery"
+	name = "Missing Delivery Boy"
+	name = "Iron Chef"
+	name = "Ruthless Thugs"
+	name = "Curious Hole"
+	name = "Locate the Seven Dragonballs"
+	name = "Retrieve the Dragonballs for Buruma"
+	name = "Clean up the rubble from Castle Pilaf"
+	name = "Return the Dragonballs to Emperor Pilaf"
+	name = "Return to Castle Pilaf"
+	name = "Execute...you?"
+	name = "Destroy the Red Ribbon Army!"
+	name = "Ring of Fire"
+	name = "Beautiful Fans"

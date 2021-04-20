@@ -1,0 +1,18 @@
+#####R                  /---------------------------\                          
+#####R                 <   Pilot's Club Membership   >                         
+#####R                  \---------------------------/                          
+                                                                               
+#####GWelcome!                                                                 
+Welcome to the Pilot's Club!                                                   
+                                                                               
+#####GBenefits                                                                 
+Pilot's Club members are allowed unlimited access to                           
+the runways for their own personal craft, as well as                           
+complimentary hanger storage for same.                                         
+                                                                               
+#####GFees                                                                     
+Membership dues amount to 1000zn per day. To maintain                          
+membership in good standing, Pilot's Club members are                          
+required to maintain a positive balance in their account                       
+at all times. Failure to do so may result in forfeiture                        
+of hanger, and all materials stored therein.                                   

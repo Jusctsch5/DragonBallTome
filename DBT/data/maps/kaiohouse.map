@@ -1,0 +1,32 @@
+map.define("kaiohouse.map")
+
+map.symbol{ symbol='X' feat=FEAT_PERMA_WALL info=6 }
+map.symbol{ symbol='*' feat=FEAT_MAP_BORDER info=6 }
+map.symbol{ symbol='<' feat=FEAT_LESS info=6 inventory_size=0 }
+map.symbol{ symbol='K' feat=FEAT_GREEN_CARPET info=6 monster=RACE_NORTH_KAIO }
+map.symbol{ symbol='b' feat=FEAT_BLUE_CARPET info=6 }
+map.symbol{ symbol='g' feat=FEAT_GREEN_CARPET info=6 }
+
+map.map
+{
+[[*****************************]],
+[[*XXXXXXXXXXXXXXXXXXXXXXXXXXX*]],
+[[*XgggggggggggggggggggggggggX*]],
+[[*XggggggggggbbbbbggggggggggX*]],
+[[*XgggggggggbbgggbbgggggggggX*]],
+[[*XggggggggbbggKggbbggggggggX*]],
+[[*XggggggggbbgggggbbggggggggX*]],
+[[*XgggggggggbbgggbbgggggggggX*]],
+[[*XgggggggggggbbbgggggggggggX*]],
+[[*XggggggggbbbbbbbbbggggggggX*]],
+[[*XggggggggbbbbbbbbbggggggggX*]],
+[[*XgggggggggggbbbgggggggggggX*]],
+[[*XgggggggggggbbbgggggggggggX*]],
+[[*Xgggggggggggb<bgggggggggggX*]],
+[[*XgggggggggggbbbgggggggggggX*]],
+[[*XgggggggggggggggggggggggggX*]],
+[[*XXXXXXXXXXXXXXXXXXXXXXXXXXX*]],
+[[*****************************]],
+}
+
+map.set_player(13, 14)

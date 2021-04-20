@@ -1,0 +1,58 @@
+#####R                  /---------------------------\                          
+#####R                 <    DBT V066 Release Notes   >                         
+#####R                  \---------------------------/                          
+                                                                               
+Summary:                                                                       
+*****/abook-16.txt*1[(a) Hello!]                                               
+*****/bbook-16.txt*2[(b) Noteworthy Changes since Version 0.6.5]               
+*****/cbook-16.txt*3[(c) Known Bugs]                                           
+*****/dbook-16.txt*4[(d) To Submit a Big Report]                               
+*****/ebook-16.txt*5[(e) Fixnotes 'todo' list]                                 
+                                                                               
+~~~~~1                                                                         
+#####G(a)Hello!                                                                
+Alpha's 6 and 7 took some getting used to, and this release is                 
+mostly a conversion from alpha 5 to 7, but there are some other                
+changes as well                                                                
+                                                                               
+~~~~~2                                                                         
+#####G(b)Noteworthy Changes since Version 0.6.5                                
+0) Changed the version convention. 0.0.1 increments no longer                  
+   necesarily mean one day.                                                    
+1) Converted to alpha 7.                                                       
+2) Abilities are now hidden, and must be earned in game.                       
+3) Map wrap has been implemented! Woohoo!                                      
+4) Much of the map has been redesigned to accomodate the                       
+   wrap feature.                                                               
+5) Implemented a system to allow combat mods from equipment                    
+   to only apply to certain combat modes. For example, if                      
+   you wear a suit of heavy armor that impedes your motion,                    
+   it will now negatively affect your melee combat, but it                     
+   won't have any effect on your firearms combat.                              
+6) Magic pluses from equipment are now counted.                                
+7) Some new items and item types.                                              
+8) Yamcha's Bridge and related quests have been redesigned.                    
+                                                                               
+~~~~~3                                                                         
+#####G(c)Known Bugs                                                            
+1) Dialogue, *sigh*. Yes, there are still dialoge dead                         
+   ends. They really needto be fixed, but the dialogue                         
+   is altogether about 165K now, so there's a lot to                           
+   go through.                                                                 
+                                                                               
+~~~~~4                                                                         
+#####G(d)To Submit a Bug Report                                                
+If convenient, submit bug reports for Dragonball T on the wiki.                
+I've created a bug report section on the DBT page. That should                 
+be a little easier than navigating the official bug report forum.              
+If you don't feel comfortable with the Wiki feel welcome to submit             
+via email to lordbucket@hotmail.com.                                           
+                                                                               
+~~~~~5                                                                         
+#####G(e)Fixnotes 'todo' list                                                  
+As usual, see fix notes.txt for the complete to do list.                       
+                                                                               
+Enjoy!                                                                         
+                                                                               
+Bucket Man                                                                     
+lordbucket@hotmail.com                                                         

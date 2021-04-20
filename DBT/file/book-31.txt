@@ -1,0 +1,110 @@
+#####R                 /------------------------\                              
+#####R                <  DBT V087 Release Notes  >                             
+#####R                 \------------------------/                              
+                                                                               
+Summary:                                                                       
+*****/abook-31.txt*1[(a) V087 Status]                                          
+*****/bbook-31.txt*2[(b) Summary of Changes]                                   
+*****/cbook-31.txt*3[(c) WT Loss-by-Ringout Comments]                          
+                                                                               
+~~~~~1                                                                         
+#####G(a) Status                                                               
+                                                                               
+ May 5th, 2007                                                                 
+                                                                               
+  V087 adds tunneling, some intersting ring-out twists, and replaces           
+  some things that were missed in V086, but mostly this is a bugfix            
+  release.                                                                     
+                                                                               
+~~~~~2                                                                         
+#####G(b)Summary of Changes                                                    
+Systems:                                                                       
+ * Basic implemtation of tunneling                                             
+                                                                               
+Rulechanges:                                                                   
+ * Bumping into allies while blind no longer initiates an attack               
+                                                                               
+Ommissions and Corrections:                                                    
+ * A number of stores/events/buildings/uniques who were missed in the migration
+   to Earth-9 have been replaced                                               
+ * Implemented the Rubble quest                                                
+ * Tsuru-Seni'nin no longer requires the Wolf Quest                            
+                                                                               
+Bugfixes:                                                                      
+ * Error message when buying from empty store                                  
+ * Incorrect/no stair placement for Uranai Baba quest                          
+ * Missing locations: Martial Arts store, Emperor Pilaf's Castle, 'Hack'       
+   Trenchcoat guy                                                              
+ * Fixed several bugs relating to the World Tournament                         
+ * Receiving the Bear Thief quest no longer corrupts your entire quest display 
+ * Tameshiwari tree-knockout non functional if anything is in the tool slot    
+ * HP display now immediately updates after con gains from enrolment           
+ * Incorrect road alignment between Earth-4 and Earth-5                        
+ * Rabbit Hole and Satan Estate night-light effects                            
+ * Several minor bugs relating to planet Namek have been fixed (Not worth      
+   the trip yet, though)                                                       
+ * Throwing:                                                                   
+   * Being thrown from the WT ring now properly disqualifies you               
+   * WT monsters are now more intelligent about their throw directions         
+   * No more LUA errors resulting from player-monster collissions              
+ * Flying                                                                      
+   * No WT loss by ring-out from flying (or being thrown while flying) out     
+     of the ring                                                               
+   * Some terrain types were incorrectly preventing flight. This has been      
+     fixed.                                                                    
+   * No more crash from approaching the map edge while flying                  
+ * Bumping into the WT medic while blind no longer kills her                   
+ * The evil anti-Technomancer bug of death reported by Nerdanel aeons ago      
+   has been FIXED!                                                             
+ * It's possible that steel ego weapons might be fixed now                     
+ * Being caught eating during a WT match now properly disqualifies you         
+ * General Blue's Lair now properly self-destructs                             
+ * Resolved some water breathing issues                                        
+ * Giran tailwhip now checks for WT disqualification                           
+ * The WT Medic will no longer heal you DURING matches                         
+ * Damage now properly drains from chi when dead                               
+ * Fixed Chi Burst                                                             
+ * The hotel now correctly deducts zeni                                        
+ * Removed the Wolf quest requirement for Tsuru-Seni'nin (Since the Frozen     
+   Waste map is gone)                                                          
+ * Turtle and Crane are now mutually exclusive                                 
+ * The hotel now properly deducts zeni                                         
+ * General Blue's AI now fights properly                                       
+ * A bug preventing Demon King Piccolo from being summoned has been fixed      
+ * Made some graphical corrections to the enrollment script                    
+                                                                               
+New Issues:                                                                    
+ * monster_effect.CUT doesn't seem to work?                                    
+                                                                               
+~~~~~3                                                                         
+#####G(c)World Tournament Loss-by-Ringout comments                             
+With this release, the dynamic I have always planned for WT-ringouts is now    
+pretty much in place. Monsters WILL throw you out of the ring. Deliberately.   
+And they do it well. Loss by ring-out is now a major consideration for World   
+Tournament strategy. Even a pesky black belt now has a reasonable chance of    
+throwing you out if you're not careful and poorly prepared, but some of the    
+specialty uniques are REALLY GOOD at throwing you out of the ring. Yawara,     
+for instance. Throwing is what she does. She doesn't do enough damage to       
+have much chance of seriously hurting even a level 10 character, but I just    
+watched her throw my level 22 barehanded fighter out of the ring in under      
+ten seconds. And she's not the only one. Lots of monsters throw. Again, it's   
+a major consideration for particaptingin the Tournament. So how do you cope?   
+Well, if you're fast, you can simply stay away from the ring border. When      
+you're thrown, simply run back towards the middle. You may take a couple       
+extra blows, but you won't be thrown out. Of course, you have to be able       
+to take those extra cople blows. Then there's the easiest way to avoid         
+ring-outs: Study sumo and learn Immovability. This will grant you complete     
+immunity to throws. But not all players will want to study Sumo, and women     
+cannot. Flying is an option. If you're airbourne, even if you're thrown        
+"outside" the ring, you're not disqualified unless you hit the ground. But     
+learning to fly is not exactly trivial. If you're a student at the right       
+school, Dodge skill will reduce an opponents chance to succesfully throw.      
+And finally: eliminate undesireable opponents from the lineup. If you find     
+and kill a unique...they can't appear in the Tournament. But, of course,       
+this isn't always an appealing option either. If you kill Yawara, you can't    
+study Judo. And, she's not the only instructor who can throw. So, hopefully    
+this should keep things interesting. Enjoy!                                    
+                                                                               
+Bucket Man                                                                     
+lordbucket@hotmail.com                                                         
+                                                                     

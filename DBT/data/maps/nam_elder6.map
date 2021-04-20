@@ -1,0 +1,39 @@
+-- Dragonball T: The Yurt of the Elder of the Sixth Village of Namek
+
+map.define("nam_elder6.map")
+
+map.symbol{ symbol='.' feat=FEAT_FLOOR info=3 }
+map.symbol{ symbol='X' feat=FEAT_PERMA_WALL info=3 }
+map.symbol{ symbol='W' feat=FEAT_PERMA_WALL info=6 }
+map.symbol{ symbol='*' feat=FEAT_MAP_BORDER info=6 }
+map.symbol{ symbol='<' feat=FEAT_LESS info=3 }
+
+map.symbol{ symbol='E' feat=FEAT_SAND info=3 monster=RACE_NAMEK_ELDER6 }
+
+map.map
+{
+[[*******************************]],
+[[*WWWWWWWWWXXXXXXXXXXXWWWWWWWWW*]],
+[[*WWWWWWXXXX....<....XXXXWWWWWW*]],
+[[*WWWWXXX...............XXXWWWW*]],
+[[*WWWXX...................XXWWW*]],
+[[*WWXX.....................XXWW*]],
+[[*WXX.......................XXW*]],
+[[*WX.........................XW*]],
+[[*XX.........................XX*]],
+[[*X.............E.............X*]],
+[[*X...........................X*]],
+[[*XX.........................XX*]],
+[[*WX.........................XW*]],
+[[*WWX.......................XWW*]],
+[[*WWWX.....................XXWW*]],
+[[*WWWWX...................XXWWW*]],
+[[*WWWWXXX...............XXXWWWW*]],
+[[*WWWWWWXXXX.........XXXXWWWWWW*]],
+[[*WWWWWWWWWXXXXXXXXXXXWWWWWWWWW*]],
+[[*******************************]],
+}
+
+map.set_player(2, 15)
+
+

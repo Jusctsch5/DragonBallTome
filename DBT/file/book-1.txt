@@ -1,0 +1,177 @@
+#####R                  /---------------------------\                          
+#####R                 <  Welcome to Dragonball T!  >                          
+#####R                  \---------------------------/                          
+                                                                               
+Note: This parchment is primarily intended for players who are familiar        
+with the original game, ToME. If you're coming to Dragonball with little       
+or no experience with roguelikes, you'll probably be better off to read        
+the help sections for first time players. If you press escape to leave         
+this parchment, pressing ? will allow you to access the help system.           
+                                                                               
+Summary:                                                                       
+*****/abook-1.txt*1[(a) Differences from ToME]                                 
+*****/bbook-1.txt*2[(b) Getting Started]                                       
+*****/cbook-1.txt*3[(c) Feeling Helpless?]                                     
+*****/dbook-1.txt*4[(d) Things To Know]                                        
+                                                                               
+Introduction:                                                                  
+                                                                               
+The world of Dragonball is fun and exciting and everyone loves it! Yay!        
+                                                                               
+~~~~~1                                                                         
+#####G(a) Differences from ToME                                                
+                                                                               
+The Dragonball T module is very different from the main game in a variety of   
+ways.                                                                          
+                                                                               
+Items                                                                          
+Dragonball T is less heavily item dependant than ToME. This is good in that    
+you will spend virtually no time "scumming" for useful equipment, but may      
+be inconvenient in that a number of items you may be accustomed to simply      
+do not exist. Healing potions, Word of Recall and identify scrolls being       
+the most conspicuous. Don't worry, though. There are ways of dealing with      
+these issues, but Dragonball T handles them differently. Take the time to      
+figure them out.                                                               
+                                                                               
+Character Development                                                          
+Rather choosing a class and set of skills right away, in Dragonball T you      
+will gradually develop your character over the course of the entire game.      
+Skills are generally learned, and improved, in one of two ways: enrolling      
+in classes, and completing quests. Which classes you choose to take, and       
+which quests you choose to complete will determines what sort of character     
+you end up with.                                                               
+                                                                               
+Combat                                                                         
+Dragonball T features an entirely new combat system.                           
+                                                                               
+Quests                                                                         
+Dragonball T is VERY HEAVILY quest and storyline driven. There are             
+(present count) over sixty quests which exist in a complicated tree. Some      
+are mutually exclusive, many can be solved in several ways, a few can be       
+issued by different people for different results, and any combination of       
+the above can greatly affect the path that the story takes. Sometimes, even    
+merely the sequence in which quests are completed will have storyline          
+repercussions. Your first few games you may get used to a certain set of       
+quests being available, and then suddenly, one game, find that they are not.   
+Don't be surprised by this. Only a very few quests are truly generated         
+randomly, but the tree is complicated enough that it may take some time to     
+learn.                                                                         
+                                                                               
+Wilderness or space?                                                           
+You may notice that there is no wilderness mode. But oh...wouldn't it be       
+wonderful to be able to explore the stars? Hmm. How could you get off of       
+this planet?                                                                   
+                                                                               
+~~~~~2                                                                         
+#####G(b) Getting Started                                                      
+                                                                               
+You begin the game as a complete nobody with aspirations to win the world's    
+largest martial arts tournament. Of course, you've never studied martial       
+arts, so maybe you should go do that first. There are a number of schools      
+available. Choose one you like, and enroll in classes. This will give you      
+some basic skills to work with.                                                
+                                                                               
+From there it's time to start exploring the world. There are a number of       
+quests that become available almost immediately, but some of them may be       
+too difficult to start on right away. Take your time. Talk to people. Some     
+of them may offer useful information.                                          
+                                                                               
+If you're having difficulty locating low level quests to start with, try       
+heading to Aru village, south, and then west of the World Tournament arena.    
+Talk to the villagers there. They seem to be having a number of problems.      
+                                                                               
+~~~~~3                                                                         
+#####G(c) Feeling Helpless?                                                    
+Once you're famliiar with the world, you should be able to start any way       
+you'd like, but for the first few times it might help to start out with        
+the Dragonball T equivalent of Troll Warrior instead of a Yeek Hermit          
+Sorceror. :) Here's my advice for an easy start:                               
+                                                                               
+str:12                                                                         
+int:8                                                                          
+wil:8                                                                          
+dex:8                                                                          
+con:12                                                                         
+chr:10                                                                         
+spd:12                                                                         
+                                                                               
+This probably isn't the best long term strategy, but the strength will         
+allow you to do damage right away, the constitution will give you a few        
+extra hit points, and the speed will help you to run away should you           
+ever get in trouble.                                                           
+                                                                               
+First thing to do, once in game, is to press S and change your movement        
+mode to running. With 12 speed stat from above, this should increase your      
+net running speed to +5. At that rate you should be able to match speed        
+or outrun most things you're likely to encounter on the surface of earth       
+Important exception: Mountain lions are fast, and live in the mountains        
+to the east of your starting location. If you travel in that direction         
+and see a bridge with a sign near it, beware!                                  
+                                                                               
+After setting your movement rate, your next priority will be choosing          
+a martial arts style. There are four schools immediately available in          
+the Tonkan business distract a short ways south of your starting location.     
+Look for the 4's. Pick a style that suits you, then enroll five times in       
+a combat skill class, either barehand or weapons. If you've chosen to          
+study weaponry, you might consider investing in a better weapon than the       
+kubotan you start with.                                                        
+                                                                               
+Now, press 'w' to equip your armor (and your weapon if you've enrolled in      
+a weapons class) and you're ready to go! You can either pracice with (or       
+on, depending on how you look at it) the white and yellow belts in town,       
+or you can head for Aru Village to the west and begin working on the           
+quests for the villagers there. Imelda's rabbit hole is the > to the           
+west of the village.                                                           
+                                                                               
+Good luck!                                                                     
+                                                                               
+~~~~~4                                                                         
+#####G(d) Things To Know                                                       
+                                                                               
+While I've tried to make Dragonball T a lighthearted adventure, I've also      
+tried to keep it challenging. I think I've succeeded, but a game should        
+be challenging rather than frustrating, so here's some advice and information  
+you might want to know:                                                        
+                                                                               
+#####BDon't skimp charisma                                                     
+I know it's awfully tempting to pull as many points from charisma as possible  
+during character creation. Feel free, but also know that you may suffer for    
+it. Dialogue is a considerable portion of Dragonball T, and as a measure of    
+your ability to convince people to like you and see things your way, charisma  
+will frequently affect which dialogues options are available to you. You can   
+always equip charisma enhancing items, and/or increase your skill directly     
+by studying at the Robbins Institute.                                          
+                                                                               
+#####BOh no! I lost a really important quest item!                             
+Dont' worry about it. There may be some quests that will become unfinishable   
+without the right items, but the game should never be irrecoverable because    
+of it. You might just have to find an alternate solution for the problem.      
+Also, in particular, Dragonballs may never be permanently lost.  Even if       
+you abandon a dragonball on a level somewhere, it will always be possible      
+to find it again at a later date.                                              
+                                                                               
+#####BI don't think I want to do that                                          
+Then DON'T. Just because someone issues you a quest doesn't mean you should    
+do it. Be willing to pick and choose what you're willing to do. Even if        
+you've already accepted a quest, you can always change your mind. Failing      
+a quest is not always a bad thing. In fact, there are some branches on the     
+quest tree that are only accessible if you fail certain quests, and it is      
+even possible to be simultaneously issued multiple quests which directly       
+contradict one another. Don't feel like you have to play a certain way         
+just because someone issues you a quest. Play as you like. That's why          
+there are multiple game endings.                                               
+                                                                               
+#####BChange your playstyle                                                    
+Without going into too much detail, there are five primary professional        
+styles available in Dragonball T. Each has its own strengths and weaknesses,   
+and some may be better able to cope with the challenges you face. If you're    
+having a tough time, try things differently. Perform different quests. Try     
+to solve one ones you have in different ways. Develop new skills and see how   
+the game changes for you. It may help. It may also enhance replayability. If   
+you play exactly the same way every game, you'll see the same story. Do        
+things differently, and you'll have a different game experience.               
+                                                                               
+Good luck!                                                                     
+                                                                               
+Bucket Man                                                                     
+#####Glordbucket@hotmail.com                                                   

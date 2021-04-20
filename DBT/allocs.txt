@@ -1,0 +1,172 @@
+Rabbit Hole	1-5			THEME_PLAIN=25 THEME_ACCESSORY=25 THEME_JUNK=25 THEME_GOLD=25
+Sewers		5-9	(5-8 real)	THEME_PLAIN=25 THEME_ACCESSORY=25 THEME_JUNK=20 THEME_GOLD=25 THEME_TOXIC=5
+Satan Estate	10-15	(11-14 real)	THEME_PLAIN=30 THEME_MARTIAL=50 THEME_GOLD=20
+Ninja House	15-21	(16-20 real)	THEME_MARTIAL=20 THEME_NINJA=60 THEME_GOLD=20
+Temple		17-23	(18-23 real)	THEME_MARTIAL=100
+Muscle Tower	21-26	(21-25 real)	THEME_RRA=50 THEME_PLAIN=10 THEME_BATTERY=10 THEME_BLUEPRINTS=10 THEME_GOLD=20
+Blue's Cavern	31-36	(31-35 real)	THEME_RRA=50 THEME_PLAIN=10 THEME_BATTERY=10 THEME_BLUEPRINTS=10 THEME_GOLD=20
+RRA SHQ		41-45	(4x 41-44 real)	THEME_RRA=50 THEME_PLAIN=10 THEME_BATTERY=10 THEME_BLUEPRINTS=10 THEME_GOLD=20
+Volcano		46-50	(46-49 real)
+Gero's Lair	80-100	(81-99 real)
+
+Side Dungeons
+Pilaf's Fort	33-40	(???)
+
+Item		Alloc
+
+Polearms
+Spear		CHINESE MARTIAL	{15,3}, {17,2}, {19,1}, {21,1}, {23,1}
+Bo Staff	JAPAN MARTIAL	{14,2}, {16,1}, {18,1}, {21,1}, {23,1}
+Waxwood Staff	CHINESE MARTIAL	{14,2}, {16,1}, {18,1}
+3-Sect Staff	CHINESE MARTIAL	{15,3}, {17,2}, {19,1}, {21,1}, {23,1}
+Pudao		CHINESE MARTIAL	{23,2}, {48,1}
+
+Entangling
+Whipchain	CHINESE MARTIAL	{19,2}, {21,2}, {23,1}
+Rope Dart	CHINESE MARTIAL	{21,2}, {23,1}
+
+Small Arm
+Kubotan		PLAIN MARTIAL	{0,1}, {3,1}, {5,1}, {5,1}, {9,1}, {13,1}
+Knife		PLAIN MARTIAL	{0,2}, {3,2}, {5,1}, {7,1}, {9,1}, {13,1}, {15,1}, {20,1}, {23,1}, {33,1}
+Escrima STick	MARTIAL		{5,1}, {7,1}, {9,1}, {11,1}
+Nunchaku	CH,JP,MRT	{11,1}, {13,1}, {15,1}, {17,1}, {19,1}, {21,1}
+Mini B-fly	PLAIN, MARTIAL	{0,2}, {3,1}, {5,1}, {5,1}, {9,1}
+Sai		JP, MRT		{9,5}, {11,3}, {14,2}, {16,1}, {18,1}, {20,1}
+Tonfa		JP, MRT		{9,5}, {11,3}, {14,2}, {16,1}, {18,1}, {20,1}
+Ninja Claw	NINJA		{17,3}, {19,2}, {21,1}
+Sanjobang	MARTIAL		{11,1}, {13,1}, {15,1}, {17,1}, {19,1}, {21,1}
+Kama		JP, MRT		{11,3}, {14,2}, {16,1}, {18,1}, {20,1}
+Iron Fan	JP, MRT		{17,3}, {19,2}, {21,2}, {23,2}
+Rounded Hammer	CH, MRT		{15,5}, {17,3}, {19,2}, {21,2}
+Taser		PLAIN, RRA	{4,2}, {7,2}, {11,2}, {21,1}, {25,1}, {33,1}, {45,1}
+Stun Baton	PLAIN, RRA	{21,2}, {25,2}, {33,2}, {43,1}
+Cattle Prod	PLAIN, RRA	{25,3}, {33,2}, {45,1}
+
+Swords
+B-fly Knife	CH, MRT		{13,2}, {15,1}, {17,1}, {19,1}, {21,1}
+Straightsword	CH, MRT		{15,4}, {17,3}, {19,2}, {21,1}
+Sabre		CH, MRT		{15,4}, {17,3}, {19,2}, {21,1}
+Wakazashi	JP, MRT		{13,3}, {15,2}, {17,1}, {19,1}, {21,1}
+Shinai		JP, MRT		{11,1}, {13,1}, {15,1}, {17,1}, {19,1}, {21,1}
+Bokken		JP, MR		{11,2}, {13,2}, {15,1}, {17,1}, {19,1}, {21,1}
+Katana		JP, MRT, RRA	{21,3}, {24,2}, {33,1}, {43,1}
+Tai Chi Sword	CH, MRT		{17,2}, {20,2}
+Ninja-to	JP, MRT, NIN	{17,2}, {20,2}
+Hook Sword	CH, MRT		{17,3}, {20,2}
+Epee		FRENCH		{20,1}
+Rapier		FRENCH		{20,1}
+Jagged Sword	SPECIAL_GENE	{100,999}
+Umbrella	SPECIAL_GENE	{100,999}	-- Don't we want the non-artifact version to be available?
+2-H Sword	SPECIAL_GENE	{100,999}
+Z-Sword		SPECIAL_GENE	{100,999}
+
+Guns
+Pistol		RRA		{21,1}, {23,1}, {26,1}, {31,1}, {33,1}, {36,1}, {41,1}, {43,1}, {46,1}
+Rifle		RRA		{23,1}, {26,1}, {31,1}, {33,1}, {36,1}, {41,1}, {43,1}, {46,1}
+Machine Gun	RRA		{26,1}, {31,1}, {33,1}, {36,1}, {41,1}, {43,1}, {46,1}
+
+Shotguns
+Single		RRA		{21,1}, {23,1}, {26,1}, {31,1}, {33,1}, {36,1}, {41,1}, {43,1}, {46,1}
+Double		RRA		{26,1}, {31,1}, {33,1}, {36,1}, {41,1}, {43,1}, {46,1}
+
+Launcher
+Bazooka		RRA		{31,1}, {33,1}, {36,1}, {41,1}, {43,1}, {46,1}
+
+Shoes
+Tennis Shoes	PLAIN		{0,1}, {3,1}, {5,1}, {7,1}, {9,1}, {11,1}
+Leather Boots	PLAIN		{5,1}, {7,1}, {9,1}, {11,1}
+Fighting Boots	MARTIAL		{18,3}, {20,2}, {23,2}
+Steel Toed Sho	PLAIN RRA	{21,1}, {23,1}, {25,1}, {31,1}, {33,1}, {35,1}, {41,1}, {43,1}, {45,1}, {46,3}, {49,3}
+Thigh Boots	PLAIN		{35,3}, {43,2}, {49,1}
+High Heels	PLAIN		{3,2}, {5,1}
+Ninja Tabi	NINJA		{16,1}, {18,1}, {20,1}
+CLimb Tabi	NINJA		{16,3}, {18,2}, {20,1}
+Slippers	FRENCH		{5,3}, {7,2}			(Only French uniques drop THEME_FRENCH items)
+Toe Shoes	FRENCH		{5,3}, {7,2}			(Only French uniques drop THEME_FRENCH items)
+Croc Boots	PLAIN		{9,3}, {12,2}, {22,2}
+Inline Skates	PLAIN		{5,5}, {8,4}, {17,3}
+
+Body Armor
+Bathrobe	PLAIN		{0,1}, {1,1}, {3,1}, {5,1}
+Streetclothes	PLAIN		{0,1}, {1,2}, {3,1}, {5,1}, {7,1}, {9,1}
+Light Gi	JP, MRT		{10,1}, {13,1}, {15,1}
+Medium Gi	JP, MRT		{10,2}, {13,1}, {15,1}
+Heavy Gi	JP, MRT		{10,3}, {13,2}, {15,1}
+Shaolin Robes	MRT		{10,3}, {13,2}, {15,1}
+Boxing Shorts	PLAIN, MRT	{0,1}, {1,1}
+Tutu		FRENCH		{20,1}				(Only French uniques drop THEME_FRENCH items)
+Qipao		CH		{15,3}, {17,3}, {19,2}, {21,2}
+Tai Chi Unif	CH, MRT		{10,2}, {13,1}, {15,1}
+Tuxedo		PLAIN		{33,3}, {43,2}
+Camoflague	RRA		{23,1}, {26,1}, {31,1}, {33,1}, {36,1}, {41,1}, {43,1}, {46,1}
+Ninja Uniform	NINJA		{16,1}, {18,1}, {20,1}
+Dobak		MRT		{10,2}, {13,1}, {15,1}
+Samurai Do	JP, MRT		{15,5}, {17,3}, {20,2}
+Fencing Armor	FRENCH		{20,1}
+Flak Vest	RRA		{23,3}, {26,2}, {32,2}, {34,1}, {42,1}, {44,1}
+Flak Jacket	RRA		{32,2}, {34,1}, {42,1}, {44,1}
+Maawashi	JP, MRT		{10,1}, {13,1}, {15,1}
+Sparring Gear	MRT		{10,3}, {13,2}, {15,1}
+Radiation Suit	RRA, TECH	{43,5}, {80,2}, {90,1}, {100,1}
+EVA Suit	TECHNO		{80,2}, {90,1}, {100,1}
+Saiyajin Armor	SPECIAL_GENE	{100,999}
+
+Headpiece
+Sunglasses	PLAIN, RRA	{0,1}, {1,1}, {3,1}, {5,1}, {21,1}, {26,1}, {31,1}, {36,1}, {41,1}, {46,1}
+Shades		PLAIN, RRA	{1,2}, {3,1}, {5,1}, {21,1}, {26,1}, {31,1}, {36,1}, {41,1}, {46,1}
+Headband	PLAIN, MRT	{0,1}, {3,1}, {5,1}, {5,1}, {9,1}, {13,1}, {15,1}, {20,1}
+Blindfold	PLAIN, MRT	{0,1}, {3,1}, {5,1}, {5,1}, {9,1}, {13,1}, {15,1}, {20,1}
+Ninja Hood	NINJA		{16,1}, {18,1}, {20,1}
+Samurai Helm	JP, MRT		{15,5}, {17,3}, {20,2}
+Motorcyle Hmlt	PLAIN		{21,1}, {26,1}, {31,1}, {36,1}, {41,1}, {46,1}
+Earmuffs	PLAIN		{0,1}, {1,1}, {3,1}, {5,1}
+Hockey Mask	PLAIN		{6,1}, {8,1}
+Infantry Helm	RRA		{21,1}, {26,1}, {31,1}, {36,1}, {41,1}, {46,1}
+Gas Mask	RRA		{21,3}, {26,2}, {31,1}, {36,1}, {41,1}, {46,1}
+Fencing Mask	FRENCH		{20,1}
+
+Jackets
+Cotton Cloak	PLAIN		{6,1}, {8,1}
+Cape		PLAIN		{4,1}, {6,1}, {8,1}
+Leather Jacket	PLAIN, RRA	{14,3}, {21,1}, {23,1}, {31,1}, {33,1}, {41,1}, {43,1}
+Flight Jacket	PLAIN, RRA	{21,5}, {23,3}, {31,1}, {33,1}, {41,1}, {43,1}
+Duster		PLAIN		{21,5}, {23,3}, {31,1}, {33,1}, {41,1}, {43,1}
+Trenchcoat	PLAIN, RRA	{31,2}, {33,2}, {41,1}, {43,1}
+Turtle Shell	SPECIAL_GENE	{100,999}
+Hvy Shell	SPECIAL_GENE	{100,999}
+
+Gloves
+Lgt Box Glv	MRT		{10,1}, {13,1}, {15,1}
+Hvy Box Glv	MRT		{13,1}, {15,1}
+Golf Gloves	PLAIN		{2,2}, {5,1}, {6,1}, {8,1}
+Silk Gloves	PLAIN, FRENCH	{5,3}, {6,2}, {8,1}
+Welding Gloves	PLAIN		{5,3}, {6,2}, {8,1}
+Ski Gloves	PLAIN		{2,1}, {4,1}
+Ninja Claws	NINJA		{17,3}, {20,2}
+
+Bracers
+Wrist Braces	PLAIN		{6,1}, {8,1}, {10,1}, {13,1}, {15,1}, {17,1}, {20,1}
+Shaolin Wraps	MRT		{20,1}, {22,1}
+Cloth Brace	PLAIN, MRT	{6,2}, {8,1}, {10,1}, {13,1}, {15,1}, {17,1}, {20,1}
+Lgt L. Brace	PLAIN, MRT	{8,3}, {10,1}, {13,1}, {15,1}, {17,1}, {20,1}
+Hvy L. Brace	PLAIN, MRT	{10,2}, {13,1}, {15,1}, {17,1}, {20,1}
+Steel Brace	MRT, NINJA	{15,5}, {17,3}, {20,1}
+Battle Brace	MRT, NINJA	{17,3}, {20,1}
+Ninja Brace	NINJA		{16,1}, {18,1}, {20,1}
+
+Shield
+Leather Sh.	MRT
+Riot Sh.	POLICE, RRA	{33,5}, {35,3}, {41,1}, {43,1}
+
+Salves
+Coagulant	PLN, MRT, RRA	{13,3}, {15,2}, {20,1}, {23,1}, {33,1}, {35,1}, {41,1}, {43,1}
+Zheng Gu Sh.	CH, MRT		{11,5}, {13,3}, {15,2}, {18,2}, {20,2}, {22,2}
+Body Oil	MRT		{11,2}, {13,1}, {15,1}
+
+
+
+
+
+
+
+

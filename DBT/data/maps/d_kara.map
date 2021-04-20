@@ -1,0 +1,41 @@
+-- Studio design based on:
+-- Japan Karate Do, Shotokan, Mission Viejo, Ca
+-- Doomo Arigatou, Sensei Paul Godshaw!
+
+map.define("d_kara.map")
+
+map.symbol{ symbol='.' feat=FEAT_FLOOR info=6 }
+map.symbol{ symbol='*' feat=FEAT_MAP_BORDER info=6 }
+map.symbol{ symbol='X' feat=FEAT_PERMA_WALL info=6 }
+map.symbol{ symbol='a' feat=FEAT_GREEN_CARPET  info=3 monster=RACE_NAKAMURA }
+map.symbol{ symbol='<' feat=FEAT_LESS info=6 }
+map.symbol{ symbol='-' feat=FEAT_GREEN_CARPET info=6 }
+map.symbol{ symbol='T' feat=FEAT_SIGNPOST info=6 on_walk="Supplies" }
+map.symbol{ symbol='m' feat=FEAT_MIRROR info=6 }
+map.symbol{ symbol='w' feat=FEAT_GLASS_WALL info=6 }
+map.symbol{ symbol='d' feat=FEAT_DOOR info=6 }
+
+map.map
+{
+[[*******************]],
+[[*XXXXXXXXXXXXXXXXX*]],
+[[*Xm--------------X*]],
+[[*Xm--------------X*]],
+[[*Xm--------------X*]],
+[[*Xm--------------X*]],
+[[*Xm--------------X*]],
+[[*Xm-----------a--X*]],
+[[*Xm--------------X*]],
+[[*Xm--------------X*]],
+[[*Xm--------------X*]],
+[[*Xm--------------X*]],
+[[*Xm--------------X*]],
+[[*XXXXXXXX...XXXXXX*]],
+[[*X..........X..d.X*]],
+[[*X.X...........w.X*]],
+[[*X<X.......TX..w.X*]],
+[[*XXXXXXXXXXXXXXXXX*]],
+[[*******************]],
+}
+
+map.set_player(7, 6)

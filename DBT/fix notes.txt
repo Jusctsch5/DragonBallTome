@@ -1,0 +1,295 @@
+DVD Notes:
+	Sasanishiki sword of Murasaki
+
+Current list of things I just don't know how to do:
+
+	generate a dungeon with no randon items
+	get a random sval of a certain tval
+	apply a new flag type from equipment to the player
+	reference kind info without creating an object
+	Empty a store inventory
+	set item flags to be only from a list, or of a multipler, e.g: 1000, 2000, 3000 or 4000
+
+
+
+Planned for V080:
+		Ninja Quests finished
+		Afterlife functional
+		Freeza/Cell quests done
+		Gero/Android/Trunks/TimeTravel quest tree done
+		Rosshi and Pilaf done
+		(Note: Rosshi sort of requires Videl/Chichi/Buruma/Joesephine...)
+		Shredder/Turtle Lair special levels
+		Finish Chi abilities!
+
+
+Planned for V090:
+		Babidi/Buu quests
+
+BUGS
+	Closing door in Foot Lair LUA error?
+	Pilot's Auction setup breaks after 1 year
+
+Fusion Benefits:
+Rosshi
+Uranai Baba
+Tenshinhan
+Krillan		Meditate, +20 BH
+
+
+obj = create_object(item.tval, item.sval)
+obj.ego_id[1] = dball.find_ego_idx("designer")
+apply_magic(obj, 99, FALSE, true, FALSE)
+
+085-087 issues:
+ * Being thrown into a monster should hurt the monster too
+ * Disintegration does not destroy walls?
+ * Reincarnation is disabled, as for some reason it seems to cause
+   horrible, nasty crashes when creating non-reincarnated characters
+ * Gah!!! Closed school FEAT messages are causing crashes as well.
+   Also disabled.
+ * monster_effect.CUT doesn't seem to work?
+ * Carriage returns do not display correctly on some quest descriptions
+ * Special attack types don't register in monster memory
+ * Armor display is weird
+ * Verbose descriptions of *ID*'d items sometimes do not display correctly.
+   In particular, Technomancers using laptops may have issues.
+ * FLAG_PERSISTENT has been removed from the engine, so I've replaced about fifteen
+   maps that were using it with SAVE_LEVEL=true. Consequently some WEIRD stuff is
+   going to happen in regards to special levels.
+ * Knowledge menu has not been DBT'ified
+ * Wizard mode cureall no longer restores chi
+ * Technomancers really do need to be able to make ego items <sigh>
+ * Not possible to have missile ball effects of variable radius
+ * "Beam" weapons don't actually "beam"
+ * Scopes need to be implemented
+ * It is not possible for ammo to specify the ball/bolt/beam type
+ * It would be neat to have the chi light effects of evil players radiate red
+ * Chi constant effects turn off when chi pool < 1, not <= 0, which is not quite the same
+
+
+084 issues
+If you kill someoneafter they've ben select as a WT opponent, it doesn't work
+Honda can't leave hsi ring durign a fatal match
+No runnign in Korin tower
+
+083 issues:
+New bugs:
+* WT 'fatal' matches (such as against the Androids) aren't actually fatal
+* It shouldn't be possible to jump over monsters
+* Demon King Piccolo handling is generally not correct
+* Trunks dialogue is not properly handled if trunks is aggressive
+* Light radii from death and battle aura aren't properly cumulative
+* Androids 17 and 18 don't kill Dr Gero when they should
+
+082 issues:
+* Muscle Stimulators/Sushi not removed from inventory after marrying Videl
+* No ego type filtering: Some egos may attach to extremely counterintuitive item types* "Aura" effects from spiked/bladed armor types should be more effective for barehanded fighters with AB_BLOCKING
+
+* Ego flags are being set, NOT added. Thus, strange situations may occur. For example, fur-lined trenchcoats provide less protection from cold than trenchcoats without fur lining. Designer tuxedos offer less of a charisma bonus than regular tuxedos. Etc.                    
+
+* For some reason you can no longer buy things back from the pawnshop :/       
+
+* There should probably be a display indicator for planets that have high gravity
+* Chi Constant Effects don't turn off when you run out of Chi                  
+
+* Heaven not behaving as intended                                              
+
+* The alternate stairway out of Mr Satan's training room behaves very strangely                                                                    
+
+
+079 issues:
+* Vorpal cuts appear to be happening less frequently than they should
+* Monster hp meters don't register secondary effects by color
+* Should be possible for damage to knock a character off a motorcycle
+* Why are PASS_ flags ignored?
+* Grrr...engine treats wilderness squares differently than dungeons.
+  How do we light them?
+
+
+
+Misc
+	From Crane Hermit exists to entrance to Frozen Wastes
+	Heaven/Hell: Piccolo/Demon King Piccolo handling must be unique
+	Implement climbing tools
+	Implement Ofuda
+	Ninja warehouse goods shouldn't decay
+	You should be able to scavenge robot corpses for parts
+	Planetary Teleport, Radditz, and dragonball wish teleports should probably all use a single function
+	Dr briefs/Gero should be moved to dball_data
+	Implement Pilot's Club Auction
+	Add a FOUND for 'It was made for you by the fan lady' and 'given to you in marriage'
+	Post-death character display is weird (Hmm?)
+	Character sheet does not display intrinsic intrinsics
+	Map wrap ignores diagonals	Stat loss should apply immediately upon receipt
+	stairs should be REMEMBER=true
+	onwalk notifications for judo/sumo closed (Ballet/ninjutsu?)
+	Add save building destructions
+	dam.LITE: using conf instead of blind,effect is correct, but hard coded message is wrong
+	EAT_GOLD should use the monster name
+	Pizza kitchen: set food to 10000 not hunger in one step, set to 14999 = High Strangeness
+	Wizard mode dungeon teleport to a Challenge Quest dungeon incorrectly places character on exit (do i care?)
+	Allow inventory commands in stores
+	Would be nice to have a visual damage cue on @
+	Charisma store bonus math appears to be incorrect
+	Lots of = options not releveant to DBT
+
+Wishes
+	sanity
+	corruption removal
+
+Options
+	Firearms
+
+Abillities / Chi Abillities
+	Firearms abilities?
+
+	Burst of Speed
+		Implement!
+	Telepathy
+		Implement! (Just using cell phone code, but that doesn't exist yet either)
+	Teleport
+		Failure should allow dist / 2 scattering, rather than max of 1
+	Planetary Teleport:
+		Make destinations unique and safe
+
+Technomancy
+	Subtract use difficulty from dismantle success chance
+	DUPLICATE INGREDIENT CHECKING!!!
+	Explosive failure damage should be resistable
+
+Afterlife
+	Spirits should have a chance to scare monsters
+	can pickup gold when dead
+	Pass flags not correct
+	No resistances are being set
+	Add invis, see invis
+
+AI's
+	Pilaf dialogue still using project fear
+	Add CAN_SPEAK handling
+
+Plot Holes
+	We have to find some plausible excuse to justify the planet plant/dungeon scenario
+
+Purge List
+	Lots of uneccessary stuff in calc.lua still
+	Unneccesary flags: pass_through_web, is_orc, etc.
+	Dungeons: features.lua  Don't really need webs, glphs of warding, fountains, etc.
+	some timed effects can go: probability travel, projection archery, etc.
+
+Systems
+	Throwing
+	Dragonball Status Check
+
+Planets
+	Ruins of planet Plant
+	'Kaio World' of the East Kaioshin: (Will be a teleport dungeon in extra dimensional space)
+
+Combat
+	Poison: effect happens even after monster dies
+	Poison: Should display 'is poisoned' on poisoned blades
+	Reduce to hit odds when stunned, etc.
+	Hide damage for fighting umbrella's
+	Hide second hand info if only can use one hand
+	Why does AC not display for weapons with AC mods?
+	Paired skill should count for melee weapons when paired with guns
+	Blocking bonus is inconsistantly handling: one hand firearms vs. one hand weapon
+	Aura effect + Blocking
+
+Marksmanship
+	Missiles should detonate regardless of hitting a monster
+	Ammo handling is hard coded, should check item flags
+	Implement AB_'s
+
+Thrown
+	Implement throwing
+	Ninja darts?
+
+Uniques
+	Princess Snake should do stuff
+
+Dungeons
+	Can't place stairs in Gero Dungeon?
+	Heaven and Hell need special monster placement
+	East Kaioshin/Z-Sword
+	Foot Lair needs random traps on dark squares
+
+Special Levels to add
+	Dungeon beneath Castle Pilaf
+	RRA Control Rooms 1 and 2
+	Dr. Gero's Secret Lab
+	Babidi's spaceship Levels 1-6
+	Jajoushin's Lair
+	Duel vs Ballet
+
+Flavours
+	Resolve # ~ issues for electronics
+	Flavours for tech components
+
+The Cosmos
+	set player on Kaio's World
+
+Quests
+	Imelda shoe reward should check to see if player is wearng artifact shoes
+	Add in Challenge quest helper texts for Ballet
+	FINISH NINJA QUESTS!
+	Chi Master quests
+	Lost boy quest?
+
+Monsters
+	Dr. Gero should probably summon robots, or something...not eat gold
+
+Display
+	Breakage chance for ammo can probably be removed from desc.lua
+	[=-Wizard-=] Doesn't disaply right away. (Can this even be fixed?)
+
+Stores
+	Add: Jewelry store
+
+Items
+	What should pulse monitors actually do?
+	EVA suits are armor=true, but should display FUEL (oxygen)
+	OOPS! Bigger number is MORE common in alloc, not less. Lots of items need to be renumbered
+	Store items aren't ID'd properly
+	Add lots of tech stuff
+	Add functionality for: cell phone
+	Wine of the Drunken master should do something
+	Change item characters so not so many things resemble corpses
+	Headbands aren't displaying res-Blind? Or missing flag?
+	First Aid kits need checking for something?
+
+Uniques that still need to be added:
+
+Good Guys
+	Goku
+	Gohan
+
+Namekkians
+	Dende
+	Nail
+	Raichi
+	?Zakuro?
+
+Freeza Tree
+	Koola
+	King Coola
+	Nappa
+
+Babidi Tree
+	Pui Pui (Level 1 Ship Guardian)
+	Yakon (Another ship gaurdian)
+
+Other Bad Guys
+	Cell Jr.
+
+Absolutely Misc
+	Puar, Yamcha's...umm...whatever
+
+OOT: Undecided:
+	Jackie Chan
+	Jet Li
+
+Artifacts
+	Bibidi's Crystal Ball
+	Music Box

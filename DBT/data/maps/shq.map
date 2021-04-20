@@ -1,0 +1,119 @@
+-- Dragonball T: Red Ribbon Army: Commander Red and Adjutant Black
+
+map.define("shq.map")
+
+map.symbol{ symbol='.' feat=FEAT_FLOOR info=6 }
+map.symbol{ symbol='<' feat=FEAT_LESS info=3 }
+map.symbol{ symbol='>' feat=FEAT_MORE info=6 }
+map.symbol{ symbol='*' feat=FEAT_MAP_BORDER info=6 }
+map.symbol{ symbol='X' feat=FEAT_PERMA_WALL info=6 }
+map.symbol{ symbol='+' feat=FEAT_DOOR info=6 }
+map.symbol{ symbol='D' feat=FEAT_DOOR_LOCKED_HEAD+6 info=6 }
+map.symbol{ symbol='~' feat=FEAT_IMPASSABLE_DOOR info=6 }
+map.symbol{ symbol='G' feat=FEAT_GLASS_WALL info=6 }
+
+map.symbol{ symbol='Z' feat=FEAT_GUARD_TOWER info=6 }
+
+map.symbol{ symbol='T' feat=FEAT_FLOOR info=6 monster=RACE_RRA_SHQ_INT }
+map.symbol{ symbol='C' feat=FEAT_FLOOR info=6 monster=RACE_RRA_SHQ_CAM }
+
+map.symbol{ symbol='A' feat=FEAT_FLOOR info=6 monster=RACE_RRA_PRIVATE }
+map.symbol{ symbol='B' feat=FEAT_FLOOR info=6 monster=RACE_RRA_CORPORAL }
+map.symbol{ symbol='H' feat=FEAT_FLOOR info=6 monster=RACE_RRA_CAPTAIN }
+map.symbol{ symbol='I' feat=FEAT_FLOOR info=6 monster=RACE_RRA_COMMANDER }
+map.symbol{ symbol='J' feat=FEAT_FLOOR info=6 monster=RACE_RRA_SNIPER }
+
+map.symbol{ symbol='1' feat=FEAT_FLOOR info=6 monster=RACE_RRA_RED }
+map.symbol{ symbol='2' feat=FEAT_FLOOR info=6 monster=RACE_RRA_BLACK }
+
+map.symbol{ symbol='c' feat=FEAT_FLOOR info=6 on_walk="A sign on the door reads 'Authorized Personel -=Only=-" }
+
+map.symbol{ symbol='e' feat=FEAT_FLOOR info=6
+	flags = {
+		MOVE_POST_DEST=function()
+			local trap_msg = "None"
+			if dball_data.rra_shq_cam == 1 then
+				trap_msg = "A camera zooms in on you and an alarm sounds!"
+			elseif dball.player_flying() == false then
+				trap_msg = "You step on a pressure plate in the floor!"
+			end
+			-- Trap remains active if player avoids it at first
+			if trap_msg ~= "None" then
+				message(trap_msg)
+				for i = 24, 26 do
+					cave_set_feat(i, 31, FEAT_FLOOR)
+					cave_set_feat(i, 35, FEAT_FLOOR)
+				end
+				cave_set_feat(23, 33, FEAT_IMPASSABLE_DOOR)
+				local c_ptr = cave(player.py, player.px)
+				c_ptr.flags[FLAG_MOVE_POST_DEST] = nil
+			end
+		end
+	}
+}
+map.symbol{ symbol='f' feat=FEAT_FLOOR info=6
+	flags = {
+		MOVE_POST_DEST=function()
+			if dball_data.rra_hq_state == 0 then
+				dialogue.RED()
+			end
+		end
+	}
+}
+map.symbol{ symbol='g' feat=FEAT_FLOOR info=6
+	flags = {
+		MOVE_POST_DEST=function()
+			if race_info_idx(RACE_RRA_RED, 0).max_num + race_info_idx(RACE_RRA_BLACK, 0).max_num > 0 then
+			else
+				if cave(4, 46).feat == FEAT_IMPASSABLE_DOOR then
+					cave_set_feat(4, 46, FEAT_FLOOR)
+					message("The door slides open.")
+					local c_ptr = cave(player.py, player.px)
+					c_ptr.flags[FLAG_MOVE_POST_DEST] = nil
+				else
+				end
+			end
+		end
+	}
+}
+
+map.map
+{
+[[*******************************************************************]],
+[[*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*]],
+[[*XXXXXXXXX........XXXXXXXXCG.....f+...........XXX........XXXXXXXXX*]],
+[[*XXXXXX....XXXXXX.XXXXXXXXCG...XXXX.........1.XXX.XXXXXX....XXXXXX*]],
+[[*XXXX...XXXXXTTTX.XXXXXXXXCG......X..........g~.X.XTTTXXXXX...XXXX*]],
+[[*XXX..XXXXXXX...X.XXXXXXXXCGGGGXXDXX........2.X.X.X...XXXXXXX..XXX*]],
+[[*XX..XXXXXXXX...X.XXXXXXXXCCCCCX.c.X..........X>X.X...XXXXXXXX..XX*]],
+[[*XX.XXZ.....X...X.XXXXXXXXXXXXXX...XXXXXXXXXXXXXX.X...X.....ZXX.XX*]],
+[[*X..XZ..ZZZ.X...X.XHIH.HI........I........IH.HIHX.X...X.ZZZ..ZX..X*]],
+[[*X.XZ...ZJZ.X...X.XTTT.TTH...............HTT.TTTX.X...X.ZJZ...XX.X*]],
+[[*X.X....ZZZ.X...X.X......TI.............IT......X.X...X.ZZZ....X.X*]],
+[[*X.X........X...X.X.......TI...........IT.......X.X...X........X.X*]],
+[[*X.X........X...X.+.......TH...........HT.......+.X...X........X.X*]],
+[[*X.X........X...XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX...X........X.X*]],
+[[*X.X........D...D........X...............X........D...D........X.X*]],
+[[*X.X........X...X........X...XXXXDXXXX...X........X...X........X.X*]],
+[[*X.D........X...X.....X..X..XX...c...XX..X..X.....X...X........D.X*]],
+[[*X.X........X...X.....X..X..XC...<...CX..X..X.....X...X........X.X*]],
+[[*X.X........X...X.....X..X..XX...c...XX..X..X.....X...X........X.X*]],
+[[*X.X........X...X.....X..X..XXXXXDXXXXX..X..X.....X...X........X.X*]],
+[[*X.X.ZZZZZZ.X...X........X..XXXB...BXXX..X........X...X.ZZZZZZ.X.X*]],
+[[*X.X.ZJZZJZ.X...XT..........XCGB...BGCX..........TX...X.ZJZZJZ.X.X*]],
+[[*X.X.ZZZZZZ.X...XT........TTXXXHBBBHXXXTT........TX...X.ZZZZZZ.X.X*]],
+[[*X.X........X...X.....XXXXXXXXXXX+XXXXXXXXXXX.....X...X........X.X*]],
+[[*X.XXXXXXXXXX...X.....XT.......X...X.......TX.....X...XXXXXXXXXX.X*]],
+[[*X.XXXXXXXXXX...X.....XT.......X.e.X.......TX.....X...XXXXXXXXXX.X*]],
+[[*X..XXXXXXXXX...X.....XT.......X...X.......TX.....X...XXXXXXXXX..X*]],
+[[*XX.XXXXXXXXX...X.TTTTXT.......XXDXX.......TXTTTTTX...XXXXXXXXX.XX*]],
+[[*XX..XXXXXXXXX+XXXXXXXXXXXXXXXXX...XXXXXXXXXXXXXXXXX+XXXXXXXXX..XX*]],
+[[*XXX..XXXXXXXX.X..HX..HX..HX..HX.X.XH..XH..XH..XH..X.XXXXXXXX..XXX*]],
+[[*XXXX...XXXXXX..HX..HX..HX..HX...X...XH..XH..XH..XH..XXXXXX...XXXX*]],
+[[*XXXXXX....XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX....XXXXXX*]],
+[[*XXXXXXXXX...............................................XXXXXXXXX*]],
+[[*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*]],
+[[*******************************************************************]],
+}
+
+map.set_player(17, 33)

@@ -1,0 +1,58 @@
+-- Duel Vs Honda
+-- This design is just made up. Not based on any particular studio...
+-- But the sand ring is from what I've seen in sumo tournaments
+-- Please note, also, the Japanese baths. :)
+
+map.define("dojo.map")
+
+map.symbol{ symbol='.' feat=FEAT_FLOOR info=3 }
+map.symbol{ symbol='*' feat=FEAT_MAP_BORDER info=6 }
+map.symbol{ symbol='X' feat=FEAT_PERMA_WALL info=3 }
+map.symbol{ symbol='<' feat=FEAT_LESS info=3 }
+map.symbol{ symbol='w' feat=FEAT_GLASS_WALL info=6 }
+map.symbol{ symbol='D' feat=FEAT_DOOR info=6 }
+
+map.symbol{ symbol='-' feat=FEAT_SAND info=3 }
+map.symbol{ symbol=':' feat=FEAT_DISQUALIFIED info=3 }
+
+map.symbol{ symbol='=' feat=FEAT_FURNITURE info=3 on_walk="Ringside seating" }
+map.symbol{ symbol='L' feat=FEAT_FURNITURE info=3 on_walk="Balcony seating" }
+map.symbol{ symbol='M' feat=FEAT_FURNITURE info=3 on_walk="Weightlifting machines" }
+
+-- It's attention to details that makes people smile...
+map.symbol{ symbol='W' feat=FEAT_JAPANESE_BATH info=6 }
+map.symbol{ symbol='s' feat=FEAT_SHOWER info=3 }
+
+map.symbol{ symbol='S' feat=FEAT_LADDER_RIGHT info=3 }
+
+map.symbol{ symbol='a' feat=FEAT_SAND info=3 monster=RACE_HONDA }
+
+-- Dungeon layout
+map.map
+{
+[[************************************]],
+[[*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*]],
+[[*XM.....D.....................SSS.X*]],
+[[*X......X....============.....XXX.X*]],
+[[*X..MM..w...=............=....XXXDX*]],
+[[*X......w..=..==========..=...X...X*]],
+[[*XM.....w.=..=::::::::::=..=..w.L.X*]],
+[[*XM.....w.=.=::--------::=..=.w.L.X*]],
+[[*X......X.=.::----------::=.=.w.L.X*]],
+[[*XMMM..MX.=.:------------:=.=.w.L.X*]],
+[[*XXXXXXXX...:------------:=.=.w.L.X*]],
+[[*X<.........:----------a-:=.=.w.L.X*]],
+[[*XXXXXXXX...:------------:=.=.w.L.X*]],
+[[*XXsXsXXX.=.:------------:=.=.w.L.X*]],
+[[*X.....sX.=.::----------::=.=.w.L.X*]],
+[[*X.WWW.XX.=.=::--------::=..=.w.L.X*]],
+[[*X.WWW.sX.=..=::::::::::=..=..w.L.X*]],
+[[*X.WWW.XX..=..==========..=...X...X*]],
+[[*X.WWW.sX...=............=....XXXDX*]],
+[[*X.....XX....============.....XXX.X*]],
+[[*X......D.....................SSS.X*]],
+[[*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*]],
+[[************************************]],
+}
+
+map.set_player(11, 14)

@@ -1,0 +1,125 @@
+map.define("earthse.map")
+
+-- Import default symbols
+map.import("towns/symbols.map")
+
+map.symbol{ symbol='a' feat=FEAT_ASH info=3 }
+map.symbol{ symbol='b' feat=FEAT_SHOP info=3 building=store.WAREHOUSE }
+map.symbol{ symbol='e' feat=FEAT_SHOP info=3 building=store.GYM }
+map.symbol{ symbol='f' feat=FEAT_SHOP info=3 building=store.SHOOTING_RANGE }
+map.symbol{ symbol='g' feat=FEAT_MORE info=3 dungeon=DUNGEON_VOLCANO }
+map.symbol{ symbol='h' feat=FEAT_SIGNPOST info=3 on_walk="Orinji Buddhist Temple" }
+map.symbol{ symbol='i' feat=FEAT_MORE info=3 dungeon=DUNGEON_TEMPLE }
+map.symbol{ symbol='k' feat=FEAT_SHOP info=3 building=store.MUSEUM }
+map.symbol{ symbol='l' feat=FEAT_MORE info=3 dungeon=DUNGEON_MUSASHI }
+map.symbol{ symbol='m' feat=FEAT_VOLC_LAVA info=3 }
+map.symbol{ symbol='n' feat=FEAT_MORE info=3 dungeon=DUNGEON_OXKING_HOUSE }
+map.symbol{ symbol='o' feat=FEAT_MORE info=3 dungeon=DUNGEON_BEAR_CAVE }
+map.symbol{ symbol='p' feat=FEAT_SHOP info=3 building=store.PIZZA_KITCHEN }
+map.symbol{ symbol='4' feat=FEAT_SHOP info=3 building=store.STORE_GUNSTORE }
+map.symbol{ symbol='y' feat=FEAT_SHOP info=3 building=store.YMCA }
+
+map.symbol{ symbol='z' feat=FEAT_MORE info=3 dungeon=DUNGEON_KAME_HOUSE }
+
+-- Mountain Lion warning signs
+map.quest_symbol
+{
+	quest = QUEST_MOUNTAIN_LIONS
+	symbol = 'j'
+	symbols =
+	{
+		[{QUEST_STATUS_FINISHED}] = { feat=FEAT_DIRT info=3 }
+		default = { feat=FEAT_SIGNPOST info=3 on_walk="The sign reads: Beware of mountain lions" }
+	}
+}
+-- Mountain Lions
+map.quest_symbol
+{
+	quest = QUEST_MOUNTAIN_LIONS
+	symbol = 'q'
+	symbols =
+	{
+		[{QUEST_STATUS_FINISHED}] = { feat=FEAT_GRASS info=3 }
+		default = { feat=FEAT_GRASS  info=3 monster=RACE_MOUNTAIN_LION }
+	}
+}
+map.quest_symbol
+{
+	quest = QUEST_MOUNTAIN_LIONS
+	symbol = 'r'
+	symbols =
+	{
+		[{QUEST_STATUS_FINISHED}] = { feat=FEAT_DIRT info=3 }
+		default = { feat=FEAT_DIRT  info=3 monster=RACE_MOUNTAIN_LION }
+	}
+}
+
+map.map
+{                                                                                                                                                                                                       
+[[TTTTTTTTTTTTT-,O,-------VWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWVV----T-T-TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT-----,O,--TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT]],
+[[TTTTTTTTT-----,O,,,--,---VVVWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWVVV-----------TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT---------------TTTTTTTTTTTTTTTTT------,O,-T----TTTTTTTTTTTTTTTTTTTTTTTTTTTTTT]],
+[[-TTTTTT----,-,,O,--,,-,,,--VVVWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWVVVVVVV---q------TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT---------------------------TTTTT-TT-------jO,------------------TTTTTTTTTTTTTTTTTT]],
+[[---TTTT--,,-,,,O,--,--,----VWWWWWWWVVVVVVVVVVVVVWWWWWWWWWWWWWWWWWWV-------------TTTTTTTTTTTTTTTTT------------TTTTTT-----------^^^^^------------------------T--,,O,-------,----T----------T----TTTTTTTT]],
+[[---TTTTT-----,,O,,--,---,-VVWWWWVVVV-----------VVVVWWWWWWWWWWWWVVVV-q-q-q-------TTTTTTTTTTTTTT-----------------TT------------^^^^^^^-,,,,,,,,,,,,,,,,,,,,,,,,,,,O,T------T-------VVVVVV-----V----TTTTT]],
+[[----TTTTTTTT--,O,---------VWWWVVV-----------------VVVWWWWWWWWVVV-------------TTTTTTTTTTTTTTTT-----------------------------^^^^^^^---,,OOOOOOOOOOOOOOOOOOOOOOOOOO,,------------------VVVVV--VVVV---TTTT]],
+[[-----TTTTTTTT-,O,,--,--,--VVVVV---,---,-,-,-,-----VVVWWWWWWWVV------q-q-q---TTTTTTTTTTTTTT-------------^^^--------------^^^^^-------,O,,,,,,,,,,,,,,,,,,,,,,,,,,-------------T--------VVV-VVWWV-----TT]],
+[[---,---TTTTT--,O,--,--,---------,--,-----,-----,--VWWWWWWVVVV-----------------TTTTTTTTTTT------------^^^^^^^---------^^^^^^^---,,,,,,O,---------------------------T------------^^^^----VVVVWWVV------T]],
+[[--------TTT--,,O,----,-,---,-,-,-,---,,-,--,-,,---VVWWWWVVVVVVVVVV------------TTTTTTTTTT-----------^^^^^W^^^^^^^^^^^^^^^^^----,,OOOOO,,---------------------------------T-----^^^^--------VVVV-------T]],
+[[------------,-,O,,---,-----,---,--,,-,-,--,-----,--VVWWWWWWWWWWWWVVVVVVV-------TTTTTTTT-----------^^^^^^W^^^^^^^^^^^^^^^^^^^--,O,,,,,,-------------------------------------^^^^^^T--^^^^^---V--T-----T]],
+[[---,-,-,-,-,--,O,---,-----,-------,---------,-,-,--VWWWWWWVVVVWWWWWWWWWVVV-----TTTTT-------------^^^^^^^W^^^^^^^^^^^^^^^^^^^^^,O,^^^^^^^^^^^^^^^^^^----------,----,--,---^^^---^^---T^^^^^-------T-TTT]],
+[[-------,------,O,--,--,--,,-,-,-------,-,-,------,-VVWWWWVV--VVVWWWWWWWWWV-----TTT--------------^^^^^^^WW^^^^^^^---^^^^^^^^^^-,O,--^^^^^^^^^^^^^^^^^^^^^^^^^^--,-T,,----,-----T-^^^---o^^^--T------TTT]],
+[[-,-,-,,---,---,O,,------,-,-,,-,-,-,----,-,,-,,----VWWWWVV-----VVVVWWWWWWV-----TTT-------------^^^^^^^WW^^^^^^^^^----^^^^^----,O,------^^^^^^^^^^^^^^^^^,,,,,,,-,---,-T-----,----^^^^^^^^-------TTTTTT]],
+[[-,---,---,-,--,O,,-,,-,,--,,-,,-,,---,-,,--,,-,,---VVWWWWV--------VVVWWVVV-----TT---------------^^^^^WW^^^^^^^^^^------^^^^^^-,O,--------^^^^^^^^^^^^,,,,,,,,-,,,,,,,,--,-----,-----^^^----------TTTTT]],
+[[-,--,---,--,--,O,,,,,-----,---,,,,,-,,,,,,,,,-,--,--VVWWWV----------VVVV------TTT--------------^^^^^WW^^^^^^^^^^^---------^^--,O,------^^^^^^^^^^^^,,,,,,,,,,,,,,,-,-,,-,--T,-----T-----T---T------TTT]],
+[[-----,-,--,,,,,O,,,,,,-,---,--,###,-,#######,--,--,--VVWWV------------------TTTT-------VVVVVVVVV^^^WW^^^^^^^^^^^^^----,,,,,,,,,O,-----^^^^^^^^^^^^^,,,,,T,,,,,,-,,,,,,,,,,,-,-------------------TTTTTT]],
+[[---,-,---,,###,O,###,,,---,-,-,###,-,#######,-,,--,,--VWWVV---TTT-----------TTTT------VVWWWWWWWWWWWW^^#####^^^^^-----,,OOOOOOOO,,-----^^^^^^^^^^^^^^^,,,,,,,,,,,,,,,-,---------T--------------TTTTTTTT]],
+[[-,----,---,##pOOOb##,--,,,-,--,#4#,,,###e###,,,--,--,-VVWWV----TTTTT--------TTT------VVWWVVVV^^^^^^^^^##i##^^^^^-----,O,,,,,,,,,----^^^^^^^^^^^^^^,,,,,,,,,,,T,,,,,,,,-TTTTTTTTTTTTTTT--T--TTTTTTTTTTT]],
+[[----,-----,###,O,###,,,-,-,-,,,,O,,,,,,,O,,,,,,,,-,----VVWV------TTTTTTTTTTTTT------VVWWVVV^^^^^^^^^^^^#-#^^^^^^-----,O,,,^^^^-----^^^^^^^^^,,,,,,,,,,,,,,,,,,,,,,,T,,,---,-TTTTTTTTTTTTTTTTTTTTTTTTTT]],
+[[--,---,-,-,,,,,O,,,,,--,--,-,,OOOOOOOOOOOOOOOOO,,--,----VWVV-------TTTTTTTTTTT-----VVWWVV-----^^^^^^--T#-#^^^^-------,O,^^^^^^--^^^^^^^^^^^^^^,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,-,--,-TTTTTTTTTTTTTTTTTTT]],
+[[----,--,-----,,O,---,--,--,,,OO,,,,,,,,,,,,,,,OO,####-,-VWWVV--------TTTTTTTT------VWWVV-------^^^^----h-^^^^^^^^^^--,O,^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^,,,,,,,,,,,,-,,,-,,,,-,,-,TTTTTTTTTTTTT]],
+[[--,---,-------,O,,,,,,,,,,,,OO,,TTTTTTTTTTTTT,,O,####,--VVWWV----------TTTTT------VVWVV--------T^---OO---^^---^^^^^^^,O,^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^,,,,,,,,,,,,,,,,,,,,,,,,,,,-,,,-,,-T-TTTTTTTTT]],
+[[-----,--,-----,OOOOOOOOOOOOOO,,TTTTTTTTTTTTTTT,OOy###,-VVVWWVVV---------TTTT-----VVWWV---------,,,,-O--^^^------^^^^-,O,,^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^,,,,,,,,,,,,,,,,,T,,,,,,,,,,,,,T,,-,,,-TTTTTTTT]],
+[[--,-,-,-,-,-,-,O,,,,,,,,,,,,OO,,TTTTTTTTTTTTT,,O,####-----VWWWVVVV-------TTTT----VWWVV---------,OOOOO-^^^--------^^^^,O,,^^^^^^^^^^^^^^^^^^^^^^^^^^,,,,,,,,,,T,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,TTTTTTT]],
+[[---,--------,-,O,,T,,,--,--,,OO,,,,,,,,,,,,,,,OO,####-----VVWWWWWVVV------TTT----VWVV----------,O,,,,--------^^^^^^^^,O,,,,,^^^^^^^^^^^^^^^,,^^^,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,-,TTTTT]],
+[[------,--,-,,,,O,-,-,-,,-,--,OOOOOOOOOOOOOOOOOO,,,,-,---VVVWWWWWWWVVVV----TTTT---VWV-----------,O,--------^^^^^^^^^^^,,OOOO,,^^^^^^^^^^^^^^,,,^^^^,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,T,,,,,,,,,,,-,,,,-TTT]],
+[[-,-,-,-,--,,,,,O,,,,,-,-,---,O,,,O,,,,,,O,,,,,,,-,----VVVWWWWWWWWWV---------TT---VWV-----------,O,-------^^^^^^^^^^^^^,,,,,O,--^^^^^^^^^,,,r,,,^^^^^^^,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,T,,-,-,-TT]],
+[[---,---,--,###,O,###,----,--,O,-###,,###k###-,-,---VVVVVWWWWWWWWWWV--------------VWV-----------,O,------------------^^^^^^,O,-^^^^^^,,,,,,,,,,,,^^^^^^^,,,,,,,,,,,,,,,^^^^^^^^^^,,,,,,,,,,,,,,,,,,,TTT]],
+[[-,---,----,##bOOOb##,---,--,,O,,###--#######,----------VVWWWWWWWWWVVVV-----------VWV-----------,O,,,,,,,,,,,,,,,,,,,,,,,,,,O,-^^^^^^^,,,,r,,,r,,,,^^^^^,,,,,,,,,,^^^^^^^^^^^^^^^^^^^,,,,,,,,,,,,,,T,TT]],
+[[-------,--,###,O,###,,--,--,,O,-###-,#######--,----,----VVVVWWWWWWWWWVVVVV-------VWV-----------,OOOOOOOOOOOOOOOOOOOOOOOOOOO,,-^^^^^^^^^,,,,,,,,,,,,^^^,,,,,,,^^^^^^^^^^^^^^^^^^^^^^^^^^^,,,,,,,,,,,TTT]],
+[[---,--,--,,,,,,O,,,,,-,,-,-,,O,,,-,,-,---,,,,-,,,---,,,----VVVWWWWWWWVV----------VWV-----------,O,,,,,,,,,,,,,,,,,,,,,,,,,,--^^^^^^^^^,,,r,,,,,,,,,,,,,,,,,,,,^^^^^^^^^^^^^^^^^^^^^^^^,,,,,,,,T,,,TTTT]],
+[[-,---,--,--,-,,O,--,--,-----,O,--,-,,-,---,,---,----,----,---VVVWWWWWWVVVVVVV---VVWV-----------,O,--------------------------^^^^^^^^^^^,,,,r,,,,,,,,,,,,,,,,,,,,,,,^^^^^^^^^^^^^^^^^,,,,,,,,,,,,,TTTTT]],
+[[----,-,--,--,-,O,,--,--,-,--,O,--,---,-,,,,-,,,--,-,-,---------VWWWWWWWWWWWWVVVVVWWV-----------,O,---------------------^^^^^^^^^^^^^^^^^^,,,,,,,,,,,,,,,,,,,,,,,,,,,,^^^^^^^^^^^^^,,,,,,,,,,,,TTTTTTTT]],
+[[--,-,-,---,---,O,-,,-,,---,,,O,,-,-------------------------VVVVVWWWWWWWVVVVWWWWWWWVV-----------,O,----------------^^^^^^^^^^^^^^^^^^^^^^^,,,,,,,,,,,,,,,,^^^^^^^^^^^^^^^^,,,,,,,,,,,,,,,,,TTTTTTTTTTTT]],
+[[--,---,-,-,-,-,O,-----,----,,O,----VVVVVVVVVVVVVVVV----VVVVVWWWWWVVVVVVV--VVVVVVVVV------------,O,-----------^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^,,,,,,,,,,,,,,,^^^^^^^^^^^^^^^,,,,,,,,,,,T,,,,,,,,,TTTTTT]],
+[[-,-,-,--------,O,,---,-,----,O,-VVVVVWWWWWWWWWWWWWVVVVVVWWWWWWVVVV-----------------------------,O,----^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^,,,,,,,,,,,,,,,,,,,^^^^^^^^^^^^^^^^,,,,,,,,,,,,,,,,,,,TTTT]],
+[[-------,-,--,-,O,--,,-,,,---,O,-----VVVVVWWWWWWWWWWWWWWWWWWWVVVVVVVVV--------------------------,O.--------^^^^^^^^^^^^^^^^^^^^^^^^^^^^^mmm^,,,,,,,,,,,,,,,,,,,,,,,,,,^^^^^^^^^^^^^^^^,,,,,T,,,,,T,,TTT]],
+[[----,---,---,-,O,----,-----,,O,---,-----VVVWWWWWWWWWWWVVVVVVVV---------------------------------,O,-------------^^^^^^^^^^^^^^^^^^^^^^^^mnm^^^^^^^^^^,,,,,,,,,,,,,,,,,,,,,^^^^^^^^^^^^^,,,,,,,,,,,,,TTT]],
+[[--------------,O,,,-,--,--,-,O,--,,,-,,---VVVVWWWVVVVVV----------------------------------------,O,--------------------^^^^^^^^^^^^^^^^^m,m^^^^^^^^^^^^^^^^^^^^^,,,,,,,,,^^^^^^^^^^^^^^^^^,,,,,,,,,,TTT]],
+[[----,,-----,-,,O,--,-----,--,O,-,-,--,--,----VWWWV--------------,------------------------------,O,---------------------^^^^^^^^^^^^^^^^,,,,,^^^^^^^^^^^^^^^^^^^^^^,,,,,,,,,,,,,,,^^^^^^^^^^^^^,,,,TTTT]],
+[[--,-----------,O,,---,-,-,--,O,,---,--,,---VVWWWVV--,----,-------------------------------------,O,----------------q-----^^^^^^^^^^^^^,,,,,,^^^^^^^^,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,^^^^^^,,,,TTTTT]],
+[[-,---,--------,O,-,----,---,,O,--,--,,----VVWWWWWV-,-,,-----,------,---------------------------,O,-----------------------^^^^^^^^^^^,,,,,^^^^^,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,^^,,,,,TTTT-T]],
+[[-----,-,-,,---,O,--,--,-----,O,,-,-,,-,-,-WW###VV----------------------------------------------,O,-----------------------^^^^^^^^^^,,,,^^^^^,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,TTTTT,,,,,,,,,,TTTTT--T]],
+[[,,,,,,,,,,,,,,,O,,,,,,,,,,,,,O,,,,,,,,,,,j#######,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,O,----------------q------l^^^^^^^^,,,,,,^^,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,TTTTTTTTTTTTT---T---]],
+[[OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO,---^^^-------q--------^^^^^^^^^^^,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,TTTTTTT--------]],
+[[,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,#######,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,O,--^^^^^------------^^^^^^^^^^^^^^,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,--TTTTTTT---VV]],
+[[--,----,-,-,--,-,-,,-,-,--,-,-,-,-,,-------V###VVV--,---,-------------------------------------,,O,-^^^^^^^----------^^^^^^^^^^^^^^^^^^^^,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,--TTT--VVW]],
+[[---------,-,-,-------,---------,---------VVVWWWWWVV---,-----TTTTTTTTTTTTT----------------^^^^^^,O,-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,VVVVVVVVVV,-,-,,,---VVWW]],
+[[------------------------------------VVVVVVWWWWWWWWVVV----TTTTTTTTTTTTTTTTTTTTTTT----^^^^^^^^^--,O,^^^^^^^^^^^^^^^^^^^^^^^^^^^^^,,,,,,,,,,,a,,a,,a,,,,,,,,,,,,,,,,,,,,,,,,,,VVVVWWWWWWWWVVVVVV-,,,VVWWW]],
+[[------------------VVVVVVVVVVVVVVVVVVVWWWWWWWWWWWWWWWVV-------TTTTTTTTTTTTTTT------^^^,,,,,,,,,,,O,,^^^^^^^^^^^^^^^^^^^^^^,,,,,,,,,,,,,,,a,,,a,,a,,a,,,,,,,,,,,,,,,,,,,,,,VVVWWWWWWWWWWWWWWWWVVVVVVWWWW]],
+[[----------VVVVVVVVVWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWVVV-------TTTTTTTTTTT------^^^^,,OOOOOOOOOO,,^^^^^^^^^^^^^^^^^^^--,,,,,,,,,,,a,,,a,,a,a,,,,a,,,aa,,,,,,,,,,,,,,,,,,VVWWWWWWWWVVVVVVVVVWWWWWWWWWWW]],
+[[-------VVVVWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWV----------TTTTTTTTTTT---^^^^,O,,,,,,,,,,,^^^^^^^^^^^^^^^^^^------,,,,,,,,,,,,a,aaaaaaaaa,a,a,,,,,,,,,,,,,,,,,,,VVWWWWWWVVVV,,,,,,,VVVVVVVVVVVV]],
+[[------VVWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWV--------TTTTTTTTTT------^^^^,O,,,^^^^^^^^^^^^^^^^^^^^^^-----,---,,,,,,,,a,,a,aaaaaaaaaaaaa,,,,,a,,,,,,,,,,,,,,VVWWWWWWWWWVVVVV,,,,,,,,,,,-,,--]],
+[[-----VVWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWVVV----TTTTTTTTTTT------^^^^^,O,^^^^^^^^^^^^^^^^^^^^^---,------,,,,,,,,a,,,a,aaaaaa^^^aaaaaa,,,,,,,,,,,,,,,,,,,VWWWWWWWWWWWWWWVVVV,,,,,,,-,,-,-]],
+[[-----VWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWV-----TTTTTT--------^^^^^^^,O,^^^^^^^^^^^^^^^^^^---,--,-,-,,,,,,,,,,,,,,,,aaaaaa^^^^^aaaaaa,,,,a,,,,,,,,,,,,,VVWWWWWWWWWWWWWWWWVVV,,,,,,-,,--]],
+[[-----VWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWV---TTTTTTTTTTT----^^^^^^^,,,,,,,,,,,,,,,,,,,^^^^,---,,,,,,,,,,,,,,,,,,a,aaaaaa^^^g^^^aaaaaaa,,,,,,,,,,,,,,,,,VVWWWWWWWWWWWWWWWWWV,,,,-,-,--T]],
+[[-----VWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWVVVV----TTTTTTTTTTTT----^^^^^,#f#--------------,^^^^^-,,,,,,,,,,,,,,,,,,,aa,,aaaaaa^^m^^aaaaaa,a,a,,,,,,,,,,,,,,,,VWWWWWWWWWWWWWWWVVV,,,,,,,-,-T]],
+[[-----VWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWVVVVV---------TTTTTTTTTTTTT---^^^,###--------------,^^^^^--,,,,,,,,,,,,,,,,a,aaa,aaaaaaa^m^aaaaaa,a,,,,,,,,,,,,,,,,,,,VVWWWWWWWWWWWWVV,,,,,,,,-,,,-T]],
+[[-----VVWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWVVVV---------------TTTTTTTTT----^^^^,###--------------,^^^-----,,,,,,,,,,,,,,,,,,,,a,aaaaaaaaaaaaaa,a,,a,a,,,,,,,,,,,,,,,,VVVVWWWWWWVVVV,,,,,,,-,,,-,-T]],
+[[------VVVWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWVVVVVVVVV-------------------TTTTT------^^^^^,,,,,,,,,,,,,,,,,,,^^^-----,,,,,,,,,,,,,,,,a,a,a,aa,aaaaaaaaaaaa,,,,,,,,,,,,,,,,,,,,,,,,,VVVVVVVV,,,,,,,,,,,,,,,--T]],
+[[--------VVVVVWWWWWWWWWWWWWWWWWWWWWWWWVVV-------------------------TTTT-------^^^^^^^^^^^^^^^^^^^^^^^^^^^^^----,,,,,,,,,,,,,,,,,,,,,,a,aaa,a,a,,aa,,a,a,a,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,-,,,-,,-TT]],
+[[------------VVVVVVVWWWWWWWWWWWWWWWWVVV--------------------------TTTT------^^^^^^^^^^^^^^^^^^^^^^^^^^^^^-------,,,,,,,,,,,,,,,,,,,,,,a,,a,,a,aa,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,-,,-,,,,,,---TT]],
+[[------------------VVVVVVVVVVVVVVVVVV--------------------------TTTTTTT-------------^^^^^^^^^^^^^^^^^^--------------,,,,,,,,,,,,,,,a,,,,,,a,,a,,,a,a,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,------TTTT]],
+[[-----------------------------------------------------------TTTTTTTTTTTTT-------------------------------------------,,,,,,,,,,,,,,,,,,,,,,,,,,a,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,----,----TTTTTTTTT]],
+[[--------------------------------------------------------TTTTTTTTTTTTTTTTTTT-------------------------------------,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,-,--,TTTTTTTTTTTTTTTTT]],
+[[---------------------------------------------------TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,TTTTTTTTTTTTTTTTTTTTTTTTT]],
+}

@@ -1,0 +1,119 @@
+#####R                  /---------------------------\
+#####R                 <    Barehand Vs. Weaspons    >
+#####R                  \---------------------------/
+
+*****/abook-3.txt*1[(a) Barehanded]
+*****/bbook-3.txt*2[(b) Weapons]
+*****/cbook-3.txt*3[(c) Comparitive Analysis]
+
+Note: As of DBT Version 0.3.0 the analysis offered
+herein is no longer representative of the current
+combat system. Eventually a proper comparison will
+be offered, but for now, let me summarize by saying
+that weapons do more damage, but barehanded hits more
+often. It's a lot more complicated than that, but if
+you're having difficulty fighting barehanded in the
+early game, don't be adverse to switching to weapons.
+I've seen a second level character with zero skill take
+on a level 7 black belt.
+
+~~~~~1
+#####G(a) Barehanded
+Barehanded combat is very simple, and straightforward
+in both its use, and its skill point investment. By
+investing points in the barehanded skill, a player will
+receive bonuses to their chances to-hit, their damage
+as well as their armor class. Additional points spent
+in the general martial arts skill will further increase
+their to-hit chances.
+
+Barehand fighting does have its limitations, though.
+While a barehanded fighter will generally have an easy
+time hitting a target, they may not deliver a lot of
+damage. Maximum damage for barehand is equal to the
+vaule of your barehanded skill, plus any strength
+bonuses. THis means that many players will find
+themselves unable to do more than one or two points
+of damage at a time. Some players may even be incapable
+of damaging a target at all. This problem quickly
+goes away with the investment of a few skill points,
+however.
+
+The other disadvatage to barehanded fighting is the
+inability to wield anything in your hands. Both hands
+must be completely free to fight barehanded. This means
+a barehanded fighter must make special allowances
+for adventuring in dark places, as flashlights must
+be carried in the hands.
+
+~~~~~2
+#####G(b) Weapons
+Weapons offer easy damage at the expense of difficulty
+of use, and a lessened chance of successfully landing a
+blow. They offer a great deal more flexibility than
+barehanded fighting, as a weapons fighter may choose
+from any of nearly two dozen weapons, and may even
+choose to wield two entirely different weapons together.
+Doing so often results in a severe to-hit penalty, but
+this may be mitigated either by choosing weapons which
+naturally pair, or by investing points in the paired
+weapons skill, which reduces this penalty. Poor choice
+of weapons may result in a penalty as high as -80
+to-hit. It would require 80 skill points to make up for
+such a penalty.
+
+Futher, weapons fighting is altogether more skill point
+intensive than barehand, with four separate skills to
+invest points in: martial arts, which increases only
+your tohit odds, weapons, which also increases your
+tohit odds, as well as determines your chances of success
+in weapon-related tasks, parrying, which provodes an armor
+class bonus for each weapon wielded, and paired, which
+reduces paired weapon penalties.
+
+Weapons combat also offers a variety of other benefits:
+A weapons fighter may cary things in his hands (such as
+flashlights) and continue to fight, some weapons can
+have poison applied to them, many weapons offer benefits
+secondary to their immediate combat value. Entangling
+weapons may disable foes, some may offer resistance or
+protective benefit, and of course, there are any artifact
+weapons which offer any number of benefits.
+
+~~~~~3
+#####G(c) Comparitive Analysis
+For the first several levels, weapons combat
+is always superior to barehand. A fighter with average
+stats and no skill may be able to land blows more often
+with his hands, but we will do virtually no damage,
+whereas a weapon can easily be made to deliver a goodly
+amount.
+
+As the game progresses, barehanded will usually
+overtake weapons as the superior choice, because the
+damage limitations of barehanded will drop off far
+more quickly than than the average player will be
+able to afford to upgrade his weapons. This, in
+addition to the skill point expenditures, which will
+allow a barehanded fighter to be as effective as a
+weapons fighter with three times as many skill points
+invested.
+
+By the middle game, a barehanded fighter will have
+found solutions to the light problem, but may begin
+to regret his inability to wield the artifacts he
+is beginning to find. This may or may not be
+outweighed by all the skill points he has available
+to invest, depending primarily on playstyle.
+
+In the late game, the evaluation becomes more complicated,
+as many factors are involved. However, the deciding
+factor may often be that of skill points. A barehanded
+fighter needs only reach 200 combined skill in martial
+arts and barehand in order to have reached his maximum
+capacity. A weapons fighter, however, might spend up to
+400. 100 each in martial arts, weapons, parrying and
+paired. His ultimate end result will be far more impressive,
+but at twice the cost.
+
+

@@ -1,0 +1,38 @@
+map.define("pilaf.map")
+
+map.symbol{ symbol='.' feat=FEAT_FLOOR info=6 }
+map.symbol{ symbol='*' feat=FEAT_MAP_BORDER info=6 }
+map.symbol{ symbol='X' feat=FEAT_PERMA_WALL info=6 }
+map.symbol{ symbol='<' feat=FEAT_LESS info=6 }
+map.symbol{ symbol='a' feat=FEAT_RED_CARPET info=6 monster=RACE_PILAF }
+map.symbol{ symbol='b' feat=FEAT_FLOOR info=6 monster=RACE_MAI }
+map.symbol{ symbol='c' feat=FEAT_FLOOR info=6 monster=RACE_SHUU }
+map.symbol{ symbol='d' feat=FEAT_SIGNPOST info=6 on_walk="The Glorious Emperor Pilaf's Castle is under construction." }
+-- map.symbol{ symbol='e' feat=RUBBLE info=6 }
+map.symbol{ symbol='r' feat=FEAT_RED_CARPET info=6 }
+
+map.map
+{
+[[*****************************************]],
+[[*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*]],
+[[*X..............rrrXXXrrr..............X*]],
+[[*X..............rrrXaXrrr..............X*]],
+[[*X..............brrrrrrrc..............X*]],
+[[*X.................rrr.................X*]],
+[[*X.................rrr.................X*]],
+[[*X.................rrr.................X*]],
+[[*X.................rrr.................X*]],
+[[*X.................rrr.................X*]],
+[[*X.................rrr.................X*]],
+[[*X.................rrr.................X*]],
+[[*X.................rrr.................X*]],
+[[*X.................rrr.................X*]],
+[[*X.................rrr.................X*]],
+[[*X.................rrr.................X*]],
+[[*X.................dr..................X*]],
+[[*X..................<..................X*]],
+[[*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*]],
+[[*****************************************]],
+}
+
+map.set_player(17, 20)

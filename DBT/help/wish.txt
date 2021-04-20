@@ -1,0 +1,74 @@
+[[[[[BWishes]                                                                  
+                                                                               
+Dragonball T wishes are extremely flexible, and in general pretty much anything
+may be wished for. No, really...try it. Wish for anything.                     
+                                                                               
+[[[[[BGeneral Rules]                                                           
+                                                                               
+ * Wishes must begin with 'I wish'                                             
+ * Wishes may not interfere with the free will of any conscious being          
+ * Wishes may not contain numbers of any kind                                  
+ * Spelling and spacing between words must be correct                          
+ * It is not always necessary to be specific                                   
+ * Complete sentences are usually ok, and sometimes necessary                  
+ * Item wishes are more delicate than non-item wishes                          
+ * You are allowed a couple mistakes, but...                                   
+ * People who annoy Shenron may not get their wish granted                     
+                                                                               
+It should be pointed out though, that Shenron is basically on your side.       
+He's not out to trick you through clever interpretation, nor will he try       
+to cheat you out of having your wish granted. In fact, most of the time        
+if he's uncertain about what you're asking for, he'll give you his best        
+guess, then ask you to confirm that's really what you want. If it isn't,       
+simply tell him no and try making another wish. But don't do this too          
+many times...                                                                  
+                                                                               
+...Shenron is not very patient.                                                
+                                                                               
+[[[[[BAvoiding Problems]                                                       
+                                                                               
+The wish parser is designed to be flexible, but it does have limits. Basically 
+the parser looks for key expressions it recognizes, and responds to them.      
+Consequently, while excessive verbage and very specific requests may sometimes 
+work fine, other times it may lead to inaccurately granted wishes. For example,
+while:                                                                         
+                                                                               
+'I wish to be a really super mega strong! Yeah baby!'                          
+                                                                               
+...is a perfectly valid wish, and will work quite nicely, if you give too many 
+words unrelated to what you really want, sometimes those extra words will be   
+recognized as expressions. For example:                                        
+                                                                               
+'I wish to have a nifty stealth bomber with a cute blonde co-pilot.'           
+                                                                               
+This is a case in which the wish parser really doesn't know what you're asking 
+for, so it finds the only word it recognizes: 'Stealth' and assumes you want   
+your stealth skill increased. Not what you were asking for, but fortunately    
+you'll be prompted if Stealth is really what you want, and you can simply say  
+no.                                                                            
+                                                                               
+In particular, wishes for items are somewhat more sensitive to excessive       
+verbage. For example, while all of these will work:                            
+                                                                               
+'I wish for an escrima stick.'                                                 
+'I wish for a serated knife'                                                   
+'I wish to have a strip of squid jerky, please.'                               
+                                                                               
+None of these will work:                                                       
+                                                                               
+'I wish for a dozen escrima sticks.'                                           
+'I wish for a very serated knife'                                              
+'I wish to have a yummy strip of squid jerky, please.'                         
+                                                                               
+In general, avoid adding adjectives when wishing for items.                    
+                                                                               
+[[[[[BSome Examples of Valid Wishes]                                           
+                                                                               
+'I wish to know how to ride motorcycles'                                       
+'I wish to return to earth'                                                    
+'I wish to be really smart!'                                                   
+'I wish for a crock of gold'                                                   
+'I wish to die'                                                                
+                                                                               
+                                                                               
+                                                                               

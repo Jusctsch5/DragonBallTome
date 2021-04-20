@@ -1,0 +1,102 @@
+#####R                 /------------------------\                              
+#####R                <  DBT V090 Release Notes  >                             
+#####R                 \------------------------/                              
+                                                                               
+Summary:                                                                       
+*****/abook-34.txt*1[(a) V090 Status]                                          
+*****/bbook-34.txt*2[(b) Note]                                                 
+*****/cbook-34.txt*3[(c) Summary of Changes]                                   
+                                                                               
+~~~~~1                                                                         
+#####G(a) Status                                                               
+Version 0.9.0                                                                  
+                                                                               
+ Phew! This past month has gone by quickly. Alpha18 hasn't come,               
+ and a lot of engine bugs remain. I've tried to work around some               
+ and ignored some others. V090 is not nearly as grandiose as was               
+ planned, but still features some nice new content.                            
+                                                                               
+ Also, I think it's time to start making some spoilers. As Reenen              
+ pointed out a while back, there's a lot of content her in DBT                 
+ that noone has ever seen. That's good, at that the middle and late            
+ game will continue to hold surprises for a long while, but it's               
+ sad that people aren't getting to see it. Hopefully as more middle            
+ game material becomes available it will be easier to survive to               
+ the late game.                                                                
+                                                                               
+~~~~~2                                                                         
+#####G(b) NOTE:                                                                
+NOTE: A few days before release some very bad things happened to               
+Dragonball T, which unfortunately involved some reverts of some                
+rather important files (like the dialogue file). Some things                   
+are not entirely back in place. This version must, sadly, be                   
+considered "not entirely stable" and some things that are reported             
+as completed in the change logs may have been lost. We do the best             
+we can.                                                                        
+                                                                               
+I am aware of no major errors...but I have not completely reviewed             
+everything I've done over the past month. There are very likely to             
+be some LUA errors and/or screen corruptions. As usual, dialogue               
+related display problems can usually be cleared by saving and reloading.       
+When in doubt, wizard mode is ctrl-W                                           
+                                                                               
+~~~~~3                                                                         
+#####G(c) NOTE:                                                                
+Systems:                                                                       
+ * Party system has been implemented                                           
+ * Integrated capsule vehicles have been implemented                           
+ * Variable altitude flight has been implemented                               
+ * Yet another complete rewrite of item drops                                  
+ * 70K new dialogue                                                            
+                                                                               
+New Content:                                                                   
+ * Chi: Burst of Speed has been implemented                                    
+ * CAUTION: Monster reflection/deflection has been implemented!                
+ * Toxic Waste quest has been implemented                                      
+ * Implemented Kami                                                            
+ * Implemented Mr. Popo                                                        
+ * Implemented Lonely Oolong quest                                             
+ * New quests: Defeat Mr Popo, Train with the North Kaio                       
+ * New item: Wrestling oil makes you more difficult to grab                    
+ * Implemented rice and rice cookers                                           
+ * Implemented capsule flyers                                                  
+ * A variety of new AI's have been added for the party system                  
+ * Implemented Namek quest #3                                                  
+                                                                               
+Rulechanges and Balance:                                                       
+ * Doubled cost of Chi Healing                                                 
+ * Monster grapple attacks now all use the same math                           
+ * Fencing and Sumo instructors are now less powerful, and Ninjutsu is tougher 
+ * (Persuade) options now tell you the required charisma to access them        
+ * Removed sanity. Android corruptions now drain Willpower directly.           
+ * The level+10 skill limit has been removed (Subject to evaluation)           
+                                                                               
+Bugfixes:                                                                      
+ * Talking to Akira no longer locks the game                                   
+ * Ego items now exist again                                                   
+ * Electronic goods in ninja warehouse don't align with quest completion       
+   MOVE_POST_DEST function                                                     
+ * Ego items never generate                                                    
+ * Kami's Lookout is broken                                                    
+ * Karin incorrectly offers training from Crane                                
+ * Using the Nyoibo wipes the stairs to Kami's Lookout                         
+ * Unique trainers don't regenerate like other uniques                         
+ * Chi bursts by monsters greater than level 30 do double intended damage      
+ * North Kaio Joke quest check doesn't work properly                           
+ * Bos/Teleport/Throw induced monster collissions now damage the monster too   
+ * Fixed an off-by-one error in the throw collission code                      
+ * Mice should no longer trap King Mouse, preventing quest completion          
+ * Joesephine can speak once again                                             
+                                                                               
+New issues:                                                                    
+ * It is possible to encapsulate integrated capsule items while equipped       
+   This shouldn't be meaningfully abusable, since speed is unaffected by       
+   weight while riding/piloting, but it is incorrect                           
+ * It shouldn't be possible to enter stores while flying at high altitude      
+ * Chi Bursts need a "you hit it" message. Monsters who fail to reflect        
+   or deflect blasts should generate failure messages.                         
+ * Attack messages for party members seems to be invisible, though it appears  
+   in scrollback                                                               
+                                                                               
+Enjoy!                                                                         
+lordbucket@hotmail.com                                                         

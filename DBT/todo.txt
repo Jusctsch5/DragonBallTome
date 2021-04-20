@@ -1,0 +1,73 @@
+126 "Implement me" and "Not implemented" notes
+
+
+Diaogues:
+	Kami, et. all
+	The East Kaioshin
+	The North Kaio
+
+	Yajirobe
+	Rosshi partially incomplete (waiting on the engine)
+	Krillan
+
+	Pilaf has a lot of holes still
+
+	Dende
+	Nail
+
+	Buruma, post inroduction
+	Chichi
+
+	Bra?
+	Crane Hermit/Chaozu/Tenshinhan
+	Dabura
+	Hildegarn
+
+	Radditz, post 79
+	Vegita, earth
+	Vegita, post 79
+	Piccolo
+	Demon King Piccolo
+	Jajoushin
+	Freeza
+	Androids 17 and 18
+	Babidi
+	Buu/MaijinBuu/GoodBuu/EvilBuu
+
+Maps/Special Levels
+	Babidi's Ship, levels 1-5
+	Frozen Wastes
+	Duel vs. Judo
+	RRA Control Rooms
+	Dr Gero's Deep Lair
+
+Misc Major Plot Devices
+	Room of Spirit and Time
+	Planet Plant
+	Kami is not storyboarded
+	The entire Piccolo thread has not been touched
+	Cellphones/Telepathy untouched
+
+Major Quests
+	The Android Quest tree is about 2/3 incomplete
+	Dr Gero Quests
+	The entire North Kaio quest tree
+	The entire Freeza Quest tree (including the planet 79, Vegita and North Kaio subplots)
+	The Hell quests
+	The Cell Quests
+	The Namek Quests
+	The entire Buu Quest tree
+
+Minor Quests
+	The TMNT Quest tree is about 2/3 incomplete
+	White Wolf Quest
+	Toxic River Quest
+	Yajirobe Quest
+	Oolong/Rosshi 'Lonely' Quests (waiting on engine)
+	Yamcha Quest 1/2 incomplete (waiting on engine)
+	Ring of Fire Quest 1/2 incomplete
+	Bear Thief/Hasuki Quests not working properly
+	Missing Delivery Boy
+	The Criminal! Quest is not storyboarded
+	The Errand of mercy Quest is not storyboarded
+	

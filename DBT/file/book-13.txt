@@ -1,0 +1,94 @@
+#####R                  /---------------------------\
+#####R                 <    DBT V041 Release Notes   >
+#####R                  \---------------------------/
+
+Summary:
+*****/abook-13.txt*1[(a) Hello!]
+*****/bbook-13.txt*2[(b) To Submit a Big Report]
+*****/cbook-13.txt*3[(c) Noteworthy Changes since Version 0.2.9]
+*****/dbook-13.txt*4[(d) Current Issues]
+*****/gbook-13.txt*5[(e) Fixnotes 'todo' list]
+
+~~~~~1
+#####G(a)Hello!
+This is the third unoffical public release. At this point
+the game is, loosely speaking 'playable.' There is only one
+insta-crash bug that I'm aware of (avoid Korin tower) and you
+will occassionally see non-fatal LUA errors when stepping on
+traps. I've actually played several characters up to level 10
+before they died, and one who survived all the way to level 26
+before he ran out of things to do. 
+
+~~~~~2
+#####G(b)To Submit a Bug Report
+If convenient, submit bug reports for Dragonball T on the wiki.
+I've created a bug report section on the DBT page. That should
+be a little easier than navigating the official bug report forum.
+If you don't feel comfortable with the Wiki feel welcome to submit
+via email to lordbucket@hotmail.com.
+
+~~~~~3
+#####G(c)Noteworthy Changes since Version 0.2.9
+Wow...lots of things.
+1) The World Tournament totally re-made
+2) Karate, Kungfu, Kickboxing and TaeKwonDo are completely functional.
+3) Two new schools: Judo and Sumo. They're mostly functional.
+   By all means study at these schools, but be forewarned that
+   no Challenge Quest rewards exist for them yet.
+4) Basic implementation of the Chi system
+5) Several new quests. Some of them are even completable.
+6) Several new dungeons.
+7) About 20 new uniques
+8) There are now 19 abilities, though only about a half of
+   them are actually accessible within the game, and of those
+   only half are fully functional. (The firearms abiltiies are
+   'functional' but the firearms system is presently unavailable,
+   so there's not much you can do with them.)
+9) Melee combat is pretty much done.
+10) Three new 'special' locations: The Serpent's Path, the planet
+   of the North Kaio, Hell.
+11) Lots of humor has been added. :)
+12) A simple alignment system has been added.
+13) Module archive is now a .team file, thanks to Nerdanel
+   Vampire (sp?) for pointing out that it wasn't.
+
+~~~~~4
+#####G(d)Current Issues
+1) Engine Bug: monsters placed on the surface are incorrectly
+duplicated in all adjacent surface towns. So, at the moment
+I'm refraining from placing Uniques like Yamcha, Lunch and
+Bulma, who would ordindarily hang out in the town.
+2) Engine bug: Weird limitation on hp regen is being amplified
+by some changes I've made, so the regen rate is extremely slow
+to avoid an insta-crash the second you start the game. Annoying,
+but unavoidable at the moment.
+3) Engine limitation: It is not possible to make map. symbols
+query independant variables. Even worse, they can only check
+the status of a SINGLE quest variable. This makes implementation
+of certain quests I have planned...difficult. Maybe not possible,
+I'm not sure. I haven't thought of a way yet, anyway.
+4) I haven't figured out a way to teleport from a dungeon to a town
+without invoking High Weirdness. In particular, the map borders
+fail to re-size, so you end up with a truncated town that
+spawns dungeon monsters. Consequently some of the 'neat stuff'
+I have in mind is not doable, yet. I don't think this is a bug,
+or engine limitation, it's just that the wizard mode command is
+incorrect, so I don't have a functional example to work from, and
+much of the code is compiled and inaccessible, so I basically have
+to ask around.
+5) Like the companion code: It's also hard-coded. I have several
+quest concepts planned that require me to make companions, but
+there is no example of this anywhere to work from.
+
+
+~~~~~5
+#####G(e)Fixnotes 'todo' list
+Curiosly, while the changelog is now 34K, the fix-me list is
+now 10K. Last I checked is was about 28 and 6. I hope it doesn't
+continue at that rate. :) In any case, see fix notes.txt for
+a more complete list of current issues.
+
+Enjoy!
+
+Bucket Man
+lordbucket@hotmail.com

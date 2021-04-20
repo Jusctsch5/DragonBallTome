@@ -1,0 +1,33 @@
+[[[[[BClass Overview]                                                          
+Class in Dragonball T is determined by overall skill distribution.             
+To become a member of a class, you'll have to spend skill points               
+to meet the requirements for that class.                                       
+                                                                               
+[[[[[BWannabe] A wannabe has no special skills, except perhaps generating      
+ridicule and contempt from various monsters. You would be best off to vacate   
+this profession as quickly as possible.                                        
+                                                                               
+[[[[[BMartial Artist] A martial artist is a practitioner of any of the         
+primary martial schools. Or, sometimes he may be a student of multiple         
+schools.Members of this class do not gain any special skills or abilities      
+from it, but they are able to hold their heads with a little more pride        
+than a wannabe.                                                                
+                                                                               
+[[[[[BTechnomancer] A technomancer not on perfection of body or mind,          
+but rather the understanding of all sorts of technological devices.            
+Technologists may certainly be fighters as well, but they will rarely          
+excel at it.                                                                   
+                                                                               
+[[[[[BSpritualist] A Spiritulist is a martial artist who has learned to        
+go beyond the constraints of the physical, and brought their art into          
+the arena of the mind and spirit.                                              
+                                                                               
+[[[[[BNinja] Anyone practicing the art of ninjutsu may earn the title of       
+ninja. Ninja are talented and stealthy martial artists.                        
+                                                                               
+[[[[[BDancer] Dancers lack any fighting skills, but the countless hours they   
+spend practicing the art of moving with grace and ease allows them to          
+shrug off effects that might paraylyze or fatigue anyone else.                 
+                                                                               
+[[[[[BSniper] Snipers are master marksman who use guns to do their fighting    
+from a safe distance.                                                          

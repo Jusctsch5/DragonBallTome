@@ -1,0 +1,48 @@
+#####R                  /---------------------------\                          
+#####R                 <   World Tournament Guide    >                         
+#####R                  \---------------------------/                          
+                                                                               
+#####GWelcome!                                                                 
+Welcome to the Word Tournament! This annual gathering provides an arena for    
+the best fighters of the world to compete with one another to determine who    
+is the best of the best!                                                       
+                                                                               
+#####GParticipation                                                            
+To register for the tournament, fill out the forms at the registration desk    
+and submit a 100zn tournament fee. You must pass a qualifying round in order   
+to actually participate in the tournament.                                     
+                                                                               
+#####GWinning a Round                                                          
+To win a round, you must either defeat your opponent or remove him from the    
+ring.                                                                          
+                                                                               
+#####GTime Between Rounds                                                      
+This being a world-wide event, we generally have several hundred participants. 
+But, only one ring. Consequently there will generally be a lot of downtime.    
+Participants may feel free to leave the ring for any length of timebetween     
+matches.                                                                       
+                                                                               
+#####GLegal Equipment and Techniques                                           
+We recognize that there is a wide variety of fighting styles in use, and it    
+is our intention to make allowances for this. Martial arts hand and throwns    
+arms shall both be permitted in tournamnet duels, as shall special techniques  
+available to certain weapon types.  Armor shall also be permitted.             
+                                                                               
+#####GProhibitions                                                             
+1) Fighters may not consume any beneficial food or drink once a round has begun
+2) Poison may not use poison on their weapons                                  
+3) Non-weapon device use is prohibited                                         
+4) Use of any and all firearms is strictly prohibited                          
+5) Fighters shall not recruit or summon help during a match                    
+                                                                               
+#####GDisqualification                                                         
+Violation of any of the rules will result in instant disqualification.         
+                                                                               
+#####GIndemnification and Liability Clause                                     
+Participants acknowledge that martial arts is an extremely rigorous physical   
+activity which may result in severe injury and or/death. Participant agrees    
+to hold the World Tournament staff, particiapnts, audience and the module      
+maintainer free and clear of any liability for any form of injury resulting    
+from participation in this event.                                              
+                                                                               
+                                                                               

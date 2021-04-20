@@ -1,0 +1,119 @@
+#####R                  /----------------------------\
+#####R                 <   The Math of Dragonball T   >
+#####R                  \----------------------------/
+
+Summary:
+*****/abook-4.txt*1[(a) Stat Bonuses]
+*****/bbook-4.txt*2[(b) Miscellaneous]
+*****/cbook-4.txt*3[(c) Combat]
+
+This is an inside look into the various mathematical formulas
+and relationships used by Dragonball T. This should save you
+some time looking around on killerbunnies. :P
+
+
+~~~~~1
+#####G(b) Stat Bonuses
+
+All primary stats function from a base of 10. At 10, they will
+generally neither add, or detract from anything. For every point
+above or below, they will affect something by that much. Exceptions
+are noted below.
+
+Strength
+	Melee Damage Bonus = Str - 10
+	Weight Allowance   = Str * 10 lbs.
+	Strength is directly added to your digging bonus
+
+Intelligence
+	Int - 10 is added to/subtracted from your Total Chi
+	Intelligence is directly added to your device success chance
+
+Willpower
+	Wil - 10 is added to/subtracted from your Total Chi
+	Willpower determines your base "saving throw"
+        Willpower > 19 allows a character to continue to function
+         after death, as a spirit
+        For spirits: Total HP = Willpower * Level
+
+Dexterity
+	Dex - 10 is added to your melee to-hit chance
+	Dex - 10 is added to your armor class
+        Dex is directly added to your chance to avoid pickpockets
+
+Constitution
+	Total Hit Point = Constitution * Level
+
+Charisma
+Charisma determines your starting money:
+	8  Charisma = 0 zeni
+	9  Charisma = 50 zeni
+	10 Charisma = 100 zeni
+	11 Charisma = 500 zeni
+	12 Charisma = 1000 zeni
+
+Charisma also modifies the prices you pay when purchasing items
+and the amount you receive when selling things, as follow:
+
+With Charisma below 10:
+	Every point below ten counts for a 20% price change out of your
+	favor (At 1 Charisma, you will pay 280% of regular price)
+
+With Charisma of 10:
+	No effect
+
+With Charisma above 10:
+	Every point above ten counts for a 1% price change in your favor
+	(Yes, at 100 Charisma, everything is FREE)
+
+Speed
+	Your general speed rating is equal to your Speed stat - 10
+
+~~~~~2
+#####G(b) Miscellaneous
+
+Hit Points: Level * Constitution
+
+Chi = Chi Skill + Intelligence + Willpower
+(Or, zero if Chi Skill is < 1)
+
+Base Sanity = Intelligence + Willpower + Level
+(Actual sanity may be modified downwards by other factors)
+
+Weight Allowance = Str * 10 pounds
+
+
+~~~~~3
+#####G(c) Combat
+
+Barehanded
+	ToHit 1d100 + Barehanded + Dex - 10 Must be >= TargetAC
+
+        Damage = 1 to BarehandedSkill + Str - 10
+
+        AC Bonus = Barehanded
+
+Weapons Combat
+	ToHit  (single weapon)
+	1d100 + WeaponSkill - WeaponDifficulty + Dex - 10 Must be >= TargetAC
+
+	ToHit  (paired weapons)
+	Same as above, but, WeaponDifficulty of the two weapons are multiplied by
+	one another, and PairedWeapon skill is subtracted from it. For example,
+	katana are not meant to be paired, and have a difficulty of 8. Whipchains
+	are also not meant to be paired, and have a difficulty of 10. Thus,
+	your net WeaponDifficulty using these two weapons  together would be
+	10 * 8 = 80. This penalty is applied to BOTH weapons, and is reduced by
+	the parrying skill. With a parry of 20, the penalty would be reduced to
+	60. However, parry may never reduce difficulty penalties to less than the
+	base difficulty of the weapons involved. Even with 100 skill in parry,
+	wielding a katana with a whipchain, you would still have a -8 to-hit with
+	the katana and a -10 to hit with the whipchain.
+
+	Damage = WeaponDamage + Str - 10
+
+
+Armor Class = (Dexterity - 10) + Dodge Skill + TotalACFromEquipment
+                + Barehanded bonus + Parry Bonus
+
+

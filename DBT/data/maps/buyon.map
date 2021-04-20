@@ -1,0 +1,40 @@
+-- Dragonball T: Buyon's Lair
+-- This is a completely bypassable 'trap' level in Muscle Tower.
+
+map.define("buyon.map")
+
+map.symbol{ symbol='.' feat=FEAT_FLOOR info=8 }
+map.symbol{ symbol='X' feat=FEAT_PERMA_WALL info=8 }
+map.symbol{ symbol='<' feat=FEAT_LESS info=8 }
+
+map.symbol{ symbol='a' feat=FEAT_FLOOR info=8 monster=RACE_BUYON }
+
+-- Bones
+-- map.symbol{ symbol='b' feat=FEAT_FLOOR info=8 object=map.ANY }
+
+-- Dungeon layout
+map.map
+{
+[[XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX]],
+[[XXXXXXXXXXXX.......XXXXXXXXXXX]],
+[[XXXXXXX................XXXXXXX]],
+[[XXXXX....................XXXXX]],
+[[XXXX......................XXXX]],
+[[XXX..........XXXXX.........XXX]],
+[[XX.........XXXXXXXXX........XX]],
+[[XX........XXXXXXXXXXX.......XX]],
+[[X........XXXXXXXXXXXXX.......X]],
+[[X........XXXXXXXXXXXXX.......X]],
+[[X........XXXXXXXXXXXXX.......X]],
+[[XX........XXXXXXXXXXX.......XX]],
+[[XX.........XXXXXXXXX........XX]],
+[[XXX..........XXXXX.........XXX]],
+[[XXXX...........a..........XXXX]],
+[[XXXXX....................XXXXX]],
+[[XXXXXXX................XXXXXXX]],
+[[XXXXXXXXXXXX.......XXXXXXXXXXX]],
+[[XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX]],
+}
+
+-- Starting position
+map.set_player(2, 15)

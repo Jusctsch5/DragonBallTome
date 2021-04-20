@@ -1,0 +1,49 @@
+-- Dragonball T: Mr. Satan's private room
+
+map.define("satan.map")
+
+map.symbol{ symbol='.' feat=FEAT_FLOOR info=6 }
+map.symbol{ symbol='*' feat=FEAT_MAP_BORDER info=6 }
+map.symbol{ symbol='X' feat=FEAT_PERMA_WALL info=6 }
+map.symbol{ symbol='<' feat=FEAT_LESS info=6 inventory_size=0 }
+map.symbol{ symbol='a' feat=FEAT_FLOOR info=6 monster=RACE_MR_SATAN }
+map.symbol{ symbol='b' feat=FEAT_FLOOR info=6 monster=RACE_VIDEL }
+-- map.symbol{ symbol='r' feat=FEAT_RED_CARPET info=6 }
+map.symbol{ symbol='w' feat=FEAT_GLASS_WALL info=6 }
+map.symbol{ symbol='d' feat=FEAT_DOOR info=6 inventory_size=0 }
+map.symbol{ symbol='-' feat=FEAT_GREEN_CARPET info=6 }
+
+map.symbol{ symbol='t' feat=FEAT_SATAN_TROPHY info=6 }
+-- Funny, unique trophy dscriptions?
+map.symbol{ symbol='z' feat=FEAT_FLOOR info=6
+   flags = {
+      MOVE_POST_DEST=function()
+		message("A plaque on the display case describes Mr. Satan's thrilling victories")
+	end
+   }
+}
+
+map.map
+{
+[[***********************]],
+[[*XXXXXXXXXXXXXXXXXXXXX*]],
+[[*XtwtwtwtwtwtwtwtwtwtX*]],
+[[*XwwwwwwwwwwwwwwwwwwwX*]],
+[[*Xtwz.z.z.zaz.z.z.zwtX*]],
+[[*Xww.-------------.wwX*]],
+[[*Xtwz-------------zwtX*]],
+[[*Xww.-------------.wwX*]],
+[[*Xtwz-------------zwtX*]],
+[[*Xww.-------------.wwX*]],
+[[*Xtwz-------------zwtX*]],
+[[*Xww.-------------.wwX*]],
+[[*Xtwz.............zwtX*]],
+[[*XXXXXwwwwwwwwwww.XXXX*]],
+[[*X.d.......b.........X*]],
+[[*X.X.................X*]],
+[[*X<X.................X*]],
+[[*XXXXXXXXXXXXXXXXXXXXX*]],
+[[***********************]],
+}
+
+map.set_player(16, 2)

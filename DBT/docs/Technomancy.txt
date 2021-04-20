@@ -1,0 +1,76 @@
+Ingredients Lists by Discipline
+
+Random Abbreviations:
+	circ = TV_CIRCUITRY
+	Bulk = TV_BULK_MATERIALS
+	Chem = TV_CHEMISTRY
+	High = TV_HIGH_TECH_COMPONENTS
+
+Mechanical
+	Megaphone		1 Bulk, 1 Bulk, 2 Circ
+	Fire Extinguisher	1 Bulk, 3 Bulk
+	Rice Cooker		1 Bulk, 1 Circ
+	SCUBA Gear		2 Bulk, 4 Bulk
+	Battery			1 Bulk, 1 Chem, 1 Chem
+	Compass			1 Bulk
+	Metal Detector		2 Bulk, 5 Circ, 5 Circ
+	Particle Accelerator	2 Bulk, 5 Circ, 5 Circ, 5 Circ
+	Plasma Diode		2 Bulk, 5 Circ, 5 Circ, 5 Circ
+	Maglev Tube		2 Bulk, 5 Circ, 5 Circ, 5 Circ
+	Nanites			2 Bulk, 5 Circ, 5 Circ, 5 Circ
+	Tachyon Streamer	2 Bulk, 5 Circ, 5 Circ, 5 Circ
+	Positronic Relay	2 Bulk, 5 Circ, 5 Circ, 5 Circ
+
+
+Electrical
+	Capsule			1 High, 1 High
+	GPS			1 Circ, 1 Circ
+	Cellphone		1 Bulk, 1 Circ, 1 Circ
+	Laptop			2 Bulk, 4 Circ, 4 Circ, 4 Circ
+	Laser Pointer		1 Bulk, 1 Circ
+	Nightvision Goggles	2 Bulk, 2 Circ, 2 Circ, 2 Circ
+	Infrared Goggles	2 Bulk, 2 Circ, 2 Circ, 2 Circ
+	Flashlight		1 Bulk, 1 Circ
+	Safety Flashlight	1 Bulk, 1 Circ
+	Maglight		1 Bulk, 1 Circ
+	Dragon Radar		1 Bulk, 1 High, 2 High
+
+Chemistry
+	Road Flare		1 Bulk, 1 Chem, 1 Chem
+	Antidote		1 Chem, 1 Chem
+	Poison			1 Chem, 1 Chem
+
+Lathe
+	Motorcycle		8 Bulk, 8 Bulk, 8 Bulk, 8 Bulk
+	Freeza Spaceship	99 Bulk, 99 Bulk, 20 High, 20 High
+	Pistol			1 Bulk, 2 Bulk
+	Rifle			2 Bulk, 2 Bulk
+	Machine Gun		2 Bulk, 3 Bulk
+	Bazooka			3 Bulk, 3 Bulk
+	Standard Round (Clip)	1 Bulk, 1 Chem, 1 Chem
+	STS Missile		3 Bulk, 3 Chem, 3 Chem
+	Power Armor		4 Bulk, 4 High, 4 High
+	Mechanical Toolkit	2 Bulk, 2 Bulk
+	Lathe			3 Bulk, 3 Bulk
+	Shovel			2 Bulk
+	Pick			2 Bulk
+
+
+
+Real Items Pending
+
+Equipment bonuses
+
+	There aren't a lot of wieldable items a Technomancer can build, but those he can are given craftsmanship
+bonuses according to the following rules:
+
+Ranged Weapons
+	+to hit = Average of: Marksmanship, Technology, COnstruction
+
+Ammo
+	+todam = Average of: Marksmanship, Technology, Construction
+
+Armor (Seiyan Power Armor, the cornucopia of power for every Technomancer)
+	+toac = Average of: Martial Arts, Technology, Construction
+
+	

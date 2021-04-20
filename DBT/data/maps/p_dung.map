@@ -1,0 +1,44 @@
+-- Not used yet
+
+map.define("p_dung.map")
+
+-- Floor
+map.symbol{ symbol='.' feat=FEAT_FLOOR info=6 }
+
+-- Permanent wall
+map.symbol{ symbol='X' feat=FEAT_PERMA_WALL info=6 }
+
+-- exit
+map.symbol{ symbol='<' feat=FEAT_LESS info=6 }
+
+--
+map.symbol{ symbol='a' feat=FEAT_RED_CARPET info=6 monster=RACE_PILAF }
+
+--
+map.symbol{ symbol='b' feat=FEAT_FLOOR info=6 monster=RACE_MAI }
+
+-- Dungeon layout
+map.map
+{
+[[XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX]],
+[[X.....................................X]],
+[[X.<...................................X]],
+[[X.....................................X]],
+[[X.....................................X]],
+[[X.....................................X]],
+[[X.....................................X]],
+[[X.....................................X]],
+[[X.....................................X]],
+[[X.....................................X]],
+[[X.....................................X]],
+[[X.....................................X]],
+[[X.....................................X]],
+[[X.....................................X]],
+[[X.....................................X]],
+[[X.....................................X]],
+[[X.....................................X]],
+[[XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX]],
+}
+
+-- Starting position
+map.set_player(16, 19)

@@ -1,0 +1,52 @@
+-- Studio design based on:
+-- OC Kickboxing
+-- Costa Mesa, Ca
+
+map.define("dojo.map")
+
+map.symbol{ symbol='.' feat=FEAT_FLOOR info=3 }
+map.symbol{ symbol='*' feat=FEAT_MAP_BORDER info=6 }
+map.symbol{ symbol='X' feat=FEAT_PERMA_WALL info=3 }
+map.symbol{ symbol='a' feat=FEAT_BLUE_CARPET info=3 monster=RACE_BOB }
+map.symbol{ symbol='<' feat=FEAT_LESS info=3 }
+map.symbol{ symbol='m' feat=FEAT_MIRROR info=6 }
+map.symbol{ symbol='w' feat=FEAT_GLASS_WALL info=6 }
+map.symbol{ symbol='d' feat=FEAT_DOOR info=6 }
+map.symbol{ symbol='-' feat=FEAT_GREEN_CARPET info=6 }
+map.symbol{ symbol='=' feat=FEAT_BLUE_CARPET info=6 }
+map.symbol{ symbol='r' feat=FEAT_BLUE_CARPET info=6 }
+map.symbol{ symbol='m' feat=FEAT_MIRROR info=6 }
+map.symbol{ symbol='w' feat=FEAT_GLASS_WALL info=6 }
+
+map.symbol{ symbol='B' feat=FEAT_FLOOR info=6 on_walk="Men's Changing Room" }
+map.symbol{ symbol='C' feat=FEAT_FLOOR info=6 on_walk="Women's Changing Room" }
+
+-- Dungeon layout
+map.map
+{
+[[**********************]],
+[[*XXXXXXXXXXXXXXXXXXXX*]],
+[[*XmmmmmmmmmmmmmmmmmmX*]],
+[[*X------------------X*]],
+[[*X------------------X*]],
+[[*X------------------X*]],
+[[*X----------..wwwdwwX*]],
+[[*XXXXX..XXXX..w=====X*]],
+[[*X...dBCd..X..wa====X*]],
+[[*X...XXXX..X..w=====X*]],
+[[*X....X....X..wwwwwwX*]],
+[[*X....X....X..------X*]],
+[[*X....X....X..------X*]],
+[[*X....X....X..------X*]],
+[[*X....X....X..------X*]],
+[[*X....XXXXXX..XXXXXXX*]],
+[[*XXXXXX....d..XrrrrrX*]],
+[[*X....XwwwwX..XrrrrrX*]],
+[[*X............drrrrrX*]],
+[[*X....X.....<.XrrrrrX*]],
+[[*XXXXXXXXXXXXXXXXXXXX*]],
+[[**********************]],
+}
+
+-- Starting position
+map.set_player(7, 18)

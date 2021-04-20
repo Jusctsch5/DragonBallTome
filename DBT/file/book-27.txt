@@ -1,0 +1,125 @@
+#####R                 /------------------------\                              
+#####R                <  DBT V083 Release Notes  >                             
+#####R                 \------------------------/                              
+                                                                               
+Summary:                                                                       
+*****/abook-27.txt*1[(a) Hello!]                                               
+*****/bbook-27.txt*2[(b) Summary]                                              
+*****/cbook-27.txt*3[(c) New bugs and issues]                                  
+*****/dbook-27.txt*4[(d) Changes to Dr Briefs Tech Quests]                     
+*****/ebook-27.txt*5[(e) Important note for experienced players]               
+                                                                               
+~~~~~1                                                                         
+#####G(a)Hello!                                                                
+                                                                               
+ With Anime Los Angeles this past weekend, and due to a few failed             
+ attempts to upload the update, V083 is a week late. That's bad in that        
+ people had to wait...but it's good in that it's turned out to be a            
+ a much larger release that it would otherwise have been.                      
+                                                                               
+ Enjoy!                                                                        
+                                                                               
+~~~~~2                                                                         
+#####G(b)Summary of noteworthy changes                                         
+Challenge Quests                                                               
+* Instructors will now accept challenges up until you've WON the Tournament    
+* Available schools, rivalries, and abilities have CHANGED                     
+                                                                               
+Traps:                                                                         
+* Perma-Stat-Drain traps are gone                                              
+* Spirits and flyers no longer set off traps                                   
+* Percent chance to disarm now = Int + Tech + Dissassembly                     
+                                                                               
+Rulechanges:                                                                   
+* Enrollments have migrated somewhat in the direction of skill mods being      
+  similar regardless of school, but caps being very different.                 
+* Battle Aura grants light                                                     
+* Spirits have innate light                                                    
+* Sumo fighters now eat more, not more often                                   
+* Falling from Korin tower no longer deposits you in Hell                      
+* You must be at least level 10 to challenge instructors                       
+* The World Tournament prize has been dropped to 100,000 zeni                  
+                                                                               
+New Material:                                                                  
+* The time travel plotline has been developed somewhat                         
+* It is now possible to escape from Hell (Note that it is not easy. Note also  
+  that Dabura's Castle in Hell is not implemented, but you dont' need to go    
+  there.)                                                                      
+* New school: Fencing                                                          
+* New abiliteies: Riposte, Jump                                                
+                                                                               
+Bugfixes:                                                                      
+* Hanger rental now becomes a house                                            
+* It should now be possible to read blueprints                                 
+* Guard should allow entrance to Satan Estate during appropriate quest         
+* It should now be possible to leave after losing a WT match                   
+* Shenron will now grant wishes for death to immortals                         
+* Grammatically incorrect past tense item wish phrasings are now accepted      
+* Gym/Library stats gains should be correct now                                
+* Uniques no longer reisst Chi Blasts                                          
+* Yamcha bugs have been improved (not completely resolved, but improved)       
+* Issues with Mr Popo have been improved upon                                  
+* Uranai Baba quest should be completeable now, and her Crystal Ball now works 
+* GPS fixed                                                                    
+* Fixed the Pilaf screen lock when speaking to him with Dragonballs in         
+  inventory                                                                    
+* Fixed four uniques who continually failed to show up for World Tournament    
+  rounds (including Mr Satan)                                                  
+                                                                               
+~~~~~3                                                                         
+#####G(c)New Bugs and issues                                                   
+* WT 'fatal' matches (such as against the Androids) aren't actually fatal      
+* It shouldn't be possible to jump over monsters                               
+* Demon King Piccolo handling is remarkably incorrect in several places        
+* Trunks dialogue is not properly handled if trunks is aggressive              
+* Light radii from death and battle aura aren't properly cumulative            
+* Androids 17 and 18 don't kill Dr Gero when they should                       
+                                                                               
+~~~~~4                                                                         
+#####G(d)Changes to Dr Breifs Tech Quests                                      
+Players performing Tech quests for Dr Briefs now have a choice of two          
+separate, but mutually compatible, quest branches:                             
+                                                                               
+Casual Tech:                                                                   
+Upon completion of any of the various starter quests for Dr Briefs, you        
+will gain access to the basic trainer script, which allows you to learn        
+up to 10 points of Technology, at 3 skillpoints each. There is a CAP           
+on Technology skill learned via this method, however. Your Tech skill          
+limit (again, via this particular method) will be equal to your intelligence   
+minus 7. Thus, from the possible starting range of  8-12, a new character      
+will potentially be able to train technology skill to a max of 1 to 5.         
+                                                                               
+Technomancer                                                                   
+Any player who increases their Technology skill to 10 will then be offered     
+the opportunity to become Briefs' assistant, provided they procure they own    
+tools. (Basically, requires an intelligence of 17. Assuming you don't want     
+to invest skill points in Intelligence at the Robbins Foundation, relying      
+solely on gains from teh library, this means that a character starting with    
+8 intelligence will need to make level 40 before becoming a Technomancer,      
+and a character starting with 12 intelligence will need to make level 20.)     
+                                                                               
+Players who take this route this will receive the Briefs crash course, and     
+all three Tech skills will be increased to 10. From there, the player will     
+be be given a series of assignments to build a number of progressively         
+complicated items. Each time a quest is issued, Dr Briefs will provide a set   
+of blueprints to work from, and each time a quest is completed, the player     
+will be rewarded with additional techno-skills skillpoints.                    
+                                                                               
+~~~~~5                                                                         
+#####G(e)Important Note for Experienced Players!                               
+NOTE: I've finally enabled, and partially developed a certain long-planned     
+twist to the time-travel subplot of the Dr Briefs quest tree that's been       
+sitting around mostly commented out for quite a while now. New players won't   
+notice it. People who have been playing for a while are going to trip this     
+subplot RIGHT AWAY by doing something that a new player wouldn't know to do,   
+but that more experienced players probably do every game. It is not completely 
+implemented, and at present it's using the generic summoning scripts for       
+Androids 17 and 18, but tripping this plot thread has the potential to make    
+you VERY DEAD.                                                                 
+                                                                               
+You have been warned.                                                          
+                                                                               
+                                                                               
+Enjoy!                                                                         
+#####Glordbucket@hotmail.com                                                   
+                                                                               

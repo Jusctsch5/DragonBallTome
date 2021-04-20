@@ -1,0 +1,78 @@
+#####R                  /---------------------------\                          
+#####R                 <    DBT V057 Release Notes   >                         
+#####R                  \---------------------------/                          
+                                                                               
+Summary:                                                                       
+*****/abook-15.txt*1[(a) Hello!]                                               
+*****/bbook-15.txt*2[(b) Noteworthy Changes since Version 0.5.0]               
+*****/cbook-15.txt*3[(c) Known Bugs]                                           
+*****/dbook-15.txt*4[(d) To Submit a Big Report]                               
+*****/ebook-15.txt*5[(e) Fixnotes 'todo' list]                                 
+                                                                               
+~~~~~1                                                                         
+#####G(a)Hello!                                                                
+After a week and a half I still haven't done everything I had                  
+planned for Version 050, but at least thing are a little more                  
+stable now. I'm not aware of any crashes or screen weirdnesses                 
+with this relase, but altogether Dragonball T is really starting               
+to get kind of huge. It's well past the stage where I can                      
+realistically just keep a mental picture of where everything is                
+and what's going ona ll the time...so bug reports are going to                 
+start becoming increasingly important as time goes on.                         
+                                                                               
+~~~~~2                                                                         
+#####G(b)Noteworthy Changes since Version 0.5.0                                
+Wow...lots of things.                                                          
+1) Capsules have been implemented. I hightly recommend you                     
+pull up wizard mode and play with them. Not a *big* deal,                      
+but capsules were a MAJOR thematic component in Dragonball,                    
+and I'm pleased I was able to include them.                                    
+2) Basic implementation of vehicles. Also not a *big* deal,                    
+but kind of neat. Really, only the motorcycle does anything                    
+yet, but you might play with them just for fun. Excellent                      
+item to be encapsulated, too.                                                  
+3) A couple new uniques, several new quests, a couple                          
+new special levels, one new dungeon, about about 40K of                        
+new dialogue.                                                                  
+4) The data strcture of...well, everything has been                            
+redesigned so that things are slightly more well organized.                    
+This will mostly be invisible to the player, but it should                     
+fix save-game issues. Feel free to reuse your old savefiles                    
+now.                                                                           
+5) One of the five possible game endings is now availale.                      
+As in...it is actually possible to beat the game. Don't get                    
+too hopeful though, of the five, the one that works is the                     
+'joke' ending. :P                                                              
+6) Freeza's Planet 79 now exists, though it's a dead end                       
+plotline at the moment.                                                        
+7) Technology for non-technologists is now functional.                         
+8) Enough miscellanous 'stuff' has been done that the                          
+todo list is down to 9K! Wow!                                                  
+                                                                               
+~~~~~3                                                                         
+#####G(c)Known Bugs                                                            
+1) Several dialogues still have dead-ends: Rosshi, Pilaf,                      
+Dr. Gero and Dr. Briefs. I really need to finish these.                        
+Once they're done...the game is largely playable up to                         
+about character level 35. It is now, it's just that if                         
+you happen to choose an incomplete dialogue, half the                          
+time is breaks your quest chain...and while you could                          
+keep playing, personally I have a tough time playing                           
+when the quest tree is broken.                                                 
+                                                                               
+~~~~~4                                                                         
+#####G(d)To Submit a Bug Report                                                
+If convenient, submit bug reports for Dragonball T on the wiki.                
+I've created a bug report section on the DBT page. That should                 
+be a little easier than navigating the official bug report forum.              
+If you don't feel comfortable with the Wiki feel welcome to submit             
+via email to lordbucket@hotmail.com.                                           
+                                                                               
+~~~~~5                                                                         
+#####G(e)Fixnotes 'todo' list                                                  
+As usual, see fix notes.txt for the complete to do list.                       
+                                                                               
+Enjoy!                                                                         
+                                                                               
+Bucket Man                                                                     
+lordbucket@hotmail.com                                                         

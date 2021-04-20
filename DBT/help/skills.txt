@@ -1,0 +1,99 @@
+#####GSkills Overview                                                          
+                                                                               
+Skills in Dragonball T are learned in-game by taking classes and               
+completing Quests. At the start of the game, you'll have access                
+only to the skills corresponding to the primary stats, and even                
+those only at a minimal level. To gain new skills and increase                 
+their the efficiency at which they may be raised, you'll want to               
+find instructors to teach you. The skill menu may be accessed                  
+via the 'G' key.                                                               
+                                                                               
+~~~~~1|Strength                                                                
+[[[[[BStrength]                                                                
+Strength skill is directly added to your strength stat                         
+~~~~~2|Intelligence                                                            
+[[[[[BIntelligence]                                                            
+Intelligence skill is directly added to your intelligence stat                 
+~~~~~3|Willpower                                                               
+[[[[[BWillpower]                                                               
+Willpower skill is directly added to your willpower stat                       
+~~~~~4|Dexterity                                                               
+[[[[[BDexterity]                                                               
+Dextierty skill is directly added to your dexterity stat                       
+~~~~~5|Constitution                                                            
+[[[[[BConstitution]                                                            
+Constitution skill is directly added to your constitution stat                 
+~~~~~6|Charisma                                                                
+[[[[[BCharisma]                                                                
+Charisma skill is directly added to your charisma stat                         
+~~~~~7|Speed                                                                   
+[[[[[BSpeed]                                                                   
+Speed skill is directly added to your speed stat                               
+~~~~~8|Martial Arts                                                            
+[[[[[BMartial Arts]                                                            
+You general famliiarity with martial arts, both from a practical as well as a  
+theoretical sense. This skill will directly increase your tohit chances whether
+you are fighting barehanded, or with weapons.                                  
+~~~~~9|Barehanded                                                              
+[[[[[BBarehanded]                                                              
+Your ability to fight with unarmed. Barehand skill directly determines your    
+tohit chances when fighting unarmed, your base damage range, and also provides 
+a barehanded 'blocking' bonus to AC. With a 15 skill in barehanded, for example
+you would receive +15 to hit, and AC, and deliver a base damage of 1-15.       
+~~~~~10|Weapons                                                                
+[[[[[BWeapons]                                                                 
+Your ability to fight with, and your general knowledge of, melee weaponry. This
+skill directly determines your to-hit chances when fighting a weapons.         
+~~~~~11|Parrying                                                               
+[[[[[BParrying]                                                                
+Your ability to use a weapon to deflect incoming attacks. Parry skill is       
+added to your AC when fighting with a weapon.                                  
+~~~~~12|Paired                                                                 
+[[[[[BPaired]                                                                  
+It is possible to fight with a weapon in each hand, but difficult. This skill  
+reduces the penalties that would ordinarily be incurred by fighting with paired
+weapons. Note that this skill can only reduce penalties, never provide a net   
+bonus, and it can only reduce penalties up to the normal single weapon penalty.
+~~~~~13|Stealth                                                                
+[[[[[BStealth]                                                                 
+Your ability to move silently, go generally go unnoticed.                      
+~~~~~14|Dodging                                                                
+[[[[[BDodging]                                                                 
+Your abliity to get out of the way of incoming attack altogether. Dodge skill  
+id directly added to your AC.                                                  
+~~~~~15|Chi                                                                    
+[[[[[BChi]                                                                     
+Your abliity to manipulate the psychic and spiritual energies. This skill,     
+combined with your intelligence and willpower, will determine the total amount 
+of Chi you have available.                                                     
+~~~~~16|Chi-Offense                                                            
+[[[[[BChi-Offense]                                                             
+A general measure of your ability to manipulate spiritual energies offensively.
+~~~~~17|Chi-Defense                                                            
+[[[[[BChi-Defense]                                                             
+A general measure of your ability to use spiritual energies for self defense.  
+~~~~~18|Chi-Regeneration                                                       
+[[[[[BChi-Regeneration]                                                        
+Your state of mind greatly affects the way energies flow through you. This     
+skill is the sole factor determining the rate at which you restore your Chi.   
+(Edit: Willpower? pending)                                                     
+~~~~~19|Chi-Gung                                                               
+[[[[[BChi-Gung]                                                                
+Your abliity to harness spiritual energies and directly affect the less        
+substantial physical world around us. This higher this skill, the more Chi     
+abilities you be able to learn. Chi Gung also greatly reduces the drain        
+rate of Constant Effect chi abilities.                                         
+~~~~~20|Technology                                                             
+[[[[[BTechnology]                                                              
+Your general famliarity with technology, and a measure of your ability to      
+use it. (Note that there is generally no 'success/faliure' roll for Tech       
+devices in Dragonball T. You wither know how to use something, or you don't.)  
+~~~~~21|Construction                                                           
+[[[[[BConstruction]                                                            
+Your general ability to build high-tech devices.                               
+~~~~~22|Disassembly                                                            
+[[[[[BDisassembly]                                                             
+Your skill at dismantling technological devices. The greater your Disassembly  
+skill, the more likely you'll be able to recover useful parts from disassmbling
+things, and you'll be more likely to learn how to build them, as well.         
+ 

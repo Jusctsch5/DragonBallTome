@@ -1,0 +1,14 @@
+#####y If you are running windows, and are experiencing game crashes, delete   
+#####y the win.cfg file in .tome/3.0/settings!                                 
+                                                                               
+                                                                               
+I don't know why this happens, but it is new with alpha14.                     
+                                                                               
+#####y You may need to do this in between EVERY save/load!                     
+                                                                               
+This crash seems to occur mostly either when creatign characters, or when      
+transitioning betwen maps. Consequently, you may load properly, but then       
+crash as soon as you go anywhere. Presumably this is a windows-only problem,   
+but again, if you experience it, delete win.cfg                                
+                                                                               
+                                                                               

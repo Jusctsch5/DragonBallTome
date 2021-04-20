@@ -1,0 +1,123 @@
+Polearm			Damage	Special	Use	Difficulty	Cost	weight
+	spear		8-30P		MUST2H		2	350	20
+	bo staff	8-24C		MUST2H		3	300	70
+	waxwood staff	8-24C		MUST2H		6	250	12
+	3-sect staff	16-30C		MUST2H		12	500	40
+	Pudao		40-60S		MUST2H		16	4000	70
+
+Swordarm		Total					
+	butterfly knife	1-10S		Paired		2	75	14
+	straightsword	10-16S				6	2000	22
+	sabre		4-30S				5	2000	24
+	wakazashi	4-16S				3	700	24
+	shinai		1-10C		Must2Hand	4	250	40
+	bokken		1-16C		Could2Hand	2	500	30
+	katana		10-60	Vorpal	Could2Hand	8	5000	22
+	tai chi sword	5-30	20AC	Could2Hand	5	3000	40
+	ninja-to	10-25		Could2Hand	3	1000	18
+	hooksword	10-20	5AC	Paired		8	3000	40
+	"Jagged-Edged"	10-60	ART	Must2Hand	20	10000	200
+	"Umbrella"	1-20	ART			1	4000	40
+	?Z Sword?
+
+smallarm		Total
+	kubotan		1-4P				1 	10	5
+	stun baton	1-6E				3	60	20
+	knife		1-6P		Paired		2	40	20
+	escrima stick	1-10C		Paired		5	200	20
+	nunchaku	1-16C		Could2Hand	2	100	30
+	butterfly knife 1-4S				2	10	8
+	sai		2-10C		Paired		4	150	60
+	tonfa		1-10C		Paired		2	100	20
+	ninja claw	1-20P		Paired		2	1000	40
+	kama		4-16P		PAIRED		12	200	14
+
+entanglearm		Total		
+	whipchain	1-30S		Could2Hand	10	700	50
+	rope dart	20-80P		Must2Hand	30	4000
+
+
+Boots				AC	-ToHit	Cost	Special	Resists		
+	Tennis Shoes		1		40		cold5
+	High Heels		0		60	
+	Steel Toed Shoes	8		150		Cold10
+	Leather Thigh Boots	12		750		Cold15
+	Ninja Tabi		2		450	Stealth	Cold5
+	Ballet Slippers		0		50
+	Toe Shoes		1		125
+	Crocodile Boots		7		1250		cold10
+
+Body Armour
+	Bathrobe		2		35		Cold5
+	Streetclothes		5	-1	50		Cold10
+	Lightweight Gi		4		50
+	Mediumweight Gi		8		200
+	Heavyweight Gi		12		350
+	Boxing Shorts		0		50
+	Leather Jacket		8		350		Cold33
+	Tutu			0		250	Chr
+	Qipao			0		550	Chr
+	Tai Chi Uniform		5		150		Cold10
+	Tuxedo			8		1250		Cold20
+	Power Armor		100		50,000		Fire33 Cold33 Acid33 Shards66
+	Camoflague Outfit	8		550	Stealth	Cold5
+	Ninja Uniform		4		400	Stealth	Cold5
+	Dobak			8		50
+	Flak Vest		10		2000		Fire10 Ballist33 Shard33	(Platable)
+	Flak Jacket		25		3500		Fire33 Ballist50 Shard33	(Platable)
+	Sumo Suit		1		100
+	Sparring Gear		10		300		Cold10 Shards10 BHand10 Slash10 Crush10
+
+Headpiece
+	Sunglasses		0		50		Light66
+	Mirrored Shades		0		150	Chr	Light66
+	Headband		0		10		Blind?
+	Blindfold		0		10	IndBlind/ResBlind
+	Samurai Helm		16	(-10,0)	1500		Sound10 Shard10 BHand10 Slash10
+	Motorcycle Helmet	10	(-10,0)	600		Sound60 Shards10 Crush30
+	Nightvision Goggles	0		2000	Lite3
+	Infrared Goggles	0		2000	Infra5 SeeInvis
+	Earmuffs		0		70		Sound66
+	Paint Ball Mask		2		150		Slash5 Pierce5 Shards10
+	Helmet			5		350		Ballistic10
+	
+Gloves
+	Light Boxing Gloves	2	(-2,-2)	60		Cold5
+	Heavy Boxing Gloves	10	(-5,-5)	300		Cold10
+	Golfing Gloves		1		150
+	Silk Gloves		1	-1???	400	Nothing?
+	Welding Gloves		4	(-2,)	200		Fire5 Cold5
+	Ski Gloves		4	(-5,)	100		Cold10
+
+Bracers
+	Wrist Brace		4
+	Cloth Bracer		2
+	Light Leather Bracer	8
+	Heavy Leather Bracer	12	(-5,0)
+	Steel Bracer		20	(-10,0)
+	Steel Battle Bracer	20	(-10,+20)
+	Ninja Bracer		4		300	Stealth
+
+Shields
+	Leather Shield		8		150		Shard10
+	Riot Shield		20	(-5,)	2000		Shard20
+
+"Using"
+	Earplugs						Sound10
+	SCUBA Gear		5	(-20,0)			Cold50 Fire-20 Shards10 Slash10
+	Mouthguard		0				BHand5
+
+Cloaks
+	Cotton Cloak		2				Cold5
+	Cape			1	
+	Woolen Cloak		5	(-5,0)			Slash5 Cold10 Shards5
+	Australian Duster	20		750		Cold33 Shards10 Acid10
+	Trenchcoat		25		2000		Cold40 Acid10 Shards15
+
+Add?
+	Radiation Suit
+	EVA Suit
+	Baseball Cap
+	Cowboy Hat
+	Fedora
+	Leather Boots

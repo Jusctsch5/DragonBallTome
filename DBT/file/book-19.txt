@@ -1,0 +1,28 @@
+#####R               /------------------------------\                          
+#####R              <  DBT V076 (095) Release Notes  >                         
+#####R               \------------------------------/                          
+                                                                               
+Summary:                                                                       
+*****/abook-19.txt*1[(a) Hello!]                                               
+*****/bbook-19.txt*2[(b) Bugfixes]                                             
+                                                                               
+~~~~~1                                                                         
+#####G(a)Hello!                                                                
+                                                                               
+ This is an emergency release to fix a rather nasty bug reported               
+ by Nerdanel Vampire on the Wiki. See the release notes for V075               
+ for a more complete list of changes since V072.                               
+                                                                               
+~~~~~2                                                                         
+#####G(b)Bugfixes                                                              
+Bugfixes:                                                                      
+ * RES_BLIND has been restored, thus eliminating a nasty LUA error             
+ * Birth clearing has finally...I *think* been made to work properly           
+ * Minor updates to the help files                                             
+                                                                               
+Enjoy!                                                                         
+                                                                               
+Bucket Man                                                                     
+                                                                               
+                                                                               
+                                                                               

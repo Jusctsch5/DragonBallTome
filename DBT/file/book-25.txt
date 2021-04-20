@@ -1,0 +1,227 @@
+#####R                 /------------------------\                              
+#####R                <  DBT V081 Release Notes  >                             
+#####R                 \------------------------/                              
+                                                                               
+Summary:                                                                       
+*****/abook-26.txt*1[(a) Hello!]                                               
+*****/bbook-26.txt*2[(b) Summary]                                              
+*****/cbook-26.txt*3[(c) Complete Change Log]                                  
+                                                                               
+~~~~~1                                                                         
+#####G(a)Hello!                                                                
+                                                                               
+ This has turned out to be a rather large release. New twists to the           
+ skill system, new dialogue, new material, further implementation of           
+ the afterlife, some major bugfixes, and more!                                 
+                                                                               
+~~~~~2                                                                         
+#####G(b)Summary                                                               
+--------------------------------------------                                   
+Summary of Noteworthy changes:                                                 
+                                                                               
+Systems                                                                        
+ * New skill system replaces old 'Math' and 'Skill' modes. Lots has changed.   
+ * Abilities are now TAUGHT, not simply made 'unhidden'                        
+ * Price adjustments based on equipment pluses has been implemented            
+ * Technomancers may now specify a quantity when disassembling items           
+                                                                               
+The afterlife                                                                  
+ * Spirits may now pickup/wield artifacts                                      
+ * Spirits may now pass through many terrain types                             
+ * Spirits may no longer fight in Tournament rounds                            
+ * Neutral characters are properly sent to Emma upon death                     
+   (Good and Evil characters are not entirely implemented yet)                 
+ * It is now possible to be ressurected from death                             
+                                                                               
+Bugfixes                                                                       
+ * Temp fix for the Muscle Tower/Castle Pilaf freeze bug                       
+ * Fixed the 'randoml spawning gym' bug                                        
+ * Bonuses from equipment are no longer counted twice. (No more +87 AC from    
+   the Dobak)                                                                  
+ * Cute little bunnies should no longer drop dragonballs now                   
+ * Dr Briefs and Dr Gero quest data should now be properly cleared for new     
+   characters                                                                  
+ * Fixed the blindfold/earmuff swapping issue                                  
+ * Monsters may no longer steal during the World Tournament                    
+ * Wine bottles should stack properly now                                      
+ * Fixed ai's and Spaceport crash on Planet 79 (still a dead end branch)       
+                                                                               
+Rule Changes                                                                   
+ * You may no longer study at both of a pair of rival schools                  
+ * First Aid kits now require First Aid ability, not tech skill                
+ * Spears and iron fans are now bladed, and may be sharpened and/or poisoned   
+ * Polearms are now either bladed/poisonable or have ac mods                   
+ * Any alignment from 0 to 99 is now considered 'Neutral' by the Daio          
+ * 'Sneak' movement mode is now an ability                                     
+ * Damage types have been consolidated                                         
+ * Stealth equipment directly increases stealth, no longer increases your      
+   stealth skill                                                               
+   No more free identify                                                       
+ * Leather jackets are now equipped to the 'cloak' slot                        
+                                                                               
+Balance                                                                        
+ * In many ways, the early game has been made considerably nicer, friendlier,  
+   and easier                                                                  
+ * Briefs 'easy' quests are 'easy' now. No nuclear waste, etc                  
+ * The Rabbit Hole is now a suitable STARTER dungeon                           
+ * Mr Satan's Estate is now lit                                                
+ * AC values have been slightly increased                                      
+                                                                               
+New Material                                                                   
+ * New buildings: Robbins Foundation, YMCA                                     
+ * New dungeon/area: Frozen Wastes                                             
+ * New uniques: Iron Monkey, Yajirobe, Uranai Baba, Tsuru-Seni'nin, Tenshinhan 
+ * New artifacts: Daniel San's Headband, Shaolin Soccer Ball, Ryoga's Headband 
+   Ryoga's Umbrella, Trunks' Sword, Purple Jade Badger, Golden Nimbus          
+   Uranai Baba's Crystal Ball, Pelt of the White Wolf                          
+ * New items: Chinese rounded hammers, chainsaw, saiyan battle jacket,         
+   blowtorch, taser, cattle prod                                               
+ * Partial implementation of Tameshiware                                       
+ * Implemented Bear Thief and Hasuki quests (Beware!!!)                        
+                                                                               
+Misc                                                                           
+ * The earth maps have been slightly rearranged                                
+ * About 40K of dialogue has been scrapped and re-written. Some things may     
+   have changed. Most notably, the Emma Daio is completely different.          
+ * The various lighting issues have generally been improved upon               
+                                                                               
+New bugs and issues:                                                           
+* No flying artifacts seem to work                                             
+* Whoops...eating/quaffing during the Tournament doesn't disqualify you        
+  like it should. Obviously this makes the martial arts sushi eating           
+  technique much less useful                                                   
+* RYOGA flags need to be applied as intrinsics, not searched for in slots      
+* Emma Daio's dialogue does not account for certain scenarios. For example,    
+  if you walk the path and speak to him while alive, he does not recognize     
+  you when you subsequently die and get sent to him.                           
+                                                                               
+~~~~~3                                                                         
+#####G(c)Complete Change Log                                                   
+--------------------------------------------                                   
+-------------------------------------------                                    
+Changes from Version 0.8.0 to Version 0.8.1                                    
+-------------------------------------------                                    
+Sunday, December 31, 2006                                                      
+* Data structure changes that should be totally invisible to the player        
+* Reworked Story mode skills and enrollments                                   
+                                                                               
+Monday, Janurary 1, 2007                                                       
+* New skill system now uses xp instead of skill points                         
+* Fixed some leftover errors in dragonball drop rates                          
+* Bonuses from equipment are no longer applied twice...I think                 
+* Added abilities to  the skill system                                         
+* Eliminated about 10K of now-irrelevant code from dbtstuff.lua                
+* Eliminated a few now-irrelevant wish types                                   
+* General purge of old math-mode skill code                                    
+* Quest/Dialogue/Misc data relating to Dr's Briefs and Gero should be          
+  properly cleared with new games now                                          
+* Rule Change: First Aid kits now require knowledge of the First Aid ability,  
+  not tech skill                                                               
+* Migrated instructor dialogues out of store actions and into dialogue and     
+  disabled the dialogues relating to abilities that are now standard class     
+  material                                                                     
+* Added the Robbins Foundation and YMCA                                        
+* Wine bottles should stack properly now                                       
+* Note: The Briefs random quest rewards are +1 for easy, and +1, +3, +5 to     
+  all, and the upgrade quest is +10 to all. So, playing a Technomancer         
+  should be considerably less painful now.                                     
+* Fixed the blindfold/earmuff swapping issue                                   
+* New artifacts: Daniel San's headband, Shaolin Soccer Ball, Ryoga's headband, 
+  Ryoga's Umbrella, Trunks' Sword, Purple Jade Badger, Golden Nimbus           
+* New Unique: Iron Monkey                                                      
+* Monsters may no longer steal during the World Tournament                     
+* Misc item changes:                                                           
+        * Spears and iron fans are now bladed                                  
+        * New items: chinese rounded hammers, chainsaws, Seiyan battle jackets 
+          blowtorch                                                            
+        * Stun batons now, well...stun                                         
+* Fixed ai's on Planet 79                                                      
+* Implemented the Bear Thief and his quest (Beware!!!)                         
+* Implemented Hasuki, and his quest (Also Beware!!!)                           
+* Town features are slightly more visible after dark                           
+* It is now possible to actually LEARN abilities! Yay! (Apparantly it's        
+  .acquired)                                                                   
+* Pricing:                                                                     
+        * Each +1 increases an objects value by 10%                            
+        * Each -1 decreases an objects value by 5%                             
+        * Akira now properly gives discounts to people referred by Oolong      
+* Partial Implementation of Tameshiware                                        
+                                                                               
+Tuesday, Janurary 2, 2007                                                      
+* Added placeholders for: Yajirobe, Uranai Baba, Tenshinhan, Tsuru Seni'nin    
+* New artifact: Uranai Baba's Crystal Ball                                     
+* 'Fixed' the randomly spawning Gym 'bug' ('p' was my testing key.)            
+* Updated skill 'unhide/learning' for the new skill system                     
+* Technomancers may now specify a quantity when disassembling items. Part      
+  scavenging and recipe learning will be rolled separately for each item       
+* It should be possible to deliver sushi to Mr Satan now                       
+* Starving College students are now neutral to the player                      
+* Temporary fix for the game locking up in Castle Pilaf and Muscle Tower.      
+  It seems to be related to the 'name' field. I've removed them. Now looking   
+  at them generates messages like 'You see stairs down' instead of 'You see    
+  the entrance to Castle Pilaf' but it doesn't lock. Good trade.               
+* Massive rearrangement of the monster distribution. Should be invisible to    
+  the player.                                                                  
+* Added the Frozen Wastes                                                      
+* Sufficiently massive conceptual changes to the skill system that I'm not     
+  going to list them all. 'It's different'                                     
+* Wiped the old Chi training system, and associated dialogues                  
+* Migrated Korin to the new system                                             
+* Scrapped Rosshi's dialogue and started over                                  
+* Dead characters of mid-range alignment are now properly sent to Emma         
+  Daio on the Serpent's Path                                                   
+* Reworked the Daio's dialogue. He is no longer a Chi trainer.                 
+* Fixed fugu                                                                   
+* Hildegarn/Dabura --> Goz/Mez                                                 
+* Implemented a (Persuade) counter for character dumps (which appear to be     
+  engine-unimplemented)                                                        
+* Tsuru Seni'nin and Mr. Popo can now train skills with the new system         
+* Mike Tyson's Gloves and Master Lee's Dobak artifacts now spawn randomly      
+* Death                                                                        
+        * Spirits may now walk through trees and mountains (not doors, yet)    
+        * Spirits may no longer participate in Tourny fights                   
+        * Spirits may now pick up / wield artifacts                            
+* Added Heaven                                                                 
+                                                                               
+Thursday, Janurary 4, 2007                                                     
+* Panwshop/RVac no longer offer free identification                            
+* Most (not all) uniques now have light, so no more accidentally killing       
+  Fan Ladies                                                                   
+* Corrected to-hit calculations when fighting florentine                       
+* Pawnshop and RVac no longer offer free ID                                    
+* Yamcha now becomes 'aggrressive' if you choose the 'attack' dialogue         
+* It is now possible to wish for a house                                       
+* 'Stolen Goods' quest now properly completes if you Persuade George for       
+  more money                                                                   
+* No more LUA error on the electronics store if it closes (How do you assign   
+  functions manually?)                                                         
+* Tourny medic no longer disappears if you're disqualified                     
+* Spatial Anamoly quest text fixed                                             
+* Restored Challenge Quests for Karate and Kung fu. They have NOT been         
+  balanced for the new system                                                  
+* The Foot may now send assassins for the 'Being Watched' quest                
+* Stun Batons are now Technomancable                                           
+* New items: Taser, cattle prod                                                
+* Reworking of Rabbit Hole and Mr Satan's Estate                               
+* Eliminated the Briefs 'easy' quests that were frustrating                    
+* 3 of 5 polearms pick up +20 ac                                               
+* Acid damage is gone. Barehand generally merged with Crush.                   
+* Oops! Purged old ToME damage types: nexus, force, chaos, disenchant,         
+  time, inertia, time gravity, mana, valinorean fire, darkfire, nature.        
+* Sneak movement mode is now an ability available to ninja                     
+                                                                               
+Thursday, Janurary 5, 2007                                                     
+* Stealth equipment now directly increases Stealth, not your Stealth           
+  skill (No more free ID)                                                      
+* Added a stealth display to the character sheet                               
+* Added Pelt of the White Wolf                                                 
+                                                                               
+Sunday, January 7, 2007                                                        
+* Re-tweaked the skill system                                                  
+* Completed Musashi's dialogue. (Don't annoy Musashi...'it would be bad.')     
+* Wrote a basic skill spoiler                                                  
+* Rearranged the Challenge Quest placements and texts somewhat                 
+                                                                               
+                                                                               
+                                                                               
+                                                                               

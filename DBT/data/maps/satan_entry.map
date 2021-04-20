@@ -1,0 +1,56 @@
+-- Dragonball T: The entrance to Mr. Satan's Estate
+
+-- How do we place fixed (known) items on a map?
+
+map.define("satan_entry.map")
+
+map.symbol{ symbol='.' feat=FEAT_FLOOR info=6 }
+map.symbol{ symbol='X' feat=FEAT_PERMA_WALL info=6 }
+map.symbol{ symbol='*' feat=FEAT_MAP_BORDER info=6 }
+map.symbol{ symbol='<' feat=FEAT_LESS info=6 inventory_size=0 }
+map.symbol{ symbol='>' feat=FEAT_MORE info=6 inventory_size=0 }
+map.symbol{ symbol='P' feat=FEAT_RED_CARPET info=6 monster=RACE_MISS_PIIZA }
+map.symbol{ symbol='w' feat=FEAT_GLASS_WALL info=6 }
+map.symbol{ symbol='d' feat=FEAT_DOOR info=6 inventory_size=0 }
+map.symbol{ symbol='-' feat=FEAT_RED_CARPET info=6 }
+
+map.symbol{ symbol='t' feat=FEAT_SATAN_TROPHY info=6 }
+
+map.symbol{ symbol='b' feat=FEAT_FURNITURE info=6
+   flags = {
+      MOVE_POST_DEST=function()
+		message("There is a small waste basket here full of small paper cups.")
+	end
+   }
+}
+
+-- Funny, unique trophy dscriptions?
+map.symbol{ symbol='z' feat=FEAT_FLOOR info=6
+   flags = {
+      MOVE_POST_DEST=function()
+		message("A plaque on the display case describes Mr. Satan's thrilling victories")
+	end
+   }
+}
+
+map.map
+{
+[[**************************]],
+[[*XXXXXXXXXXXXXXXXXXXXXXXX*]],
+[[*XtwtwtwtwtwtwtwtwtwtXXXX*]],
+[[*XwwwwwwwwwwwwwwwwwwwXXXX*]],
+[[*Xtwz.z.z.z.z.z.z.z.zXXXX*]],
+[[*Xww.-------------...XXXX*]],
+[[*X...---------w---......X*]],
+[[*X>..--------Pw---.....<X*]],
+[[*X...---------w---......X*]],
+[[*Xww.-------------..bXXXX*]],
+[[*Xtwz.z.z.z.z.z.z.z.zXXXX*]],
+[[*XwwwwwwwwwwwwwwwwwwwXXXX*]],
+[[*XtwtwtwtwtwtwtwtwtwtXXXX*]],
+[[*XXXXXXXXXXXXXXXXXXXXXXXX*]],
+[[**************************]],
+}
+
+-- Starting position
+map.set_player(7, 23)

@@ -1,0 +1,20 @@
+hook disturb for acupunture?
+
+distance(player.py, player.px, y, x) 
+
+
+FUNTIONAL RANDOM OBJECT GENERATOR WOW! WOW! WOW!!!!!
+
+local drop_flags = flag_get_flags(dungeon(current_dungeon_idx).flags, FLAG_OBJ_THEME)
+local obj = rand_obj.make_object(false, false, drop_flags)
+
+max = rng.maxroll(r_ptr.hdice, r_ptr.hside)
+if rng(5) <= 2 then
+obj.number = rng.roll(3, 4)
+rng.percent(70 - player.lev) then
+if rng.number(300) <= (difficulty - smartness + 150) then
+return rng(100,200)
+
+message()
+
+

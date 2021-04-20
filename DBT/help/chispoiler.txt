@@ -1,0 +1,188 @@
+#####G Dragonball T: Frequently Asked Questions                                
+                                                                               
+~~~~~1                                                                         
+*****/achispoiler.txt*2[(a) Misc Chi Design Notes]                             
+*****/bchispoiler.txt*3[(b) Who Teaches which skills?]                         
+*****/cchispoiler.txt*4[(c) Who teaches Which Abilities?]                      
+*****/dchispoiler.txt*5[(d) Misc, Future, Notes, Unedited]                     
+                                                                               
+~~~~~2                                                                         
+#####GMisc Chi Design Notes                                                    
+#####BNOTE:                                                                    
+These are design notes. Eventually this will be formatted into a more          
+pleasant-to-read format;.                                                      
+                                                                               
+Total Chi pool = Willpower * Chi skill                                         
+                                                                               
+With zero Chi Regeneration skill, you will regenerate at 1/20th of a point     
+of Chi per round (This is slow)                                                
+                                                                               
+Otherwise, every point of regeneration gives you 1/5th of a point of           
+regeneration per round                                                         
+                                                                               
+Thus, every 5 points of Chi Regeneration gives you one full point of           
+regeneration per round                                                         
+                                                                               
+At 5 Regeneration, you'll regenerate one point per round                       
+At 10 Regeneration, you'll regenerate two points per round                     
+At 25 Regeneration, you'll regenerate five points per round                    
+At 50 Regeneration, you'll regenerate ten points per round                     
+At 100 Regeneration, you'll regenerate twenty points per round                 
+                                                                               
+Meditation skill doubles these rates                                           
+--------------------                                                           
+Flight and Battle Aura cost 100 / Chi-Gung per round to maintain               
+                                                                               
+Thus, with zero (or 1) Chi Gung, it will cost 100Chi / turn                    
+                                                                               
+At 10 Chi Gung, it will cost 10/turn                                           
+At 20 Chi Gung, it will cost 5/turn                                            
+At 50 Chi Gung, it will cost 2/turn                                            
+At 100 Chi Gung, it will cost 1/turn                                           
+                                                                               
+Thus, with 20 Chi Gung, 25 Chi Regeneration, and Meditation, you'll be able to 
+maintain a Battle Aura, and fly, FOREVER.                                      
+                                                                               
+#####BNOTE:                                                                    
+Battle Aura and Flight TOGETHER AT ONCE will, in effect, grant you the ability 
+to fly through space. Try not to run out of Chi while doing this.              
+                                                                               
+#####BNOTE:                                                                    
+Chi Skills works on a unique system. All Chi skill training is CUMULATIVE.     
+For example, if two different Chi Masters offer a particular Chi skill with    
+a cap of five, you would be able to study from both Masters to a total of ten. 
+Note that this training exists right along side the regular skill training     
+system. A Chi Master may teach both Chi skills, and non-Chi skills from the    
+same script.                                                                   
+                                                                               
+                                                                               
+~~~~~3                                                                         
+#####GWho Teaches which skills?                                                
+Rosshi (Exclusive with Tsuru Seni'nin)                                         
+        Base    Max                                                            
+Chi     5       10                                                             
+Off     5       10                                                             
+Def                                                                            
+Regen   5       10                                                             
+Gung    5       10                                                             
+                                                                               
+Tsuru Seni'nin  (Exclusive with Rosshi)                                        
+        Base    Max                                                            
+Chi     5       10                                                             
+Off                                                                            
+Def     5       10                                                             
+Regen   5       10                                                             
+Gung    5       10                                                             
+                                                                               
+Korin                                                                          
+        Base    Max                                                            
+Chi     5       10                                                             
+Off                                                                            
+Def                                                                            
+Regen   5       10                                                             
+Gung    5       10                                                             
+                                                                               
+Mr Popo                                                                        
+        Base    Max                                                            
+Chi     5       10                                                             
+Off     5       10                                                             
+Def     5       10                                                             
+Regen   5       10                                                             
+Gung    5       10                                                             
+                                                                               
+Kami                                                                           
+        Base    Max                                                            
+Chi     5       10                                                             
+Off     5       10                                                             
+Def     5       10                                                             
+Regen   5       10                                                             
+Gung    5       10                                                             
+                                                                               
+The North Kaio                                                                 
+        Base    Max                                                            
+Chi     5       20                                                             
+Off     5       20                                                             
+Def     5       20                                                             
+Regen   5       20                                                             
+Gung    5       20                                                             
+                                                                               
+Krillan (Must be > 99 alignment)                                               
+        Base    Max                                                            
+Chi     5       10                                                             
+Off     5       10                                                             
+Def     5       10                                                             
+Regen   5       10                                                             
+Gung    5       10                                                             
+                                                                               
+                                                                               
+Splinter (Exclusive with Shredder                                              
+        Base    Max                                                            
+Chi     5       10                                                             
+Off                                                                            
+Def                                                                            
+Regen                                                                          
+Gung    5       10                                                             
+                                                                               
+Shredder (Exclusive with Splinter)                                             
+        Base    Max                                                            
+Chi     5                                                                      
+Off     10                                                                     
+Def                                                                            
+Regen                                                                          
+Gung    5                                                                      
+                                                                               
+~~~~~4                                                                         
+#####GWho teaches Which Abilities?                                             
+                                                                               
+Abilitiies:             Cost    Requires   Taught By                           
+                                                                               
+Meditation              10                 Krillan, Kami                       
+Chi Burst               10                 Rosshi, Korin                       
+Haste                   5                  Korin                               
+Burst of Speed          10                 (Korin, but not implemented)        
+Battle Aura             10      CG10       Korin                               
+Light                   2                  Rosshi, Korin                       
+Power Detection         2                  Mr Popo                             
+Flight                  5       CG10       Kami                                
+Cure                    5       CG10       Kami                                
+Heal                    10      CH20       Kami                                
+Absorbtion              5                                                      
+Regeneration            10                                                     
+Telepathy               5       CG20       (Chaozu, Kaio, but not implemented) 
+Teleportation                   CG30       (Kaio, but not implemented)         
+Planetary Teleport      1       CG40       (Kaio, but not implemented)         
+Spirit Bomb             1       CG50       (Kaio, but not implemented)         
+                                                                               
+                                                                               
+~~~~~5                                                                         
+#####GMisc, Future, Notes, Unedited                                            
+                                                                               
+Chi Ability Trainers (Planned)                                                 
+                                                                               
+Rosshi: Light, Chi Burst                                                       
+Tsuru Seni'nin:                                                                
+Splinter: Battle Aura                                                          
+Shredder: Absorbtion                                                           
+Chaozu: Telepathy                                                              
+Krillan: Meditation                                                            
+Korin: Haste, Burst of Speed, Battle Aura,                                     
+Mr Popo: Regeneration                                                          
+Kami: Cure, Heal, Flight, Light, Meditation                                    
+North Kaio: Telepathy, Teleportation, Planetary Teleportation, Spirit Bomb     
+                                                                               
+Piccolo: (Chi Burst, Flight                                                    
+                                                                               
+Vegita: Chi Burst                                                              
+Radditz: Burst of Speed                                                        
+Nappa:                                                                         
+Freeza:                                                                        
+                                                                               
+Kaio Quests                                                                    
+ Make him laugh                                                                
+ Catch Bubbles                                                                 
+ Smash the Grasshopper                                                         
+ End Game Quests                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               

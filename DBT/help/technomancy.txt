@@ -1,0 +1,278 @@
+#####G Dragonball T: V085 Technology Notes                                     
+                                                                               
+~~~~~1                                                                         
+*****/atechnomancy.txt*2[(a) The Path to Technomancer]                         
+*****/btechnomancy.txt*3[(b) Items By Technology Skill Requirement]            
+*****/ctechnomancy.txt*4[(c) Technomanceable Item Ingredients by Discipline]   
+*****/dtechnomancy.txt*5[(d) Tech Items by combat effect]                      
+*****/etechnomancy.txt*6[(e) Summary of Benefits to Playing a Technomancer]    
+*****/ftechnomancy.txt*7[(f) Looking to the Future]                            
+                                                                               
+                                                                               
+~~~~~2                                                                         
+#####GThe Path to Technomancer                                                 
+                                                                               
+#####B * Initial Quest                                                         
+     Once you've completed one of the initial quests for Dr Briefs you'll be   
+     given access to his Technology training script. This script will allow    
+     you to purchase points on Technology skill for 3 skillpoints each, with   
+     a cap equal to your Intelligence, and in no case greater than 20.         
+#####B * Train to 20                                                           
+     You will need to train your skill to twenty in order to proceed. Barring  
+     Dragonball wishes, In general this means having an Intelligence of 20,    
+     and investing 60 skillpoints. For maximum efficiency, starting with 14    
+     Intelligence, and with gains only from the library, this means that the   
+     average player will need to be level 25 before becoming a Technomancer.   
+     Though, by increasing Intelligence at the Robbins Foundation, it should   
+     theoretically be possible to become a Technomancer by approximately level 
+     12.                                                                       
+#####B * Complete the Assistant Quest                                          
+     With 20 skill, the next time you speak to Dr Briefs you'll have a new     
+     dialogue option in which you ask him to take you to the next level. He    
+     will issue you Technical Assistant quest, which requires you to procure   
+     a set of your own tools. Once this quest is completed, you will officially
+     become a technomancer, and Dr Breifs will immediately train all three Tech
+     skills to an additional +10. (30, 10 and 10) additionally you will be     
+     allowed to use Dr Breifs' lab as a house to store anything you'd like, and
+     to use anything already in storage there.                                 
+#####B * Random Quests and Advanced Training (SEE NOTE, BELOW!)                
+     Dr Briefs will also immediately give you a quest to build ONE semi-       
+     randomly selected Techno device, and give you blueprints for how to build 
+     it. (At present, even 'found' items are allowed, but in the future this   
+     may be disallowed.) Every time you turn in a completed device (and only   
+     when you do) you will granted acces to the Advanced Training script, which
+     allows you to increase any of the three Techno skills by two full points  
+     for only a single skillpoint. (Thus, 50 skillpoints to increase a skill   
+     from zero to 100. Including basic training, it would cost 195 skillpoints 
+     to increase all three Tech skill to 100.) As soon as you exit this script 
+     Dr Briefs will imediately issue you another Random Build quest, which must
+     be completed before gaining access to the training script again. Every    
+     time you complete an additional Build quest, the possible range and       
+     quality of devices which Dr Breifs may ask you (and teach you how) to     
+     build will increase. It is possible to be issued multiple quests for the  
+     same item (thus not learning anything new) but it is also possible to     
+     eventually learn to build almost every electronics device from these      
+     quests. (A few exceptions do exist. For example: Scouters may only be     
+     found on Freeza's minions, and the Dragon radar is a special dialogue     
+     case related to dialogue, though it will only be Technomancers who are    
+     able to use the Dragon Radar in any case.)                                
+#####B * Super High Tech and Spaceships                                        
+     There are a number of recipes that may be learned for items that are      
+     not possible to acquire via any other means short of wizard mode and      
+     Dragonball wishes. As of the current version, these devices include:      
+     EVA suits, radiation suits, jetpacks, and the Capsule Spaceship.          
+                                                                               
+                                                                               
+#####BNOTE: This description is of how it is INTENDED to work.                 
+Looking over the code as I write this a few hours before I'm planning on       
+uploading the module, I notice that this isn't how it ACTUALLY works. The      
+recipe selector will need to be re-written, but as of V085, here's the         
+complete list of items that Dr Briefs may give you blueprints for, and         
+the number of quests you need to complete before they're possible:             
+                                                                               
+Item            Possible After                                                 
+ Compass         Always                                                        
+ Blowtorch       Always                                                        
+ Battery         Always                                                        
+ GPS             First Quest                                                   
+ Laser Pointer   First Quest                                                   
+ Metal Detector  Second Quest                                                  
+ Chainsaw        Second Quest                                                  
+ Antidote        Second Quest                                                  
+ Laptop          Third Quest                                                   
+ NV Goggles      Fourth Quest                                                  
+ IV Goggles      Fourth Quest                                                  
+ Flame Thrower   Fourth Quest                                                  
+ Muscle Stim.    Sixth Quest                                                   
+ Jetpack         Sixth Quest                                                   
+ EVA Suit        Seventh Quest                                                 
+ Radiation Suit  Seventh Quest                                                 
+ Capsule         Eight Quest                                                   
+ Motorcycle      Eight Quest                                                   
+ High Tech Comps Ninth Quest                                                   
+ Spaceship       Forced after Eleven Quests                                    
+                                                                               
+#####BALSO NOTE:                                                               
+Technomancers will eventually be able to build ego items, but this             
+is one of many things that didn't make this release.                           
+                                                                               
+~~~~~3                                                                         
+#####GItems By Technology Skill Requirement                                    
+#####BItem            TechReq Notes                                            
+Cell Phone      1       (Not implemented, but similar to Chi Telepathy)        
+Compass         1       Maps immediate area                                    
+Rice Cooker     1       Allows you to cook rice. No, really! :)                
+Remote Stop Dev 1       Initiates Self Destruct of Dr Gero's Robots            
+Muscle Stim     2       Grants strength gains by level                         
+Road Flare      2       Light area, blind monsters                             
+Fire Extinguish 3       1d6 water adjacent                                     
+Laser Pointer   3       bolt light, dam zero? (Intended to blind monsters)     
+Megaphone       3       1d6 Sound adjacent                                     
+GPS             3       Maps entire level (earth only)                         
+Grenades        3       Effect varies by type                                  
+Ballistic Plt   4       Enhances ballistic armor                               
+Blowtorch       4       1d6 fire adjacent, + destroy doors                     
+Silencer        4       Makes guns silent                                      
+Blood Coagulant 5       (Or knowledge of First Aid)                            
+chainsaw        5       Cuts down trees                                        
+Taser gun       5       Melee stun damage: 1d10                                
+Nailgun         6       Ranged pierce damage: 1d10                             
+IR Goggles      7       Headgear: Infravision                                  
+NV Goggles      7       Headgear: See in the dark                              
+Flame Thrower   12      Cone of flame damage: 6d6 range: 5                     
+Metal Detector  12      AUto-detect traps                                      
+SCUBA Gear      12      Allows swimming                                        
+Stun Baton      12      Melee stun damage: 2d10                                
+Scouter         20      *ID* Monsters                                          
+                                                                               
+#####BTechnomancer Only                                                        
+All toolkits    30      Allows construction/disassembly                        
+Cattle Prod     30      Melee stun damage: 3d10                                
+Dragon Radar    30      Detects nearby dragonballs                             
+EVA Suit        30      Armor allows breathing in vacuum                       
+Jackhammer      30      Allows tunneling, and digging downwards                
+Jetpack         30      Allows flight                                          
+Laptop          30      *ID* entire pack                                       
+Radiation Suit  30      Armor 100% protection from radiation and poison        
+Spaceship       30      Allows space travel                                    
+                                                                               
+~~~~~4                                                                         
+#####GTechnomanceable Item Ingredients by Discipline                           
+#####BItem                    Requires        Ingredients                      
+Battery                 Mechanical      1Bulk, 2Chem, 1Chem                    
+Blowtorch               Mechanical      2Bulk, 1Bulk                           
+Chainsaw                Mechanical      2Bulk, 2Bulk                           
+Compass                 Mechanical      1Bulk                                  
+Fire Extinguisher       Mechanical      1Bulk, 3Bulk                           
+Flame Thrower           Mechanical      1Bulk, 3Bulk                           
+Gas Mask                Mechanical      2Bulk, 1Chem, 1Chem                    
+Megaphone               Mechanical      1Bulk, 1Bulk, 2Circ                    
+Metal Detector          Mechanical      2Bulk, 5Circ, 5Circ                    
+Rice Cooker             Mechanical      1Bulk, 1Circ                           
+SCUBA Gear              Mechanical      2Bulk, 4Bulk                           
+Dragon Radar            Electrical      1Bulk, 1High, 2High                    
+Capsule                 Electrical      1High, 1High                           
+Cattle Prod             Electrical      1Bulk, 1Circ, 1Circ                    
+Cellphone               Electrical      1Bulk, 1Circ, 1Circ                    
+EVA Suit                Electrical      2Bulk, 1Chem, 1Chem                    
+Flashlight              Electrical      1Bulk, 1Circ                           
+GPS                     Electrical      1Circ, 1Circ                           
+Infrared Goggles        Electrical      2Bulk, 2Circ, 2Circ, 2Circ             
+Laser Pointer           Electrical      1Bulk, 1Circ                           
+Laptop                  Electrical      2Bulk, 4Circ, 4Circ, 4Circ             
+Maglight                Electrical      1Bulk, 1Circ                           
+Muscle Stimulator       Electrical      1Bulk, 1Circ, 1Circ                    
+Nightvision Goggles     Electrical      2Bulk, 2Circ, 2Circ, 2Circ             
+Radiation Suit          Electrical      2Bulk, 1Chem, 1Chem                    
+Remote Stop Device      Electrical      1Bulk, 1High, 1High                    
+Safety FLasglight       Electrical      1Bulk, 1Circ                           
+Scouter                 Electrical      1Bulk, 1High, 1High                    
+Stun Baton              Electrical      1Bulk, 1Circ, 1Circ                    
+Taser                   Electrical      1Bulk, 1Circ, 1Circ                    
+Antidote                Chemistry       1Chem, 1Chem                           
+Blood Coagulant         Chemistry       1Chem, 1Chem                           
+Flame Retardant         Chemistry       1Bulk, 2Chem, 2Chem                    
+Fragmentation Grenade   Chemistry       1Bulk, 1Chem, 1Chem                    
+Incendiary Grenade      Chemistry       1Bulk, 1Chem, 1Chem                    
+Oxygen Tank             Chemistry       1Bulk, 2Chem, 2Chem                    
+Poison                  Chemistry       1Chem, 1Chem                           
+Propane Tank            Chemistry       1Bulk, 2Chem, 2Chem                    
+Roadflare               Chemistry       1Chem, 1Chem                           
+Smoke Grenade           Chemistry       1Bulk, 1Chem, 1Chem                    
+Box of Nails            Lathe           1Bulk                                  
+Ballistic Plate         Lathe           2Bulk                                  
+Battle Jacket           Lathe           3Bulk, 3High, 3High                    
+Bazooka                 Lathe           3Bulk, 3Bulk                           
+Capsule Spaceship       Lathe           99Bulk, 99Bulk, 20High, 20High         
+Clip, Standard          Lathe           1Bulk, 1Chem, 1Chem                    
+Clip. AP                Lathe           1Bulk, 1Chem, 1Chem                    
+Freeza's Spaceship      Lathe           99Bulk, 99Bulk, 20High, 20High         
+Infantry Helmet         Lathe           2Bulk                                  
+Jackhammer              Lathe           4Bulk, 2Bulk, 2Circ, 2Circ             
+Jetpack                 Lathe           4Bulk, 2Bulk, 2Chem, 2Chem             
+Lathe                   Lathe           3Bulk, 3Bulk                           
+Machine Gun             Lathe           2Bulk, 3Bulk                           
+Mechanical Toolkit      Lathe           2Bulk, 2Bulk                           
+Missile, STS            Lathe           3Bulk, 3Chem, 3Chem                    
+Missile, Incendiary     Lathe           3Bulk, 3Chem, 3Chem                    
+Motorcycle              Lathe           8Bulk, 8Bulk, 8Bulk, 8Bulk             
+Nailgun                 Lathe           2Bulk, 2Bulk                           
+Power Armor             Lathe           4Bulk, 4High, 4High                    
+Pick                    Lathe           2Bulk                                  
+Pistol                  Lathe           1Bulk, 2Bulk                           
+Rifle                   Lathe           2Bulk, 2Bulk                           
+Shovel                  Lathe           2Bulk                                  
+Silencer                Lathe           2Bulk                                  
+                                                                               
+~~~~~5                                                                         
+#####GTech Items by combat effect                                              
+#####BElectronics and Tools                                                    
+Megaphone               1d6 Sound adjacent                                     
+Road Flare                                                                     
+Fire Extinguish         1d6 water adjacent                                     
+Laser Pointer           bolt light, dam zero?                                  
+Chainsaw                                                                       
+Blowtorch               1d6 fire adjacent, + destroy doors                     
+Flame Thrower           6d6 fire cone range 5                                  
+Arc-Welder              (Not Implemented)                                      
+Sand blaster            (Not Implemented)                                      
+                                                                               
+#####BTech 'Armors'                                                            
+Radiation Suit                                                                 
+EVA Suit                                                                       
+Battle Jacket                                                                  
+Power Armor                                                                    
+                                                                               
+#####BTech Melee weapons                                                       
+Taser gun               1d10 stun melee                                        
+Stun Baton              2d10 Stun melee                                        
+Cattle Prod             3d10 stun melee                                        
+                                                                               
+#####BTech Missile Weapons                                                     
+Nailgun                 1d10 pierce ranged (99 ammo)                           
+                                                                               
+#####BTech items that enhance equipment                                        
+Ballistic Plt   Enhances protective benefit of anti-ballistic armors           
+Silencer        Causes firearms to be silent, and thus not attract attention   
+                                                                               
+~~~~~6                                                                         
+#####GBenefits to playing a Technomancer                                       
+#####BSpecial and Miscellaneous:                                               
+ * 100% Auto trap detection and 100% disarm success                            
+ * Free access to several item types without the usually required skill/ability
+ * Exclusive access to 11 item types (including several extremely useful ones) 
+ * Ability to build/dismantle items                                            
+ * Opens up a few dialogue options                                             
+ * Allowed use of Dr Briefs Lab for storage                                    
+                                                                               
+#####BItems that anyone may use if they have the appropriate skill or ability, 
+#####Bbut Technomancers may use even without:                                  
+ * First aid kits (Requires First Aid)                                         
+ * Motorcycles (Requires Motorcycle Riding)                                    
+ * All guns and launcher types (Requires Marksmaship)                          
+ * Ballistic Plates (Requires Marksmanship)                                    
+ * In-line skates (Requires Skating)                                           
+                                                                               
+#####BItems that are only useable by characters with 30 Technology skill:      
+#####B(Thus, anyone in theory, but only Technomancers realistically)           
+ * Toolkits: Mechanical/Chemistry/Electrical kits, lathes                      
+ * The dragon radar                                                            
+ * EVA/Radiation suits                                                         
+ * Jackhammers                                                                 
+ * Jetpacks                                                                    
+ * Laptops                                                                     
+ * Spaceships                                                                  
+                                                                               
+~~~~~7                                                                         
+#####GWhat's coming up for Technomancers in the future?                        
+ * Add ability to assembly ego-types                                           
+ * Add: Sand blaster, arc-welder, binoculars, scopes?                          
+ * Add: The various high-tech gun types                                        
+ * Random recipe generator should search k_info rather than be hard-coded      
+ * Fire extinguishers should create water on floor and convert lava to stone   
+ * It would be nice if there were were terrain-affecting item types            
+ * It would be nice if chainsaws could melee                                   
+                                                                               
+                                                                               
+                                                                               
+                                                                               

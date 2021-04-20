@@ -1,0 +1,41 @@
+-- Studio design based on:
+-- The former Mission Viejo studio of:
+-- Hwa Rang Do (Now in Downey)
+-- With thanks to Supreme Grandmaster Dr. Joo Bang Lee!
+-- (With apologies for using a Hwa Rang Do studio design for a Tae Kwon Do studio. :/)
+
+map.define("dojo.map")
+
+map.symbol{ symbol='.' feat=FEAT_FLOOR info=3 }
+map.symbol{ symbol='*' feat=FEAT_MAP_BORDER info=6 }
+map.symbol{ symbol='X' feat=FEAT_PERMA_WALL info=3 }
+map.symbol{ symbol='a' feat=FEAT_BLUE_CARPET info=3 monster=RACE_MASTER_LEE }
+map.symbol{ symbol='m' feat=FEAT_MIRROR info=6 }
+map.symbol{ symbol='w' feat=FEAT_GLASS_WALL info=6 }
+map.symbol{ symbol='-' feat=FEAT_BLUE_CARPET info=3 }
+map.symbol{ symbol='<' feat=FEAT_LESS info=3 }
+
+map.map
+{
+[[******************]],
+[[*XXXXXXXXXXXXXXXX*]],
+[[*Xm.............X*]],
+[[*Xm........X.X..X*]],
+[[*XmXXXXXXXXX.XXXX*]],
+[[*Xm-------------X*]],
+[[*Xm-------------X*]],
+[[*Xm-------------X*]],
+[[*Xm--a----------X*]],
+[[*Xm-------------X*]],
+[[*Xm-------------X*]],
+[[*Xm-------------X*]],
+[[*Xm---------X---X*]],
+[[*XXwwwwww...XXXXX*]],
+[[*X..........X...X*]],
+[[*X..............X*]],
+[[*X........<.X...X*]],
+[[*XXXXXXXXXXXXXXXX*]],
+[[******************]],
+}
+
+map.set_player(8, 11)

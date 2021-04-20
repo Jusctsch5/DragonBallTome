@@ -1,0 +1,43 @@
+-- Dragonball T: Duel vs Judo
+-- Not based on any studio.
+
+map.define("dojo.map")
+
+map.symbol{ symbol='.' feat=FEAT_FLOOR info=6 }
+map.symbol{ symbol='*' feat=FEAT_MAP_BORDER info=6 }
+map.symbol{ symbol='X' feat=FEAT_PERMA_WALL info=6 }
+map.symbol{ symbol='a' feat=FEAT_GREEN_CARPET  info=3 monster=RACE_NAKAMURA }
+map.symbol{ symbol='<' feat=FEAT_LESS info=6 }
+map.symbol{ symbol='-' feat=FEAT_GREEN_CARPET info=6 }
+-- map.symbol{ symbol='T' feat=FEAT_SIGNPOST info=6 on_walk="Supplies" }
+map.symbol{ symbol='m' feat=FEAT_MIRROR info=6 }
+map.symbol{ symbol='w' feat=FEAT_GLASS_WALL info=6 }
+map.symbol{ symbol='d' feat=FEAT_DOOR info=6 }
+
+map.symbol{ symbol='A' feat=FEAT_FURNITURE info=3 on_walk="a chair" }
+map.symbol{ symbol='B' feat=FEAT_FURNITURE info=3 on_walk="a desk" }
+map.symbol{ symbol='C' feat=FEAT_FURNITURE info=3 }
+map.symbol{ symbol='D' feat=FEAT_FLOOR info=3 on_walk="office" }
+
+map.symbol{ symbol='a' feat=FEAT_GREEN_CARPET  info=3 monster=RACE_YAWARA }
+
+map.map
+{
+[[*************************]],
+[[*XXXXXXXXXXXXXXXXXXXXXXX*]],
+[[*X...X----------------mX*]],
+[[*X...X----------------mX*]],
+[[*X...X----------------mX*]],
+[[*X...X-----------a----mX*]],
+[[*X...X----------------mX*]],
+[[*X...X----------------mX*]],
+[[*X...X----------------mX*]],
+[[*X...XXXwwwwXXdXXXwwwwXX*]],
+[[*X..............X...A..X*]],
+[[*X.............Dd...AB.X*]],
+[[*X.<.XXXXXXXXXXXX......X*]],
+[[*XXXXXXXXXXXXXXXXXXXXXXX*]],
+[[*************************]],
+}
+
+map.set_player(5, 10)

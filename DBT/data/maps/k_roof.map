@@ -1,0 +1,167 @@
+-- Dragonball T: The roof of Karin Tower
+map.define("foo_k_roof.map")
+
+map.symbol{ symbol='.' feat=FEAT_FLOOR info=6 }
+map.symbol{ symbol='*' feat=FEAT_MAP_BORDER info=6 }
+map.symbol{ symbol=',' feat=FEAT_FLOOR info=3 on_walk="You peer over the edge. It is a long way down." }
+map.symbol{ symbol='X' feat=FEAT_PERMA_WALL info=3 }
+map.symbol{ symbol='<' feat=FEAT_LESS info=3 }
+map.symbol{ symbol='>' feat=FEAT_MORE info=3 }
+map.symbol{ symbol=' ' feat=FEAT_SKY info=3 }
+map.symbol{ symbol='c' feat=FEAT_CLOUD info=3 }
+
+map.quest_symbol
+{
+	quest = QUEST_CURIOUS_HOLE
+	symbol = 'a'
+	symbols =
+	{
+		[{QUEST_STATUS_FINISHED}] = { feat=FEAT_NYOIBO info=6 }
+		default = { feat=FEAT_RECEPTACLE info=3 on_walk="...there is a small hole here, as if to insert something into..." }
+	}
+}
+
+map.symbol{ symbol='r' feat=FEAT_RED_CARPET info=3
+   flags = {
+      MOVE_POST_DEST=function()
+		if quest(QUEST_CURIOUS_HOLE).status == QUEST_STATUS_UNTAKEN then
+			message("Noticing a shadow, you look skyward. There seems to be a platform high above you.")
+		end
+	end
+   }
+}
+
+map.symbol{ symbol='d' feat=FEAT_RED_CARPET info=3
+   flags = {
+      MOVE_POST_DEST=function()
+		if quest(QUEST_CURIOUS_HOLE).status == QUEST_STATUS_UNTAKEN then
+			message("Noticing a shadow, you look skyward. There seems to be a platform high above you.")
+		end
+	end
+   }
+}
+
+-- Nyoi-Floor
+map.quest_symbol
+{
+	quest = QUEST_CURIOUS_HOLE
+	symbol = 'e'
+	symbols =
+	{
+		[{QUEST_STATUS_FINISHED}] = { feat=FEAT_NYOIBO info=6 }
+		default = { feat=FEAT_FLOOR info=6 }
+	}
+}
+
+-- Nyoi-Edge
+map.quest_symbol
+{
+	quest = QUEST_CURIOUS_HOLE
+	symbol = 'f'
+	symbols =
+	{
+		[{QUEST_STATUS_FINISHED}] = { feat=FEAT_NYOIBO info=6 }
+		default = { feat=FEAT_FLOOR info=3 on_walk="You peer over the edge. It is a long way down." }
+	}
+}
+
+-- Nyoi-Sky
+map.quest_symbol
+{
+	quest = QUEST_CURIOUS_HOLE
+	symbol = 'g'
+	symbols =
+	{
+		[{QUEST_STATUS_FINISHED}] = { feat=FEAT_NYOIBO info=6 }
+		default = { feat=FEAT_SKY info=3 }
+	}
+}
+
+map.map
+{
+[[*************************************************************************************************************]],
+[[*                                XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX                                  *]],
+[[*                                       XXXXXXXXXXXXX>XXXXXXXXXXXXX                                         *]],
+[[*                                                    g                                                      *]],
+[[*                                                    g                                     ccc              *]],
+[[*                                                    g                                    cccccc            *]],
+[[*                                                    g                                     cccc             *]],
+[[*       ccc                                          g                                                      *]],
+[[*      ccccc                                         g                                                      *]],
+[[*        ccc                                         g                                                      *]],
+[[*                                                    g                                                      *]],
+[[*                                 cccc               g                                                      *]],
+[[*                                cccccc              g                                                      *]],
+[[*                                  ccc               g                                                      *]],
+[[*                                                    g                                                      *]],
+[[*                                                    g                                                      *]],
+[[*                                                    g                                                      *]],
+[[*                                                    g                   cccc                               *]],
+[[*                                                    g                  cccccc                              *]],
+[[*                                                    g                    ccc                               *]],
+[[*                                                    g                                                      *]],
+[[*                                                    g                                                      *]],
+[[*                                                    g                                                      *]],
+[[*                   ccc                              g                                                      *]],
+[[*                  ccccc                             g                                                      *]],
+[[*                    cc                              g                                                      *]],
+[[*                                                    g                                                      *]],
+[[*                                                    g                                                      *]],
+[[*                                                    g                                                      *]],
+[[*                                                    g                                                      *]],
+[[*                                                    g                                                      *]],
+[[*      ccc                                           g                                                      *]],
+[[*     cccccc                                         g                                                      *]],
+[[*       ccc                                          g     ccc                                ccc           *]],
+[[*                                                    g    cccccc                            ccccccc         *]],
+[[*                                                    g      ccc                                ccc          *]],
+[[*                                                    g                                                      *]],
+[[*                                                    g                                                      *]],
+[[*                            cccc                    g                                                      *]],
+[[*                          cccccccc                  g                                                      *]],
+[[*                             ccc                    g                                                      *]],
+[[*                                               ,,,,,f,,,,,                                                 *]],
+[[*    ccc                                     ,,,,....e....,,,,                  cccc                        *]],
+[[*  ccccccc                                  ,,.......e.......,,                ccccccc                      *]],
+[[*     ccc                                   ,........e........,                  ccc                        *]],
+[[*                                          ,,........e.....<..,,                                            *]],
+[[*                                          ,........rdr........,                                            *]],
+[[*                                          ,........rar........,                                            *]],
+[[*                                          ,........rrr........,                                            *]],
+[[*                    cccc                  ,,.................,,                                            *]],
+[[*                   ccccccc                 ,.................,                                             *]],
+[[*                     ccc                   ,,...............,,                                             *]],
+[[*                                            ,,,,.........,,,,                         cccc                 *]],
+[[*                                               ,,,,,,,,,,,                           cccccc                *]],
+[[*                                                                                       ccc                 *]],
+[[*                                                                                                           *]],
+[[*                                                                                                           *]],
+[[*                              ccc                                                                          *]],
+[[*                             cccccc                                                                        *]],
+[[*                               ccc                                 ccc                                     *]],
+[[*                                                                  ccccc                                    *]],
+[[*                                                                    ccc                                    *]],
+[[*cc                                                                                                         *]],
+[[*cccc                                                                                                       *]],
+[[*ccc                                                                                                        *]],
+[[*                                                                                                           *]],
+[[*                                                                                                           *]],
+[[*                                                                           ccc                             *]],
+[[*                                        ccc                               ccccc                            *]],
+[[*                                       ccccc                               cccc                            *]],
+[[*                                         cc                                                                *]],
+[[*                                                                                                           *]],
+[[*                                                                                                           *]],
+[[*                                                                                                           *]],
+[[*                                                                                                           *]],
+[[*************************************************************************************************************]],
+}
+
+map.level_size_to_map()
+
+-- Starting position
+if dball_data.level_tracker == 1 then
+	map.set_player(2, 54)
+else
+	map.set_player(45, 61)
+end

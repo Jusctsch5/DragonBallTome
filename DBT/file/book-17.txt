@@ -1,0 +1,150 @@
+#####R               /------------------------------\                          
+#####R              <  DBT V071 (087) Release Notes  >                         
+#####R               \------------------------------/                          
+                                                                               
+Summary:                                                                       
+*****/abook-17.txt*1[(a) Hello!]                                               
+*****/bbook-17.txt*2[(b) Version Numbering Change]                             
+*****/cbook-17.txt*3[(c) Changes Since V066]                                   
+*****/dbook-17.txt*4[(d) Bugfixes]                                             
+*****/ebook-17.txt*5[(e) New Material]                                         
+*****/fbook-17.txt*6[(f) Balance/Rule Changes]                                 
+*****/gbook-17.txt*7[(g) Marksmanship]                                         
+*****/hbook-17.txt*8[(h) Miscellaneous]                                        
+*****/ibook-17.txt*9[(i) Playability Improvements]                             
+*****/jbook-18.txt*10[(j) Known Bugs]                                          
+                                                                               
+~~~~~1                                                                         
+#####G(a)Hello!                                                                
+                                                                               
+    Due to recent computer sillynes, and a general inability for me to         
+    download the latest alpha8, it's been three weeks since the last           
+    release. Consequently, this has turned out to be a VERY BIG relase         
+    ith a lot of changes. Unfortuantely, I'm still running alpha7, and         
+    there are a few bugfixes in alpha8 that Dragonball T really needs.         
+    Hopefully this release will run adequently on alpha8, but without          
+    the ability to test it, at the moment, I can't say for sure it will        
+    even load. If you have difficulty, run it with alpha7.                     
+                                                                               
+~~~~~2                                                                         
+#####G(b)Version Numbering Change                                              
+                                                                               
+  Up to Dragonball T V.0.6.6 I had been using a policy of 'if I work           
+  on DBT that day, I increment the version number.' Unfortuantely while        
+  some 'days' I'm able to spend hours, others 'days' are only twenty           
+  minutes, and I found myself rapidly running out of version numbers.          
+  So startign with this release, official version numbers are 'what I          
+  feel like' rather than number of days worked. I'll include both              
+  just for continuity. While this release is numbered V0.7.2 it would          
+  be 0.8.7 by the old system.                                                  
+                                                                               
+~~~~~3                                                                         
+#####G(c)Changes since V066                                                    
+                                                                               
+Quite a few, actually:                                                         
+                                                                               
+                                                                               
+~~~~~4                                                                         
+#####G(d)Bugfixes                                                              
+Bugfixes:                                                                      
+ * All monsters should have AI's now                                           
+ * Fixed drop themes                                                           
+ * Fixed the infinite dragonballs bug                                          
+ * Fixed flavours                                                              
+ * Some actions weren't using energy. This has been resolved                   
+ * Caffiene now works again                                                    
+ * Non-functional randoms on RRA special levels replaced with fixed            
+   monsters                                                                    
+ * The Nyoibo now delivers falling damage if you vault too far                 
+ * DBTChat now allows conversation to occur on diagonals                       
+ * No longer possible to challenge instructors repeatedly                      
+ * It is no longer possible to be permanently trapped inside Mr.               
+   Satan's Estate                                                              
+ * Chi Masters who lack quests will now correctly teach skills, even           
+   though they're not fully implemented                                        
+                                                                               
+~~~~~5                                                                         
+#####G(e)New Material                                                          
+ * Totally new Instant/Constant effect Chi 'Magic' system                      
+ * 9 of 13 Chi abilities implemented                                           
+ * Dialogue has increased from 167K to 271K                                    
+ * The help files are now 68K                                                  
+ * It is now possible to use the dragonballs to summon Shenron                 
+ * World Tournament handling has been expanded upon                            
+ * A weapon poisoning system has been partially introduced                     
+ * 1 new dungeon: The Foot Lair                                                
+ * 2 new special levels: Juvinile Playground, Mr. Satan's Private Chambers     
+ * Four of the old studio placeholder 'Challenge' maps have been developed     
+ * 7 new uniques: All 5 of the Ginyu Force, Tatsu, and the East Kaioshin       
+ * The ninja quest tree is now about 30% developed                             
+ * 5 entirely new quests                                                       
+ * 3 'old' quests are now completeable: Delivery Service, Sushi Delivery,      
+   Stolen Goods                                                                
+ * Three new buildings: Swordsmith, Widget factory, Museum                     
+ * 2 new abilities: Skating and Martial Arts Sushi Eating!!!                   
+ * 2 new artifacts                                                             
+ * 2 New slot type: bracers, wrist                                             
+ * Several new tech items: radiation/eva suits, gas masks, flame throwers...   
+                                                                               
+~~~~~6                                                                         
+#####G(f)Balance/Rule Changes                                                  
+ * You now start with a weapon! No more scumming starving collge students      
+   for comic books to sell! Yay!                                               
+ * Girls may no longer study sumo                                              
+ * Rebalanced Ballet so it is no longer quite so overpowered                   
+ * Practitioners of ninjutsu no longer lose faction standing with 'good' guys  
+ * Resistances are no longer obvious()                                         
+ * Discarnate spirits may no longer interact with stores, usually.             
+ * Gym/Library gains are now available for 5 levels instead of every 10        
+ * Six skill points per level                                                  
+ * All chi modifier gains have been DOUBLED. This might be too much, but it    
+   do es at least make Chi useful, now.                                        
+                                                                               
+~~~~~7                                                                         
+#####G(g)Marksmanship (Experimental)                                           
+ * Partial Migration to its own subsystem                                      
+ * 'Out of Ammo' messages are now correct                                      
+ * When fighting with paired guns, if the first shot kills the monster, the    
+   second no longer fires                                                      
+ * Weapon difficulty penalties for guns are now properly applied               
+ * Guns in hand can now be reloaded                                            
+ * Armor Piercing and incendiary ammunition has been introduced                
+                                                                               
+~~~~~8                                                                         
+#####G(h)Misc                                                                  
+ * Identify system has been migrated to its own subsystem                      
+ * The Dragonball Drop system has been finalized (I think)                     
+ * The galaxy has been rearranged                                              
+ * Some game rebalancing                                                       
+ * Implemented the Dragon Radar: Know when monsters spawn with dragonballs!    
+ * Thematic changes to eating                                                  
+ * Eliminated: trapkits, chests, void jump gates, fountains                    
+                                                                               
+~~~~~9                                                                         
+#####G(i)General Playability Improvements                                      
+ * Dialogue options available only people with high charisma are now marked    
+   (Persuade)                                                                  
+ * ID system checks items on the ground                                        
+ * The inventory stacking problem has been resolved                            
+ * AI changes now work on a standard system: all monster may have two AI's     
+   to choose between.                                                          
+                                                                               
+~~~~~10                                                                        
+#####G(j)Known Bugs                                                            
+                                                                               
+ * New World Tournament changes still have non-fatal issues to resolve         
+ * Poisoning display is weird, and not entirely correct                        
+ * AI Swapping doesn't seem to work for certain factions                       
+   (Oolong and Pilaf, most notably...compare to Neutral                        
+   (or Kami factions, which work properly)                                     
+ * Don't talk to Rosshi if you're a girl                                       
+ * Lunch's AI temporarily set to NEVER_MOVE                                    
+ * Alpha7: Uniques can't spawn more than once                                  
+                                                                               
+                                                                               
+Enjoy!                                                                         
+                                                                               
+Bucket Man                                                                     
+                                                                               
+                                                                               
+                                                                               

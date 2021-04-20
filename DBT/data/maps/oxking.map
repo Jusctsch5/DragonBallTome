@@ -1,0 +1,123 @@
+map.define("oxking.map")
+
+map.symbol{ symbol='X' feat=FEAT_PERMA_WALL info=6 }
+map.symbol{ symbol='#' feat=FEAT_MAP_BORDER info=6 }
+map.symbol{ symbol='<' feat=FEAT_LESS info=6 }
+map.symbol{ symbol='d' feat=FEAT_DOOR info=6 inventory_size=0  }
+map.symbol{ symbol='G' feat=FEAT_GLASS_WALL info=6 }
+
+map.symbol{ symbol='f' feat=FEAT_FLOOR info=6 monster=RACE_FLORINIFERA }
+
+-- Looked door to Chichi's bedroom
+-- map.symbol{ symbol='D' feat=FEAT_DOOR_CHICHI info=6 inventory_size=0  }
+map.symbol{ symbol='D' feat=FEAT_DOOR info=6 inventory_size=0  }
+
+map.symbol{ symbol='l' feat=FEAT_LADDER_LEFT info=6 inventory_size=0  }
+map.symbol{ symbol='m' feat=FEAT_LADDER_RIGHT info=6 inventory_size=0 }
+map.symbol{ symbol='n' feat=FEAT_DRAWBRIDGE info=6 inventory_size=0 }
+map.symbol{ symbol='t' feat=FEAT_GREEN_CARPET info=6 on_walk="storage" }
+map.symbol{ symbol='u' feat=FEAT_GREEN_CARPET info=6 on_walk="kitchen" }
+
+map.symbol{ symbol='w' feat=FEAT_FURNITURE info=6 on_walk="chair" }
+map.symbol{ symbol='y' feat=FEAT_FURNITURE info=6 on_walk="table" }
+
+-- Chichi does not respond well to perverts
+map.symbol{ symbol='z' feat=FEAT_GREEN_CARPET info=6
+   flags = {
+      MOVE_POST_DEST=function()
+		dball.td_ox_1()
+		if dball_data.chichi_state == 0 then
+			dialogue.CHICHI_NAKED()
+			dball_data.chichi_state = 1
+		elseif dball_data.chichi_state == 1 then
+			-- In fact, she will hunt them to the ends of the earth. :P
+			-- Or at least until her father intervenes.
+			dball_data.chichi_state = 2
+			for_each_monster(function(m_idx, monst)
+				if monst.r_idx == RACE_CHICHI then
+					monst.flags[FLAG_PERMANENT] = true
+				end
+			end)
+		else
+			-- Do nothing: state=3 is 'resolved'
+		end
+	end
+   }
+}
+
+
+map.symbol{ symbol='A' feat=FEAT_GREEN_CARPET info=6 monster=RACE_CHICHI }
+map.symbol{ symbol='a' feat=FEAT_GREEN_CARPET info=6
+   flags = {
+      MOVE_POST_DEST=function()
+		dball.td_ox_1()
+	end
+   }
+}
+map.symbol{ symbol='b' feat=FEAT_BLUE_CARPET info=6
+   flags = {
+      MOVE_POST_DEST=function()
+		dball.td_ox_1()
+	end
+   }
+}
+map.symbol{ symbol='e' feat=FEAT_RED_CARPET info=6 }
+map.symbol{ symbol='c' feat=FEAT_RED_CARPET info=6
+   flags = {
+      MOVE_POST_DEST=function()
+		dball.td_ox_1()
+	end
+   }
+}
+map.symbol{ symbol='g' feat=FEAT_GREEN_CARPET info=6
+   flags = {
+      MOVE_POST_DEST=function()
+		dball.td_ox_1()
+	end
+   }
+}
+
+map.symbol{ symbol='G' feat=FEAT_WALL_OF_FIRE info=6 }
+
+map.symbol{ symbol='.' feat=FEAT_FLOOR info=6
+   flags = {
+      MOVE_POST_DEST=function()
+		dball.td_ox_2()
+	end
+   }
+}
+
+map.map
+{
+[[XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX]],
+[[XXX.....................................X]],
+[[XXX......XXXXXXXXXXXXXXXXXXXXXXXXX......X]],
+[[XXX......XaaaaaaaaaaaaaaaaaaaaaaaX......X]],
+[[XXX......XaaaaawawawawawawawaaaaaX......X]],
+[[XXX.XXXXXXaaaayyyyyyyyyyyyyyyaaaaXXXXXX.X]],
+[[XXX.XGGGGXaaawyyyyyyyyyyyyyyywaaaX....X.X]],
+[[#GGGGGGGGXaaaayyyyyyyyyyyyyyyaaaaX....X.X]],
+[[XXX.XGGGGduaaaawawawawawawawaaaatd....X.X]],
+[[XXX.XGGGGXaaaaaaaaaaaaaaaaaaaaaaaX....X.X]],
+[[XXX.XXXXXXXXXdXXXXXXXXXXXXXXXdXXXXXXXXX.X]],
+[[XXX.XggggXXXcccccccccccccccccccXXXzzzzX.X]],
+[[XXX.XggggXXcccccccccccccccccccccXXzzzzX.X]],
+[[XXX.XggggDccccccccccaaaccccccccccXzzzzX.X]],
+[[XXX.XggggdccccccccaaaaaaaccccccccDzzAzX.X]],
+[[XXX.XggggXccccccccaGGGGGaccccccccXzzzzX.X]],
+[[XXX.XXXXXXccccccccaGfffGaccccccccXXXXXX.X]],
+[[XXX.lccccccccccccaaGfffGaaccccccccccccm.X]],
+[[XXX.XXXXXXccccccccaGfffGaccccccccXXXXXX.X]],
+[[XXX.XggggXccccccccaGGGGGaccccccccXggggX.X]],
+[[XXX.XggggdccccccccaaaaaaaccccccccdggggX.X]],
+[[XXX.XggggXccccccccccaaaccccccccccXggggX.X]],
+[[XXX.XggggXXcccccccccccccccccccccXXggggX.X]],
+[[XXX.XXXXXXXXcccccccccccccccccccXXXXXXXX.X]],
+[[XXX......XXXXXXXXXXcccccXXXXXXXXXX......X]],
+[[XXX......XXXXXXXXXXcccccXXXXXXXXXX......X]],
+[[XXX......XXXXXXXXXXcccccXXXXXXXXXX......X]],
+[[XXX...............Xee<eeX...............X]],
+[[XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX]],
+}
+
+map.set_player(27, 21)

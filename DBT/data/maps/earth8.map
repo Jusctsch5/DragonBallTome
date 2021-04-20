@@ -1,0 +1,126 @@
+-- Dragonball t: Dragonball earth, north "8"
+map.define("earth8.map")
+
+-------------------------------------------------------------------------------
+-- Terrain
+-------------------------------------------------------------------------------
+map.symbol{ symbol='=' feat=FEAT_GRASS info=3 }
+map.symbol{ symbol='^' feat=FEAT_MOUNTAIN info=3 }
+map.symbol{ symbol='&' feat=FEAT_SNOWY_PEAK info=3 }
+map.symbol{ symbol='#' feat=FEAT_BUILDING info=6 }
+map.symbol{ symbol='T' feat=FEAT_TREES info=3 }
+map.symbol{ symbol='W' feat=FEAT_DEEP_WATER info=3 }
+map.symbol{ symbol='V' feat=FEAT_SHAL_WATER info=3 }
+map.symbol{ symbol=',' feat=FEAT_DIRT info=3 }
+map.symbol{ symbol='.' feat=FEAT_ASPHALT info=6 }
+map.symbol{ symbol='O' feat=FEAT_SIDEWALK info=6 }
+map.symbol{ symbol='|' feat=FEAT_ROADSTRIPE_VERT info=3 }
+map.symbol{ symbol='-' feat=FEAT_ROADSTRIPE_HORZ info=3 }
+
+
+
+-------------------------------------------------------------------------------
+-- Map-Specific Misc
+-------------------------------------------------------------------------------
+map.symbol{ symbol='P' feat=FEAT_KAME_WALL info=3 }
+map.symbol{ symbol='Q' feat=FEAT_GLASS_WALL info=3 }
+-- map.symbol{ symbol='R' feat=FEAT_SE_FAKE_DOOR info=3 }
+map.symbol{ symbol='S' feat=FEAT_SIGNPOST info=3 on_walk="Mr. Satan's Estate" }
+-- T used by trees
+map.symbol{ symbol='U' feat=FEAT_KAME_ROOF info=3 }
+-- V used by Shallow Water
+-- W used by Deep Water
+map.symbol{ symbol='X' feat=FEAT_SIGNPOST info=3 on_walk="Orinji Buddhist Temple" }
+map.symbol{ symbol='Y' feat=FEAT_SIGNPOST info=3 on_walk="Kame House" }
+
+-------------------------------------------------------------------------------
+-- Dungeons
+-------------------------------------------------------------------------------
+map.symbol{ symbol='B' feat=FEAT_MORE info=3 dungeon=DUNGEON_TEMPLE }
+-- map.symbol{ symbol='B' feat=FEAT_SIGNPOST info=3 on_walk="(Temple disabled for V087)" }
+
+
+
+map.symbol{ symbol='C' feat=FEAT_MORE info=3 dungeon=DUNGEON_SATAN_ESTATE }
+map.symbol{ symbol='D' feat=FEAT_MORE info=3 dungeon=DUNGEON_KAME_HOUSE }
+map.symbol{ symbol='E' feat=FEAT_MORE info=3 dungeon=DUNGEON_OXKING_HOUSE }
+
+-------------------------------------------------------------------------------
+-- Stores
+-------------------------------------------------------------------------------
+map.symbol{ symbol='a' feat=FEAT_SHOP info=3 building=store.MILITARY_SURPLUS }
+map.symbol{ symbol='b' feat=FEAT_SHOP info=3 building=store.SHOOTING_RANGE }
+map.symbol{ symbol='c' feat=FEAT_SHOP info=3 building=store.STORE_GUNSTORE }
+map.symbol{ symbol='d' feat=FEAT_SHOP info=3 building=store.SHOOTING_RANGE }
+map.symbol{ symbol='e' feat=FEAT_SHOP info=3 building=store.PIZZA_KITCHEN }
+map.symbol{ symbol='f' feat=FEAT_SHOP info=3 building=store.YMCA }
+
+map.map
+{
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW====================...===============================]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW=====================.|.===============================]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW======================...===============================]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW===========================.|.===============================]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW======================================...===============================]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW================================================.|.===============================]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW============================================================...===============================]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW==============================================================.|.===============================]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW================================================================...===============================]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW================================================================.|.===============================]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW================================================================...============^^^^^==============]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW=================================================================.|.==========^^^^^^^^^^^==========]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW==================================================================...========^^^^^^^^^^^^^^^========]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW====================================================================.|.=============^^^^^^^^^^^^^^====]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW======================================================================...===========^^^^^^^^^^^^^^^^^^^^]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWVVVVVVVVWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW======================================================================.|.==============^^^^^^^^^^^^^^^^^]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWVVV======VVVWWWWWWWWWWWWWWWWWWWWWWWWWWWWW=======================================^^^^^^^^======================...====================^^^^^^^^^^^]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWV====UU====VVVVWWWWWWWWWWWWWWWWWWWWWWWWWWW=============================^^^^^^^^^^^^^^^^^^^^^==================.|.=======================^^^^^^^^]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWVV==T=UUUU======VVWWWWWWWWWWWWWWWWWWWWWWWWWWW========================^^^^^^^^^^^^^^^&&&^^^^^^^^^^^==============...==========================^^^^^]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWV====UPPPPU=T====VVWWWWWWWWWWWWWWWWWWWWWWWWWW======================^^^^^^^^^^^^^^^&&&^^^^^^^====================.|.===========================^^^^]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWV==T==PPDPY=======VWWWWWWWWWWWWWWWWWWWWWWWWWWW=========================^^^^^^^^&&&&^^^^^^^^^====================...============================^^^]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWVV============VVVVVWWWWWWWWWWWWWWWWWWWWWWWWWWW===========================^^^^^^^^^^^^^^^========================.|.=============================^^]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWVVVVV====VVVVVWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW===========================^^^^^^^^^^^^^==========================...==========================^^^^^]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWVVVVVVWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW=========================^^^^^^^^^###^^===========================.|.=========================^^^^^^]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW=====================^^^^^^^^^^^^^^#B#X^===========================...=====================^^^^^^^^^^]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW==================^^^^^^^^^^^^^^^^^^#===============================.|.===============^^^^^^^^^^^^^^&&]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW==============^^^^^^^^^^^^======^^^^^^^^^^^^^^^^^===================...==============^^^^^^^^^^^^&&&&&]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW==============^^^^^^^^^^=============^^^^^^&&^^^=====================.|.=========^^^^^^^^^^^^^&&&&&&&&&]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW===============^^^^^^=================^^^^&&^^^======================...======^^^^^^^^^^^^&&&&&&&&&&&&&]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW=======================================^^&^^^^=======================.|.========^^^^^^^^^^^^^^^^^&&&&&&]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW=======================================^^^^^^=========================...===========^^^^^^^^^^^^^^^^^&&&]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW======================================^^^^^^^==========================.|.==================^^^^^^^^^^^^^]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW===================================^^^^^^^^^===========================...=======================^^^^^^^^]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW=================================^^^^^============================###==.|.=====================^^^^^^^^^^]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW=============================^^^^^^^==============================##e.....====================^^^^^^=====]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW===================================================================###==.|.==================^^^^^^=======]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW========================================================================...================^^^^^==========]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW=========================================================================.|.===============^^^^^^^=========]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW=======================================================================###==...===####====^^^^^^===^^^========]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW========================================================================###...|.===#OO#===^^^^^^======^^^======]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW=========================================================================###==...===#OO#====^^^=========^^^^====]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW===============================================================================.|.===#OO#===============^^^^=====]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW============================================#Q#Q#Q#Q#Q#Q#Q#Q#Q#Q#Q#==============...===#OO#================^^======]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW===============================================Q=================T===Q==============.|.===#OO#========================]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW================================================#==##############=====#=========###==...===#OO#========================]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW==================================================Q==##############=====Q=========###==.|.==##O##========================]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW==================================================#==####==T========VV==#=========##a.......OOOd#======================TT]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW===================================================Q==###COOOOO====VVVV==Q=========###==.|.==##c##====================TTTT]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW====================================================#==####====O===VVVV===#==============...===###================TTTTTTTTT]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW=====================================================Q=======T==O=======T==Q==============.|.=========================TTTTTT]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW======================================================#Q#Q#Q#Q#Q#.#Q#Q#Q#Q#Q#==============...==###==========TTT==========TTT]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW=================================================================S.=========================.|.==###=========TTT============TT]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW====================================================================.=========================.....f##==========TTT==========TTT]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW=========================================================..........................................|.==###======================TTTT]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW=========================================================..-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-..==###==================TT==TTTT]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW==========================================================.|..........................................=============================TTT]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW============================================================...======================================================WWWWW============TT]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW==============================================================.|.====================================================WWWWWWWWWWW========TT]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW================================================================...=================================================WWWWWWWWWW===========TTT]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW==================================================================.|.=========TTTTT==============================WWWWWWWWWWWW===============TT]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW===================================================================...=======TTTTTTTTTT=============================WWWWWWWWWWW============TTTT]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW====================================================================.|.=======TTTTTTTTTTTTT==============================================TTTTTTT]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW=====================================================================...==========TTTTTTTTTTTTTTT=====================================TTTTTTTTTTT]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW======================================================================.|.=============TTTTTTTTTTTTTTTTTTTTTTTT===============TTTTTTTTTTTTTTTTTTTTT]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW=======================================================================...=============TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW========================================================================.|.===========TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT]],
+}

@@ -1,0 +1,34 @@
+map.define("spaceport.map")
+
+map.symbol{ symbol='.' feat=FEAT_FLOOR info=3 }
+map.symbol{ symbol='X' feat=FEAT_PERMA_WALL info=3 }
+map.symbol{ symbol='d' feat=FEAT_DOOR_LOCKED_HEAD info=3 }
+map.symbol{ symbol='<' feat=FEAT_LESS info=3 }
+-- map.symbol{ symbol='w' feat=FEAT_GLASS_WALL info=6 }
+
+map.symbol{ symbol='V' feat=FEAT_FLOOR  info=3 monster=RACE_VEGITA }
+map.symbol{ symbol='R' feat=FEAT_FLOOR  info=3 monster=RACE_RADDITZ }
+
+map.map
+{
+[[XXXXXXXXXXXXXXXXX]],
+[[X...............X]],
+[[X...............X]],
+[[X...............X]],
+[[X...........XXXXX]],
+[[X...R.......X...X]],
+[[X...........d.<.X]],
+[[X...V.......X...X]],
+[[X...........XXXXX]],
+[[X...............X]],
+[[X...............X]],
+[[X...............X]],
+[[XXXXXXXXXXXXXXXXX]],
+}
+
+-- Starting position
+if dball_data.level_tracker == 1 then
+	map.set_player(2, 15)
+else
+	map.set_player(6, 14)
+end

@@ -1,0 +1,43 @@
+-- This map is for the second ninjutsu challenge quest...
+-- Should the student decide to try to surpass the master
+-- Unlike most other duels, this one will have to be fought
+-- like a ninja.
+
+map.define("d_ninjutsu.map")
+
+map.symbol{ symbol='.' feat=FEAT_FLOOR info=8 }		-- Dark!
+map.symbol{ symbol='X' feat=FEAT_PERMA_WALL info=8 }
+map.symbol{ symbol='*' feat=FEAT_MAP_BORDER info=6 }
+
+map.symbol{ symbol='a' feat=FEAT_FLOOR  info=4 monster=RACE_HATSUMI }
+map.symbol{ symbol='<' feat=FEAT_LESS info=4 }
+
+-- Dungeon layout
+map.map
+{
+[[***********************************]],
+[[*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*]],
+[[*Xa..............................X*]],
+[[*X...............................X*]],
+[[*X...............................X*]],
+[[*X...............................X*]],
+[[*X...............................X*]],
+[[*X...............................X*]],
+[[*X...............................X*]],
+[[*X...............................X*]],
+[[*X...............................X*]],
+[[*X.<.............................X*]],
+[[*X...............................X*]],
+[[*X...............................X*]],
+[[*X...............................X*]],
+[[*X...............................X*]],
+[[*X...............................X*]],
+[[*X...............................X*]],
+[[*X...............................X*]],
+[[*X...............................X*]],
+[[*X...............................X*]],
+[[*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*]],
+[[***********************************]],
+}
+
+map.set_player(18, 30)

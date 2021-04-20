@@ -1,0 +1,163 @@
+#####R                 /------------------------\                              
+#####R                <  DBT V086 Release Notes  >                             
+#####R                 \------------------------/                              
+                                                                               
+Summary:                                                                       
+*****/abook-30.txt*1[(a) V086 Status]                                          
+*****/bbook-30.txt*2[(b) Summary of Changes]                                   
+*****/cbook-30.txt*3[(d) Things that have been REMOVED]                        
+*****/dbook-30.txt*4[(d) Planned, but didn't make this release]                
+*****/ebook-30.txt*5[(e) Newly Observed Bugs]                                  
+                                                                               
+~~~~~1                                                                         
+#####G(a)V086 Status                                                           
+                                                                               
+ April 8th, 2007                                                               
+                                                                               
+ We've been due for a content release for a while, so this is it.              
+ Lots of new material. Some of it obvious, some of it not so obvious.          
+ We've also gone through a few alphas since the last release, so it's          
+ very likely that there are some stability issues. This release feels          
+ more stable than V085 (the win.cfg bug seems to have magically vanished)      
+ but playing with wizard mode and/or save scummming is recommended.            
+                                                                               
+ Also, I'd like to mention that Dragonball T has passed the point where        
+ I can keep track of everything. It's too big. Opening the dialogue file       
+ in Word shows it to be 196 pages. And that's JUST the dialogue. The           
+ functions and hooks library is another 100 pages. The quests are another      
+ hundred pages. Tools, wishing and schools enrollment...another hundred        
+ pages. It just goes on and on. It's neat that it's so large, but at the       
+ same time I've been working on this for almost a year now, and I've           
+ definitely starting losing momentum. If I had known how much time and         
+ effort this was going to be, I'd certainly have started with something        
+ less ambitous                                                                 
+                                                                               
+ I suppose I would find it less frustrating if I was able to spend less        
+ time shaking my head, trying to figure out why things don't work. The         
+ last three versions have been especially trying, and I've constantly been     
+ dealing with problems that defy all sense. It seems like the past few alphas  
+ have changed a number of 'unknown somethings' in ways that may ultimately     
+ be good for the engine, but have been awfully inconvenient for a module       
+ with over 3 megabytes of script written for previous versions. Spending three 
+ hours making neat, new things is fun. Spending five hours systematically      
+ commenting/deleting from 100K files looking for the one line that causes a    
+ fatal crash with no error message isn't nearly as much fun. Engine bugs       
+ that appear in one alpha, but can't be reproduced in any other module, but    
+ nevertheless magically vanish for no obvious reason with the following alpha  
+ also not so much fun. Starting tome ten times in a row, and seeing it         
+ crash during character creation five of those times with no error message...  
+ very not fun.                                                                 
+                                                                               
+ So, altogether, I have to admit that this project has been a lot less fun     
+ lately than it used to be. I'm not quite ready to stop working on it          
+ completely, but it's very likely that releases will start being less large    
+ and less frequent than they have been. And...we'll see where it goes from     
+ there.                                                                        
+                                                                               
+                                                                               
+ lordbucket@hotmail.com                                                        
+                                                                               
+                                                                               
+~~~~~2                                                                         
+#####G(a)Summary of Changes                                                    
+Systems:                                                                       
+ * Migrated to alpha16                                                         
+ * Restored CAN_SPEAK handling to several ai's                                 
+ * Basic push-past for party members                                           
+                                                                               
+Things that have been redesigned:                                              
+ * The entire planet earth has been redesigned, and a number of thematic,      
+   cosmetic changes have been made throughout the universe.                    
+ * The Ballet quest has been redesigned                                        
+ * The Red Ribbon Army:                                                        
+   * Is generally tougher                                                      
+   * Has picked up a lot of new material: monsters, ai's, special attacks,     
+     dungeons, special levels...                                               
+   * Entering Muscle Tower might not be as easy as it used to be               
+   * Is still in transition. A few things are disabled.                        
+                                                                               
+Monster Changes:                                                               
+ * Several new monster AI's have been added. Some of them are intelligent,     
+   and may do things you don't expect: flee from maps, initiate conversations, 
+   change tactics depending on location and circumstance, and interact with,   
+   or follow other monsters. In particular, some uniques have become deadly    
+   nasty, will play shoot and scoot, blind you repeatedly, etc. You have been  
+   warned.                                                                     
+ * New monster special abilities: Throw, Bearhug, "Radio request for backup",  
+   launch missile                                                              
+ * WARNING: There is a certain new unique, on a certain new special level in   
+   a certain dungeon that has 100% immunity to barehanded attacks. This special
+   level may very easily be completely skipped...once you know how.            
+                                                                               
+Rulechanges/Balance:                                                           
+ * Monsters on SAVE levels are now healed while the player is away             
+ * BBB now only gives one immunity (ballistics) not four                       
+ * Steel weapons are gone until getter.ego() is fixed in the engine            
+ * Ninjutsu returns as opposition to Ballet.                                   
+ * Marksmanship is now 'it's own thing'                                        
+ * Dodge skill now helps avoid certain monster special attack types            
+ * Tsuru-Seni'nin now teaches flight.                                          
+ * Movement mode speed penalties have been reduced                             
+ * Basho / Hikui rules have changed somewhat                                   
+ * Marrying Rosshi no longer removes Rosshi as a trainer                       
+ * Most (not all, but most) monsters now have maximized hp                     
+ * Poorly made (badly balanced) and steel weapons (too heavy) may no longer    
+   riposte                                                                     
+ * Melee attacks delivered while a battle aura is maintained now cause         
+   irresistable damage                                                         
+                                                                               
+Bugfixes:                                                                      
+ * Egos now use getter.ego(). This should eliminate bugs (high capacity safety 
+   flashlights) as well as weird combinations (cleated high heels)             
+ * A bug which incorrectly prevented some monsters from using special attacks  
+   during World Tournament matches has been fixed                              
+ * Jump and throw effects no longer teleport you through walls or monsters     
+ * Using the Nyoibo now properly consumes energy                               
+ * Fixed the briefs_friend error                                               
+ * Kickboxing Challenge Quest is available again                               
+ * Speed modifying items are now functional, and properly displayed            
+ * Fixed Namek's map-wrap                                                      
+ * Robots no longer drop dragonballs                                           
+ * Fixed some xp bugs                                                          
+ * Fixed the speed/regeneration problem while climbing Karin Tower             
+ * Volcano monster breath weapon damage has been fixed                         
+ * Capsules have been fixed (I think.)                                         
+                                                                               
+New Content:                                                                   
+ * New Uniques: Anton the great, Chapao, Buyon, Bosa, Oopa, Puar               
+ * New monsters: RRA Snow Patrol, Missile Turret, dinosaurs, frogs             
+ * New artifact: Dark Nimbus                                                   
+ * New maps: Land of Korin                                                     
+ * New dungeons: Red Ribbon Army Supreme HQ                                    
+ * New special levels: Buyon's Lair                                            
+                                                                               
+~~~~~3                                                                         
+#####G(c)Things that have been removed or replaced                             
+ * The frozen wastes                                                           
+ * Yamcha's bridge                                                             
+ * Tama's quest (Theme: Briefs would NEVER neglect his kitty!)                 
+ * Mountain Lion quest                                                         
+ * Criminal quest                                                              
+                                                                               
+~~~~~4                                                                         
+#####G(d)Planned things that didn't make this release                          
+ * Fusion                                                                      
+ * Technomancer-Customizable Battle Jackets and spaceships                     
+ * Ballet vs. Ninjutsu Challenge Quests                                        
+ * Dungeon: Emperor Pilaf's Underground Fortress                               
+ * Namek Dragonball quests                                                     
+ * Red Ribbon Army Supreme Headquarters                                        
+                                                                               
+~~~~~5                                                                         
+#####G(e)New bugs and issues:                                                  
+ * Being thrown into a monster should hurt the monster too                     
+ * Disintegration does not destroy walls?                                      
+ * Reincarnation is disabled, as for some reason it seems to cause             
+   horrible, nasty crashes when creating non-reincarnated characters           
+ * Gah!!! Closed school FEAT messages are causing crashes as well.             
+   Also disabled.                                                              
+                                                                               
+                                                                               
+Enjoy!                                                                         
+                                                                               
+lordbucket@hotmail.com                                                         

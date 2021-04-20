@@ -1,0 +1,110 @@
+map.define("earthnw.map")
+
+-- Import default symbols
+map.import("towns/symbols.map")
+
+map.symbol{ symbol='a' feat=FEAT_SHOP info=3 building=store.CAPSULE_CORP }
+map.symbol{ symbol='b' feat=FEAT_SHOP info=3 building=store.WAREHOUSE }
+map.symbol{ symbol='c' feat=FEAT_MORE info=3 dungeon=DUNGEON_BRIEFS }
+map.symbol{ symbol='d' feat=FEAT_SHOP info=3 building=store.BALLET }
+map.symbol{ symbol='e' feat=FEAT_SHOP info=3 building=store.MILITARY_SURPLUS }
+map.symbol{ symbol='f' feat=FEAT_SHOP info=3 building=store.ACUPUNCTURE }
+map.symbol{ symbol='g' feat=FEAT_SHOP info=3 building=store.SUMO }
+map.symbol{ symbol='h' feat=FEAT_SHOP info=3 building=store.JUDO }
+map.symbol{ symbol='i' feat=FEAT_SHOP info=3 building=store.LIBRARY }
+map.symbol{ symbol='j' feat=FEAT_GLASS_WALL info=3 }
+map.symbol{ symbol='k' feat=FEAT_MORE info=3 dungeon=DUNGEON_SATAN_ESTATE }
+map.symbol{ symbol='l' feat=FEAT_SE_FAKE_DOOR info=3 }
+map.symbol{ symbol='m' feat=FEAT_SIGNPOST info=3 on_walk="Mr. Satan's Estate" }
+map.symbol{ symbol='n' feat=FEAT_SHOP info=3 building=store.SWORDSMITH }
+map.symbol{ symbol='o' feat=FEAT_SHOP info=3 building=store.ROBBINS }
+map.symbol{ symbol='3' feat=FEAT_SHOP info=3 building=store.STORE_MARTIAL_ARTS_SUPPLIES }
+map.symbol{ symbol='C' feat=FEAT_WINDOW info=3 }
+
+map.symbol{ symbol='z' feat=FEAT_TTQ1 info=3 }	-- TTQ1: 'Forewarning'
+map.symbol{ symbol='y' feat=FEAT_TTQ2 info=3 }	-- TTQ2: 'Trigger'
+
+-- If Criminal Quest, then police guard the Dance Studio
+map.quest_symbol
+{
+	quest = QUEST_CRIMINAL
+	symbol = 'p'
+	symbols =
+	{
+		[{QUEST_STATUS_TAKEN}] = { feat=FEAT_FLOOR info=3 monster=RACE_POLICE }
+		default = { feat=FEAT_GRASS info=3 }
+	}
+}
+
+map.map
+{                                                                                                                                                                                                       
+[[TTTTTTTTTTT-VWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWV-TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT-T--T---T--T-----T------T----]],
+[[TTTTTTTTTT--VVVVWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWVVVVVVV---TT-T-T-TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT-------TTTTTTTTTTTTTTTTTTTT------------------------------------------]],
+[[TTTTTTTTTTT----VVVVVVWWWWWWWWWWWWWWWWWVVVVVVVVVVVVVVVVVVVVVVV-------TTT--TT-T--T-TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT-----------------TTTTTTTTTTTTTTTTTTTTTT--------T--T----TT----T---T-----T---]],
+[[TTTTTTTTTT-T-----T--VVVWWWWWWWWWWWWWWWVVVVVVVV---------------TTTTTTTT-TT--T----------TTTTTTTTTTTTTTTTTTTTTTTTTTTT---------------------T-------------TTTTTTTTTTT-------T-----T---T----T----T--T--T-----]],
+[[TTTTTTTTT----T------T-VVVVVVWWWWWWWWWWWWWWWWWVVVVVVVV-TT--TTT---T--T--------T-------------TTTTTTTTTTTTTTTTTT------T-------T-------------------T--------TTTTTTTTT--------------T-------T-T--T----------]],
+[[TTTTTTTT-T-TT--T--T--------VVVVVVVVVWWWWWWWWWWWWWWWWVV--T--TTn-T-T----T---------------------TTTTTTTTTTTT-----------------------------------T-------TTTTTTTTTTTTTTTT------------T--T-T--T-T----T-T-----]],
+[[TTTTTT----T------------------------VVVVVVVWWWWWWWWWWWV------TTTTT-T-T--T----------------------TTTT-----------T---------------------------------TTTTTTTTTTTTTTTTT----------------T---TT-----T-------T--]],
+[[TTTTTTT-T--TT---------T------------------VWWWWWWWWWWWVVVVVVVV---T-T--TTTTT--------T-------------------T--T-----------------------------------TTTTTTTTTTT-----------------------T--T---T-T--------T-T--]],
+[[TTTTTT--T-------------------------T------VVVVVVVWWWWWWWWWWWWVVV-TTTTTTT--------T----------------TTTTT-----------#j#j#j#j#j#j#j#j#j#j#j#-----TTTTTTTTTTT----------------TT------------------TT---------]],
+[[TTTT--T---T----T-------------------T-------VVVVVVVWWWWWWWWWWWWV---T-TTTTTTTTTTTTTT-TT---------TTTTTTTTT---------j---------------------j----TTTTTTTTTTTT-----T----------------T-----T-T---T-T-TT-T---T-]],
+[[TT---T-T--------------------T--------VVVVVVVWWWWWWWWWWWWVVVVVVV------TTTTTTTTTTTTTTTTTTT-----TTTTTTTT-----T-----#---------------------#-----TTTTTTTTT-----------T----T---------------------T--TT----T-]],
+[[T-TTT-------------------------------VVWWWWWWWWWWWWWWWWWWVVV-----TTTTTTTTTTTTT-----TTTTTTTTTTTTTTTTTTTTTTT-------j--############-------j------TTTTTTTTTTT--------------------------------T----T-T--T---]],
+[[TT----------------------------------VWWWWWWWWWWWWWWWWWWWWWVVV--TTTTTTTTT---------T-----TTTTTTTTTTTTTTTTT--------#--############-VVVT--#-------TTTTTTTTTTT---------------T--T--------------------T-T---]],
+[[T-T---------T---------------T-----VVVWWWWWWWWWWWWWWWWWWWWWWWVV-TTTTTTTTT------------------TTTTTTTTTTT-----------j--############--VVT--j-----TTTTTTTTTTT----T--------------------------------T---TT--T-]],
+[[TTT------------------------------VVWWWWWWWWWWWWWWWWWWWWWWWWWWV-TTTT-----------T--------T----TTTTTTT----T--T-----#--#####----------VV--#----TTTTTTTTTTT--------------T----------------T--------T---TT--]],
+[[T------T--T----------------------VWWWWWWWWWWWWWWWWWWWWWWWWWWWV-T------------------T----------TTTTT----------T---j--####k-OOO-----VVV--j----TTTTTTTTTTT------T--T-----------------T-----------------TTT]],
+[[T-T-T----------------------------VVVWWWWWWWWWWWWWWWWWWWWWWVVVV----------------------------TTTTTTTTTTTT----------#--#####---OT---VVVV--#---TTTTTTTTT---T-----------------------T-----------T--------TTT]],
+[[TT---------------------------------VVWWWWWWWWWWWWWWWWWWWWWV-----------T-----T---------TTTTTTTTTTTTTTTTTTT-------j--#####-T-O---VVV----j---TTTTTTTT--------------------TT--------------------T-----TTTT]],
+[[T-----------------------------------VVVVVVWWWWWWWWWWWWWWWVV----T-------------------TTTTTTTTTTTTTTTTT----------T-#----------O----------#----TTTTTTTT---------T--T----TTTT--------------T----------TTTTT]],
+[[TT---------------------------------------VVVVVVWWWWWWWWVVV-------------------TTTTTTTTTTTTTTTTTTTTTTT------------j----------O----------j-----TTTTTTTTT-T-------------TTTT--T---------------------TTTTTT]],
+[[TT-T------,,,,,,,,,,,,,,,---------------------VVVVVVVVVV------------------TTTTTTTTTTTTTTTTTTTTTTTTT--T----T-----#j#j#j#j#j#l#j#j#j#j#j#------TTTTTTTTT-------------TTTT--------------------T--TTTTTTTT]],
+[[TT-------,,OOOOOOOOOOOOO,,-------------------------------------------TTTTTTTTTTTTTTTTTTTTTTTTTT---------------------------mO,----------------TTTTTTT---------T---TTTT---------T--TT---TTTTTTTTTTTTTTTT]],
+[[T-------,,OOOOOOOOOOOOOOO,,----------------------------------------TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT----------------,O,-----------------TTTTTTTTT----------TTT----------------T-----TTTTTTTTTTTT]],
+[[T---T--,,OOO,,,,,,,,,,,OOO,,-------------------------------T----TTTTTTTTTTTT----------------TTTTTTTTTTTTTTTTTTT-----------,O,------------------TTTTTTTTTT-------TTT--------T-------------T--TTTTTTTTTT]],
+[[TT----,,OOO,,---------,,OOO,,,,,,,,,,,,,,,,,,,,,,,,,,,,--------TTTTTTTTTT--------------------------TTTTTTTTTTTTTTT--------,O,---------------------TTTTTTTTTTTTTTTT---------------------------TTTTTTTTT]],
+[[T-----,OOO,,-----------,,OOOOOOOOOOOOOOOOOOOOOOOOOOOOO,,---------TTTTTTT---T-------------------T-------TTTTTTTTT----------,O,-------------------------TTTTTTTT----------------T-----T---------TTTTTTTT]],
+[[TT----,OOO,-,,,,,,,,,,,,,,OOOOOOOOOOOOOOOOOOOOOOOOOOOOO,,--------TTTTTT----------------------------------TTTTTTT----------,O,-----T------------T---------TTT-------------T-----------------T----TTTTTT]],
+[[------,OOO,-,##########,-,,,,,,zzzzzzzzzzzzzzzzzzzz,,OOO,-------TTTTTTTT------###########------------------TTT------------,O,-----------------------------------------------------T-----T--------TTTTT]],
+[[-T----,OOO,-,##########,-------z###,,###,,###,,###z-,OOO,------TTTTTTTTT------###########---------T---------TT------------,O,---------T----------------------------T----------------------------TTTTTT]],
+[[---T--,OOO,-,##CC###CC#,-------z###,,###,,###,,###z-,OOO,-------TTTTTTT-------#######o###---------------------------------,O,----------------------------------------------T----------T-------T----TTT]],
+[[-T----,OOO,-,#C####C###,-VVVV--z#b#,,#c#,,#b#,,#b#z-,OOO,------TTTTT----------####--,O,-------------------T---------------,O,--------------------------------T------------------------------------TTTT]],
+[[--T---,OOO,-,#C####C###,-VVVV--z,,,,,yyy,,,,,,,,,,z-,OOO,------TTTT--------T--------,O,--------T--------------------------,O,------------------------T---------------------------T--------------T--TTT]],
+[[-T----,OOO,-,#C####C###,-VVVV--z,,,,,,,,,,,,,,,,,,z-,OOO,-------TTT----------,OOOOOOOOOOOOOOO,---------T------------------,O,----T----------T-----T---------------T------------------------T--------TT]],
+[[--T---,OOO,-,##CC###CC#,-------z#b#,,#b#,,#b#,,#b#z-,OOO,---------------T---,O,,,,,,,,,,,,,,,O,-----------------T---------,O,-----------------------------------------T---------T-----------------T-TT]],
+[[------,OOO,-,##########,-------z###,,###,,###,,###z-,OOO,-----T------------,O,,-------------,,O,-T------------------------,O,---------------------------T-------------------------------T-----------TT]],
+[[--TT--,OOO,-,##########,-------z###,,###,,###,,###z-,OOO,----------T------,O,,---------------,,O,-------------------------,O,---------T---------------------T--------------------------------T-------T]],
+[[--T---,OOO,-,####aa####,--,,,,,zzzzzzzzzzzzzzzzzzzz,,OOO,--------------###,O,-----------------,O,###----------------------,O,-------------T-------------------------------T-------------------------TT]],
+[[--T---,OOO,-,,,,,OO,,,,,-,,OOOOOOOOOOOOOOOOOOOOOOOOOOOO,,--------------##fOO,----T-----T------,OOb##----------------------,O,-T------------------T--------------T----------------T---------T---------T]],
+[[------,OOO,,-,,,,OO,,,,-,,OOOOOOOOOOOOOOOOOOOOOOOOOOOO,,--------T------###,O,-----------------,O,###-------T--------------,O,-------------------------T----T-------------------------------------T---T]],
+[[----T-,,OOO,,,,,,OO,,,,,,OOO,,,,,,,,,,,,,,,,,,,,,,,,,,,-----T-------------,O,-------VVV---T---,O,-------------------------,O,------T----------T---------------------T----------------T---------------T]],
+[[-------,,OOOO,,,,OO,,,,OOOO,,------------------------------------------###,O,-T----VVVVV------,O,###----------------------,O,------------------------------------------------------------------------T]],
+[[--T-----,,OOOOOOOOOOOOOOOO,,-------------------------------------------###,O,p-----VVVVV------,O,###------------------###,,O,,###---------T-----------------T------------------T---------------------T]],
+[[---------,,,OOOOOOOOOOOO,,,--------------------------------------------###,O,p-----VVVVV------,O,###------------------##hOOOOOg##-----------------T-----------------T----T-----------------------T---T]],
+[[-------T---,,,,,OOOO,,,,,----------------------------------------------##d,O,p------VVV-------,O,e##------------------###,,O,,###----T-T-----T--------T--T-----T----------------------VVVVVVVVVVV----T]],
+[[----------------,OO,,--------------------------------------------------###,O,p-----------T----,O,###----------------------,O,---------------TTTT---T---T--T-----------------T--------VVWWWWWWWWWVV---T]],
+[[----------------,OO,-----------------T-------------T-----------T----------,O,---T--T----------,O,-------------------------,O,-----------T-TTT----------------------------------VVVVVVVWWWWWWWWWWWVVV--]],
+[[---T---------T--,OO,--------T------------------------------------------###,O,---------T-------,O,###----------------------,O,-----T----------------T------------------VVVVVVVVVVWWWWWWWWWWWWWWWWWWWV--]],
+[[----------------,OO,---------------------------------------------------##iOO,-----------------,OO3##----------------------,O,--------T----------------------VVVVVVVVVVVWWWWWWWWWWWWWWWWWWWWWWVVVVWWVVV]],
+[[-T-----T--------,OO,-------------------------T-------------------------###,O,-----T-----------,O,###----------------------,O,-T----T------TT-------------VVVVWWWWWWWWWWWWWWWWWWWWWWWWWWVVVVVVV--VVWWWW]],
+[[----------T-----,OO,------------------------------------------------------,O,,----------T----,,O,-------------------------,O,-----------T------T--T----VVVWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWVV-------VWWWW]],
+[[----T-----------,OO,------------------------------------------------------,,O,,-------------,,O,,--------------TTTT-------,O,-------T--T------------VVVVWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWVV------VVVWW]],
+[[----------------,OO,------T-------T-----------------------T----------------,,O,,,,,,,,,,,,,,,O,,-----------TTTTTTTTTT-----,O,------TT---------------VWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWVV-T-----VVV]],
+[[------T---T--T--,OO,-----------------------------------------------T--------,,OOOOOOOOOOOOOOO,,----------TTTTTTTTTT-------,O,--T-------------T-----VVWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWV----------]],
+[[--T-----T-------,OO,---------------------------------------------------------,,,,,,,,O,,,,,,,,------------TTTTTTTT--------,O,--------T-TTTT----T--VVWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWV----T-----]],
+[[----------------,OO,----------------------------------------------------------------,O,--------------------TTTT-----------,O,--T-TT-T---TT--------VWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWVVV--------]],
+[[----T-----------,OO,----------------------T-----------------------------------------,O,-----------------------------------,O,------TT--TTT--------VVWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWV-------T]],
+[[-----------T----,OO,----------------------------------------------------------------,O,-----------------------------------,O,----T-T--TTT----T-----VWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWV-------T]],
+[[-T----T---------,OO,----------------------------------------------------------------,O,-----------------------------------,O,----------------------VVVWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWVV------T]],
+[[----------------,OO,----------------------------------------------------------------,O,-----------------------------------,O,---T--TT--------T-------VVVWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWV---T-TT]],
+[[,,,,,,,,,,,,,,,,,OO,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,O,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,O,------------TT------------VVVVWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWVVV------T]],
+[[OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO,-----------------T-----------VVVVWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWV---T---T]],
+[[,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,O,----T-----T---------------------VVVVVVWWWWWWWWWWWWWWWWWVVVVVVVVVV------TT]],
+[[--------------------------------------------------------------------------------------------------------------------------,O,-------------------------------------VVVVVVVVVVVVVVVVVVV-------------T--T]],
+[[----T--T--T---T--T-TT-T--T---T---T----T-----------------------------------------------------------------------------------,O,------------------------------------------------------------------T----TT]],
+[[--TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT----------------------------------------------------------------------------,O,----------------------------------------------------------------------TTT]],
+[[TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT-------------------------------------------------------------,O,-----------------------------------------------------------------T--TTTTT]],
+}
+
+---------------- Starting position ----------------
+-- if leaving_quest == 0 then map.set_player(10, 10) end

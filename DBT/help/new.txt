@@ -1,0 +1,199 @@
+~~~~~1|Introduction to Dragonball T                                            
+                                                                               
+Welcome to the world of Dragonball!                                            
+                                                                               
+*****/anew.txt*1[(a) New to 'rogue-likes'?]                                    
+*****/bnew.txt*2[(b) Things to know right away]                                
+                                                                               
+Differences between Dragonball T and ToME                                      
+*****/cnew.txt*3[(c) Character advancement]                                    
+*****/dnew.txt*4[(d) Equipment issues]                                         
+*****/enew.txt*5[(e) Quests]                                                   
+*****/fnew.txt*6[(f) Magic]                                                    
+*****/gnew.txt*7[(g) New commands]                                             
+                                                                               
+~~~~~1                                                                         
+[[[[[BNew to rogue-likes?]                                                     
+Dragonball T is a psuedo-graphical game in the genre of 'Rogue.'               
+Gameplay is 'visual' with an overhead view of the game map, but                
+the graphics themselves are keyboard characters. Your character                
+is represented by the @ sign in the middle of the display, and                 
+different characters represent different sort of things. For                   
+example, numbers are stores. Letters in the alphabet are usually               
+monsters. Punctuation is generally either terrain, or equipment.               
+                                                                               
+Now, you may be asking yourself 'why would anyone make a game                  
+like this?' The answer is simple: graphics take an awful lot                   
+of time and energy to build. Time and energy that some game                    
+designers would rather devote to making a game both fun and                    
+interesting. You've probably played commercially produced games                
+with incredible graphics that left you bored out of your mind                  
+after a few hours. Games in which, 'double clicking on monsters'               
+constituted 98% of gameplay.                                                   
+                                                                               
+That's not fun.                                                                
+                                                                               
+Here, a designer is able to focus on fun rather than graphics,                 
+and you may be surprised at the complexity and subtle nuances                  
+of some games in this genre.                                                   
+                                                                               
+If this is your first time playing a rogue-like, it may take                   
+some time to get used to the interface. Stick with it. It                      
+will be worthwhile.                                                            
+                                                                               
+~~~~~2                                                                         
+[[[[[BThings to know right away]                                               
+                                                                               
+ * Numbers are stores                                                          
+ * Letters are usually monsters                                                
+ * You can move using the arrow keys                                           
+ * If a monster is friendly, you can talk to it by                             
+   moving into it                                                              
+ * If it's not friendly, you can fight it by moving                            
+   into it                                                                     
+ * Upper-case and lower-case are different, whether it's                       
+   a monster, or a command.                                                    
+ * You can view your inventory by pressing 'i' (inventory)                     
+ * You can wear/wield items by pressing 'w' (wear/wield)                       
+ * You can pick things up from the ground by pressing 'g' (get)                
+ * You can save and exit the game by pressing ctrl-x (exit)                    
+ * You can look around you by pressing 'l' (look)                              
+ * You may view your character sheet by pressing 'C' (character)               
+ * You may view your current skills by pressing 'G'                            
+ * You may increase your skills by studying at a school. Look                  
+   for the number '4.' There are four schools immediately                      
+   accessible, directly south of where you first start, near the               
+   World Tournament building.                                                  
+ * When looking at armor, for example: streetclothes (-1) [5, +0]              
+   * The '-1' is a to-hit penalty (not all will have this)                     
+   * The '5' is the base armor value of that armor type                        
+   * The '+0' is a  bonus specific to that particular piece                    
+     of armor based on quality of workmanship                                  
+ * When looking at weapons, for example: kubotan (1d4) (+0, +1)                
+   * The '1d4' is a damage range, expressed in dice. The second                
+     number is ths number of sides on the die. The first is the                
+     number of times it will be rolled. '1d4' means '1 to 4'                   
+     '3d5' means '3 to 15' etc. Some weapons may express their                 
+     damage explicity, for example '10to25.'                                   
+   * The first plus, '+0' in this case, is a to-hit bonus specifc              
+     to the wepon                                                              
+   * The second plus, '+1' in this case, is a damage bonus                     
+     specific to the weapon                                                    
+ * If the letter of an item shows up as dark grey, that means                  
+   you don't know what it is, and will need to 'identify' it                   
+   to know more about it.                                                      
+ * Verbose descriptions of items is available by pressing 'I'                  
+   (Note: capitol 'I')                                                         
+ * Pay attention to the information on the left menu, as well                  
+   as the bottom line of your screen.                                          
+                                                                               
+And finally...please read this very carefully:                                 
+                                                                               
+ * Death is usually permanent.                                                 
+                                                                               
+                                                                               
+There is a lot more that you'll need to know, but this should                  
+get you started. When in doubt, consult the help files. Also,                  
+be aware that there is an online community delighted to help                   
+new players. To meet fellow Dragonball T players, go to:                       
+                                                                               
+http://www.forums.t-o-m-e.net                                                  
+                                                                               
+...or...                                                                       
+                                                                               
+http://www.wiki.t-o-m-e.net                                                    
+                                                                               
+Remember that Dragonball T is an add-on module for ToME, and                   
+you may need to search to find information specific to                         
+Dragonball T.                                                                  
+                                                                               
+[[[[[BDifferences between Dragonball T and ToME]                               
+~~~~~3                                                                         
+[[[[[BCharacter Advancement]                                                   
+You've probably noticed that you were never asked for race or class            
+during character creation, and that you cannot spend skill via the             
+G screen.                                                                      
+                                                                               
+Character advancement in Dragonball T occurs gradually, and over the course    
+of the entire game. You don't simply decide to 'be a martial artist' and       
+magically know everything about martial arts. Rather, you will have to choose  
+individual skills and abilities to learn. Some skills may be learned simply    
+by taking classes. Others requires practice. Still others are only available   
+through the completion of quests. The basic skill system is accessed via the   
+various martial arts schools. From your starting location near the World       
+Tournament building, there are two such school, for Karate and Kung-fu         
+located conveintly nearby in the buildings directly south. If you are just     
+beginning, just pick one, enroll in classes and learn some basic skills to     
+get you started. In time, you'll find more school to choose from which         
+offer different skill sets. Be aware that while many schools are compatible,   
+some are not. Once you study Karate, you will no longer be able to study       
+Kickboxing.                                                                    
+                                                                               
+~~~~~4                                                                         
+[[[[[BEquipment Issues]                                                        
+Dragonball T handles many aspects of equipment somewhat differently. The       
+first thing you'll notice is the complete and total lack of many of the        
+basic accessories you're accustomed to in a rogue-like game. No scrolls        
+of identify, no healing potions, no word of recall scrolls. Many of these      
+functions simply do not exist. Others have been replaced with new systems.     
+For instance, identification is now skill based. If you are skilled with       
+weapons, you will be knowledgeable enough to instantly understand the          
+uses and limitations of weapons you find. If you're generally skilled in       
+martial arts, you'll understand how wearing armor will affect your ability     
+to fight. Etc.                                                                 
+                                                                               
+~~~~~5                                                                         
+[[[[[BQuests]                                                                  
+Dragonball T is HEAVILY quest-driven. There are nearly 100 quests avaialable   
+over the course of the game, and several possible game-endings. Dragonball T   
+has the trappings of a rogue-like, but in many ways resembles an RPG. There    
+are many paths to finish the game, and you may pick and choose which quests    
+to accept, and which to complete. Just because a quest is offered does not     
+mean you have to accept it, and just because a quest is issued does not mean   
+you have to complete it. Further, there is not merely a single 'plotline'      
+but rather, your choices DO affect what is going on in the world around you.   
+Just because a certain event occurred, or situation existed in one game,       
+does not mean that it will necessarily exist, or play out the same way in      
+the next. Often it will. But don't be surprised when it doesn't. Dragonball    
+T is not entirely linear.                                                      
+                                                                               
+~~~~~6                                                                         
+[[[[[BMagic]                                                                   
+The Chi system in Dragonball T works very differently than magic in ToME.      
+                                                                               
+ * It's mostly a middle and late game phenomenon. Don't be surprised           
+   if your characters aren't using Chi much before level 30.                   
+                                                                               
+ * There are five Chi skills:                                                  
+   * Chi - Determines your total available Chi (spell points)                  
+   * Offense - Generally affects offensive Chi abilities                       
+   * Defense - Generally affects defenseive Chi abilities                      
+   * Regeneration - Determines your Chi regeneration rate                      
+   * Gung - Affects the cost of your constant effects, and                     
+     determines which abilities you are able to learn                          
+                                                                               
+ * There are two types of Chi abilities:                                       
+   * Instant Effects - Consume one turn, and take place immediately.           
+     Accessed via the 'U'se ability command                                    
+   * Constant Effects - Consume Chi gradually over time, with effects          
+     that are constantly in effect so long as you have them enabled.           
+     Chi constant effects may be toggled, and modified at any time             
+     without consuming energy or turns, via the 'M'anipulate Chi               
+     command.                                                                  
+                                                                               
+~~~~~7                                                                         
+[[[[[BNew Commands]                                                            
+                                                                               
+a - reload Ammo                                                                
+u - Use an item                                                                
+F - reFill or reFuel (batteries in flashlights, etc.)                          
+S - change movement/Speed mode Settings                                        
+M - Manipulate chi constant effects                                            
+U - Use special ability or chi power                                           
+                                                                               
+Also, note that the skills and abilities screens, 'G' and 'N'                  
+do display your current skills, but are not used to actually                   
+spend skills or learn new abilities. This will be done at the                  
+the various schools and trainers available in game.                            
+                                                                               
+Enjoy!                                                                         

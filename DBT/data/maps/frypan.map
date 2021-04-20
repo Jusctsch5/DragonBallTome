@@ -1,0 +1,78 @@
+-- Dragonball T: Mount Frypan
+
+map.define("frypan.map")
+
+map.symbol{ symbol='.' feat=FEAT_FLOOR info=6 }
+map.symbol{ symbol='X' feat=FEAT_MAP_BORDER info=3 }
+map.symbol{ symbol='#' feat=FEAT_PERMA_WALL info=6 }
+map.symbol{ symbol='w' feat=FEAT_WALL_OF_FIRE info=6 }
+map.symbol{ symbol='T' feat=FEAT_TREES info=6 }
+map.symbol{ symbol='^' feat=FEAT_MOUNTAIN info=6 }
+map.symbol{ symbol='-' feat=FEAT_GRASS info=6 }
+map.symbol{ symbol='<' feat=FEAT_LESS info=6 }
+map.symbol{ symbol='>' feat=FEAT_MORE info=6 }
+-- map.symbol{ symbol='h' feat=FEAT_MORE info=6 dungeon=DUNGEON_HIKUI_BIRD_CAVE }
+
+-- Dungeon layout
+map.map
+{
+[[XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX]],
+[[X^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^X]],
+[[X^^^^^^^^^^^^^^---^^^^^^T--T-T-T----T----T-T-----T----TT-T-----^^^^^^^^^^^^^^X]],
+[[X^^^^^^^-----T---^^^T-TT----T--TTTT--T-T-T-T-T-T---T-----T------TT-T--^^^^^^^X]],
+[[X^^^^----------^^^^-T-T----T-TT------------------TT-T-T----T-T-------T-T-^^^^X]],
+[[X^--T------T--^^-T------T-T--------------------------TT-------T----------T--^X]],
+[[X^-------T---T-T---TT--T-------------------------------TT-T-T----T-TT-----T-^X]],
+[[X^--T------T--T-T--T--T----------wwwwwwwwwwwww-----------T---T-------T-T----^X]],
+[[X^T---------T---T---T---------wwwwwwwwwwwwwwwwwww--------TT----TT--T-----T--^X]],
+[[X^-T-T------------T----------wwwwwwwwwwwwwwwwwwwww--------T--T---T---T-T----^X]],
+[[X^-----TT-------------------wwwwwwwwwwwwwwwwwwwwwww---------TT--T---------T-^X]],
+[[X^-T-T--T---T--------------wwwwwwwwww----wwwwwwwwwww----------TT-T--T---T---^X]],
+[[X^-----T-----T--T----------wwwwww-------------wwwwww------------------T--T--^X]],
+[[X^T---T---T-----T---------wwwwww---##-----##---wwwwww---------T-----T-------^X]],
+[[X^--------T----T----------wwwww----##-#-#-##----wwwww----------T-----T---T--^X]],
+[[X^-T-T----T--T-T----------wwwww-----#######-----wwwww----------T-T---------T^X]],
+[[X^T--T--T---T-T-----------wwwww-----#######-----wwwww------------T---T---T--^X]],
+[[X^T---T-TT----------------wwwwww----###>###----wwwwww---------T-T-------T---^X]],
+[[X^-T-T----T-T--T-----------wwwwww-------------wwwwww---------------T--T--T--^X]],
+[[X^-------T---T-------------wwwwwwwwww-----wwwwwwwwww--------TT--T---T-----T-^X]],
+[[X^T---TT--TT----T-----------wwwwwwwwwwwwwwwwwwwwwww--------T---T---TT--T----^X]],
+[[X^T---------T---T------------wwwwwwwwwwwwwwwwwwwww---------T---------T---T--^X]],
+[[X^---T--T---T-----------------wwwwwwwwwwwwwwwwwww----------T---T--T---T--T--^X]],
+[[X^-T--T---T-T----T---------------wwwwwwwwwwwww------------T--T-T--T--------T^X]],
+[[X^-T----T-----T---T--------------------------------------TT------T--T--T----^X]],
+[[X^--T-----T--T--T-TT-------------------------------------T---T--T-----T--T--^X]],
+[[X^T--TT-----T------TTT----------------------------------T----T-----T---T--T-^X]],
+[[X^---T---T---T-----T--TT--------------------------------T--T------T--T------^X]],
+[[X^T---T--T------T-----T-TT----------------------------T---T-T-T-T-----TT-TT-^X]],
+[[X^-T--T-----T-----T-T--T--T-------------------------T----TT---T---T--T----T-^X]],
+[[X^--T-T---T-T--T----T---T--TTT--------------------T-T--T---T----T----TT-T-T-^X]],
+[[X^---T----T----T-------T--T---T-----------------T----------------T----------^X]],
+[[X^---T-----T---T----TT---T-T---TT------------T-T--T---T-T----T-T--T--T--T---^X]],
+[[X^-T-T---T--T---------------T--T-T-------T-T----T-T-T-----T-----T-----T---TT^X]],
+[[X^--T---T-T---T-T--T--T-----T--T--T------T---TT-------T---TT--TTT---T-------^X]],
+[[X^TT---T-----T--T--T-T---T---------T-----T-T-----T---------T-------T-T-----T^X]],
+[[X^---------T-------T---T---T----T--T------T-----T--T---T-----TTT---T-----T--^X]],
+[[X^--T-T--------T-----T-----T-T---T-TT-----T--T-TT--------T------T----T-T----^X]],
+[[X^--T-T----T---T-----------------T---T----T-------T-TTT----T--TT--T------T--^X]],
+[[X^--------T-------T--T-T-----T-T--T--T-----T---T----------T---------TT-T----^X]],
+[[X^-T---T------T-T--------T-------TT-T-T----T-T---T--T--T---T--T-TT------T--T^X]],
+[[X^-T------TT----------T--T-T--T--TT--T----T--T-----------T------TT----T-T---^X]],
+[[X^------T-T----TT-T--------T---T--T-T----T----T--T--T--------T-T--T-T----T--^X]],
+[[X^T----T--T-T-------T--T-T--T-----TT----T--T---T------T---T----T-----T--T--T^X]],
+[[X^T---T--T----T--T--T--T-T--T-T-T-T----T---T----TTT-TT--T---T------T-T-T----^X]],
+[[X^-T----T---T-T--T-----T---TTT-TT-T---T--T-T--T-----T-T--TT----T-T-----T--T-^X]],
+[[X^---T-T----T---TT--T-T-------T---T----T-T---T---T------T---------T---T-----^X]],
+[[X^-T-T----T--T---T--T---TT-TT-T--TTT---T-----T-------TT----TT-T-T---T-----T-^X]],
+[[X^T---T-T------T---TT-T-T--T-TT---T-T---T--T--T---T--T----------T--T----T---^X]],
+[[X^--TT------T-T---T--T-TT-------T---T----T--T-----TT-----T---T-T---T---T--T-^X]],
+[[X^--T--T------T--T-T------T--TT----T-T---T----------T-T--T-------T--T-----T-^X]],
+[[X^-T-T--T--T-------T--T--T-T--T--T-T-T---T-T-T--TT-------TT--T--T-------T---^X]],
+[[X^---T-TT--T--T-T--T-T--T--T-T-----TTT-<-T----T-----TT-----T---T-T--T---T--T^X]],
+[[X^-T----T-----T-------TT---T-T---T--TT---T---T--T-T----T---------T-T-T--T-T-^X]],
+[[X^T-T-T-----T-----T-T----T-----T----TTTTTT-T----T----T-----T--T-T------T---T^X]],
+[[XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX]],
+}
+
+-- Starting position
+map.set_player(52, 39)

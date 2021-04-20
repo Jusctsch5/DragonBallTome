@@ -1,0 +1,202 @@
+#####R                 /------------------------\                              
+#####R                <  DBT V079 Release Notes  >                             
+#####R                 \------------------------/                              
+                                                                               
+Summary:                                                                       
+*****/abook-23.txt*1[(a) Hello!]                                               
+*****/bbook-23.txt*2[(b) Summary]                                              
+*****/cbook-23.txt*3[(c) Complete Change Log]                                  
+*****/dbook-23.txt*4[(d) Brand New Bugs/Issues]                                
+*****/ebook-23.txt*5[(e) Advance Warning Regarding Challenge Quests]           
+                                                                               
+~~~~~1                                                                         
+#####G(a)Hello!                                                                
+                                                                               
+ Merry Christmas, everyone! As the version number indicates, this is not       
+ a huge release. Only a couple bugfixes, but 079 is mostly about weapons.      
+ and the experimental skill option. Read on.                                   
+                                                                               
+~~~~~2                                                                         
+#####G(b)Summary                                                               
+--------------------------------------------                                   
+                                                                               
+ * New experimental skill system                                               
+ * New experimental aplication of th/dam/ac bonuses on treasure drops.         
+   This has not been officially introduced by the engine yet, and I'm          
+   'winging it' to get it to happen. Odd things may result.                    
+ * Motorcycle rebalancing and bugfixes                                         
+ * Weapon changes:                                                             
+   * Implemented entangling/vorpal weapons                                     
+   * The swordsmith can rebalance blades for + to hit                          
+   * Two new weapon special abilities: Iaido and Bleed Attack                  
+   * You may fight with a gun/melee weapon from a motorcycle at -30 tohit      
+ * Mr. Satan no longer teaches double attack                                   
+ * Briefs general cleanup and rearrangement                                    
+ * Bugfixes: No more Briefs 'unknown object' bug, dragonballs are now 'used'   
+ * Temporary workaround for the alpha12 dungeon bug regarding Rosshi           
+                                                                               
+~~~~~3                                                                         
+#####G(c)Complete Change Log                                                   
+--------------------------------------------                                   
+Changes from Version 0.7.8 to Version 0.7.9:                                   
+--------------------------------------------                                   
+Tuesday, Dec 19, 2006                                                          
+                                                                               
+* Edits to the Mr Satan dialogue. Things have been rearranged. Don't count     
+  on the old dialogue rewards to be exactly what they used to be. Mr. Satan    
+  is a comic relief character. He longer teaches double attack. Other changes  
+  have been made as well. At the moment, it is still possible to talk him      
+  into giving you a dragonball, but this might change in the future.           
+* Alignment loss for evil dialogue choices have generally been increased       
+* Rule Change: If your alignment is less than -99, killing evil uniques no     
+  longer increases your alignment                                              
+* added about 7K dialogue                                                      
+                                                                               
+Tuesday, Dec 19, 2006                                                          
+* World Tournament trophy is now ID'd                                          
+* It is now possible to complete the Briefs Tournament quest                   
+* General cleanup, rearrangement, and rebalancing of some of the quests        
+  for Dr Briefs. For example:                                                  
+        * No random quests issues while Martial Arts Delivery Service          
+          is pending                                                           
+        * If you use Briefs to gain access to the Satan Estate, you no         
+          longer also receive Tech skills gains for the accompanying quest     
+        * If you fail the delivery quest, you can no longer receive random     
+          quests                                                               
+        * Etc                                                                  
+        * Note: The Briefs Ballistic Bodyarmor quest tree is, and has          
+          ALWAYS been intended to be entirely mutually exclusive with          
+          the ENTIRE Briefs Tech branch. Even so, there have been              
+          several changes since the armor was introduced that probably         
+          make it unreasonably powerful. Muscle Tower is level 20-26           
+          instead of 10-15, and several uniques now exist who do slash         
+          damage. Might have to reconsider this one.                           
+                                                                               
+* Nakamura no longer teaches Martial Arts Sushi eating. If you already         
+  know Double Attack, instead, he increases your Barehand skill by +3, +.2     
+* Fixed the 'error in Briefs random quest' bug. Curiously, looking at          
+  the code, the bug should have popped up in 10% of all type 1 random quests   
+* Dialogue development of Videl and Buruma (incomplete, commented out          
+  in this release)                                                             
+                                                                               
+Wednesday, Dec 20, 2006                                                        
+* Roads and buildings in town are now lit (Ack! Doesn't work!)                 
+* Tuxedo's now increase charisma by 2                                          
+                                                                               
+Thursday, Dec 21, 2006                                                         
+* Made gold drops slightly more common in dungeons                             
+* Basic Implementation of tohit/dam/ac bonuses on random treasure drops        
+* ID Checking now occurs for every item at time of creation                    
+* Implemented Iaido                                                            
+* Set of price mods by th/d/ac bonuses, but hook(OBJECT_VALUE appears          
+  not to function                                                              
+* Tofu Sensei now properly teaches Acupuncture                                 
+* Updated a few of the book-n.txt parchments. (Several are OLD dating          
+  from DBT 3.x!)                                                               
+* Swordsmith:                                                                  
+        * Can now 're-balance' blades for to-hit bonuses                       
+        * May sharpen/balance to +1 starting at level 1, not at level 5        
+* Weapons:                                                                     
+        * Eliminated the 'can be used with two hands' display. It's not        
+          being used.                                                          
+        * Fixed the poisoned weapon description                                
+        * A single poison application now grants 5-7 uses, instead of 1-3      
+* Trunks will now teach the Paired Weapons ability to anyone, for free,        
+  provided they have a weapon skill of 50 or more                              
+* Implemented stunning effects from entangling weapons                         
+                                                                               
+Friday, Dec 22, 2006                                                           
+* Weapons:                                                                     
+        * Implemented vorpal weapons                                           
+        * New ability: Bleed attack                                            
+        * Weapons abilities now have skill minimums                            
+* New item: Ofuda                                                              
+* Musashi is now a unique and has his own cave                                 
+* ...added monster_effects...?                                                 
+* Pffft. Dropped the Ring of Fire quest to level 16. You can walk right        
+  through the flames with 10 constitution and zero fire resistance at          
+  level 15. (Still can't get credit for completing the quest)                  
+* It is now possible to raise/lower the drawbridge at Ox Castle                
+                                                                               
+Sunday, Dec 24, 2006                                                           
+* Yep...the dungeon crashing situation is definitely an engine bug.            
+  Set up a bizarre workaround for ROsshi's Kame house                          
+* Motorcycles/Vehicles:                                                        
+        * It is no longer possible to fight barehanded from a                  
+          motorcycle                                                           
+        * No AC bonuses from barehand or Dodge while riding                    
+        * Only your right hand must be empty to ride                           
+        * It IS now possible to fight with a single weapon or a                
+          firearm from a motorcycle                                            
+        * Doing so conveys a -30 to hit penalty                                
+        * Vehicles may no longer navigate level transitions                    
+        * You may no longer pick things up with riding (Except                 
+          gold, for now...)                                                    
+        * Motorcycles now provide light (Not a cone, sorry)                    
+        * Movement mode modifiers are inoperative while riding                 
+          (though you can still change your mode, and the display              
+          still shows)                                                         
+        * Motorcycles are loud. While riding your stealth will be              
+          zero, and aggravate=true                                             
+* New Item: Ninja climbing claws (Hmm. They don't seem to work yet,            
+  though)                                                                      
+* Silk gloves --> +1 Chr                                                       
+* New Unique: Wong-Fei Hong                                                    
+* Wong-Fei Hong and Miyamoto Musashi may now participate in the                
+  World Tournament.                                                            
+* Added an EMT to the World Tournament                                         
+* New Item: Ninja climbing Tabi (These also don't appear to work)              
+* Some development of the end-game quests                                      
+* Additional development of the Inner Sanctum map                              
+* Bugfix: Dragonballs are now properly scattered after use                     
+                                                                               
+Wednesday, Dec 27, 2006                                                        
+* Added an experimental retroactive skill system                               
+                                                                               
+~~~~~4                                                                         
+#####G(d)New Bugs/Issues                                                       
+* Vorpal cuts appear to be happening less frequently than they should          
+* Monster hp meters don't register secondary effects by color                  
+* Should be possible for damage to knock a character off a motorcycle          
+* Why are PASS_ flags ignored?                                                 
+* hook(OBJECT_VALUE appears not to be implemented?                             
+* Grrr...engine treats wilderness squares differently than dungeons.           
+  How do we light them?                                                        
+                                                                               
+~~~~~5                                                                         
+#####G(e)Advance Warning Regarding Challenge Quests]                           
+                                                                               
+  Too much completing for desing time, so it didn't make this release, but     
+I'm considering major changes to the Challenge Quests. Too many issues and     
+things that just don't make sense. So...the details are still in the air,      
+but I'm, thinking something along these lines:                                 
+                                                                               
+ * Generally make the abilities taught make more sense. Musashi was            
+   famous for using paired swords. He should teach the ability. Kickboxing     
+   obviously uses both hands. Bob should teach the ability. Etc.               
+ * Generally move the CQ ability rewards to regular enrollments. For           
+   example, I'm thinking something along the lines of:                         
+                                                                               
+            1st Class         2nd Class        3rd Class                       
+KungFu                        Paired Weapons                                   
+Kendo       Paired Weapons    Iaido            Bleed Attack                    
+Kickboxing                    Double Attack                                    
+                                                                               
+Again...the details aren't decided yet. I'm not sure what to do about the      
+skill system situation yet, either, and the two may integrate somehow. But,    
+at the same time I'm not certain there's realy a problem with the skill        
+system. You don't *have* to play scummy. Plus, with the Room of Spirit         
+and Time, and since the dragonballs can be found multiple times, there are     
+effectively an infinite number of skill points and modifiers available over    
+the course of the game. Sure, you can fight and save skill points and have a   
+miserable early game, and get great results from it...or you can just spend    
+points, play and enjoy the game...and then use dragonball wishes to get your   
+skills. Again, I'm not sure there's really a problem.                          
+                                                                               
+But we'll see.                                                                 
+                                                                               
+Enjoy!                                                                         
+                                                                               
+Bucket Man                                                                     
+lordbucket@hotmail.com                                                         
+                                                                               

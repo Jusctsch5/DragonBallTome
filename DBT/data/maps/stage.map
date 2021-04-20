@@ -1,0 +1,35 @@
+map.define("stage.map")
+
+map.symbol{ symbol='<' feat=FEAT_LESS info=6 }
+map.symbol{ symbol='*' feat=FEAT_MAP_BORDER info=6 }
+map.symbol{ symbol='.' feat=FEAT_FLOOR info=6 }
+map.symbol{ symbol='X' feat=FEAT_PERMA_WALL info=6 }
+
+map.symbol{ symbol='g' feat=FEAT_FLOOR info=6 monster=RACE_CUTE_LITTLE_GIRLMOUSE }
+map.symbol{ symbol='b' feat=FEAT_FLOOR info=6 monster=RACE_CUTE_LITTLE_BOYMOUSE }
+map.symbol{ symbol='K' feat=FEAT_FLOOR info=6 monster=RACE_KING_MOUSE }
+
+-- Dungeon layout
+map.map
+{
+[[*****************************]],
+[[*XXXXXXXXXXXXXXXXXXXXXXXXXXX*]],
+[[*X............<............X*]],
+[[*X.........................X*]],
+[[*X.........................X*]],
+[[*X....g...............g....X*]],
+[[*X.........................X*]],
+[[*X....g...............g....X*]],
+[[*X.........................X*]],
+[[*X....g...............b....X*]],
+[[*X.........................X*]],
+[[*X....g...............g....X*]],
+[[*X............K............X*]],
+[[*X.........................X*]],
+[[*XXXXXXXXXXXXXXXXXXXXXXXXXXX*]],
+[[*****************************]],
+}
+
+-- Starting location
+map.set_player(1, 13)
+

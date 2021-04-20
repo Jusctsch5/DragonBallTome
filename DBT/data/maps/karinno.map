@@ -1,0 +1,37 @@
+map.define("karinno.map")
+
+map.symbol{ symbol='.' feat=FEAT_FLOOR info=6 }
+map.symbol{ symbol='X' feat=FEAT_PERMA_WALL info=6 }
+map.symbol{ symbol='*' feat=FEAT_MAP_BORDER info=6 }
+map.symbol{ symbol='<' feat=FEAT_LESS info=6 inventory_size=0 }
+map.symbol{ symbol='>' feat=FEAT_MORE info=6 inventory_size=0 on_walk="Roof Access" }
+map.symbol{ symbol='a' feat=FEAT_RED_CARPET info=6 monster=RACE_KARIN }
+map.symbol{ symbol='r' feat=FEAT_RED_CARPET info=6 }
+map.symbol{ symbol='w' feat=FEAT_GLASS_WALL info=6 }
+map.symbol{ symbol='d' feat=FEAT_DOOR info=6 inventory_size=0 }
+map.symbol{ symbol='-' feat=FEAT_GRASS info=6 }
+
+map.map
+{
+[[***********************]],
+[[*XXXXXXXXXXXXXXXXXXXXX*]],
+[[*X...................X*]],
+[[*X.wwwwwwwwwwwwwww.X.X*]],
+[[*X.w-------------w.X>X*]],
+[[*X.w-------------w.XXX*]],
+[[*X.wwwwwwwwdwwwwww...X*]],
+[[*X...................X*]],
+[[*X...rrrrrrrrrrrrrrr.X*]],
+[[*X...rrrrrrrrrrrrrrr.X*]],
+[[*X.X.rrrrrrrrrrarrrr.X*]],
+[[*X.X.rrrrrrrrrrrrrrr.X*]],
+[[*X<X.................X*]],
+[[*XXXXXXXXXXXXXXXXXXXXX*]],
+[[***********************]],
+}
+
+if dball_data.level_tracker == 1 then
+	map.set_player(4, 20)
+else
+	map.set_player(12, 2)
+end

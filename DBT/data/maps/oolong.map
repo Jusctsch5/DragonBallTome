@@ -1,0 +1,70 @@
+map.define("oolong.map")
+
+map.symbol{ symbol='.' feat=FEAT_FLOOR info=6 }
+map.symbol{ symbol='X' feat=FEAT_PERMA_WALL info=6 }
+map.symbol{ symbol='*' feat=FEAT_MAP_BORDER info=6 }
+map.symbol{ symbol='<' feat=FEAT_LESS info=6 }
+map.symbol{ symbol='a' feat=FEAT_RED_CARPET info=6
+   flags = {
+	MOVE_POST_DEST=function()
+		dialogue.quickie("A sign on this door reads 'Beware: Big, mean, hungry 9-headed hydra'")
+		local c_ptr = cave(player.py, player.px)
+		c_ptr.flags[FLAG_MOVE_POST_DEST] = nil
+      end
+   }
+}
+map.symbol{ symbol='c' feat=FEAT_RED_CARPET info=6
+   flags = {
+	MOVE_POST_DEST=function()
+		dialogue.quickie("A sign on this door reads 'Bedchamber of the all-mighty Oolong the Terrible'")
+		local c_ptr = cave(player.py, player.px)
+		c_ptr.flags[FLAG_MOVE_POST_DEST] = nil
+      end
+   }
+}
+map.symbol{ symbol='e' feat=FEAT_BLUE_CARPET info=6
+   flags = {
+	MOVE_POST_DEST=function()
+		dialogue.quickie("You see Oolong sitting in the corner, facing the wall with his head in his hands. He appears to be crying.")
+		local c_ptr = cave(player.py, player.px)
+		c_ptr.flags[FLAG_MOVE_POST_DEST] = nil
+      end
+   }
+}
+
+map.symbol{ symbol='r' feat=FEAT_RED_CARPET info=6 }
+map.symbol{ symbol='g' feat=FEAT_GREEN_CARPET info=6 }
+map.symbol{ symbol='b' feat=FEAT_BLUE_CARPET info=6 }
+map.symbol{ symbol='D' feat=FEAT_DOOR_LOCKED_HEAD+6 info=6 }
+map.symbol{ symbol='d' feat=FEAT_DOOR info=6 }
+map.symbol{ symbol='o' feat=FEAT_BLUE_CARPET info=6 monster=RACE_OOLONG }
+map.symbol{ symbol='p' feat=FEAT_GREEN_CARPET info=6 monster=RACE_WHINY_ARU }
+map.symbol{ symbol='q' feat=FEAT_RED_CARPET info=6 monster=RACE_WHINY_ARU }
+map.symbol{ symbol='V' feat=FEAT_SHAL_WATER info=6 on_walk="A beautiful fountain." }
+
+map.map
+{
+[[*****************************************]],
+[[*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*]],
+[[*XggggggXbbbbbbXXXXXXXXXX.......XggggggX*]],
+[[*XggggggXbobbbbXXXXXXXXXX.......XggggggX*]],
+[[*XggggggXbbbbbbedcrrrrraD.......XggggggX*]],
+[[*XgggpggXbbbbbbXXXXXrXXXX.......XgggpggX*]],
+[[*XggggggXbbbbbbXXXXXrXXXX.......XggggggX*]],
+[[*XggggggXbbbbbbXXXXXdXXXX.......XggggggX*]],
+[[*XXXXdXXXXXXXXXXXrrrrrrrXXXXXXXXXXXdXXXX*]],
+[[*XrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrX*]],
+[[*XrrrrrrrrqrrrrrqrrVVVrrrrqrrrrrrrrrqrrX*]],
+[[*XrrrrrrrrrrrrrrrrrVVVrrrrrrrrrrrrrrrrrX*]],
+[[*XXXXdXXXXXdXXXrrrrrrrrrrrXXXdXXXXXXdXXX*]],
+[[*XggggggXgggggXXXrrrrrrrXXXgggggXggggggX*]],
+[[*XggggggXgggggXXXXXrrrXXXXXgggggXggggggX*]],
+[[*XggpgggXggpggXXXXXrrrXXXXXggpggXgggpggX*]],
+[[*XggggggXgggggXXXXXrrrXXXXXgggggXggggggX*]],
+[[*XggggggXgggggXXXXXr<rXXXXXgggggXggggggX*]],
+[[*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*]],
+[[*****************************************]],
+}
+
+-- Starting position
+map.set_player(17, 20)

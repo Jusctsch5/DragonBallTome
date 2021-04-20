@@ -1,0 +1,66 @@
+#####R                 /------------------------\                              
+#####R                <  DBT V078 Release Notes  >                             
+#####R                 \------------------------/                              
+                                                                               
+Summary:                                                                       
+*****/abook-21.txt*1[(a) Hello!]                                               
+*****/bbook-21.txt*2[(b) Change Log]                                           
+                                                                               
+~~~~~1                                                                         
+#####G(a)Hello!                                                                
+                                                                               
+ This is a next-day bugfix release of some assorted silliness that             
+ somehow snuck by me for yesterday's release, as well as some fixes            
+ for new bug reports on the wiki last night.                                   
+                                                                               
+ Many thanks to [[[[[GSirrocco] for all the bug reports!                       
+                                                                               
+~~~~~2                                                                         
+#####G(b)Changes                                                               
+--------------------------------------------                                   
+Changes from Version 0.7.7 to Version 0.7.8:                                   
+--------------------------------------------                                   
+Sunday, Dec 17, 2006 (scant hours after the release of V077)                   
+                                                                               
+* Argggghhhh!!!! Fixed Imelda's shoe reward AGAIN!!!                           
+* You no longer have to talk to Marcos multiple times to get his reward        
+  dialogue to increment properly                                               
+* You can now construct/disassemble road flares                                
+* Korin:                                                                       
+        * Implemented Chi training sessions 2 and 3                            
+        * Korin now correctly describes his specialty as 'Chi' not 'Defense'   
+* Added a Chi spoiler                                                          
+* Disabled the North Kaio's house. It appears to be fatal-crash-bugged like    
+  Rosshi's. I don't understand why, and it's behaving oddly...and both lcations
+  were fine for alpha11. Curiously, if I swap map files, the dungeons work     
+  fine, and if I place the maps in another dungeon, they also work fine. This  
+  may be an engine bug.                                                        
+* Marrying Oolong                                                              
+        * Fixed the house. (This worked two days ago. What happened?)          
+        * Quest for Marcos now completes properly if you marry Oolong          
+        * The dialogue branch that allows you to marry Oolong is now a         
+          (Persuade) branch. Sorry ladies...free house and magic weapon        
+          with zero risk at level one in thirty seconds was just too           
+          much. You can still do it, you'll just need to find a way to         
+          get 13 charisma. Shouldn't be difficult. You can even do it          
+          at level one or two, you just have to do it on purpose.              
+* Pilaf:                                                                       
+        * Fixed two more text-overflows (at 24x80) in dialogue                 
+        * For the RRA-interuption dialogue path, Mai and Shuu no longer        
+          becomes hostile, and the RRA soldiers are no longer prevented        
+          from shooting at you                                                 
+* Judo/Sumo:                                                                   
+        * Multiple friendly duels no longer generate LUA errors                
+        * If you actually KILL Yaware or Honda, their schools now close        
+        * General cleanup of the Challenge Quests between the two studios      
+                                                                               
+Monday, Dec 18,                                                                
+* Customized the Duel vs Sumo map                                              
+* Yawara no longer closes her studio if you lose the match with Honda          
+  by leaving the ring                                                          
+                                                                               
+Enjoy!                                                                         
+                                                                               
+Bucket Man                                                                     
+lordbucket@hotmail.com                                                         
+                                                                               

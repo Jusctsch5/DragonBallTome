@@ -1,0 +1,82 @@
+-- Dragonball T: Orinji Temple, Catacombs
+
+map.define("catacomb.map")
+
+map.symbol{ symbol='.' feat=FEAT_FLOOR info=8 }
+map.symbol{ symbol='<' feat=FEAT_LESS info=6 inventory_size=0 }
+map.symbol{ symbol='*' feat=FEAT_MAP_BORDER info=8 }
+map.symbol{ symbol='X' feat=FEAT_PERMA_WALL info=8 }
+map.symbol{ symbol='H' feat=FEAT_FLOOR info=6 monster=RACE_MEDITATING_MONK }
+map.symbol{ symbol='A' feat=FEAT_FLOOR info=6 monster=RACE_ABBOT }
+
+map.symbol{ symbol='B' feat=FEAT_BUDDHA info=6 }
+
+map.symbol{ symbol='w' feat=FEAT_FLOOR info=8 monster=RACE_CORRUPT_MONK_A }
+map.symbol{ symbol='x' feat=FEAT_FLOOR info=8 monster=RACE_CORRUPT_MONK_B }
+map.symbol{ symbol='y' feat=FEAT_FLOOR info=8 monster=RACE_CORRUPT_MONK_C }
+map.symbol{ symbol='z' feat=FEAT_FLOOR info=8 monster=RACE_CORRUPT_MONK_D }
+
+map.symbol{ symbol='u' feat=FEAT_FLOOR info=6 monster=RACE_MONK_RINGLEADER }
+
+
+map.symbol{ symbol='T' feat=FEAT_TREES info=6 }
+map.symbol{ symbol='-' feat=FEAT_GRASS info=6 }
+
+map.symbol{ symbol='|' feat=FEAT_LAMP info=6 on_walk="This old lantern provides some illumination" }
+map.symbol{ symbol=',' feat=FEAT_FLOOR info=6 }
+
+map.symbol{ symbol='D' feat=FEAT_FAKE_DOOR info=6 }
+map.symbol{ symbol='+' feat=FEAT_DOOR info=6 }
+
+map.symbol{ symbol='E' feat=FEAT_FLOOR info=6
+   flags = {
+      MOVE_POST_DEST=function()
+		if dball_data.temple_key == 0 then
+			message("This door looks quite sturdy.")
+		else
+			message("You open the door")
+			cave(player.py, player.px).flags[FLAG_MOVE_POST_DEST] = nil
+			cave_set_feat(player.py, player.px - 1, FEAT_FLOOR)
+		end
+      end
+   }
+}
+
+
+
+map.map
+{
+[[*******************************************************]],
+[[*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*]],
+[[*XXXXXXXXXXXXXXXXXXXXXXXXX...........................X*]],
+[[*XXXXXXXXXXXXXXXXXXXXXXXXX.XXXXXXXXXXXXXXXXXXXXXXXXX.X*]],
+[[*XXXXXXXXXXXXXXX.....................XXXXXXXXXXXXXXX.X*]],
+[[*XXXXXXXXXXXXXXX........XXXXX........XXXXXXXXXXXXXXX.X*]],
+[[*X...XX...XX...X.....................X...XX...XX...X.X*]],
+[[*X.H.XX...XX...X.....................X...XX...XX...X.X*]],
+[[*X...XX...XX...X...,,,.........,,,...X...XX...XX...X.X*]],
+[[*XXDXXXXDXXXXDXXzz.,|,....z....,|,.zzXXDXXXXDXXXXDXX<X*]],
+[[*X.................,,,...xyx...,,,.................XXX*]],
+[[*XXDXXXXDXXXXDXX........wwwww........XXDXXXXDXXXXDXXXX*]],
+[[*X...XX...XX...X.....................X...XX...XX...XXX*]],
+[[*X...XX...XX.H.X.X....w..,,,..w....X.X.H.XX...XX.H.XXX*]],
+[[*X...XX...XX...X.X...xw.,,u,,.wx...X.X...XX...XX...XXX*]],
+[[*XXXXXXXXXXXXXXX.X..zyw.,,B,,.wyz..X.XXXXXXXXXXXXXXXXX*]],
+[[*X...XX...XX...X.X...xw.,,,,,.wx...X.X...XX...XX...XXX*]],
+[[*X.H.XX...XX...X.X....w..,,,..w....X.X...XX...XX.H.XXX*]],
+[[*X...XX...XX...X.....................X...XX...XX...XXX*]],
+[[*XXDXXXXDXXXXDXX........wwwww........XXDXXXXDXXXXDXXXX*]],
+[[*X.................,,,...xyx...,,,.................XXX*]],
+[[*XXDXXXXDXXXXDXX...,|,....z....,|,...XXDXXXXDXXXXDXXXX*]],
+[[*X...XX...XX...X...,,,.........,,,...X...XX...XX...XXX*]],
+[[*X...XX.H.XX.A.X.....................X...XX.H.XX...XXX*]],
+[[*X...XX...XX...X.....................X...XX...XX...XXX*]],
+[[*XXXXXXXXXXXXXXX........XXXXX........XXXXXXXXXXXXXXXXX*]],
+[[*XXXXXXXXXXXXXXX.....................XXXXXXXXXXXXXXXXX*]],
+[[*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*]],
+[[*******************************************************]],
+}
+
+map.set_player(9, 52)
+
+map.level_size_to_map()

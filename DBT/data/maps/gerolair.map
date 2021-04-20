@@ -1,0 +1,41 @@
+map.define("gerolair.map")
+
+-- map.set_default_symbol_attributes{ inventory_size=2 }
+map.symbol{ symbol='.' feat=FEAT_FLOOR info=4 }
+map.symbol{ symbol='*' feat=FEAT_PERMA_WALL info=4 }
+map.symbol{ symbol='X' feat=FEAT_PERMA_WALL info=4 }
+map.symbol{ symbol='D' feat=FEAT_DOOR_LOCKED_HEAD+6 info=4 inventory_size=0  }
+map.symbol{ symbol='<' feat=FEAT_LESS info=4 inventory_size=0 }
+map.symbol{ symbol='>' feat=FEAT_MORE info=4 inventory_size=0 }
+
+-- Dr. Gero
+map.symbol{ symbol='a' feat=FEAT_FLOOR info=4 monster=RACE_DR_GERO }
+map.symbol{ symbol='b' feat=FEAT_FLOOR info=4 monster=RACE_WHIRLIGIG }
+map.symbol{ symbol='c' feat=FEAT_FLOOR info=4 monster=RACE_DEATH_ORB }
+map.symbol{ symbol='d' feat=FEAT_FLOOR info=4 monster=RACE_EXTERMINATOR }
+
+-- Dungeon layout
+map.map
+{
+[[***********************]],
+[[*XXXXXXXXXXXXXXXXXXXXX*]],
+[[*Xc.................cX*]],
+[[*X..b....b.....b....>X*]],
+[[*X..................cX*]],
+[[*X.......XXXXXXXXXXXXX*]],
+[[*Xd......X..b.......cX*]],
+[[*X.a.....D...........X*]],
+[[*Xd......X..b........X*]],
+[[*X.......XXXXXXXXX...X*]],
+[[*X..............cX...X*]],
+[[*X..b...b....b...X...X*]],
+[[*Xc.............cX.<.X*]],
+[[*XXXXXXXXXXXXXXXXXXXXX*]],
+[[***********************]],
+}
+
+if dball_data.level_tracker == 1 then
+	map.set_player(3, 20)
+else
+	map.set_player(12, 19)
+end

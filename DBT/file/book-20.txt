@@ -1,0 +1,172 @@
+#####R                 /------------------------\                              
+#####R                <  DBT V077 Release Notes  >                             
+#####R                 \------------------------/                              
+                                                                               
+Summary:                                                                       
+*****/abook-20.txt*1[(a) Hello!]                                               
+*****/bbook-20.txt*2[(b) Change Log]                                           
+*****/cbook-20.txt*3[(c) Noteworthy Bugs]                                      
+                                                                               
+~~~~~1                                                                         
+#####G(a)Hello!                                                                
+                                                                               
+ This release is primarily a bugfix release is response to the high            
+ volume of traffic on the wiki. Keep the feedback coming and I'll keep         
+ releasing updates every week or so.                                           
+                                                                               
+~~~~~2                                                                         
+#####G(b)Changes                                                               
+Changes from V076 to V077                                                      
+                                                                               
+Tuesday, Dec 12, 2006                                                          
+* Hack: Temporarily eliminated duplicate dragonball checking                   
+        This effectively trades the BIG bug, of more or less being             
+        unable to collect the dragonballs for the relatively LITTLE            
+        bug of being able to find duplicates of the same dragonball,           
+        as well as being able to collect more than seven at a time.            
+        So, feel free to throw away, sell and abandon dragonballs              
+        to your hearts content. You will ALWAYS be able to find them           
+        again.                                                                 
+* Added a 'not implemented' level feeling to the Turtles lair                  
+* Commented out Splinters dialogue, replaced with 'Implement me'               
+* Hack: Added a temporary solution for the store refresh problem               
+* Iruka, Buruma and Lunch no longer spawn, so people won't                     
+        encounter them and expect them to work properly                        
+* Fixed about twenty items that weren't properly appearing in stores           
+        SDL version seems to have better error logging                         
+* World Tournament disqualification bugfixes/changes:                          
+        * Landing a hit with a poisoned weapon now disqualifies you            
+        * Attempting to fire a firearm AT ALL during the Tournament            
+          disqualifies you. Don't even think about using splash damage         
+          from your bazooka to win a round.                                    
+        * However, ANYTHING GOES in a battle to the death: Poison, firearms,   
+          tools, summoned friends...anything you'd like. (Note: this is        
+          fine for the duels with Androids 16 and 17, but may have to be       
+          reconsidered for Demon King Piccolo)                                 
+        * Except: You may no longer exit the WT building during                
+          fights to the death                                                  
+        * Monsters are now deleted if you are disqualified. No more            
+          running out of the ring and dying anyway. Note that you can          
+          still die from secondary effects.                                    
+* In theory, you should no longer fight the same Unique multiple times         
+        in different Tournament rounds. (Except Mr Satan, who will flake       
+        in roughly 2 out of 3 games, then reappear as the final opponent.      
+        Just ignore this. The World Tournament should be safe to play,         
+        it's just that there's a special storyline branch related to the       
+        World Tournament and the final match which hasn't been implemented     
+        yet, so for the moment, Mr Satan is *always* your final opponent,      
+        even if he shouldn't be able to because he's already flaked on         
+        his match.)                                                            
+* The WT Backstage Guard can speak again                                       
+* The WT Ticket girl no longer generates 'name' errors                         
+* Added a placeholder so people may study Kendo                                
+* Added help files: command list, abilities descriptions                       
+* Adjusted barehanded skill gains from karate/taekwondo                        
+* Revamped the schools spoiler and made it current                             
+* Oolong:                                                                      
+        * Once the village girls have been 'sent away' they no longer          
+          spawn in the castle                                                  
+        * Marcos now rewards you properly if you kill Oolong                   
+        * Castle Oolong is no longer a 'saved' level, so no more storing       
+          equipment there.                                                     
+        * Oolong quest dialogue no longer re-writes itself to previous         
+          quest states if you talk to the village girls a second time          
+          after informing Marcos of what's going on                            
+        * If you marry Oolong:                                                 
+                * He now gives you a ring                                      
+                * His castle becomes a home                                    
+                                                                               
+Wednesday, Dec 13, 2006                                                        
+                                                                               
+* Afterlife:                                                                   
+        * Hunger display no longer appears when dead                           
+        * HP are now recalculated instantly upon death                         
+* Fixed Imelda's Shoe problem, I think...                                      
+* I think I've fixed the Mr. Satan bug with the World Tournament               
+* Wishing:                                                                     
+        * Fixed a nasty bug which caused certain skills in some cases to       
+          be SET to an amount, instead of being INCREMENTED by that amount.    
+          Oops.                                                                
+        * Implemented some new wish types                                      
+        * Here's the big one: Shenron now (generally) asks for confirmation    
+          of your wish instead of just making a best guess and granting it     
+          blindly. This was sort of a pain, and bloated the wishing script     
+          with about 15K of totally redundant code and confirmation texts,     
+          but...no longer will you wish for a stealth bomber and have your     
+          stealth skill increased. Certain wish types (items, most notably)    
+          do not require confirmation.                                         
+        * Skill gain wishes are now rounded off. Instead of a 3.617 gain       
+          you'll get 3.6. Obviously this does decrease the net value...but     
+          it's so much prettier.                                               
+* Yawara and Honda no longer drop corpses when you defeat them in a            
+  'friendly' match                                                             
+* Implemented experience modifiers from weighted clothing                      
+* Implemented marriage with Rosshi. (Though Rosshi's dialogue still has a      
+  lot of unimplemented branches. If you want to get married, marry Oolong.     
+  He's less buggy.)                                                            
+                                                                               
+Wednesday, Dec 13, 2006                                                        
+* Dr. Briefs' store is now a dungeon. This works around the Briefs dialogue    
+  overflow error, and allows me to place Tama, as well as some other cute      
+  tidbits                                                                      
+* Added Tama's Quest :)                                                        
+* Adjusted treatment of catnip                                                 
+* Implemented the muscle stimulator                                            
+                                                                               
+Saturday, Dec 16, 2006                                                         
+* Updated to alpha12                                                           
+* Fixed the skill overage bug (apparantly skill_overage isn't being used       
+  anymore)                                                                     
+* It is now possible for evil characters to prematurely bring on the           
+  arrival on Androids 16 and 17                                                
+* Fixed the store dialogue bug (Completely, I *think*)                         
+* Started resizing the various dialogues for 24x80 character displays          
+* Cleaned up some dialogue dead-ends                                           
+* Net about 30K more dialogue since last release                               
+* Fixed some bugs with Technomancy                                             
+* No more Dragonballs, or item drops in WT matches, either.                    
+* Friendly Uniques are now set to the 'Duel' faction for WT matches            
+                                                                               
+Sunday, Dec 17, 2006                                                           
+* Fixed an absolutely nasty bug that caused Dancers save files to fail to      
+  load. :/                                                                     
+* Juvinile Playground is now a "decaying" SAVE_LEVEL                           
+* Foot Ninja now drop items                                                    
+* Yawara may no longer participate in the Tournament if her wrist is broken    
+* The Ninjutsu school now sells poison                                         
+* Temporarily disabled Rosshi's Kame house (alpha12 bug???)                    
+* Some general cleanup of monsters, levels and ai's relating to Dr Gero        
+* Migrated a few more special levels to be new alpha12-style decay levels      
+* Mai and Shuu can move now                                                    
+* Temporarily allowed Shenronto be summoned so long as you have SEVEN          
+  dragonballs, whether or not they are seven UNIQUE dragonballs.               
+* Fixed a bug that allowed infinite wishes from a single summoning.            
+  (Haha! Oops.)                                                                
+                                                                               
+~~~~~3                                                                         
+#####G(c)Noteworthy Bugs                                                       
+                                                                               
+Plese see the wiki: http://www.wiki.t-o-m-e.net for current bug information.   
+There are several outstanding bugs. Here are a few I feel are especially       
+worthy of mention.                                                             
+                                                                               
+* Bazookas are broken. If you attempt to fire one, you'll get LUA errors.      
+                                                                               
+* World Tournament (minor): In 2:3 games, Mr Satan will be allocated as a      
+  World Tournament opponent between rounds 16 and 17. He will be a no-show.    
+  He will then reappear for the final round. This is not ''as'' incorrect      
+  as it probably sounds (monsters ''are'' allowed to flake on matches) but     
+  it is nevertheless incorrect.                                                
+                                                                               
+* Technomancy (major): A nasty error situation can develop in rare, specific   
+  circumstances: If you are ever assembling from a recipe that lists two       
+  instances of the same ingredient on multiple lines, make certain that you    
+  have enough of the ingredient to fulfill the TOTAL requirements, lest you    
+  may befall this bug.                                                         
+                                                                               
+                                                                               
+Enjoy!                                                                         
+                                                                               
+Bucket Man                                                                     
+                                                                               
+                                                                               

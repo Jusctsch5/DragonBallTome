@@ -1,0 +1,79 @@
+Q. How are the dragonballs allocated?
+
+A. It's fairly complicated.
+
+First off, the dragonballs are absolutely indestructible perma-artifacts. They can not be permanantly lost. Dragonball T keeps very close watch on their location, and anytime a dragonball is 'lost' say, from being abandoned in a dungeon level, stolen by theives (Yes, this can happen!) or being lost with your body when you 'die,' that dragonball is re-allocated as being 'available' and can be found again. Further, even once all the dragonballs have been gathered and USED, they will all once again become available to be found as monster loot. It is completely be design, and fully expected that characters will complete the dragonball quest MULTIPLE TIMES within the same game. Maybe not very many times...but the average winning character can probably expect to get two or three dragonball wishes over the course of a typical game.
+
+So where are they? Well...it depends. Their exact locations are semi-fixed, but they can also spawn randomly. There are roughly a dozen uniques that have a *chance* of dropping a dragonball which varies anywhere from 20% to 100%. There are also certain quest locations which are 'gaurunteed' to contain a dragonball. Additionally however, with a few exceptions we'll get to in a moment, every monster in the game all the way from Cell down to the lowliest starving college student has a 1 in 1000 chance of dropping a dragonball. Theoretically a patient person could find all seven dragonballs simply by hanging out in town and killing random monsters. No more than seven dragonballs may exist, however, so if a player manages to find all seven, those 'gaurunteed' locations and '100% drop' uniques will NOT drop dragonballs until they have been either lost or used, and thus return to the available pool. Once you find all seven dragonballs it is in your best interest to use them as quickly as possible so you can begin hunting them again.
+
+Thematic exceptions: The earth dragonballs were created by the current God of the earth, who curiously, was able to create them not solely because he is God of the earth, but rather because is a higher caste Namekkian. As in, someone from the planet Namek. Planetary Gods in Dragonball are simply individuals, and Godhood is simply an office. The dragonballs were created and given the ability to summon the dragon of the earth, Shenron. And, because of their nature, they will never be found off world. Additionally, since wishes are a fairly trivial thing for greater celestial beings, beings who are capable of granting wishes, these beings will generally not bother collecting trinkets like dragonballs. Thus, while 'very powerful' mortal uniques will generally have a chance of dropping a dragonball, supremely powerful immortal beings will generally have ZERO chance of dropping a dragonball, not even the 1:1000 chance afforded to starving college students.
+
+The Dragon Radar: The dragon radar checks monster inventories and certain fixed quest locations for dragonballs upon entering thelevel that contains them. If a dragonball has spawned, either randomly or through fixed generation, it will indicate that a dragonball is nearby. However, the dragon radar messages do not override any of the above. If the dragon radar tells you once minute that the seventh dragonball is located somewhere, you might immediately leave that area and find a random dragonball on a ramdom monster, in which case when you return to the location previously indicated as containing a dragonball, it will no longer be there. Dragonballs are fickle, and like to move around. Sort of like the One Ring.
+
+Q. Ok. Spoil me. Where are the semi-fixed dragonball drop locations?
+
+The following people have a chance to drop a dragonball on death:
+
+(Exact percentages may no longer be accurate)
+
+General White		100
+General Blue		100
+Commander Red		100
+Dr. Gero		100
+Emperor Pilaf		100
+King Mouse		100
+Buruma			100
+Master Rosshi		100
+Oolong, the Terrible	50
+Ginkako			20
+Kinkaku			20
+Boss Rabbit		20
+Mr. Satan		20
+Oroku Saki
+
+(Pending storyline decisions, possibly these as well:)
+Goku
+Gohan
+Vegita
+Krillan
+Radditz
+
+Additionally, it is possible for dragonballs to be acquired through purely non-combatative dialogue with the following uniques:
+
+Emperor Pilaf
+Mr. Satan
+Master Rosshi
+Oolong, the Terrible
+
+And finally, a lone dragonball may be found on a quest level in the Volcano.
+
+Note: Death is not entirely permanent in Dragonball, either for the player, or for the monsters. Under certain circumstances, uniques may return, or be brought back from death. Anyone interested in dragonballs in their first life will probbaly still be interested after dying, and resume their quest to find all seven. Thus, while the complication will probably prevent it from being a good source of dragonballs, it IS possible to get multiple dragonballs from the same unique by killing him multiple times.
+
+The following uniques and creatures should never, under any circumstances, ever, ever drop a dragonball:
+Kami
+Piccolo
+Demon-King Piccolo
+Mr. Popo
+Bubbles
+The North Kaio
+The Emma Daio
+Korin
+Princess Snake, and her minions
+Buu, and his variants
+Babidi (Pending storyline considerations)
+Any of Babidi's minions
+Any creature on planets 79, Namek, or Plant.
+
+And finally...the last two very terribly important, and EXTREMELY spoily pieces of information:
+
+Kami created the dragonballs, and they are tied to His life force. THEY WILL ONLY CONTINUE TO FUNCTION IF HE LIVES!
+
+Think very carefully about that.
+
+Shenron is the Dragon of the Earth. His spirit, and that of our world, are together, as One.
+
+It would be bad if Shenron died.
+
+Very bad.
+
+

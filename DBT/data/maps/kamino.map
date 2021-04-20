@@ -1,0 +1,41 @@
+-- Dragonball T: Kami no uchi
+
+map.define("kamino.map")
+
+map.symbol{ symbol='.' feat=FEAT_FLOOR info=6 }
+map.symbol{ symbol='X' feat=FEAT_PERMA_WALL info=6 }
+map.symbol{ symbol='*' feat=FEAT_MAP_BORDER info=6 }
+map.symbol{ symbol='<' feat=FEAT_LESS info=6 inventory_size=0 }
+map.symbol{ symbol='a' feat=FEAT_FLOOR info=6 monster=RACE_KAMI }
+map.symbol{ symbol='r' feat=FEAT_RED_CARPET info=6 }
+map.symbol{ symbol='g' feat=FEAT_GREEN_CARPET info=6 }
+map.symbol{ symbol='V' feat=FEAT_VOID info=6 }
+map.symbol{ symbol='d' feat=FEAT_DOOR info=6 inventory_size=0 }
+map.symbol{ symbol='-' feat=FEAT_GRASS info=6 }
+map.symbol{ symbol='1' feat=FEAT_SIGNPOST info=6 on_walk="The Room of Spirit and Time (Not implemented)" }
+map.symbol{ symbol='=' feat=FEAT_FURNITURE info=6 on_walk="A luxurious bed" }
+
+map.map
+{
+[[*************************************]],
+[[*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*]],
+[[*XVVVVVVXXXXX...rrXaXrr...XXXXXg==gX*]],
+[[*XVVVVVVXXXXX.-..rrrrr..-.XXXXXg==gX*]],
+[[*XVVVVVVXXXXX.--...r...--.XXXXXg==gX*]],
+[[*XVVVVVVXXXXX1....rrr.....XXXXXggggX*]],
+[[*XVVVVVVd...drrrrrrrrrrrrrd...dggggX*]],
+[[*XVVVVVVXXXXX.....rrr.....XXXXXggggX*]],
+[[*XVVVVVVXXXXX.---..r..---.XXXXXggggX*]],
+[[*XVVVVVVXXXXX.---..r..---.XXXXXggggX*]],
+[[*XVVVVVVXXXXX......<......XXXXXggggX*]],
+[[*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*]],
+[[*************************************]],
+}
+
+map.set_player(10, 19)
+if dball_data.piccolo_hurt_player > 0 then
+	-- Reset to avoid infinite ressurections
+	-- dball_data.piccolo_hurt_player = 0
+	map.set_player(3, 19)
+	-- dialogue.KAMI_RESSURECT()
+end

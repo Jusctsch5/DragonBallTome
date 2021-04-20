@@ -1,0 +1,127 @@
+#####GElectronics, Tools and Technical Gear                                    
+                                                                               
+Acupuncture Needles (Requires Ability to use)                                  
+        Activates for Cure Conditions.                                         
+                                                                               
+Blowtorch (Requires Propane)                                                   
+        Used to destroy doors. Also can be used to deliver a small             
+        amount of damage to monsters.                                          
+                                                                               
+Fire Extinguisiher                                                             
+        Activates for Water damage attack                                      
+                                                                               
+Ballistic Plate                                                                
+        May be inserted into ballistic body armors to increase the protection  
+        they offer.                                                            
+                                                                               
+Batteries                                                                      
+        Used to recharge: Laser Pointer, Megaphone                             
+                                                                               
+Capsule                                                                        
+        Activates to place any item in extra-dimensional storage. Item may     
+        then be activated to retrieve it, as well as the capsule.              
+                                                                               
+Cell Phone      (Not Implemented)                                              
+                                                                               
+Chainsaw                                                                       
+        When equipped to your tool slot, allows you to quickly cut down trees. 
+                                                                               
+Chemistry Kit                                                                  
+        Used to extract/concoct chemical mixtures.                             
+                                                                               
+Compass                                                                        
+        Can be used at any time to help you figure out where you're going.     
+                                                                               
+Electrical Toolkit                                                             
+        Used to assemble/dismantle electronic devices                          
+                                                                               
+Earmuffs                                                                       
+        When worn, provides very good resistance to Sound                      
+                                                                               
+Earplugs                                                                       
+        When worn, provides some resistance to Sound                           
+                                                                               
+First Aid Kit                                                                  
+        Activates for Cure Cuts                                                
+                                                                               
+Flame Retardant                                                                
+        Used to recharge: Fire Extinguisher                                    
+                                                                               
+Flame Thrower   (Requires Propane)                                             
+        Used to fire a cone of highly damage flames in any direction.          
+                                                                               
+GPS                                                                            
+        Activats for enlightenment. May only be used on earth.                 
+                                                                               
+Infrared Goggle                                                                
+        When worn, proveos infravision and See Invisible                       
+                                                                               
+Laptop                                                                         
+        Activate for *identify* entire pack                                    
+                                                                               
+Laser Pointer   (Requires Batteries)                                           
+        Activates for Blind Monster at Range                                   
+                                                                               
+Lathe                                                                          
+        Used to build/dismantle heavy metal objects                            
+                                                                               
+Mechanical Toolkit                                                             
+        Used to assemble/dismantle mechanical devices.                         
+                                                                               
+Metal Detector                                                                 
+        When equipped, slows you down somewhat, but auto detects traps around  
+        you as you walk.                                                       
+                                                                               
+Megaphone       (Requires Batteries)                                           
+        Activates for Aggravate and Sound Damage                               
+                                                                               
+Muscle Stimulator                                                              
+                                                                               
+Night vision goggles                                                           
+        When worn, provides light, and See Invisible                           
+                                                                               
+Oxygen Tank                                                                    
+        Used to recharge: SCUBA Gear                                           
+                                                                               
+Poison                                                                         
+        May be used to poison bladed weapons.                                  
+                                                                               
+Propane Tank                                                                   
+        Used to recharge: Flame Thrower                                        
+                                                                               
+Rice Cooker                                                                    
+                                                                               
+Road Flare                                                                     
+        Single Use activation for Light Room, and Blind Monster radius: 1      
+                                                                               
+SCUBA gear      (Requires Oxygen Tanks)                                        
+        When equipped, allows you to travel through Deep Water.                
+                                                                               
+Item            Tech skill to use                                              
+Compass         1                                                              
+Ballistic Plt   1                                                              
+Silencer        1                                                              
+Muscle Stim     1                                                              
+Cell Phone      1                                                              
+Rice Cooker     1                                                              
+Megaphone       1                                                              
+Road Flare      1                                                              
+Fire Extinguish 3                                                              
+Laser Pointer   3                                                              
+Chainsaw        3                                                              
+Blowtorch       4                                                              
+GPS             5                                                              
+Taser gun       5                                                              
+Stun Baton      7                                                              
+Metal Detector  7                                                              
+SCUBA Gear      7                                                              
+Flame Thrower   7                                                              
+Dragon Radar    7                                                              
+NV Goggles      7                                                              
+IR Goggles      7                                                              
+Cattle Prod     10                                                             
+Laptop          12                                                             
+Radiation Suit  16                                                             
+EVA Suit        20                                                             
+Jetpack         20                                                             
+Scouter         20                                                             

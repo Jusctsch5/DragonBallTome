@@ -1,0 +1,177 @@
+#####R                  /---------------------------\
+#####R                 <    DBT V024 Release Notes   >
+#####R                  \---------------------------/
+
+Summary:
+*****/abook-8.txt*1[(a) Hello!]
+*****/bbook-8.txt*2[(b) To Submit a Big Report]
+*****/cbook-8.txt*3[(c) Major Bugs]
+*****/dbook-8.txt*4[(d) Things I DOn't Know How To Do]
+*****/ebook-8.txt*5[(e) Some Minor Random Things]
+*****/gbook-8.txt*6[(f) Fixnotes 'todo' list]
+
+~~~~~1
+#####G(a)Hello!
+This is not an official release. DBT is still very much incomplete,
+but I would like to put something out there for people to look
+at, to generate interest, do some bug testing, and hopefully,
+recruit the aid of someone else who can take a thirty second
+look at some of the problems I've been spending hours on, and
+simply say 'Oh, just do this.'
+
+~~~~~2
+#####G(b)To Submit a Bug Report
+If convenient, submit bug reports for Dragonball T on the wiki.
+If that's not convenient, please feel welcome to submit them
+via email to lordbucket@hotmail.com. If you have the time, you
+might read over the fixnotes.txt file to see if the problem you're
+having is a known condition, but, honestly I'd rather sort through
+a few redundant reports than have bugs go undetected.
+
+~~~~~3
+#####G(c)Major Bugs
+1) Approximately one in five monsters are mysteriously untargetable.
+Which monsters seems to be totally random. It's not always the
+same monsters. You might see two wannabe martial artists standing
+next to each other in town, with one targetable and the other not.
+You can see them on screen. You can attack them. They can attack you.
+But, you cant 'l'ook at them, and you can't target them with missile
+weapons. (Guns fires arrows, at the moment...if you'd like to test,
+and you do seem to be able to hit them by firing directionally, just
+no targeting them.) The only clue I have on this is that apparantly
+ALL monsters created via Wizard mode are untargetable. But I have no
+idea why.
+
+2) Monsters cannot be made to cast spells. Putting spells
+in their descriptions causes them to never generate. See
+monsters/globa.lua and look up dragonfly for an example of a monster
+that never generates.
+
+3) Unreasonable delays: Go to the northeast quadrant of Earth.
+There's nothing there. No dunegons, no stores, no fixed monsters.
+The map file is fully populated, so we're not even using the
+terrain generator, but it still takes four seconds (on my machine)
+to load and move to the new map. Why? What's it doing? The same
+delay exists in the ToME module, but it is much less. About two
+seconds. Granted I'm doing different things with DBT, but I
+can't think of anything that would justify an extra two seconds of
+waiting. Whatever it is, you see the same delay transitioning from
+"wilderness travel" to town mode, and you also see the same delay
+when executing town_regen() after staying overnight in your house.
+(Though both these are disabled with this release. If you'd like
+to re-enable wilderness mode, look at: scripts/dbtstuff.lua)
+Also, I notice that working with the ToME module, the delay is
+noticeably less when moving from a wilderness-only map square to
+another wilderness-only map square, but...if I, for example, (in
+ToME) move from the sector 1 south of Bree to the sector 2 south
+of Bree, it is only about a second and a half, whereas if I move
+from the sector 2 south of Bree to the sector 1 south of Bree, it's
+closer to two seconds. My best guess about that is that's from
+looking for the map edge information, though it seems odd that it
+would take a full half second to pull one line from a file...and
+either way, the four seconds that my module is taking to do what
+the ToME module is doing in two isn't ok. The first time I tried
+to regenerate the town to change a feature, I thought it had
+crashed. Four seconds after you create you character...transition
+between maps, change a town feature, exit a dungeon...it's
+annoying. And, if it continues to get worse as I add more material,
+that's going to be a major problem.
+
+~~~~~4
+#####G(d)Things I don't know how to do:
+1) Challenge/World Tournament Quest Transitions
+
+So...we're in a store, and we need to transition to a dungeon.
+How? Ideally, I would keep stores as they are...and a player
+could press the 'c'hallenge key, receive a cute little message,
+press space, then instantly be in a special level to fight.
+But: how to break out of the stores routine? And how to do it
+in a way that we can continue to exucute commands to teleport
+into the spceial level? Next best choice would be to cave.feat
+the store entrance into a dungeon entrance, and again, kick the
+player out of the store. But...how to perform cave.feat while
+inside a store, and again, how to kick the player out? Third
+best choice would be to change the quest status, deliver a 
+message("Meet me outside!") and then regenerate the town, using
+map.quest_symbol to change the store to a dungeon. This would
+be annoying for a bunch of reasons: it doesn't make sense,
+the four-second delay would kick in twice (once when you exit
+the store, and again once you complete the quest), the player
+would have to to exit the store manually...it would just be a
+mess. 
+
+2) If it possible to have terain features dependant upon functions?
+I'd like to alter terrain based on variable DBT is keeping track of,
+but I'm only aware of map.symbol and map.quest_symbol. Are there
+others?
+
+3) Map wrapping
+I'm designing the layout of the "four towns" with the assumption
+that I will be able to map-wrap them so when a player walks off
+the south edge of the southern portion of town, he appears on
+the northerns side of the north part of town. (Would be nice to
+eliminate the map-edge too. At the moment i'm planning to do that
+by creating a terrain feature that's blank and placing it along
+the border of all the towns.) Ideally, I'd capture the keystroke
+that moved the player off the map, and teleport them to them
+correct location, but I'm not sure how to do that. Next best choice
+would be to set up some sort of on_walk hook so that if a player
+ever stands on the outside edge of a town map, I think this is
+an acceptable solution, but I haven't figured out how to notice
+when a player steps on a certain terrain feature. There is an
+example of that in the Thieves Lair quest, though, so at least I
+know it's possible.
+
+4) Umm...how to make a unique drop a certain item? I see the
+example in QUEST_THE_ONE_RING, but...how do make a monster
+drop an item rather than force it into the players inventory?
+
+5) Items bought in store have Perma-Missing extra info
+I've created some custom flags for the DBT combat system. Start
+up wizard mode, and create a weapon. Any weapon. Now, *identify*
+it and read the description. You'll see that weapons now have
+an innate "difficulty" modifier. Now, go to one of the martial
+arts studios, and examine a weapon. No difficulty information.
+Enroll in classes and buy the weapon. Try to *identify* it.
+You can't. The difficulty information is forever invisible.
+
+6) Various texts are incorrect, and apparantly inaccessible to
+a module. For instance: I've changed the currency from gold
+to zeni. 'garnets' are now 'a small billfold.' 'mithril' is now
+'a credit card.' Etc. All fine and good, but when you pick up
+money, you get a message like: "You pick up 50 gold worth of
+credit card" instead of: "You pick up a credit card worth
+50 dollars." This doesn't exist in desc.lua. Other example of
+this sort of problem exist, also...like 'you are on a mud'
+and 'There is' always preceeding on_block messages.
+
+~~~~~5
+#####G(e)Some Minor Random Things
+
+1) How to make the double spacing in parchments go away? :)
+I assume it's a disagreement over how to handle CR/LF's,
+but every text editor I've tried generates the same result.
+Hopefully I don't have to find a copy of vi for windows. :P
+
+2) I've eliminated the lite and shield slots. Lights and Shields
+now go in your hands. (Wouldn't they?) But...lights now no longer
+lose fuel over time.
+
+3) Treasure is generating in the Sewers even though the object
+theme doesn't allow for it. I'm trying to create money scarcity
+for the early game, and being able to scum an easy dungeon to
+get money isn't helping. I think treasure generates as a default
+if a valid object can't otherwise be found. That's going to have
+to change.
+
+~~~~~7
+#####G(g)Fixnotes 'todo' list
+All of the above is, sadly, only a partial list. But these are
+all the things that are really bothering me. Most everything
+else I think I know how to do, I just need to get to it. See
+fixnotes.txt for the complete 'to do' list.
+
+Enjoy!
+
+Bucket Man
+lordbucket@hotmail.com

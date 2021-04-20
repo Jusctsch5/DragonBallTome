@@ -1,0 +1,155 @@
+-- Dragonball T: Red Ribbon Army Control Level: Internal Auto Turrets
+-- Optional special level in the RRA SHQ
+
+map.define("control3.map")
+
+map.symbol{ symbol='.' feat=FEAT_FLOOR info=6 }
+map.symbol{ symbol='<' feat=FEAT_LESS info=3 }
+map.symbol{ symbol='*' feat=FEAT_MAP_BORDER info=6 }
+map.symbol{ symbol='=' feat=FEAT_FURNITURE info=6 on_walk="A bed" }
+map.symbol{ symbol='X' feat=FEAT_PERMA_WALL info=6 }
+map.symbol{ symbol='+' feat=FEAT_DOOR info=6 }
+map.symbol{ symbol='~' feat=FEAT_IMPASSABLE_DOOR info=6 }
+map.symbol{ symbol='D' feat=FEAT_DOOR_LOCKED_HEAD+6 info=6 }
+map.symbol{ symbol='T' feat=FEAT_FLOOR info=6 monster=RACE_RRA_SHQ_INT }
+map.symbol{ symbol='C' feat=FEAT_FLOOR info=6 monster=RACE_RRA_SHQ_CAM }
+map.symbol{ symbol='G' feat=FEAT_GLASS_WALL info=6 }
+
+map.symbol{ symbol='1' feat=FEAT_LEVER info=6
+	flags = {
+		MOVE_POST_DEST=function()
+			term.save()
+			term.text_out("There is a lever on the wall. Pull it?\n\n")
+			dialogue.helper("Yes", "a")
+			dialogue.helper("No", "b")
+			local ans = dialogue.answer()
+			term.load()
+			if ans == "a" then
+				if cave(19, 33).feat == FEAT_IMPASSABLE_DOOR then
+					cave_set_feat(15, 33, FEAT_FLOOR)
+					cave_set_feat(19, 33, FEAT_FLOOR)
+				else
+					cave_set_feat(15, 33, FEAT_IMPASSABLE_DOOR)
+					cave_set_feat(19, 33, FEAT_IMPASSABLE_DOOR)
+				end
+				message("You hear machinery in the distance.")
+			else
+				-- do nothing
+			end
+		end
+	}
+}
+-- Note trap may be triggered repeatedly
+map.symbol{ symbol='2' feat=FEAT_FLOOR info=6
+	flags = {
+		MOVE_POST_DEST=function()
+			if cave(19, 33).feat ~= FEAT_IMPASSABLE_DOOR then
+				cave_set_feat(15, 33, FEAT_IMPASSABLE_DOOR)
+				cave_set_feat(19, 33, FEAT_IMPASSABLE_DOOR)
+				message("A blastdoor slams into place!")
+			end
+		end
+	}
+}
+
+
+map.symbol{ symbol='A' feat=FEAT_FLOOR info=6 monster=RACE_RRA_PRIVATE }
+map.symbol{ symbol='B' feat=FEAT_FLOOR info=6 monster=RACE_RRA_CORPORAL }
+
+map.symbol{ symbol='H' feat=FEAT_FLOOR info=6 monster=RACE_RRA_CAPTAIN }
+map.symbol{ symbol='I' feat=FEAT_FLOOR info=6 monster=RACE_RRA_COMMANDER }
+map.symbol{ symbol='J' feat=FEAT_FLOOR info=6 monster=RACE_RRA_SNIPER }
+map.symbol{ symbol='K' feat=FEAT_FLOOR info=6 monster=RACE_RRA_LIETENANT }
+
+map.symbol{ symbol='L' feat=FEAT_CONTROL_SYSTEM info=6
+	flags = {
+		MOVE_POST_DEST=function()
+			dialogue.RRA_INT_DISABLE()
+		end
+	}
+}
+
+-- Random monsters don't seem to work as intended
+-- Random monster
+-- map.symbol{ symbol='d' feat=FEAT_FLOOR info=6 monster=map.ANY }
+-- Random monster (up to 10 levels ood)
+-- map.symbol{ symbol='e' feat=FEAT_FLOOR info=6 monster=map.ANY monster_level=10 }
+
+
+map.symbol{ symbol='c' feat=FEAT_FLOOR info=6 on_walk="A sign on the door reads 'Authorized Personel -=Only=-" }
+map.symbol{ symbol='f' feat=FEAT_FLOOR info=6
+	flags = {
+		MOVE_POST_DEST=function()
+			term.save()
+			term.text_out("A sign on the door reads:\n\n")
+			term.text_out(color.LIGHT_RED, "Auto Turrret Control Room: Authorized Personal Only!!!\n\n")
+			dialogue.conclude()
+			term.load()
+			local c_ptr = cave(player.py, player.px)
+			c_ptr.flags[FLAG_MOVE_POST_DEST] = nil
+		end
+	}
+}
+map.symbol{ symbol='g' feat=FEAT_FLOOR info=6
+	flags = {
+		MOVE_POST_DEST=function()
+			message("A sign on this door reads: 'Excercise track'")
+			local c_ptr = cave(player.py, player.px)
+			c_ptr.flags[FLAG_MOVE_POST_DEST] = nil
+		end
+	}
+}
+map.symbol{ symbol='i' feat=FEAT_FLOOR info=6
+	flags = {
+		MOVE_POST_DEST=function()
+			term.save()
+			term.gotoxy(0, 0)
+			term.text_out("A note has been scrawled into the wall here:\n\n")
+			term.text_out(color.LIGHT_BLUE, "  Never use your sick leave. You might have to see the doctor.\n\n")
+			term.text_out("A strange message. Though it's nice of the Red Ribbon Army to give its soldiers sick leave.\n\n")
+			dialogue.conclude()
+			term.load()
+		end
+	}
+}
+
+map.map
+{
+[[*******************************************************************]],
+[[*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*]],
+[[*XXXXXXXXX......................XXXXXXXXXXXXXXXX...X.....XXXXXXXXX*]],
+[[*XXXXXX....XXXXXXXXXXXXXXXXXXXXiXXXXXXXXXXXXXX.+.L.X.XXX....XXXXXX*]],
+[[*XXXX...XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXDX...X.XXXXXX...XXXX*]],
+[[*XXX..XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXfXXXXX+XXXXXXXX..XXX*]],
+[[*XX..XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX......gXXXXXXXXX..XX*]],
+[[*XX.XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.XXXXXXXXXX.XX*]],
+[[*X..XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.XXXXXXXXXX..X*]],
+[[*X.XXXXXXXXXXXXXK.H.............................H.KX.XXXXXXXXXXX.X*]],
+[[*X.XXXXXXXXXXXXX.I...............................I.X.XXXXXXXXXXX.X*]],
+[[*X.XXXXXXXXXXXXXH.................................HX.XXXXXXXXXXX.X*]],
+[[*X.XXXXXXXXXXXXX...................................X.XXXXXXXXXXX.X*]],
+[[*X.XXXXXXXXXXXXX.B...............................B.X.XXXXXXXXXXX.X*]],
+[[*X.XXXXXXXXXXXXX...B.............2.............B...X.XXXXXXXXXXX.X*]],
+[[*X.XXXXXXXXXXXXX.B...........XXXXDXXXX...........B.X.XXXXXXXXXXX.X*]],
+[[*X.XXXXXXXXXXXXX...B........XX...c...XX........B...X.XXXXXXXXXXX.X*]],
+[[*X.XXXXXXXXXXXXX.B..........XC...<...CX..........B.D.XXXXXXXXXXX.X*]],
+[[*X.XXXXXXXXXXXXX...B........XX...c...XX........B...XXXXXXXXXXXXX.X*]],
+[[*X.XXXXXXXXXXXXX.B...........XXXXDXXXX...........B.XXXXXXXXXXXXX.X*]],
+[[*X.XXXXXXXXXXXXX...B.............2.............B...XXXXXXXXXXXXX.X*]],
+[[*X.XXXXXXXXXXXXX.B...............................B.XXXXXXXXXXXXX.X*]],
+[[*X.XXXXXXXXXXXXX...................................XXXXXXXXXXXXX.X*]],
+[[*X.XXXXXXXXXXXXXH.................................HXXXXXXXXXXXXX.X*]],
+[[*X.XXXXXXXXXXXXX.I...............................I.XXXXXXXXXXXXX.X*]],
+[[*X.XXXXXXXXXXXXXK.H.............................H.KXXXXXXXXXXXXX.X*]],
+[[*X..XXXXXXXXXXXXXXXXXXX...XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX..X*]],
+[[*XX.XXXXXXXXXXXXXXXXXXX...XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.XX*]],
+[[*XX..XXXXXXXXXXXXXXXXXX.1.XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX..XX*]],
+[[*XXX..XXXXXXXXXXXXXXXXX...XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX..XXX*]],
+[[*XXXX...XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX...XXXX*]],
+[[*XXXXXX....XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX....XXXXXX*]],
+[[*XXXXXXXXX...............................................XXXXXXXXX*]],
+[[*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*]],
+[[*******************************************************************]],
+}
+
+map.set_player(16, 33)

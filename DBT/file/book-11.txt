@@ -1,0 +1,99 @@
+#####R                  /---------------------------\                          
+#####R                 <   Translation Commentary    >                         
+#####R                  \---------------------------/                          
+                                                                               
+Summary:                                                                       
+*****/abook-11.txt*1[(a) General Apologies]                                    
+*****/bbook-11.txt*2[(b) Names and Translations]                               
+*****/bbook-11.txt*3[(c) Cultural Notes]                                       
+                                                                               
+~~~~~1                                                                         
+#####G(a)General Apologies                                                     
+Spanning three different series, and over three hundred episodes,              
+Dragonball no doubt has a lot of die-hard loyal fans. Personally,              
+I had only ever seen two or three episodes when I started this                 
+project. As you can expect, I had a lot of misconceptions about                
+the story, the plot, the characters...etc. Dragonball is quite                 
+a bit more deep than it appears at first glance. (Or second, or                
+third, sometimes. :P )                                                         
+In any case, to those fans who dearly love the series, let me                  
+extend my apologies for any errors I've made. I've done the best               
+I could, with the episodes and guides available to me. I hope you              
+enjoy the result.                                                              
+                                                                               
+~~~~~2                                                                         
+#####G(b)Names and Translations                                                
+But it's not entirely my fault! Dragonball has been subbed and                 
+dubbed by so many different people over so many years, and there               
+are quite a few different interpretations of the show floating                 
+around. Just on the surface, it seems like fully half of the                   
+characters were given different names by every translator. In some             
+cases it's just a matter of romanization. In other cases, it's                 
+complicated. Take Dr. Briefs' daughter, for instance. Her original             
+Japanese name 'Buruma' is a Japanization of an English word:                   
+Bloomers. (To go with the undergarments naming theme of the Breifs'            
+family.) Somehow when this was translated back to English dubbing              
+though, a lot of translators came up with 'Bulma.' True, if the                
+name had originally been 'Bulma' the Japanization of it might                  
+have been pretty close to 'Buruma' but it's sort of ironic that                
+an English word brought to Japanese would then be romanized                    
+rather than simply using the original word. In cases like this                 
+I've generally chosen the Japanese name in favor of the English,               
+but curiously, lots of characters in Dragonball have names that                
+are plays on english words. I've already mentioned Buruma, but                 
+what about Vegeta, Radditz, Trunks, Dr. Briefs, Piccolo, Nail...               
+it's a long list! There are also a few names that were changed                 
+to pacify the american telesion censors. Mr Satan being the                    
+most glaringly obvious of those. Yes, there is a character                     
+named Mr Satan in Dragonball. Or, 'Hercule' to the american                    
+audience. And, similarly, I've chosen to go with 'Hell' instead                
+of 'Home for Infinite Losers.' No, sorry...Hell is Hell, Dabura                
+is a demon, and Kami is a God. Apparantly the american censors                 
+are very sensitive about religious issues, and quite a few                     
+characters in Dragonball are Gods or demons. I imagine it must                 
+have made the translators life difficult. Often they were able to              
+ignore it simply by leaving the Japanese words untranslated.                   
+Kami is called Kami instead of God. Chichi is called Chichi intead             
+of breasts. Etc.                                                               
+                                                                               
+In any case, the point of all this is: don't be surprised if you               
+see a few place and people names you don't recognize.                          
+                                                                               
+~~~~~3                                                                         
+#####G(c)Cultural Notes                                                        
+Finally, I'd just like to mention some of the cultural issues                  
+going on here. Japanese television is generally a lot more                     
+lenient about sexual issues than American television. They like                
+sex, and are squeemish about death. We like to kill people and                 
+are squeemish about sex. It's a bit amusing, really. In any                    
+case, yes, Dragonball is a chlidren's television show, but it                  
+has an awful lot of material that would never come close to                    
+passing American censorship. Oh, sure...some of you are probably               
+stil laughing about the 'HELL' --> 'HFIL' nonsense, and if you                 
+thought about Dr Briefs, Buruma, Trunks and Bra, you might nod                 
+knowingly...but what about some of the actual content of the show?             
+Like episode two, where Goku, who has never seen a girl before,                
+takes off Buruma's panties and gets all panicky that her balls                 
+are missing?  Which conveniently sets her up so when she agrees                
+to flip her skirt for Master Rosshi, he gets more than he anticipated?         
+For those who have never seen the show...no, Dragonball is not                 
+a bizarre sex anime, it's just that Japanese culture is a bit                  
+more permissive about this sort of humor. Conversely, an American              
+viewer might think it odd that even thought it's apparantly all                
+about fighting, there's never any blood in Dragonball, and even                
+when characters 'die' it isn't usually more than a temporary                   
+inconvenience, and dead characters quite regularly continue on                 
+as if nothing had happened. Anyway...the sexual content in                     
+Dragonball has created some uncertanties when it's come to                     
+module making. If you pay attention when you play, you might see               
+some of these themes coming through in an 'americanized' way, but              
+don't be shocked if there's still some content which would be                  
+blatantly sexual by American standards.                                        
+                                                                               
+Enjoy!                                                                         
+                                                                               
+Bucket Man                                                                     
+lordbucket@hotmail.com                                                         
+                                                                               
+                                                                               
+                                                                               

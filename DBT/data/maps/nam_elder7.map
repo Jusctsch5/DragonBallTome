@@ -1,0 +1,44 @@
+-- Dragonball T: The Yurt of the Elder of the Great Elder of Namek
+
+map.define("nam_elder7.map")
+
+map.symbol{ symbol='.' feat=FEAT_FLOOR info=3 }
+map.symbol{ symbol='X' feat=FEAT_PERMA_WALL info=3 }
+map.symbol{ symbol='W' feat=FEAT_PERMA_WALL info=6 }
+map.symbol{ symbol='*' feat=FEAT_MAP_BORDER info=6 }
+map.symbol{ symbol='<' feat=FEAT_LESS info=3 }
+
+map.symbol{ symbol='E' feat=FEAT_SAND info=3 monster=RACE_NAMEK_GREAT_ELDER }
+map.symbol{ symbol='N' feat=FEAT_SAND info=3 monster=RACE_NAMEK_NAIL }
+
+map.symbol{ symbol='|' feat=FEAT_LAMP info=6 on_walk="This old lantern provides some illumination" }
+map.symbol{ symbol='.' feat=FEAT_FLOOR info=8 }
+map.symbol{ symbol=',' feat=FEAT_FLOOR info=6 }
+
+map.map
+{
+[[*******************************]],
+[[*WWWWWWWWWXXXXXXXXXXXWWWWWWWWW*]],
+[[*WWWWWWXXXX.........XXXXWWWWWW*]],
+[[*WWWWXXX...............XXXWWWW*]],
+[[*WWWXX...................XXWWW*]],
+[[*WWXX.....................XXWW*]],
+[[*WWX,,..,,,..,,,..,,,......XXW*]],
+[[*WX,,,,,,,,,,,,,,,,,,,......XW*]],
+[[*XX,|,,,,|,,,,|,,,,|,,......XX*]],
+[[*X,,,,,,,,,,,,,,.,,NXXX......X*]],
+[[*X<,,,..,,,..,,,..,,,EX......X*]],
+[[*X,,,,,,,,,,,,,,,,,,XXX......X*]],
+[[*XX,|,,,,|,,,,|,,,,|,,......XX*]],
+[[*WX,,,,,,,,,,,,,,,,,,,......XW*]],
+[[*WXX,,..,,,..,,,..,,,......XXW*]],
+[[*WWXX.....................XXWW*]],
+[[*WWWXX...................XXWWW*]],
+[[*WWWWXXX...............XXXWWWW*]],
+[[*WWWWWWXXXX.........XXXXWWWWWW*]],
+[[*WWWWWWWWWXXXXXXXXXXXWWWWWWWWW*]],
+[[*******************************]],
+}
+
+map.set_player(10, 2)
+

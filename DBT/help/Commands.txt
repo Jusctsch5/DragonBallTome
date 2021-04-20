@@ -1,0 +1,244 @@
+#####Ga - 'Ammo refill'                                                        
+        Used to reload firearms. Firearms must be equipped to be reloaded.     
+                                                                               
+#####Gc - 'close'                                                              
+        Close a door.                                                          
+                                                                               
+#####Gd - 'drop'                                                               
+        Drop an item from inventory, or equipment. Press slash to alternate.   
+                                                                               
+#####Ge - 'equipment list'                                                     
+        View currently equipped/worn gear.                                     
+                                                                               
+#####Gf - 'fire'                                                               
+        Shoot a firearm.                                                       
+                                                                               
+#####Gg - 'get'                                                                
+        Pick up an item from the ground.                                       
+                                                                               
+#####Gi - 'inventory'                                                          
+        View the items you are currently carrying.                             
+                                                                               
+#####Gk - 'destroy an item'                                                    
+        Irrecoverably destroy an item. May not be used on artifacts.           
+                                                                               
+#####Gl - 'look'                                                               
+        Look around and examine your surroundings.                             
+                                                                               
+#####Gm - 'manipulate chi'                                                     
+        Set the states and rates of chi Constant Effects. Note that Instant    
+        Effects use the 'U' command. See the Chi System helpfile entry for     
+        more information.                                                      
+                                                                               
+#####Gn - 'agaiN'                                                              
+        Repeat the previous command, whatever it was.                          
+                                                                               
+#####Go - 'open'                                                               
+        To open doors.                                                         
+                                                                               
+#####Gq - 'quaff'                                                              
+        Quaff, or 'drink' a liquid. Dragonball T does not feature 'potions'    
+        in the traditional roguelike sense, but there are some item types      
+        which may be drunk.                                                    
+                                                                               
+#####Gr - 'read'                                                               
+        Read a book, parchment, or blueprint. Dragonball T does not feature    
+        'scrolls' but has a variety of help descriptions available in-game     
+        in parchment form. Technomancers may also attempt to learn recipes     
+        by reading blueprints. Note that you will need light to read by.       
+                                                                               
+#####Gs - 'search'                                                             
+        Search the immediate area for traps or secret doors.                   
+                                                                               
+#####Gt - 'take off'                                                           
+        Remove a piece of equipment.                                           
+                                                                               
+#####Gu - 'use'                                                                
+        To use/activate any item, tool, or artifact. In Dragonball T, the      
+        'u'se command unifies most Angband style aim/zap/use/apply/activate    
+        commands, except for 'r'ead and 'q'uaff.                               
+                                                                               
+#####Gw - 'wear/weild'                                                         
+        Equip an item from inventory or the ground. Put on armor or clothing,  
+        put a weapon or light in hand, etc.                                    
+                                                                               
+#####Gy - 'give'                                                               
+        Give an item to someone. This is only occasionally used. Most          
+        'give' type actions will be accessed through dialoqgue, however,       
+        occassionally this command will be useful. For example, you may        
+        give senzu beans to companions to heal them.                           
+                                                                               
+#####GC - ' Character Sheet'                                                   
+        View your general stats, resistances and state.                        
+                                                                               
+#####GD - 'disarm'                                                             
+        Attempt to disarm a trap. Depends on the Disassembly skill.            
+                                                                               
+#####GE - 'eat'                                                                
+        Food is yummy! Use 'e' to eat some!                                    
+                                                                               
+#####GF - 'reFill/reFuel'                                                      
+        Refill anything that takes fuel, or batteries. Different item types    
+        will require different fuel sources. Flashlights require batteries,    
+        flame throwers require propane tanks, SCUBA gear requires oxygen       
+        tanks, etc.                                                            
+                                                                               
+#####GG - 'gain skills'                                                        
+        View your current skills, and spend skill points earned from           
+        previously gained levels. Dragonball T features a uniques skill/class  
+        system, and it it highly recommended that you read through the related 
+        help files.                                                            
+                                                                               
+#####GI - 'identify item'                                                      
+        View a verbose object dscription for an item.                          
+        NOTE: With the new inventory subsystem of alpha 11, this command is    
+        no longer active. It will probably make a comeback once I'm able to    
+        restore it. In the meantime, access verbose descriptions via the       
+        inventory command.                                                     
+                                                                               
+#####GL - '*look*'                                                             
+        Scan through nearby screen of the overhead map.                        
+                                                                               
+#####GM - 'map'                                                                
+        Zoom out the display, and view an overhead map of the entire level.    
+                                                                               
+#####GN - 'abilities'                                                          
+        View your current abilities, and spend skill points to learn new       
+        abilities. Note that while there are nearly thirty abilities in        
+        Dragonball T, you begin the game only able to learn three of them.     
+        The rest must be made available through quests, classes and dialogue.  
+                                                                               
+#####GQ - 'Quit'                                                               
+        Permanently retire the character. Equivalent to dying.                 
+                                                                               
+#####GR - 'rest'                                                               
+        Causes time to go by rapidly to allow you to regain health and chi.    
+        Your rest may be interupted, but this is much safer than holding down  
+        keys to pass time.                                                     
+                                                                               
+#####GS - 'Set Speed'                                                          
+        Used to Set your movement mode.  Note that this command replaces the   
+        attack and movement mode commands that previously existed on the       
+        character sheet in ToME 2.x                                            
+                                                                               
+#####GT - 'Tunnel'                                                             
+        To hack, cut, or dig through trees, rock, or other obstructions. You   
+        will need a digging to to tunnel.                                      
+                                                                               
+#####GU - 'use ability'                                                        
+        Use an innate ability, or chi Instant Effect. You begin the game not   
+        knowing any.                                                           
+                                                                               
+#####GV - 'version information'                                                
+        Report current version information.                                    
+                                                                               
+#####GY - 'talk/converse'                                                      
+        Attempt to speak to a person or monster. There is a tremendous amount  
+        of dialogue in Dragonball T, and you will use this command often.      
+                                                                               
+#####G+ - 'Attack'                                                             
+        Force specify attack. Queries for a direction.                         
+                                                                               
+#####G- - 'Attack'                                                             
+        Force specify attack. Queries for a direction.                         
+                                                                               
+#####G= - 'options'                                                            
+        View and change the current game settings.                             
+                                                                               
+#####G< - 'Go up'                                                              
+        Go 'up.' Whether 'up' is up a set of stairs, or up and out of the      
+        atmosphere.                                                            
+                                                                               
+#####G> - 'Go down'                                                            
+        Go 'down.' Whether 'down' is down a set of stairs, or down to land     
+        on a planet.                                                           
+                                                                               
+#####G~ - 'View extra information'                                             
+        The tilde menu features a great deal of useful information.            
+                                                                               
+#####G@ - 'adjust macros'                                                      
+        Access the macro screen.                                               
+                                                                               
+#####G# - ...not sure what this does...                                        
+                                                                               
+#####G$ - 'record a macro'                                                     
+        Manually record a single macro.                                        
+                                                                               
+#####G% - 'interact with visuals'                                              
+        Change/load pref files or adjust individual character displays.        
+                                                                               
+#####G^ - 'control key'                                                        
+        Activate a 'crtl' command. For keyboards without control keys.         
+                                                                               
+#####G& - 'interact with colors'                                               
+        Gamma correction, display colors, pref files, etc.                     
+                                                                               
+#####G* - 'Set target'                                                         
+        Manually enter targetting mode and set current target.                 
+                                                                               
+#####G_ - 'enter store'                                                        
+        Enter a store that you're currently standing on.                       
+                                                                               
+#####G+ - 'repeat move?'                                                       
+        This appears to be similar to shift-arrow-key movement.                
+                                                                               
+#####G{ - 'inscribe an item'                                                   
+        Mark an item with text, or macro or processing characters              
+                                                                               
+#####G} - 'uninscribe an item'                                                 
+        Remove previously inscribed texts from an item.                        
+                                                                               
+#####G\ - 'use a command'                                                      
+        This appears to prompt you for a command, which can be any regular     
+        command.                                                               
+                                                                               
+#####G" - ...prefs?                                                            
+                                                                               
+#####G: - 'Use numbers as directional movement'                                
+        Prompt you for a number, and translates that into the corresponding    
+        movement direction.                                                    
+                                                                               
+#####G? - 'Help'                                                               
+        Access the help files.                                                 
+                                                                               
+#####G/ - 'monster/item/character help'                                        
+        Inquire about a specific character. Allows access to monster memory.   
+                                                                               
+#####G. - 'Use numbers as directional movement'                                
+        Prompt you for a number, and translates that into the corresponding    
+        movement direction. Same as :                                          
+                                                                               
+#####G, - 'pass a turn'                                                        
+        Sit, wait and do nothing for one turn.                                 
+                                                                               
+#####Gshift key - 'move until interupted'                                      
+        By holding down shift and pressing a directional key, you may          
+        automatically move in any direction until interupted by a noteworthy   
+        event, such as a monster moving.                                       
+                                                                               
+#####Gspace - 'clear 'more' prompts'                                           
+        Scroll through any pending messages.                                   
+                                                                               
+#####Gctrl-a 'Activate Wizard Command'                                         
+        Use a single wizard mode command                                       
+                                                                               
+#####Gctrl-q 'Quest Log'                                                       
+        View your current quest list. This is also acessible via the tilde     
+        menu.                                                                  
+                                                                               
+#####Gctrl-w 'Wizard Mode'                                                     
+        Used for testing and debugging. Wizards:                               
+                                                                               
+        * Do not generate regular 'scored' savefiles                           
+        * Are given full access to all skills and abilities whether or not     
+          they have been learned                                               
+        * May adjust skills and abillities via - and +                         
+        * May fly through space unaided                                        
+        * Automatically know all technomancy recipes                           
+        * Are given more verbose error descriptions                            
+        * Are given more complete access to ctrl-a commands                    
+                                                                               
+#####Gctrl-x 'eXit'                                                            
+        Saves the game and exits.                                              
+                                                                               
+                                                                               

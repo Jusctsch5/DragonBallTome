@@ -1,0 +1,116 @@
+#####R                 /------------------------\                              
+#####R                <  Experimental Skills     >                             
+#####R                 \------------------------/                              
+                                                                               
+#####GSo here's the deal:                                                      
+                                                                               
+Waiting on skill gains isn't fun. Suffering skill point losses for not waiting 
+on skills gains is also not fun. So...hence the experiment.                    
+                                                                               
+The theory is very simple: retroactively apply skill modifier changes to       
+any skill points already spent. If you invest 10 skill points at a .1 mod,     
+you have 1 net skill. If you then increase your mod to .2, you then have       
+2 net skill without spending any additional skill points.                      
+                                                                               
+Unfortuantely it's not as simple as that, and if this goes 'official' then     
+I'm going to have to rewrite absolutely everything having anything to do       
+with skill points, from the interface down to each and every single random     
+quest that rewards you a single skill point.                                   
+                                                                               
+#####GPlayers who choose to play Experimental characters will:                 
+                                                                               
+ * Have a weird, kludgy skill-gain screen                                      
+                                                                               
+ * Not get any skill value increases from absolutely anything...other than     
+   skill points spent via the above, weird, kludgy interface. Example:         
+   You study Karate. The screen will tell you that you gained +1 to barehanded 
+   value, and +.6 to barehanded mod. Guess what? You get +.6 to the mod, and   
+   that's it.                                                                  
+                                                                               
+ * Will run the risk of fatal crashes if I did something dumb. Don't play      
+   experimental characters and expect to keep them.                            
+                                                                               
+ * Will see weird behavior in skills close to zero and close to 50             
+                                                                               
+ * Will occasionally have to view the skill 'G'ain screen a couple times to    
+   see the actual benefits of skill increases                                  
+                                                                               
+...and, oh:                                                                    
+                                                                               
+ * Will have skill mod changes retroactively applied to their current skill    
+   values                                                                      
+                                                                               
+#####G For example:                                                            
+                                                                               
+Let's say you hop into wizard mode, and gives yourself 380 xp, and 200 zeni.   
+Poof! You are now level 10, with 54 skill points, and can now experiment with  
+two enrollments. You head over to Bob's Kickboxing school, study once, and     
+gain:                                                                          
+                                                                               
+Barehanded 0, +.8                                                              
+                                                                               
+(Bob tells you you have 1, +.8, but remember skill value changes outside       
+of the interface are lost. Deal with it.)                                      
+                                                                               
+Now, let's raise barehanded to max. You spend 25 skill points, at .8, thus     
+bringing your Barehanded skill value to it's maximum for your level: 20,       
+and leaving you with 29 skill points.                                          
+                                                                               
+With your second enrollment, let's now head over to Nakamura's and study       
+Karate. Nakamura says he gives you +1, +.6 to barehanded, but in reality       
+he's only giving you the modifier, so your total barehanded modifier is        
++1.4. Go to your skill screen, and you'll see that your current barehanded     
+skill is 35. That's all 25 of the points you spent previously, at the total    
+current mod of 1.4.                                                            
+                                                                               
+Great, right?                                                                  
+                                                                               
+#####GBut this has certain implications                                        
+                                                                               
+You may have noticed that you're now level 10 with a 35 skill. That's fully    
+fifteen points over what should be your maximum. But it gets worse, and it     
+can be horribly abused. For example...let's start a new character, hop into    
+wizard mode with 200 zeni and 380 xp. Now, study Sumo, with only a .3 mod      
+in Barehand. You can now spend ALL 54 points, for a net of only 16.2, but      
+when you then go and study Kickboxing, and gain an additional .8 mod:          
+                                                                               
+You are now level 10 with a barehanded skill of 59.4                           
+                                                                               
+This is just silly. Now, we could:                                             
+                                                                               
+ * Apply a cap. But that puts people in situations where they have skill       
+   points 'locked away' in skills they aren't deriving any benefit from.       
+                                                                               
+ * Allow these 'already spent' skill points to become magically available      
+   again. I don't really like this idea. It doesn't make sense to me.          
+                                                                               
+ * Limit the number of skill points spent per level. This could possibly       
+   solve the problem, but it also creates new ones in the process, and         
+   would require that absolutely everything be rebalanced.                     
+                                                                               
+ * Do away with the whole 'retroactive' part, and simply require that          
+   players spend all of their skill points every time they gain a level.       
+   This is probably the simplest solution, and would completely solve the      
+   original problem, but:                                                      
+                                                                               
+   * Would require just as much coding as more complicated solutions           
+   * Would eliminate the 'save for later' playstyle as even as option          
+   * Would create situations where players avoided storyline quests,           
+     events and monsters because it made them gain levels before they          
+     had opened up skill trees                                                 
+   * Creates problems for people who gain multiple levels at a time            
+                                                                               
+ * Come up with something totally else. Unfortunately this is probably         
+   what has to happen.                                                         
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               
+                                                                               

@@ -1,0 +1,231 @@
+#####R                 /------------------------\                              
+#####R                <  DBT V081 Release Notes  >                             
+#####R                 \------------------------/                              
+                                                                               
+Summary:                                                                       
+*****/abook-26.txt*1[(a) Hello!]                                               
+*****/bbook-26.txt*2[(b) Summary]                                              
+*****/cbook-26.txt*3[(c) Armor Class Commentary]                               
+*****/dbook-26.txt*4[(d) New bugs and issues]                                  
+*****/ebook-26.txt*5[(e) Complete Change Log]                                  
+                                                                               
+~~~~~1                                                                         
+#####G(a)Hello!                                                                
+                                                                               
+ Blueprints, ego items, rule changes, bugfixes, and a marryable Videl!         
+                                                                               
+~~~~~2                                                                         
+#####G(b)Summary of noteworthy changes                                         
+Rule Changes                                                                   
+* Intelligence now affects your identify skill requirements, with              
+  a base of 10. Everyone who starts with 8 int will need two more              
+  points of skill for EVERYTHING they identify.                                
+* Intelligence now aids in disarming/lockpicking (Previously was               
+  only Tech skills)                                                            
+* The magic number for getting married is FIFTEEN charisma. Except             
+  Rosshi, in which case the number is two. X-chromosomes.                      
+* Ego items now require higher skill to identify than non-ego items            
+* The Gun store now BUYS guns and clips                                        
+* Adjusted the displayed severity of cuts. Cuts themselves are                 
+  unchanged. Only the display name.                                            
+* Firing guns now wakes up all sleeping monster in line of sight,              
+  unless they have a silencer                                                  
+                                                                               
+Systems:                                                                       
+* Implemented Technomancy blueprints                                           
+                                                                               
+Bugfixes:                                                                      
+* YMCA: Swimming/Skating have separate keys to learn                           
+* Fixed Rosshi LUA/screen errors (I think)                                     
+* Monsters should no longer spawn in Korin tower                               
+* Yamcha ai now properly runs from girls                                       
+* Weighted items now work properly                                             
+* Several bugfixes related to Instructors, Challenge Quests, and               
+  school closures                                                              
+* Gym/Library/Muscle Stimulator no longer detract from your maximum            
+  training levels                                                              
+* Androids 17 & 18 no longer spawn as allies (Hehehe...oops! :) )              
+* Wong Fei Hong appears in the Tournament                                      
+                                                                               
+New Material:                                                                  
+* Slight development of the planet Namek                                       
+* It is now possible to marry Videl. There is an easy way and a                
+  hard way.                                                                    
+* Uranai Baba and related dungeon, monsters and dialogue                       
+* A few new monster attack types have been added. Warning: RRA                 
+  officers can now blind you!                                                  
+* Partial Implementation of Joesephine                                         
+* Several new item types, most notably silencers for guns                      
+                                                                               
+New Ego Item Types:                                                            
+Armor:                                                                         
+* Fur lined armors: Extra cold resistance                                      
+* Designer clothings: Charisma bonus                                           
+* Cleated shoes: bonus to walking speed                                        
+* Sqeaky shoes: Aggravate                                                      
+* Studded armor: extra slash resistence                                        
+* Dark/Neon clothing: Stealth modifiers                                        
+* Reinforced bracers: bonus to ac                                              
+* Spiked bracers: pointy spikes damage enemies when they hit you               
+* Visored headgear: Provides resistance to blindness                           
+Weapons                                                                        
+* Steel 'wooden weapons': extra damage, greatly increased weight               
+* Poorly made weapons: Double normal Difficulty penalty                        
+* Channeled blades: Similar to vorpal. Makes monsters bleed.                   
+Guns:                                                                          
+* High Velocity firearms: Increased firing range, extra damage                 
+* High capacity firearms: Extra ammo capacity                                  
+Other:                                                                         
+* Rare and mint condition comic books: Sell for more money                     
+* Moldy food:                                                                  
+* Bright lights: Extra light radius                                            
+                                                                               
+Chi:                                                                           
+* All Chi training rates have been doubled                                     
+* Chi Constant Effect drain rates have been made more reasonable               
+* Chi Burst may now be fired with variable effect                              
+* Chi Spoilers have been updated                                               
+                                                                               
+Balance Changes:                                                               
+* Speed classes are now slightly more expensive across the board.              
+  No more 'speed is cheaper than barehanded'                                   
+* Learning Paired Weapons requires closing a school. Learning                  
+  Double Attack does not.                                                      
+* Misc enrollment numbers have been modified here and there                    
+* The economy has been rebalanced. Assuming you have skill to                  
+  identify things, there should now be a general progression of                
+  increasing value of treasure as you progress through the various             
+  dungeons. No more leaving level 30 dungeons to scum the Rabbit               
+  Hole for money.                                                              
+                                                                               
+~~~~~3                                                                         
+#####G(c)Armor Class Commentary                                                
+* NOTE: Dragonball T is now using its own function to determine                
+  whether monsters land melee blows. Level is now a stronger                   
+  factor in determining to-hit chances, and overall monsters                   
+  will be hitting you a little more often than they did.                       
+                                                                               
+AC      Monster         Old Math        New Math                               
+ 50 AC  Orange Belt     45% to hit      43% to hit                             
+100 AC  Orange Belt     8% to hit       13% to hit                             
+ 50 AC  Green Belt      59% to hit      63% to hit                             
+100 AC  Green Belt      18% to hit      26% to hit                             
+ 50 AC  Any Instructor  69% to hit      75% to hit                             
+100 AC  Any Instructor  38% to hit      50% to hit                             
+ 50 AC  Krillan         75% to hit      81% to hit                             
+100 AC  Krillan         49% to hit      62% to hit                             
+ 50 AC  Cell            88% to hit      92% to hit                             
+100 AC  Cell            75% to hit      84% to hit                             
+                                                                               
+Approximate AC Required to reach baseline minimum 5% of monster hitting you,   
+and thus, having higher AC no longer makes a difference:                       
+Orange Belt             109             115                                    
+Green Belt              121             135                                    
+School Instructor       160             200                                    
+Krillan                 196             260                                    
+Cell                    400             600                                    
+                                                                               
+Note that the theoretical maximum AC is 953                                    
+                                                                               
+90 from Dexterity                                                              
+100 from Battle Aura                                                           
+200 from Parry/Blocking                                                        
+203 from Armor                                                                 
+120 from Armor Quality bonuses                                                 
+200 from Dodge                                                                 
+40 from melee weapon AC bonuses                                                
+                                                                               
+Armor   100 + 20                                                               
+Bracers 20 + 20                                                                
+Boots   16 + 20                                                                
+Helm    32 + 20                                                                
+Gloves  10 + 20                                                                
+Coat    25 + 20                                                                
+                                                                               
+~~~~~4                                                                         
+#####G(d)New Bugs and issues                                                   
+New bugs/issues:                                                               
+* Muscle Stimulators/Sushi not removed from inventory after marrying           
+  Videl                                                                        
+* No ego type filtering: Some egos may attach to extremely                     
+  counterintuitive item types                                                  
+* Ego based ac bonuses are applied as to hit bonuses (engine?)                 
+* "Aura" effects from spiked/bladed armor types should be more                 
+  ffective for barehanded fighters with AB_BLOCKING                            
+* Ego flags are being set, NOT added. Thus, strange situations may             
+  occur. For example, fur-lined trenchcoats provide less protection            
+  from cold than trenchcoats without fur lining. Designer tuxedos              
+  offer less of a charisma bonus than regular tuxedos. Etc.                    
+* For some reason you can no longer buy things back from the pawnshop :/       
+* There should probably be a display indicator for planets that have           
+  high gravity                                                                 
+* Chi Constant Effects don't turn off when you run out of Chi                  
+* Heaven not behaving as intended                                              
+* The alternate stairway out of Mr Satan's training room behaves very          
+  strangely                                                                    
+                                                                               
+                                                                               
+~~~~~5                                                                         
+#####G(e)Complete CHange Log from V0.8.1 V0.8.2                                
+Thursday, Janurary 11, 2007                                                    
+* Cosmetic changes to Namek                                                    
+* Added the Namekkian dragonballs                                              
+* Bugfixes from wiki reports:                                                  
+        * YMCA: Swimming/Skating have separate keys to learn                   
+        * Fixed Rosshi LUA/screen errors                                       
+        * Monsters should no longer spawn in Korin tower                       
+        * Yamcha ai now properly runs from girls                               
+* The enrollment system may now hide classes that are unavailable              
+* Dragonball thieves should now blink away more often                          
+* Tameshiware --> Tameshiwari                                                  
+* Muscle Stimulator, Gym and Library stat bonuses are now direct,              
+  no longer affect skill                                                       
+* Increased Judo/Sumo stat requirements to intended values                     
+* Partial development of the Yamcha quest                                      
+* It is now possible to marry Videl                                            
+* Ballet CQ migrated to new method                                             
+* Sumo/Judo now close properly once defeated                                   
+                                                                               
+Friday, January 12, 2007                                                       
+* Artifacts:                                                                   
+        * Appear more often                                                    
+        * No longer randomly have penalties                                    
+        * No longer auto-id on generation                                      
+* Ego items:                                                                   
+        * Many new ego types                                                   
+        * Rule changes for weighted armor                                      
+        * Egos add to the required skill to identify                           
+* Adjusted the displayed severity names of cuts                                
+* Intelligence now helps with ID                                               
+* Defeating instructors in the Tournament no longer closes their schools       
+* The gunstore now buys guns and clips                                         
+* Extensive development of the Korin/Rosshi/UranaiBaba quest tree              
+                                                                               
+Sunday, January 14, 2007                                                       
+* Updated the help files somewhat                                              
+* Chi effect costs are no lonber / 1000 (oops...)                              
+* Minor updates and bugfixes to the Chi system (Though obviously nobody        
+  has been using it.)                                                          
+* Slight rebalancing of the skill numbers                                      
+* Added a bunch of ego types                                                   
+* Bugfix: Android8 should now properly be removed when he self destructs       
+* Added a placeholder for jetpacks                                             
+* Implemented blueprints                                                       
+                                                                               
+Monday, January 15, 2007                                                       
+* Further development of Namek                                                 
+* Added regeneration to some monsters                                          
+* Closed about 20K worth of dead branches in the Mr Satan and Videl dialogues  
+* Bugfix: Wong Fei Hong may now appear in the Tournament                       
+* Firearms now wake up sleeping monsters in los                                
+                                                                               
+Tuesday, January 16, 2007                                                      
+* Cleaned up Uranai Baba Persuade thread                                       
+* Implemented silencers                                                        
+* Good/Evil characters now go to Heaven/Hell                                   
+* Partial Implementation of Joesephine                                         
+* Now using my own test_hit math for monster combat                            
+                                                                               
+Enjoy!                                                                         
+lordbucket@hotmail.com                                                         
+                                                                               

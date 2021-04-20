@@ -1,0 +1,138 @@
+Android Enhancements are optinal rewards from completing the Gero find-it Quests.
+There are 20 possible enhancements, but only 10 possible quests. Which enhancements
+become available is random. Once a quest is completed, you are given the name
+of the enhancement type before the decision to accept it, but not the exact effects.
+
+In addition to the listed effects, every android enhancement:
+
+	Reduces your total sanity by 2-10
+	Has a 50/50 chance of reducing your willpower by 1
+
+If you reach zero sanity, you lose control completely and become a mindless
+automaton in service of Dr. gero.
+
+Android Enhancement #1		Cerebral Bomb
+	
+
+
+Android Enhancement #2		Synthetic Muscle Replacement
+	+ 4-20 Strength
+	50/50 chance to lose 2-5 charisma
+	50/50 chance -1 willpower
+	Strength modifier change
+		40% stays the same
+		30% increases by .1 to .3
+		30% decrease by .1
+
+Android Enhancement #3		Adrenaline System overhaul
+	+ 4-20 Speed
+	50/50 chance it cuts in and out randomly
+	50/50 chance -1 willpower
+	25% chance you gain innate ability to controlled-LOS-blink
+	Speed modifier change
+		40% stays the same
+		30% increases by .1 to .3
+		30% decrease by .1
+
+Android Enhancement #4		Sub-Dermal Armor
+	+ 50 - 150 armor class
+	50/50 chance +1 to 3 constitution
+	50/50 chance to lose 5-10 dexterity
+	50/50 chance to lose 1-4 speed
+	+20 to weight
+
+Android Enhancement #5	Dermal Armor
+	+50 to 150 armor class (cumulative with sub-dermal armor)
+	+1 to +100 resist heat
+	+1 to +100 resist cold
+	+1 to +100 resist acid
+	-1 to -10 charisma
+	50/50 chance to lose 5-10 dexterity
+	50/50 chance to lose 1-4 speed
+	+100 to weight
+
+Android Enhancement #6		Cortical Processor
+	+ 5 - 15 intelligence
+	50/50 chance to gain 100% resist confusion
+	50/50 cance to gain 100% resist fear
+	50/50 chance to lose 2-4 willpower
+	20% chance your Intelligence modifier drops to 0
+	20% chance your willpower modifier drops to 0
+	25% chance lose ability to naturally regenerate Chi
+
+Android Enhancement #7		Android Eyes
+	50/50 chance 100% resist blind
+	50/50 chance 100% resist light
+	50/50 chance +10 infravision
+	50/50 chance lose 1-2 charisma
+	50/50 chance innate light 1-5
+
+Android Enhancement #8		Android Heart
+	50/50 chance + 2-7 speed
+	50/50 chance -3 to +5 constitution 
+	25% chance lose ability to regenerate Chi
+
+Android Enhancement #9		Android Absorbtion Nodes
+	?Gain Innate absorb life/chi from foes?
+	Food effect	80% chance you never need to eat again	
+			10% chance you need to eat more often
+			10% chance neved hunger, but INCAPABLE of eating
+
+Android Enhancement #10		Remote Interface to Network Grid
+	Gain auto ID
+	50/50 chance Technology skill increases to *100*
+	Lose an extra 5-10 sanity
+
+Android Enhancement #11		Motion Sensors
+	ESP: All
+	ESP: Android	(No other way to get it)
+	Minus an extra 1 - 10 sanity
+
+Android Enhancement #12		Blood filtration System
+	Resist poison	50% resist poison 100%
+			50% resist poison 50% - 99%
+	50/50 chance -1 to 3 constitution
+
+Android Enhancement #13		Solar Collector
+	resist light 100%
+	reduce hunger 1-10
+
+Android Enhancement #14		Titanium sketelal lacing
+	+ 50 to 100 armor class
+	+1 to +10 Strength
+	+100 to weight
+	50/50 chance - 1 to -5 speed
+
+Android Enhancement #15		forearm plasma beam
+	Gain innate Ability: fire plasma beam
+	50/50 chance lose a WEILD slot
+
+Android Enhancement #16		Hand beam saber
+	One WEILD slow becomes a permanant beam saber
+
+Android Enhancement #17		Enhanced Endocrine system
+	Regeneration
+	50/50 increased hunger (though will not overcome immunity from #8)
+
+Android Enhancement #18		Checkloss system
+	Sustain all stats
+
+Android Enhancement #19		Titanium dermal lacing
+	+20 to +50 armor class
+	1 to 100 resistance to slash
+	1 to 50 resistance to pierce
+	1 to 50 resist acid
+	+10 to weight
+	-1 to -4 speed
+	-1 to -4 charisma
+
+Android Enhancement #20		Magnetic Resonance Propulsion System
+	+10 to weight
+	Innate Flying +15
+	50/50 chance to lose BOOTS wield slot
+
+Android Enhancement #21		Tracking System
+	Your melee attacks never miss
+	- an extra 10 sanity
+
+	

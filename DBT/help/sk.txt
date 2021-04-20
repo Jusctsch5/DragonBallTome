@@ -1,0 +1,153 @@
+#####GDragonball T: Skill System                                               
+                                                                               
+*****/ask.txt*1[(a) Overview]                                                  
+*****/bsk.txt*2[(b) How it will play out]                                      
+*****/csk.txt*3[(c) General Comments]                                          
+*****/dsk.txt*4[(d) Classes offered by each school]                            
+                                                                               
+#####GNote:                                                                    
+As of V085, this file is no longer entirely accurate. It is 'mostly'           
+accurate                                                                       
+                                                                               
+~~~~~1                                                                         
+#####GOverview                                                                 
+At the start of the game you are allotted 5 skill points, and you will gain    
+six more with every level. These points may be spend at the various trainers   
+to increase your skills and learn new abilities. In general, there are three   
+different types of trainers: 'Schools' 'Master Teachers' and 'Other'           
+                                                                               
+ * Schools:                                                                    
+   (Karate, Kungfu, Kickboxing, TaeKwonDo, Sumo, Judo, Ninjutsu, Ballet)       
+   Each school offers a different set of skills and abilities. At the start    
+   of the game, each skill will have a preset 'cap' which is the maximum       
+   level to which it may be trained. These caps may be increased by completing 
+   a 'Challenge Quest' and by forcing other schools to close.                  
+                                                                               
+ * Master Teachers:                                                            
+   (Rosshi, Tsuru Seni'Nin, Musashi, Korin, Mr. Popo, etc.)                    
+   Masters each work according to their own rules, but in general:             
+   * Gaining access to them will require completion of quests                  
+   * They will often be difficult to physically reach                          
+   * They will occassionally be more skill-point expensive to train with than  
+     the schools                                                               
+   * They're caps will be higher than the starting point for schools, but lower
+     than the maximum cap for schools                                          
+   * In general, the 'early game' Master Teachers will provide low level skill 
+     coverage for 'must have' skills that some schools don't offer at all. For 
+     example, a dedicated Judo practitioner can get up to 10 con from Rosshi.  
+   * In general the 'late game' Master Teachers will offer pretty much most    
+     skills at relatively high levels, though 'how relatively' and 'how high'  
+     is undecided. It seems reasonable to me that The North Kaio, for instance 
+     could teach anything better than anybody at a school, but this may or may 
+     not actually be possible for balance reasons. In any case, skill levels   
+     in the 60-80 range will probably eventually be available across the board 
+     from the higher level Master Teachers.                                    
+                                                                               
+ * Other:                                                                      
+   (Places like the YMCA, Dr's Tofu/Briefs/Gero, the Robbins Institute, etc.   
+   Ballet may eventually be moved to this category as well.) These are fairly  
+   fixed places to learn the remaining skills and abilities that either        
+   everyone should have easy access to (First Aid, Swimming, etc) or that      
+   didn't nicely fit into the schools model (Charisma)                         
+                                                                               
+~~~~~2                                                                         
+#####GHow it will play out:                                                    
+In the early game, the schools will be your primary access to fighting skills. 
+Eventually you'll be able to raise most any skill to a 'moderately high' level 
+from the appropriate Master Teacher, but in general the HIGHEST skills will    
+eventually be taught by your selected school(s). At approximately the time you 
+reach the cap of the 'primary' fighting skill of a school, the head instructor 
+will issue you a quest to defeat the instructor of their 'rival' school. Once  
+you have completed this quest, the various training caps at your school will   
+be increased (and will continue to increase) based on the number of schools    
+that have been closed. The more schools have closed, the higher the caps for   
+the remaining schools for which a Challenge Quest has been completed, will be. 
+Any school that you train at MAY NEVER BE CHALLENGED.                          
+                                                                               
+So...you will choose a school, or perhaps a few, and train to your cap.        
+You'll then be issued a quest, and then you'll probbaly have to start          
+completing quests for Master Teachers so that you can train with them to       
+the point of being able to complete the Challenge Quest. Once you do,          
+you'll finish off the rest of the schools, and have access to the highest      
+possible level of training for the school(s) you've chosen to study at,        
+which will, by now, be higher than the training offered by most Master         
+Teachers. Note that regardless of the stated cap, schools will never be        
+able to train you to any skill more than your current level + 10               
+                                                                               
+~~~~~3                                                                         
+#####GGeneral Comments                                                         
+ * Don't expect to be able to perform your challenge quest the moment you      
+   receive it. You may need to study at a Master Teacher first. Remember,      
+   none of the instructors have been able to defeat their rivals...don't       
+   expect them to be able to train you to.                                     
+ * Note also that several schools offer classes which have prerequisites       
+   that they CANNOT teach you until after some number of other schools         
+   have been closed. Both Karate and Sumo will teach Tameshiware, for          
+   instance, but Sumo teaches it early on, whereas Karate requires that        
+   you close six schools first.                                                
+                                                                               
+~~~~~4                                                                         
+#####GClasses offered by each school                                           
+[[[[[BKarate] (Classes cost 10zn)                                              
+Skill/AB        Gain/Cost       Cap             Requirement                    
+Martial Arts     .6 for 1 sk    10 +  4 per cs                                 
+Barehand        1.0 for 1 sk    20 + 10 per cs                                 
+Weapons          .3 for 1 sk    10 +  1 per cs                                 
+Strength         .4 for 1 sk     5 +  5 per cs  Lev 15, 15 BH                  
+Blocking        10 skillpoints                  Lev 15, 20 BH                  
+                                                                               
+[[[[[BKickboxing] (Classes cost 25zn)                                          
+Skill/AB        Gain/Cost       Cap     Requirement                            
+Barehand        1.2 for 1 sk    20 + 10 per cs                                 
+Speed            .3 for 1 sk    10 +  5 per cs  25 BH                          
+Constitution     .4 for 1 sk    10 + 10 per cs  30 BH                          
+Double Attack   20 skillpoints                  Lev 20, 20 BH                  
+                                                                               
+[[[[[BKung fu] (Classes cost 20zn)                                             
+Skill/AB        Gain/Cost       Cap             Requirement                    
+Martial Arts     .7 for 1 sk    15 +  5 per cs                                 
+Barehand         .5 for 1 sk    10 +  2 per cs                                 
+Weapons         1.0 for 1 sk    20 + 10 per cs  10 Dex                         
+Dexterity        .4 for 1 sk    10 + 10 per cs  level 10                       
+Parrying        1.2 for 1 sk    10 + 10 per cs  25 Wp                          
+Paired          1.2 for 1 sk    10 + 10 per cs  30 wp                          
+Paired Weapons   20 skillpoints                 30 wp                          
+                                                                               
+[[[[[BFencing] (Classes cost 20zn)                                             
+Skill/AB        Gain/Cost       Cap             Requirement                    
+Weapons         1.2 for 1 sk    20 + 10 per cs  10 Dex                         
+Parrying        1.5 for 1 sk    20 + 10 per cs  25 Wp                          
+Speed            .3 for 1 sk    10 + 10 per cs  level 15                       
+Riposte          10 skillpoints                 30 wp                          
+                                                                               
+[[[[[BSumo] (Classes cost 20zn)                                                
+Skill/AB        Gain/Cost       Cap             Requirement                    
+Barehand         .8 for 1 sk    20 +  5 per cs                                 
+Strength         .5 for 1 sk    20 + 10 per cs                                 
+Constitution     .5 for 1 sk    20 + 10 per cs  10 Str                         
+Tameshiware      5 skillpoints                  10 BH                          
+                                                                               
+[[[[[BJudo] (Classes cost 10zn)                                                
+Skill/AB        Gain/Cost       Cap             Requirement                    
+Martial Arts     .5 for 1 sk     5 +  4 per cs                                 
+Barehand         .8 for 1 sk    10 +  4 per cs                                 
+Dodge           1.0 for 1 sk    20 + 10 per cs                                 
+Dexterity        .5 for 1 sk    10 + 10 per cs  10 Dodge                       
+Speed            .4 for 1 sk    10 +  5 per cs  10 Dex                         
+Throw (not imp) 10 skillpoints                                                 
+                                                                               
+-----------------------------------------------------------                    
+[[[[[BBallet] (Classes cost 100zn)                                             
+#####BTemporarily treated as a non-school trainer for V083                     
+Skill/AB        Gain/Cost       Cap             Requirement                    
+Dexterity       1.0 for 2 sk    30, (40 quest)                                 
+Constitution    1.0 for 2 sk    10, (20 quest)  25 Dex                         
+Jump            5 skillpoints                   40 Dex                         
+                                                                               
+[[[[[BTae Kwon Do] (Classes cost 10zn)                                         
+#####BTemporarily Disabled for V083                                            
+Martial Arts     .7 for 1 sk    20 + 10 per cs                                 
+Barehand         .7 for 1 sk    20 + 10 per cs                                 
+Weapons          .7 for 1 sk    20 + 10 per cs                                 
+Dexterity        .4 for 1 sk    20 + 10 per cs                                 
+Dual Fighting (not imp)                                                        

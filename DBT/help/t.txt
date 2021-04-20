@@ -1,0 +1,10 @@
+Quickie Technomancy notes
+(Should be expanded upon)
+
+Percent chance to build an item:
+   Construction Skill - Difficulty of item
+
+TH/TD/AC Bonuses
+   Firearms and certain armors created through Technomancy will
+gain a +1 th/td/ac bonuses for each point of (Tech?/construction?)
+skill you have.

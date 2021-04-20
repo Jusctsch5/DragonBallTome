@@ -1,0 +1,58 @@
+-- Dragonabll T: Kami's Lookout
+
+map.define("lookout.map")
+
+map.symbol{ symbol='*' feat=FEAT_MAP_BORDER info=6 }
+map.symbol{ symbol='.' feat=FEAT_FLOOR info=3 }
+-- map.symbol{ symbol='-' feat=FEAT_GRASS info=3 }
+map.symbol{ symbol='X' feat=FEAT_PERMA_WALL info=3 }
+map.symbol{ symbol='<' feat=FEAT_LESS info=3 }
+-- map.symbol{ symbol='>' feat=FEAT_MORE info=3 }
+map.symbol{ symbol=' ' feat=FEAT_SKY info=3 }
+map.symbol{ symbol='c' feat=FEAT_CLOUD info=3 }
+map.symbol{ symbol='T' feat=FEAT_TREES info=3 }
+
+-- map.symbol{ symbol='a' feat=FEAT_FLOOR  info=3 monster=RACE_KAMI }
+map.symbol{ symbol='p' feat=FEAT_FLOOR info=3 monster=RACE_MR_POPO }
+
+
+map.symbol{ symbol='K' feat=FEAT_FLOOR info=6 on_walk="The entrance is impassable." }
+
+-- Dungeon layout
+map.map
+{
+[[******************************************************************************************************************]],
+[[*                                                                                                                *]],
+[[*                                                        ccc                                                     *]],
+[[*                                                       ccccc                                                    *]],
+[[*      ccc                                                cc                           cccc                      *]],
+[[*     ccccc                                                                           ccccccc                    *]],
+[[*       cc                                               ...                            ccc                      *]],
+[[*                                                    ...........                                                 *]],
+[[*                                                  ...............                                               *]],
+[[*                                                ..T.X.XXXXXXX.X.T..                                             *]],
+[[*                ccc                            ..T....XXXXXXX....T..                                            *]],
+[[*               cccccc                         ..T...X.XXXXXXX.X...T..                                           *]],
+[[*                 ccc                         ..T......TTXKXTT......T..                                          *]],
+[[*                                             .........................                                          *]],
+[[*                                            ..............p............                                         *]],
+[[*                                            ...........................         ccc                             *]],
+[[*                                             .........................         ccccc                            *]],
+[[*                                             .T.....................T.           cc                   cc        *]],
+[[* ccc                                          .T........T.T........T.                                ccccc      *]],
+[[*ccccc                                          .T.......T.T.......T.                                   cc       *]],
+[[*  cc                                            ..T.....T.T.....T..                                             *]],
+[[*                                                  ..T...T.T...T..                                               *]],
+[[*                                                    ...........       cc                                        *]],
+[[*                            cc                          .<.          ccccc                                      *]],
+[[*                           cccc                                        cc                                       *]],
+[[*                            ccc                                                                                 *]],
+[[*                                                                                                                *]],
+[[******************************************************************************************************************]],
+}
+
+if dball_data.level_tracker == 1 then
+	map.set_player(12, 58)
+else
+	map.set_player(23, 58)
+end

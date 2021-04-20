@@ -1,0 +1,24 @@
+map.define("sushi.map")
+
+map.symbol{ symbol='.' feat=FEAT_FLOOR info=3 }
+map.symbol{ symbol='X' feat=FEAT_PERMA_WALL info=3 }
+map.symbol{ symbol='a' feat=FEAT_FLOOR info=3 monster=RACE_AKIRA }
+map.symbol{ symbol='<' feat=FEAT_LESS info=3 }
+map.symbol{ symbol='w' feat=FEAT_GLASS_WALL info=6 }
+map.symbol{ symbol='b' feat=FEAT_FLOOR info=3 object=map.ANY }
+
+map.map
+{
+[[XXXXXXXXXXXXXXXXXX]],
+[[X........<.......X]],
+[[X................X]],
+[[X................X]],
+[[X................X]],
+[[X......wwwwwwwwwwX]],
+[[X...........a....X]],
+[[X......X.b.b.b.b.X]],
+[[XXXXXXXXXXXXXXXXXX]],
+}
+
+-- Starting position
+map.set_player(4, 13)

@@ -1,0 +1,33 @@
+-- Dragonball T: The lair of the White Wolf
+
+-- Why does this map not require a border like the others do
+-- since alpha17?
+
+map.define("wolfcave.map")
+
+map.symbol{ symbol='.' feat=FEAT_DIRT info=6 }
+map.symbol{ symbol=',' feat=FEAT_SNOW info=6 }
+map.symbol{ symbol='X' feat=FEAT_GROTTO info=6 }
+map.symbol{ symbol='<' feat=FEAT_LESS info=6 }
+
+map.symbol{ symbol='a' feat=FEAT_DIRT info=6 monster=RACE_WHITE_WOLF }
+
+map.map
+{
+[[XXXXXXXXXXXXXXXXXXXXXXX]],
+[[XX....XXXXXXXXXXXXXXXXX]],
+[[X.......XXXXXXXX...XXXX]],
+[[X....XX.XXXXXX....a.XXX]],
+[[XX.XXX..XXXX.........XX]],
+[[XXXXX..XXXX..XXX....XXX]],
+[[XXX,..XXXXXX..XXXXXXXXX]],
+[[XX..XXXXXXXX..XXXX...XX]],
+[[X,,XX..,..X..XXX......X]],
+[[X,,,.,XXX...XXX.......X]],
+[[X<,XXXXXXXXXXXX.......X]],
+[[X,,,,XXXXXXXXXXX.....XX]],
+[[XXXX,,.,...........XXXX]],
+[[XXXXXXXXXXXXXXXXXXXXXXX]],
+}
+
+map.set_player(11, 1)

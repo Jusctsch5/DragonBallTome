@@ -1,0 +1,76 @@
+[[[[[BNote:]                                                                   
+                                                                               
+  Unlike the ToME magic system, Chi in Dragonball T is an                      
+  advanced art that is unavailable to characters at the                        
+  start of the game. Unlike the basic melee combatative                        
+  arts which may be learned right away, it is rare to find                     
+  Chi training in the early portions of the game.                              
+                                                                               
+V085: Chi is now on a new skill system. All Chi skills are                     
+CUMUALTIVE in their gains from each Chi Master. For example,                   
+if two Chi Masters offer the same Chi skill with a cap of                      
+five, you would eb able to study with both masters for a total                 
+of ten skill. Consequently, while the standard skill system                    
+rewards people who specialize, Chi practitioners will become                   
+more powerful the more Masters they have studied from.                         
+                                                                               
+                                                                               
+                                                                               
+[[[[[BChi Skill Overview]                                                      
+                                                                               
+#####GChi                                                                      
+                                                                               
+        A general measure of your ability to channel spiritual energies.       
+Your Chi skill is directly added to your available Chi pool, which you         
+draw from in order to power the various Chi abilities.                         
+                                                                               
+#####GChi Offense                                                              
+                                                                               
+        Your ability to direct your Chi offensively. This skill will           
+determine which offensive abililties youa re able to learn, and how            
+effective you will be at using them.                                           
+                                                                               
+#####GChi Defense                                                              
+                                                                               
+        Your ability to direct your Chi offensively. This skill will           
+determine which offensive abilities you are able to learn, and how             
+effective you will be at using them.                                           
+                                                                               
+#####GChi Regeneration                                                         
+                                                                               
+        The rate at which you are able to restore your depleted energies.      
+Each point of regeneration grants 1/20th of a point of Chi regenerated         
+per turn. Yes, 1/20th of a point. The Chi system is more subtle than           
+holding down your manathrust macro.                                            
+                                                                               
+#####GChi Gung                                                                 
+                                                                               
+        Your ability to manipulate the subtle energies in increasingly         
+complicated ways. This skill will determine which advanced Chi abilities       
+you are able to learn, as well as reduce the drain rate for Chi                
+constant effects.                                                              
+                                                                               
+[[[[[BInstant vs. Constant Effects]                                            
+                                                                               
+#####GInstant Effect                                                           
+Any ability for which energy is expended right away for an immediate           
+effect. Chi Instant Effects are accessed via the 'U'se Ability command.        
+                                                                               
+#####GConstant Effect                                                          
+Any ability which may be turned on and off at any time, and generates          
+a sonstant drain on your energy reserves for as long as it is 'on.'            
+Many Constant Effects may also be engaged at varying intensities.              
+Chi Constant Effects are accessed via the 'M'anipulate Chi command.            
+                                                                               
+[[[[[BHow Do I Learn The Chi skills And Abilities?]                            
+                                                                               
+Chi skills and abilities are learned from Master Trainers in a manner          
+similar to combat skills are learned from the schools. Finding trainers        
+is often difficult, and once found, they will often require you to             
+complete quests before they'll offer you any training. Each Master             
+offers a unique set of skills, caps and abilities, which may sometimes         
+be expanded upon via quests, but there is no standard 'dojo elimination'       
+system amongst the Master Trainers, and their training will never cost         
+money.                                                                         
+                                                                               
+                                                                               

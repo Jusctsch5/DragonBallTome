@@ -1,0 +1,112 @@
+[[[[[BAbilities Overview]                                                      
+Dragonball T features nearly thirty abilities. However, you only begin the     
+game aware of three of them, and will need to learn others as you progress     
+through the game. The following is a list of the 'standard' abilities. Chi     
+abillities are 'secret' and will need to be discovered.                        
+                                                                               
+#####GAcupuncture                                                              
+        Allows use of acupuncture needles to restore yourself to health.       
+                                                                               
+#####GBlocking                                                                 
+        With blocking, barehanded fighters will gain an armor class bonus      
+equal to their barehand skill for every hand they have available. For          
+example, with 40 barehand, and both hands empty, blocking would provide a      
++80 bonus to AC. Wielding a flashlight in one hand (via the Double Attack      
+ability) would leave only one hand free, and thus the AC bonus would be        
++40.                                                                           
+                                                                               
+#####GBleed Attack                                                             
+        In the hands of a weapons fighter with knowledge of this attack,       
+all bladed weapons will be treated as if they were Vorpal blades, thus         
+allowing their wielder to cut his oppoenents, and cause them to bleed          
+over time. Additionally, the effectiveness of genuinely vorpal weapons         
+will be doubled for those with this ability.                                   
+                                                                               
+#####GDouble Attack                                                            
+        Allows a barehanded fighter to use both of his hands individually.     
+If both hands are empty, he will receive two attacks, or he may equip an       
+item (such as a flashlight) in one hand, and still attack normally with the    
+other.                                                                         
+                                                                               
+#####GJump                                                                     
+        Allows you to jump two squares in any direction, bypassing terrain     
+in the in-between square.                                                      
+                                                                               
+#####GIaijutsu                                                                 
+        Allows you to equip and take-off melee weapons and small firearms      
+in zero time, and using no energy. Note that bazookas will still take time     
+to equip and remove.                                                           
+                                                                               
+#####GImmovability                                                             
+        Ability to resist being moved. Once learned, immovability is           
+accessed via the 'S'et movement mode command.                                  
+                                                                               
+#####GMartial Arts Sushi Eating Technique!                                     
+        Ability to eat with such amazing speed that your motion will be        
+completely undetectable, and consume virtually no time!                        
+                                                                               
+#####GMeditation                                                               
+        Once learned, this ability will increase the rate at which you         
+regenerate spent chi.                                                          
+                                                                               
+#####GMotorcycle Riding                                                        
+                                                                               
+        Ability to ride motorcycles. While riding, you will move *FAST*,       
+but you will be unable to perform many actions, such as opening doors,         
+goign up or down stairs, and fighting.                                         
+                                                                               
+#####GMulti Target Tracking                                                    
+        When fighting with paried guns, this ability allows you to fire        
+on multiple, separate targets with each one. Very useful, but can be           
+annoying to be constantly prompted. This ability can be enabled/disabled       
+from the '=' options screen.                                                   
+                                                                               
+#####GPaired Weapons                                                           
+        Allows you to fight 'florentine' with two weapons simultaneously.      
+One in each hand. Note that fighting with two weapons can be tremendously      
+difficult if the weapons in question are not naturally pairable. You'll        
+be able to do it, but the regular weapon difficulty penalties will be          
+multiplied, and applied to each weapon. Net penalties can range anywhere       
+from -1 to -192. Pay careful attention to weapon pairings when using           
+mismatched weapons.                                                            
+                                                                               
+#####GPaired Firearms                                                          
+        Allows you to fight with two guns simultaneously. One in each hand.    
+Paired firearm penalties are ALWAYS multiplied. There are no naturally         
+pairing firearms.                                                              
+                                                                               
+#####GPoint Blank Firing                                                       
+        Allows you to fire at point blank range, using the direction keys      
+to fight adjacent monsters instead of having to engage the 'f'ire command.     
+                                                                               
+#####GRiposte                                                                  
+        Allows you to a chance to attempt a counterattack on any monster       
+who succesfully lands a blow on you. To riposte, you must not be blind,        
+confused, or hallucinating, the monster must be visble, and you must have      
+a suitable weapon. You may only riposte with a single weapon. If you are       
+wielding two weapons, the one in the left hand will be used for the strike.    
+For every succesful blow landed on you by a monster, your base chance to       
+riposte will be 20%, plus your character level, and minus the monster level.   
+For example, a level 20 character would have a 28% chance to riposte on        
+every attack of a level 12 foot ninja, but only a 8% to riposte an attack      
+from Krillan, at level 32.                                                     
+                                                                               
+#####GSkating                                                                  
+        Ability to use in-line skates. Skates will increase your movement      
+speed, but you will also be easier to knock down.                              
+                                                                               
+#####GSwimming                                                                 
+        Ability to swim through water too deep to wade through.                
+                                                                               
+#####GTameshiwari                                                              
+        The art of breaking boards, bricks, and other objects. With a          
+high enough barehanded skill, this ability allows the character to travel      
+through doors, trees, and eventually even solid stone.                         
+                                                                               
+#####GThrow                                                                    
+        Ability to pick up a monster up and throw them somewhere nearby.       
+                                                                               
+#####GUltimate Fighting                                                        
+        Allows use of ALL weapons, firearms and barehanded fighting            
+methods completely interchangably.                                             
+                                                                               

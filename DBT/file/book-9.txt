@@ -1,0 +1,111 @@
+#####R                  /---------------------------\                          
+#####R                 <        Firearms Guide       >                         
+#####R                  \---------------------------/                          
+                                                                               
+#####GIntroduction                                                             
+There are four types of conventional firearms in Dragonball T.                 
+(As well as a few unconventional ones.) These are:                             
+                                                                               
+ * Guns                                                                        
+ * Machine guns                                                                
+ * Shotguns                                                                    
+ * Missile launchers                                                           
+                                                                               
+#####GGuns                                                                     
+Weapons of this class are designed to fire a single round                      
+every time you pull the trigger. They come in two varieties:                   
+'pistols' which are wielded in one hand, and do the least                      
+damage and have the shortest range of any firearm, and 'rifles'                
+which require two hands two fire, but have slightly better                     
+range. Guns may be reloaded to full capacity with any standard                 
+or armor piercing clip.                                                        
+                                                                               
+#####GShotguns                                                                 
+Shotguns are firearms into which rounds are loaded directly into               
+the chamber rather than via clips. Typically, shotguns come in                 
+single and double barreled varieties. Each round must be loaded                
+into the barrel one at a time, and when the weapon is fired, any               
+and all loaded rounds are discharged at once. Shotguns may be                  
+loaded with scattershot, or lead slugs. Scatershot rounds contain              
+dozens of thin slivers of metal which burst into an area effect.               
+Lead slugs fire like regular ammunition, but with an armor piercing            
+effect.                                                                        
+                                                                               
+#####GMachine Guns                                                             
+Machine guns are designed to fire in either of two modes. Semi-automatic       
+mode, in which only a single bullet is fired each time the trigger is          
+pulled, and fully-automatic mode, in which a burst of several rounds is        
+fired every time the trigger is pulled. This flexibility does come at a        
+cost, however, and machine guns are not very accurate weapons. All rounds      
+fired from a machine gun will go in 'approximately' the direction they         
+are aimed. In practice, every round will be fired at a square plus or minus    
+one from the intended target. So, each round has only a one in nine chance     
+of going where you want it to go.                                              
+                                                                               
+     ...                                                                       
+  @  .t.                                                                       
+     ...                                                                       
+                                                                               
+When firing on t, each bullet may actually be aimed at not only the t,         
+but also any of the .'s instead. Of course, the bullets will travel in         
+straight lines, and so may end up hitting your target even if they're          
+not targetted to the correct square. In any case, stray bullets may hit        
+targets in the vicinity. Machine guns may be toggled between semi-automatic    
+and fully-automatic modes via the 'u'se command, but will be similarly         
+inaccurate in both modes.                                                      
+                                                                               
+#####GMissile Launchers                                                        
+Missile lauunchers are two-handed, shoulder-mounted weapons which              
+may be used to fire missiles. Missiles are extremely high-damage,              
+area-effect, and may tend to do unpleasant things to the surrounding           
+terrain. It will generally only be possible load a single missile              
+at a time into any launcher, but that single missile will do loads             
+of damage.                                                                     
+                                                                               
+#####GArmor Piercing Ammunition                                                
+Armor piercing ammo is especially good at penetrating heavy armor,             
+even tank armor. AP rounds are generally built as solid slug of                
+metal. This causes them to deeply penetrate rather than shattering             
+upon impact. This has the effect of halving the effective armor                
+class of the target, but since they tend merely to poke holes rather           
+than tear cone-shaped chunks, they tend to do less damage than                 
+ordinary rounds. Standard clips which are armor piercing will be               
+designated (AP). Also, all shotgun lead-slugs are considered armor             
+piercing as well.                                                              
+                                                                               
+#####GHow are to-hit chances computed for firearms?                            
+Your to-hit bonus for firearms will be equal to your skill                     
+in Marksmanship. Armor piercing ammunition will divide the targets             
+armor class in half. Martial arts skill and dexterity do not                   
+effect your chances to hit with any firearm.                                   
+                                                                               
+#####GRange                                                                    
+It is more difficult to hit targets at a distance. When firing on any          
+target not immediately adjacent, a range to-hit penalty will be applied        
+equal to the square of the distance beyond one. Thus, a target two spaces      
+away will have a -1 penalty to hit. A target three spaces away will have       
+a -4 penalty.                                                                  
+                                                                               
+ Distance Penalty                                                              
+  1        0                                                                   
+  2        1                                                                   
+  3        4                                                                   
+  4        9                                                                   
+  5        16                                                                  
+  6        26                                                                  
+  7        36                                                                  
+  8        49                                                                  
+  9        64                                                                  
+  10       810                                                                 
+  11       100                                                                 
+  12       121                                                                 
+                                                                               
+As you can see, it rapidly becomes extremely difficult to hit anything         
+the further away it is. However, many firearms may have scopes fitted          
+to them. Scope reduce the effective distance by their magnification            
+factor. This is applied directly to the distance, rather than being            
+subtracted from the penalty. So, a firearm fitted with a scope with            
+a magnification of 5 would fire as if five spaces closer to any target.        
+A target seven spaces away would be treated as if only two spaces away,        
+and thus only receive a -1 penalty to hit.                                     
+                                                                               

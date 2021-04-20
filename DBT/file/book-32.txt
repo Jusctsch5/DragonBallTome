@@ -1,0 +1,125 @@
+#####R                 /------------------------\                              
+#####R                <  DBT V088 Release Notes  >                             
+#####R                 \------------------------/                              
+                                                                               
+Summary:                                                                       
+*****/abook-32.txt*1[(a) V088 Status]                                          
+*****/bbook-32.txt*2[(b) Summary of Changes]                                   
+*****/cbook-32.txt*3[(c) Things that are way past due to be done]              
+*****/dbook-32.txt*3[(d) Newly observed (or created) issues]                   
+                                                                               
+~~~~~1                                                                         
+#####G(a) Status                                                               
+                                                                               
+ May 23rd, 2007                                                                
+                                                                               
+  V088 is a moderately large release, with a broad mix of new content,         
+  rulechanges, and bugfixes. Also, a lot of 'old' content that has been        
+  disabled for one reason or another has been re-enabled. V088 is about as     
+  stable as V087: mostly, but there are a few unresolved bugs.                 
+                                                                               
+~~~~~2                                                                         
+#####G(b)Summary of Changes                                                    
+Systems:                                                                       
+ * ''Partial'' implementation of throwing                                      
+                                                                               
+Rulechanges/Balance:                                                           
+ * The Serpent's Path is no longer connected to Earth via the Buddhist Temple. 
+   Consequently, speaking to the North Kaio is much more difficult than it used
+   to be.                                                                      
+ * Karin tower is once again slightly dangerous to climb                       
+ * No more contrivance necessary to enter Mr. Satan's estate                   
+ * The Mouse Hunt quest entrance has been moved to a safer location            
+ * Enrollment skill costs have been rebalanced somewhat. In particular, weapons
+   skill costs are less expensive. Whereas previously it would have cost 429   
+   points for a Kungfu practitioner to max out all thee weapons skills, it     
+   would now cost 266. For Fencing, from 200 to 150. (Compare to barehand:     
+   183 - 200 to max barehand + Dodge)                                          
+ * Honda's Sumo Ring has been made slightly larger, to make ring-outs less     
+   certain                                                                     
+ * Cute little mice are now Neutral, so they shouldn't be killed by default    
+ * Crocodile boots now offer a small charisma bonus                            
+ * Akira now pays you for sushi delivery                                       
+ * Buddhist monks now do things, for the right people                          
+ * Increased wish value of willpower from 2-4 to 4-6                           
+                                                                               
+Ommitted/Disabled content that has been restored:                              
+ * Dr. Tofu                                                                    
+ * The Gym                                                                     
+ * Buruma                                                                      
+ * Lunch                                                                       
+ * Buddhist Temple                                                             
+ * Krillan's enrollment script                                                 
+                                                                               
+Bugfixes:                                                                      
+ * Fixed several ai's: Rosshi, Tao Pai Pai, Anton, the Foot ninja              
+ * Several bugs relating to Uranai Baba have been fixed. (Caution though:      
+   There were several. I fixed some. There may be more.)                       
+ * High capacity flashlights now start with max fuel                           
+ * Quest: Videl's Challenge no longer corrupts the quest log                   
+ * A single point of Dodge no longer makes you immune to Bearhugs              
+ * Watches are now Technomancable                                              
+ * Ballet and Ninjutsu are now properly exclusive                              
+ * Ninja climbing claws now actually allow you to climb                        
+ * WT Auto-bump now correctly advances you a round if you kill an opponent     
+   after he has already ben confirmed as your next opponent, but before you    
+   actually begin the match                                                    
+ * Fixed medium blueprint LUA error                                            
+ * Briefs no longer traps the player in his lab                                
+ * Karin now properly gives out Kinto Un to sufficiently good or evil students 
+ * Fixed dam.BLIND                                                             
+ * Fixed the Dragonballs                                                       
+ * Fixed Pilaf LUA error when carrying Dragonballs                             
+ * Fixed LUA error when wielding a LITE while tunneling                        
+ * Fixed LUA error when very high level monsters throw Chi Bursts              
+ * Fixed dam.TYPES note_kill LUA error                                         
+                                                                               
+New, or Newly-Implemented Content:                                             
+ * Implemented Tsuru-Seni'nin's first Chi quest                                
+ * Implemented 'Find Buruma' quest                                             
+ * Implemented Rosshi's Turtle shells                                          
+ * The North Kaio has been PARTIALLY implemented                               
+        * Three new quests (Joke, Catch Bubbles, Catch Gregory                 
+        * One new unique (Gregory)                                             
+        * One new artifact (Kaio Hammer)                                       
+        * About 20K of dialogue                                                
+ * New uniques: Caroni, Pirozuki, Miss Piiza, Punter, Gregory                  
+ * New items: binoculars, sewing kits, leather boots, fighting boots,          
+   samurai do                                                                  
+ * New ego type: High voltage                                                  
+ * New special level: Mr. Satan's Entry Hall                                   
+                                                                               
+Technomancers:                                                                 
+ * Technomancers are now allowed to use inline skates without the skating      
+   skill                                                                       
+ * May now use sewing kits to repair/reinforce clothing armor-types            
+ * Flame throwers, fire extinguishers etc. may now be high-capacity            
+                                                                               
+                                                                               
+~~~~~3                                                                         
+#####G(c)Things that are way past due to be done                               
+ * Rosshi/Yamcha/Oolong quests (I need an example to create ai's               
+   for companions)                                                             
+ * Ninja quests (Same: need example of a companion ai)                         
+ * Ballet and Ninjutsu challenge quests                                        
+ * Marriage to Chichi                                                          
+ * Technomancers able to create ego items                                      
+ * Lots of abilities still haven't been implemented: Burst of Speed, Throw,    
+   both marksman ablities, many others                                         
+                                                                               
+~~~~~4                                                                         
+#####G(d)Newly observed (created) issues:                                      
+ * Items vanish when thrown                                                    
+ * Chi drain/Regen rates appear to be incorrect                                
+ * No Honda text after defeat Yawara quest?                                    
+ * Crane fails to acknowledge death of Rosshi (text only, math works fine)     
+ * Bear thief takes a long time to run...shows up very often in muscle tower   
+ * Foot ninja not ID checking drops?                                           
+ * full inventory --> briefs blueprint  ---> disintegrated blueprint           
+ * Briefs: said compass: expected and accepted a battery? (can't reproduce?)   
+ * Briefs issues chainsaw requst. Nice, but needs lathe???                     
+ * Throw --? "Smack into a wall" check                                         
+ * EAT_DRAGONBALL attack text does not check monster gender                    
+ * player.on_died_show_info LUA error when generating a post-death             
+   character dump                                                              
+                                                                               

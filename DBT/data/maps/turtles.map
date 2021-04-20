@@ -1,0 +1,37 @@
+map.define("turtles.map")
+
+map.symbol{ symbol='.' feat=FEAT_FLOOR info=3 }
+map.symbol{ symbol='X' feat=FEAT_PERMA_WALL info=3 }
+map.symbol{ symbol='<' feat=FEAT_LESS info=3 }
+map.symbol{ symbol='w' feat=FEAT_GLASS_WALL info=6 }
+map.symbol{ symbol='d' feat=FEAT_DOOR info=6 }
+
+map.symbol{ symbol='S' feat=FEAT_FLOOR info=3 monster=RACE_SPLINTER }
+map.symbol{ symbol='L' feat=FEAT_FLOOR info=3 monster=RACE_LEONARDO }
+map.symbol{ symbol='M' feat=FEAT_FLOOR info=3 monster=RACE_MICHAELANGELO }
+map.symbol{ symbol='R' feat=FEAT_FLOOR info=3 monster=RACE_RAPHAEL }
+map.symbol{ symbol='D' feat=FEAT_FLOOR info=3 monster=RACE_DONATELLO }
+
+map.map
+{
+[[XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX]],
+[[X.......X.......X.......X.......XX]],
+[[X.......X.......X.......X.......XX]],
+[[X.......X.......X.......X.......XX]],
+[[X.......X.......X.......X.......XX]],
+[[XXXX.XXXXXXX.XXXXXXX.XXXXXXX.XXXXX]],
+[[XXXX.............................X]],
+[[XXXXXXXXXXXXX....................X]],
+[[XXXXXXXXXXXXXXX..........LRMDS...X]],
+[[X...XXXXXXXXXXXXX................X]],
+[[X.X.X...XXXXXXXXXXX..............X]],
+[[X.X.X.X.X...XXXXXXXXX............X]],
+[[X.X.X.X.X.X.X...XXXXXXX..........X]],
+[[X.X.X.X.X.X.X.X.X...XXXXX........X]],
+[[X.X.X.X.X.X.X.X.X.X.X...XXXwX....X]],
+[[X<X...X...X...X...X...X.....d....X]],
+[[XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX]],
+}
+
+-- Starting position
+map.set_player(15, 1)

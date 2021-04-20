@@ -1,0 +1,81 @@
+map.define("pilaf_under.map")
+
+map.symbol{ symbol='.' feat=FEAT_FLOOR info=6 }
+map.symbol{ symbol='G' feat=FEAT_GROTTO info=6 }
+map.symbol{ symbol='X' feat=FEAT_PERMA_WALL info=6 }
+map.symbol{ symbol='D' feat=FEAT_DOOR_LOCKED_HEAD+6 info=6 }
+map.symbol{ symbol='+' feat=FEAT_DOOR info=6 }
+map.symbol{ symbol='e' feat=FEAT_FLOOR info=6 monster=RACE_RRA_TURRET }
+map.symbol{ symbol='f' feat=FEAT_FLOOR info=6 monster=RACE_RRA_CAMERA }
+map.symbol{ symbol='<' feat=FEAT_LESS info=6 }
+map.symbol{ symbol='i' feat=FEAT_FLOOR info=6 object=map.ANY }
+map.symbol{ symbol='j' feat=FEAT_FLOOR info=6 on_walk="A sign on the door read 'Storage'" }
+map.symbol{ symbol='k' feat=FEAT_GLASS_WALL info=6 }
+
+-- map.symbol{ symbol='a' feat=FEAT_FLOOR info=6 monster=RACE_RRA_RED }
+-- map.symbol{ symbol='b' feat=FEAT_FLOOR info=6 monster=RACE_RRA_BLACK }
+map.symbol{ symbol='c' feat=FEAT_FLOOR info=6 monster=RACE_RRA_BLUE }
+
+-- map.symbol{ symbol='m' feat=FEAT_RRA_BL_RED info=6 }
+
+map.symbol{ symbol='h' feat=FEAT_FLOOR info=6
+   flags = {
+      MOVE_POST_DEST=function()
+		if cave(11, 2).feat ~= FEAT_FLOOR then
+			cave_set_feat(11, 2, FEAT_FLOOR)
+			message(color.YELLOW, "The stairs retract into the ceiling behind you!")
+		end
+	end
+   }
+}
+map.symbol{ symbol='l' feat=FEAT_FLOOR info=6
+   flags = {
+      MOVE_POST_DEST=function()
+		cave(17, 57).flags[FLAG_MOVE_POST_DEST] = nil
+		cave(17, 58).flags[FLAG_MOVE_POST_DEST] = nil
+		cave_set_feat(17, 59, FEAT_PERMA_WALL)
+		dball_data.rra_blue_bd = 1
+		-- Note sequence
+		term.save()
+		term.text_out("You feel the floor recess slightly as you step on a pressure plate, and a solid concrete blast-proof door seals you inside the room.\n\n")
+		dialogue.BLUE_DESTRUCTION()
+	end
+   }
+}
+
+-- Random monsters don't seem to work as intended
+-- Random monster
+map.symbol{ symbol='A' feat=FEAT_FLOOR info=6 monster=RACE_RRA_CORPORAL }
+map.symbol{ symbol='B' feat=FEAT_FLOOR info=6 monster=RACE_RRA_LIETENANT }
+map.symbol{ symbol='C' feat=FEAT_FLOOR info=6 monster=RACE_RRA_CAPTAIN }
+
+-- Dungeon layout
+map.map
+{
+[[XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX]],
+[[X                                       X]],
+[[X                                       X]],
+[[X                                       X]],
+[[X    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX    X]],
+[[X    X                             X    X]],
+[[X    X                             X    X]],
+[[X    X                             X    X]],
+[[X    X                             X    X]],
+[[X    X                             X    X]],
+[[X    X                             X    X]],
+[[X    X                             X    X]],
+[[X    X                             X    X]],
+[[X    X                             X    X]],
+[[X    X                             X    X]],
+[[X    X                             X    X]],
+[[X    X                             X    X]],
+[[X    X                             X    X]],
+[[X    XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX    X]],
+[[X                                       X]],
+[[X                                       X]],
+[[X                                       X]],
+[[XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX]],
+}
+
+-- Starting position
+map.set_player(11, 2)

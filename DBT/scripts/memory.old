@@ -1,0 +1,25 @@
+-- Monster memory stuff
+
+memory.flag_align_add {
+	FLAG_ELDRITCH_HORROR,
+	FLAG_ANIMAL,
+	FLAG_EVIL,
+	FLAG_GOOD,
+	FLAG_UNDEAD,
+}
+
+memory.flag_race_add {
+	FLAG_GIANT,
+	FLAG_DEMON,
+	FLAG_TROLL,
+	FLAG_ORC,
+	FLAG_SPIDER,
+	FLAG_DRAGON,
+	FLAG_THUNDERLORD,
+	FLAG_NAZGUL,
+}
+
+memory.flagdesc_add{
+	{FLAG_ELDRITCH_HORROR,"sanity blasting"},
+	{FLAG_ANIMAL,"natural"},
+}

@@ -1,0 +1,44 @@
+-- Dragonball T: The Crane Hermit's house
+
+map.define("crane.map")
+
+map.set_default_symbol_attributes{ inventory_size=2 }
+
+map.symbol{ symbol='.' feat=FEAT_FLOOR info=6 }
+map.symbol{ symbol='*' feat=FEAT_MAP_BORDER info=6 }
+map.symbol{ symbol='X' feat=FEAT_PERM_INNER info=6 }
+map.symbol{ symbol='d' feat=FEAT_DOOR info=6 inventory_size=0  }
+map.symbol{ symbol='<' feat=FEAT_LESS info=6 inventory_size=0 }
+map.symbol{ symbol='a' feat=FEAT_FLOOR info=6 monster=RACE_CRANE_HERMIT inventory_size=0 }
+map.symbol{ symbol='b' feat=FEAT_FLOOR info=6 monster=RACE_CHAOZU inventory_size=0 }
+map.symbol{ symbol='c' feat=FEAT_FLOOR info=6 monster=RACE_TENSHINHAN inventory_size=0 }
+
+map.symbol{ symbol='=' feat=FEAT_TELEVISION info=3
+	flags = {
+		MOVE_POST_DEST=function()
+			message("a television")
+		end
+	}
+}
+map.symbol{ symbol='T' feat=FEAT_FURNITURE info=3 on_walk="Dinner Table" }
+
+
+-- Dungeon layout
+map.map
+{
+[[****************]],
+[[*XXXXXXXXXXXXXX*]],
+[[*X............X*]],
+[[*X.TTT.b......X*]],
+[[*X.TTT....c...X*]],
+[[*X............X*]],
+[[*X<.........a.X*]],
+[[*X............X*]],
+[[*X.....=......X*]],
+[[*X............X*]],
+[[*XXXXXXXXXXXXXX*]],
+[[****************]],
+}
+
+-- Starting position
+map.set_player(7, 2)

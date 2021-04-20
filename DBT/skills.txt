@@ -1,0 +1,141 @@
+----------------------------------
+------  Schools  -----------------
+----------------------------------
+
+Karate (Classes cost 10zn)
+Skill/AB	Gain/Cost	Cap		Requirement
+Martial Arts	 .6 for 1 sk	10 +  5 per cs
+Barehand	1.0 for 1 sk	20 + 10 per cs
+Weapons		 .5 for 1 sk	 5 +  2 per cs
+Strength	 .4 for 1 sk	 5 +  5 per cs	lev 15, 15 BH
+Blocking	10 skillpoints			20 BH
+
+Kickboxing (Classes cost 25zn)
+Skill/AB	Gain/Cost	Cap	Requirement
+Barehand	1.5 for 1 sk	30 + 10 per cs
+Speed		 .3 for 1 sk	10 +  5 per cs	25 BH
+Constitution	 .4 for 1 sk	10 + 10 per cs	30 BH
+Double Attack	20 skillpoints			30 BH
+
+Kungfu (Classes cost 20zn)
+Skill/AB	Gain/Cost	Cap		Requirement
+Martial Arts	 .8 for 1 sk	15 +  5 per cs
+Barehand	 .5 for 1 sk	10 +  2 per cs
+Weapons		 .7 for 1 sk	20 + 10 per cs	10 Dex
+Dexterity	 .4 for 1 sk	10 + 10 per cs	
+Parrying	 .7 for 1 sk	10 + 10 per cs	25 Wp
+Paired		 .7 for 1 sk	10 + 10 per cs	30 wp
+Paired Weapons	 20 skillpoints			30 wp
+
+Fencing (Classes cost 20zn)
+Skill/AB	Gain/Cost	Cap		Requirement
+Weapons		1.0 for 1 sk	20 + 10 per cs	
+Parrying	1.0 for 1 sk	10 + 10 per cs	20 Wp
+Speed		 .3 for 1 sk	10 + 10 per cs  Level 15
+Riposte		10 skillpoints			30 Wp
+
+Sumo (Classes cost 20zn)
+Skill/AB	Gain/Cost	Cap		Requirement
+Barehand	 .8 for 1 sk	5 + 5 per cs	
+Strength	 .5 for 1 sk	20 + 10 per cs	
+Constitution	 .5 for 1 sk	20 + 10 per cs	10 Str
+Tameshiware	10 skillpoints			10 BH
+
+Judo (Classes cost 10zn)
+Skill/AB	Gain/Cost	Cap		Requirement
+Martial Arts	 .5 for 1 sk	 5 +  4 per cs
+Barehand	 .8 for 1 sk	10 +  4 per cs
+Dodge		1.0 for 1 sk	20 + 10 per cs	
+Dexterity	 .5 for 1 sk	10 + 10 per cs	10 Dodge
+Speed		 .4 for 1 sk	10 +  5 per cs	10 Dex
+Throw (not implemented)
+
+TaeKwonDo (Classes cost 10zn)
+Martial Arts	 .7 for 1 sk	20 + 10 per cs
+Barehand	 .7 for 1 sk	20 + 10 per cs
+Weapons		 .7 for 1 sk	20 + 10 per cs
+Dexterity	 .4 for 1 sk	20 + 10 per cs
+
+Ballet (Classes cost 100zn)
+Skill/AB	Gain/Cost	Cap		Requirement
+Dexterity	1.0 for 2 sk	30 + 10 per cs
+Constitution	1.0 for 2 sk	20 + 10 per cs	25 Dex
+Jump		5 skillpoints			40 Dex
+
+----------------------------------
+--  Master Teachers  -------------
+----------------------------------
+(Master Teachers generally do not charge for instruction, but
+may be difficult to reach, and will need to be convinced to
+teach you, usually via quests)
+
+Rosshi (Requires quest completion)
+
+
+Tsuru Seni'nin (Requires Quest completion)
+
+Musashi (Requires 40 weapons skill)
+Skill/AB	Gain/Cost	Cap
+Martial Arts	 .7 for 1 sk	60
+Weapons		1.0 for 1 sk	60
+Dexterity	 .3 for 1 sk	60
+Speed		 .3 for 1 sk	60
+Parrying	 .5 for 1 sk	100
+Paired		 .5 for 1 sk	10
+Paired Weapons	 10 skillpoints
+Iaijutsu	  5 skillpoints
+Bleed Attack	 10 skillpoints
+
+Korin
+
+Splinter???
+Skill/AB	Gain/Cost	Cap		Requirement
+Stealth		1.0 for 1 sk	100
+Sneaking	10 skillpoints			20 Classes
+Martial Arts	 .5 for 1 sk	30
+Barehand	1.0 for 1 sk	30
+Weapons		 .6 for 1 sk	40
+Dexterity	 .5 for 1 sk	20
+Dodge		 .5 for 1 sk	10 + 10 per cs	20 Dex
+Chi		 .5 for 1 sk	 5 +  5 per cs  20 Classes
+Chi Gung	 .5 for 1 sk	 5 +  5 per cs  20 Classes
+
+
+Shredder???
+(Note that Ninjutsu is likely to undergo conceptual changes)
+Skill/AB	Gain/Cost	Cap		Requirement
+Stealth		1.0 for 1 sk	100
+Sneaking	10 skillpoints			20 Classes
+Martial Arts	 .5 for 1 sk	30
+Barehand	1.0 for 1 sk	30
+Weapons		 .6 for 1 sk	30
+Dexterity	 .5 for 1 sk	20
+Stealth		1.0 for 1 sk	100
+Dodge		 .5 for 1 sk	10 + 10 per cs	20 Dex
+Chi		 .5 for 1 sk	 5 +  5 per cs  20 Classes
+Chi Gung	 .5 for 1 sk	 5 +  5 per cs  20 Classes
+Sneaking	10 skillpoints			20 Classes
+
+
+
+----------------------------------
+--  Other Trainers  --------------
+----------------------------------
+YMCA
+Ability		Cost
+First Aid	4 skillpoints
+Swimming	5 skillpoints
+Skating		5 skillpoints
+Motorcycling	20 skillpoints
+
+Dr Tofu
+Ability		Cost	
+First Aid	4 skillpoints
+Acupunture	10 skillpoints
+
+Robbins Institute (Classes cost 100zn)
+Skill/AB	Gain/Cost	Cap
+Charisma	.5 for 2 sk	100
+Willpower	.5 for 2 sk	Player level
+
+	

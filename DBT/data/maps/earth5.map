@@ -1,0 +1,234 @@
+-- Dragonball T: Earth, central. The friendly, civilized, and populated city area
+map.define("earth5.map")
+
+-------------------------------------------------------------------------------
+-- Terrain
+-------------------------------------------------------------------------------
+map.symbol{ symbol='*' feat=FEAT_WRAP_BORDER info=6 }
+
+map.symbol{ symbol='=' feat=FEAT_GRASS info=3 }
+map.symbol{ symbol='^' feat=FEAT_MOUNTAIN info=3 }
+map.symbol{ symbol='#' feat=FEAT_BUILDING info=6 }
+map.symbol{ symbol='T' feat=FEAT_TREES info=3 }
+map.symbol{ symbol='W' feat=FEAT_DEEP_WATER info=3 }
+map.symbol{ symbol='V' feat=FEAT_SHAL_WATER info=3 }
+map.symbol{ symbol=',' feat=FEAT_DIRT info=3 }
+map.symbol{ symbol='.' feat=FEAT_ASPHALT info=6 }
+map.symbol{ symbol='O' feat=FEAT_SIDEWALK info=6 }
+map.symbol{ symbol='|' feat=FEAT_ROADSTRIPE_VERT info=3 }
+map.symbol{ symbol='-' feat=FEAT_ROADSTRIPE_HORZ info=3 }
+map.symbol{ symbol='$' feat=FEAT_FENCE_VERT info=3 }
+map.symbol{ symbol='%' feat=FEAT_FENCE_HORZ info=3 }
+-- FENCE_ULEFT
+-- FENCE_LLEFT
+-- FENCE_URIGHT
+-- FENCE_LRIGHT
+map.symbol{ symbol='C' feat=FEAT_WINDOW info=3 }
+map.symbol{ symbol='D' feat=FEAT_DECAYING_TREES info=3 }
+map.symbol{ symbol='E' feat=FEAT_SWAMP_POOL info=3 }
+-------------------------------------------------------------------------------
+-- Map-Specific Misc
+-------------------------------------------------------------------------------
+map.quest_symbol
+{
+	quest = QUEST_BALLET_PRE
+	symbol = 'U'
+	symbols =
+	{
+		[{QUEST_STATUS_TAKEN}] = { feat=FEAT_MORE info=3 dungeon=DUNGEON_NUTCRACKER }
+		default = { feat=FEAT_SHOP info=3 building=store.WAREHOUSE }
+	}
+}
+map.symbol{ symbol='Y' feat=FEAT_SNOW info=3 MOVE_POST_DEST=function() message("test") end }
+map.symbol{ symbol='Z' feat=FEAT_TONKAN info=3 }
+
+-------------------------------------------------------------------------------
+-- Temporary
+map.symbol{ symbol='G' feat=FEAT_FLOOR info=3 monster=RACE_STORE_HACK }
+map.symbol{ symbol='H' feat=FEAT_GRASS info=6 monster=RACE_MIA }
+-------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------
+-- Dungeons
+-------------------------------------------------------------------------------
+map.symbol{ symbol='u' feat=FEAT_MORE info=3 dungeon=DUNGEON_NINJA_WAREHOUSE }
+map.symbol{ symbol='v' feat=FEAT_MORE info=3 dungeon=DUNGEON_NINJA_SEWERS }
+map.symbol{ symbol='w' feat=FEAT_MORE info=3 dungeon=DUNGEON_BRIEFS }
+map.symbol{ symbol='x' feat=FEAT_MORE info=3 dungeon=DUNGEON_NINJA_WAREHOUSE }
+map.symbol{ symbol='y' feat=FEAT_MORE info=3 dungeon=DUNGEON_TOURNAMENT }
+-------------------------------------------------------------------------------
+-- Stores
+-------------------------------------------------------------------------------
+map.symbol{ symbol='a' feat=FEAT_SHOP info=3 building=store.EAU_DE_FRANCE}
+map.symbol{ symbol='b' feat=FEAT_SHOP info=3 building=store.STORE_CLOTHING }
+map.symbol{ symbol='c' feat=FEAT_SHOP info=3 building=store.STORE_RVAC }
+map.symbol{ symbol='d' feat=FEAT_SHOP info=3 building=store.STORE_PAWNSHOP }
+map.symbol{ symbol='e' feat=FEAT_SHOP info=3 building=store.PIZZA_KITCHEN }
+map.symbol{ symbol='f' feat=FEAT_SHOP info=3 building=store.CAPSULE_CORP }
+map.symbol{ symbol='g' feat=FEAT_SHOP info=3 building=store.TOXIC_PLANT }
+map.symbol{ symbol='h' feat=FEAT_SHOP info=3 building=store.STORE_MEGAMALL }
+map.symbol{ symbol='i' feat=FEAT_SHOP info=3 building=store.MUSEUM }
+map.symbol{ symbol='j' feat=FEAT_SHOP info=3 building=store.ROBBINS }
+map.symbol{ symbol='k' feat=FEAT_SHOP info=3 building=store.LIBRARY }
+map.quest_symbol
+{
+	quest = QUEST_STOLEN_GOODS
+	symbol = 'l'
+	symbols =
+	{
+		[{QUEST_STATUS_FINISHED}] = { feat=FEAT_SHOP info=3 building=store.STORE_ELECTRONICS_GOOD }
+		[{QUEST_STATUS_COMPLETED}] = { feat=FEAT_SHOP info=3 building=store.STORE_ELECTRONICS_GOOD }
+		default = { feat=FEAT_SHOP info=3 building=store.STORE_ELECTRONICS_BAD }
+	}
+}
+map.quest_symbol
+{
+	quest = QUEST_AKIRA_INSULTED
+	symbol = 'm'
+	symbols =
+	{
+		[{QUEST_STATUS_FINISHED}] = { feat=FEAT_FLOOR info=3 on_walk="With Akira dead, the Sushi bar is now closed." }
+		default = { feat=FEAT_SHOP info=3 building=store.SUSHI_BAR }
+	}
+}
+-- I'd rather not use the quest status for this, but it works
+map.quest_symbol
+{
+	quest = QUEST_PILOTMEMBER
+	symbol = 'n'
+	symbols =
+	{
+		[{QUEST_STATUS_TAKEN}] = { feat=FEAT_SHOP info=3 building=store.STORE_HOME_HANGER }
+		[{QUEST_STATUS_FAILED}] = { feat=FEAT_SHOP info=3 building=store.AIRPORT }
+		default = { feat=FEAT_SHOP info=3 building=store.AIRPORT }
+	}
+}
+map.symbol{ symbol='o' feat=FEAT_SHOP info=3 building=store.STORE_MARTIAL_ARTS_SUPPLIES }
+map.symbol{ symbol='p' feat=FEAT_SHOP info=3 building=store.GYM }
+map.symbol{ symbol='q' feat=FEAT_SHOP info=3 building=store.ACUPUNCTURE }
+-- map.symbol{ symbol='r' feat=FEAT_SHOP info=3 building=store.CANDY }
+
+
+
+-------------------------------------------------------------------------------
+-- Schools
+-------------------------------------------------------------------------------
+map.quest_symbol
+{
+	quest = QUEST_CHALLENGE_KARATE
+	symbol = '1'
+	symbols =
+	{
+		[{QUEST_STATUS_COMPLETED}] = { feat=FEAT_FLOOR info=3  on_walk="With Nakamura gone, the studio is closed." }
+		[{QUEST_STATUS_FINISHED}] = { feat=FEAT_FLOOR info=3 on_walk="With Nakamura gone, the studio is closed." }
+		default = { feat=FEAT_SHOP info=3 building=store.KARATE }
+	}
+}
+map.quest_symbol
+{
+	quest = QUEST_CHALLENGE_KICKBOXING
+	symbol = '2'
+	symbols =
+	{
+		[{QUEST_STATUS_COMPLETED}] = { feat=FEAT_FLOOR info=3 on_walk="With Bob gone, the studio is closed." }
+		[{QUEST_STATUS_FINISHED}] = { feat=FEAT_FLOOR info=3 on_walk="With Bob gone, the studio is closed." }
+		default = { feat=FEAT_SHOP info=3 building=store.KICKBOXING }
+	}
+}
+map.quest_symbol
+{
+	quest = QUEST_CHALLENGE_KUNGFU
+	symbol = '3'
+	symbols =
+	{
+		[{QUEST_STATUS_COMPLETED}] = { feat=FEAT_FLOOR info=3  on_walk="With Fong-Sai Yuk gone, the studio is closed." }
+		[{QUEST_STATUS_FINISHED}] = { feat=FEAT_FLOOR info=3 on_walk="With FOng-Sai Yuk gone, the studio is closed." }
+		default = { feat=FEAT_SHOP info=3 building=store.KUNGFU }
+	}
+}
+map.quest_symbol
+{
+	quest = QUEST_CHALLENGE_FENCING
+	symbol = '4'
+	symbols =
+	{
+		[{QUEST_STATUS_COMPLETED}] = { feat=FEAT_FLOOR info=3 on_walk="With Jacque gone, the studio is closed." }
+		[{QUEST_STATUS_FINISHED}] = { feat=FEAT_FLOOR info=3 on_walk="With Jacque gone, the studio is closed." }
+		default = { feat=FEAT_SHOP info=3 building=store.FENCING }
+	}
+}
+map.symbol{ symbol='5' feat=FEAT_SHOP info=3 building=store.JUDO }
+map.symbol{ symbol='6' feat=FEAT_SHOP info=3 building=store.SUMO }
+map.symbol{ symbol='7' feat=FEAT_SHOP info=3 building=store.BALLET }
+
+map.map
+{
+[[********************************************************************************************************************************************************************************************************]],
+[[*WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW===========================================================================================...====================TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT*]],
+[[*WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW===========================================================================================.|.====================TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT*]],
+[[*WWWWWWWWWWWWWWWWWWWWWWWWW=================================================================================================...===========================TTTTTTTTTTTTTTT=====TTTTTTTTTTTTT======TTTTTTT*]],
+[[*WWWWWWWWWWWWWWWWWWW=======================================================================================================.|.===============================TTTTTTTT============TTTTTTT==========TTTTT*]],
+[[*WWWWWWWWWWWWWWWW==========================================================================================================...=====================T============TT=========================T=======TTTT*]],
+[[*WWWWWWWWWWWWW=============================================================================================================.|.====================================================================TTTTT*]],
+[[*WWWWWWWWWW================================================================================================================...========================T=========================================T=TTTTT*]],
+[[*WWWWWWWW==================================================================================================================.|.====================================T=========T=====================TTTTT*]],
+[[*WWWWWWW===================================================================================================================...=========================================T=======T===================TTTT*]],
+[[*WWWWWWW===================================================================================================================.|.===================================VV==================T============TTTTT*]],
+[[*WWWWW=====================================================================================================================...==============================T===VVVVV===========VVVV============T==TTTT*]],
+[[*WWW=======================================================================================================================.|.======......==============T=========TVVVV==T===VVVVWWVVV============TTTTT*]],
+[[*==========================================================================================================================...=====.======.=========================VVVVVVVVVVWWVVVVVVVVVVV=======TTTTT*]],
+[[*============================O%%%%%%%%%%%%%%%%%%%%%%%%%%O==================================================================.|.====.========.=====================VVVVWWVWWWWWWWWV======VVVVVVVVV===TTTT*]],
+[[*============================$==========================$==================================================================...====.=.=.====.=================VVVVVWWWWWWVVVVVVVWV=========VWWVV====TTTT*]],
+[[*============================$T==###===T=============T==$===================================OOOO=========OOOO==============.|.====.=.=.=##=.==================VVVWWWWWWWV=====VWVV========VVVV======TTT*]],
+[[*============================$==#####====###=====###====$===================================O##OOOOOOOOOOO##O==============...====.=.=.=##=.=======T============VVVWWWWWV=###=VWWVV========VV========TT*]],
+[[*============================$=#######===###=====###====$===================================O###############O==============.|.====.=.=.=##=.======================VVVWWWV=###=VWWWVV===T============TTT*]],
+[[*============================$==##f##====#w#=====#.#====$===================================OO#############OO==============...====.=.=.=##=.================T======TVWWWV=#u#=VWWWWVVVV=========T===TTT*]],
+[[*============================$====O=======O=======O=====$====================================O##C###C######O===============.|.====.=.=.=##=.=======================VVWWWV=====VWWWVV===============TTTT*]],
+[[*============================$=T==OOOOOOOOOOOOOOOOO==T==$====================================O##C#C#C######O===============...====.=.=.=##=.========================VWWWVVVVVVVWVVV================TTTT*]],
+[[*============================$====O========T====T=======$====================================O##C#C#C######O===============.|.====.=...=##=.========================VVVWWWWWWWWWVVV===T===T========TTTT*]],
+[[*============================O%%%%O%%%%%%%%%%%%%%%%%%%%%O====================================O###C#C#######O===============...====.=.===##=.=============T===========TVVVVVVWVVVV==================TTTT*]],
+[[*================================.|.=========================================================O########CCC##O===============.|.====.=.#####=.===============================VVV================T===TTTTT*]],
+[[*================================...=========================================================O#########C###O===============..-.-.-...n##===.=================T==================T=================TTTTT*]],
+[[*================================.|.=========================================================O#########C###O===============.|.====.==###===.=====================================================TTTTTT*]],
+[[*================================...========================================================OO#########C###OO==============...=====.======.==========================T============================TTTTT*]],
+[[*================================.|.========================================================O#######y#######O==============.|.======......================================T===============T=======TTTTT*]],
+[[*================================...========================================================O##OOOOOOOOOOO##O==============...======================================================T============TTTTTT*]],
+[[*================================.|.========================================================OOOO====.====OOOO==============.|.====================================================================TTTTT*]],
+[[*================================...============================================================H===.======================...====================================================================TTTTT*]],
+[[*.................................|.........................................................................................|.===================================================================TTTTTT*]],
+[[*-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-..==================================================================TTTTTTT*]],
+[[*...................................................................................................|.........................===================================================================TTTTTT*]],
+[[*=======================================================================.========.======.==========...==========.=======.========================================================================TTTTTT*]],
+[[*=======================================================================.========.======.==========.|.==========.=======.=========================================================================TTTTT*]],
+[[*====================================================================###h###====#e#====#l#====###==...==###====#7##====#.#======================================================================TTTTTTT*]],
+[[*====================================================================#######====###====###====##a...|...b##====####====###=====================================================================TTTTTTTT*]],
+[[*====================================================================#######====###====###====###==...==###====####====###===================================================================TTTTTTTTTT*]],
+[[*==================================================================================================.|.========================================================================================TTTTTTTTT*]],
+[[*==================================================================================================...==========================================================================================TTTTTTT*]],
+[[*TTTT==============================================================================================.|.===========================================================================================TTTTTT*]],
+[[*TTTTTTTTT========================TTT=========================================================###==...==###======================================================================================TTTTTT*]],
+[[*TTTTTTTTTTTTTT=================TTTTTTT==========================#####==========###===========##....|....##=====#####==========#####=====###===========###===###===###===========================TTTTTT*]],
+[[*TTTTTTTTTTTTTTTTTT==============TTTTT===========================#####==========###===========###==...==###=====#####==========#####=====###===========###===###===###============================TTTTT*]],
+[[*TTTTTTTTTTTTT====================TTTTTT=================TT======##j##==========#q#================.|.==========##o##==========##i##=====#m#===========#e#===#d#===#c#============================TTTTT*]],
+[[*TTTTTTTTTT========================TTTTTTTT============TTTTTT======.===============================...============O==============O========O=============O============G================,,,,,=======TTTTT*]],
+[[*TTTTTTT=============================TTTTTTTTT====TTTTTTTTTT=======.................................|........................................................................====,,,,,,,,,,,,,,====TTTT*]],
+[[*TTTTT==================================TTTTTTTTTTTT===============-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.,,,,,,,,,,,,,,,,,,,,==TTTT*]],
+[[*TTT=======================================TTTTTTTTTTT=============..........................................................................................................,,,,,,,,,,,,,,,,,,,,,=TTTT*]],
+[[*TT=====================TTT==============TTTTTTTTTT================.================================.======================================================================O,,,,,,,,,,,,,,,,,,,,,,,TTTT*]],
+[[*TT==================TTTTTTTT==========TTTTTTTTTTTTTTT===========##k##===##p##=========###=========OOO=========###====================================#U#==###============.O,,,,,,,,D,,,,,,,,,,,,,TTTTT*]],
+[[*TT================TTTTTTTTTTTTT===========TTTTTTTTTTTT==========#####===#####=========##1OOOOOOOOOOZOOOOOOOOOO4##====================================###==###=========....O,,,,,,,,,D,,,,,,,,,,,,TTTTT*]],
+[[*TT==================TTTTTTTTTTTTTTTT=====TTTTTTTTTTTTTTTTT======#####===#####=========###=O=====O=OOO=O=====O=###====================================###==###==##########,O,,,,,,,,,,,,,,,,,,v,,,DTTTT*]],
+[[*TT========================TTTTTTTTTTTTTTTTTTTTTTTTTTT=================================####2#====O=====O====#3####=====================TTTTT====================##########,O,,,,,,,,,,,,,,,,,,E,,,DTTTT*]],
+[[*TT============================TTTTTTTTTTTTT=============================================########5#####6#######====================TTTTTTTTTTTT================,##########,O,,,,,,,,,,,,,,,,,,E,,,,DTTT*]],
+[[*TT===============================TTTTTTTTTTTT============================================#####################=================TTTTTTTTTTTTTTTTTTT============,###########g#,,,,,,,,,,,,,,,,,E,,,,DDTT*]],
+[[*TTT===============================TTTTTTTTTTTTTTT============================================#############=================TTTTTTTTTTTTTTTTTTTTTTTTTTTT=======,####E########,,,,,,D,,,,,,,,,,E,,,,DTTT*]],
+[[*TTT=============================TTTTTTTTTTTTTTTTTTTTTT=================================================================TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT=======,,,,,EE,,,,,,,,,,,,,,,,,,,,,,,,,E,,,,TTTT*]],
+[[*TTTT=========================TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT==============================,===,T,===,==,======TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTD==,,,,,,EEEEEEEEEEEEEEEEEEEEEEEEEEEE,,,DTTTT*]],
+[[*TTTTTTTT=============TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT================TT=TTT=TT=====T=TTT=====TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTDD,,,,,,,,EE,,,,,,,,,,,,,,,,,,D,,,,,,,,,TTTTT*]],
+[[*TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT=TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTDDDD,D,,,,,,,,,,,,,,,D,,D,,,,,,,,D,,,DTTTTTT*]],
+[[*TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTDDDDD,,,,,,,,DD,,,,,D,,,,D,,,,,TTTTTTTTTTT*]],
+[[*TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT*]],
+[[*TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT*]],
+[[*TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT*]],
+[[********************************************************************************************************************************************************************************************************]],
+}

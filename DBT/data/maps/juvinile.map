@@ -1,0 +1,49 @@
+map.define("juvinile.map")
+
+map.symbol{ symbol='.' feat=FEAT_FLOOR info=6 }
+map.symbol{ symbol='*' feat=FEAT_MAP_BORDER info=6 }
+map.symbol{ symbol='X' feat=FEAT_PERMA_WALL info=6 }
+map.symbol{ symbol='<' feat=FEAT_LESS info=6 inventory_size=0 }
+map.symbol{ symbol='>' feat=FEAT_MORE info=6 inventory_size=0 }
+map.symbol{ symbol='a' feat=FEAT_FLOOR info=6 monster=RACE_JUVINILE_RED }
+map.symbol{ symbol='b' feat=FEAT_FLOOR info=6 monster=RACE_JUVINILE_GREEN }
+map.symbol{ symbol='c' feat=FEAT_FLOOR info=6 monster=RACE_JUVINILE_YELLOW }
+map.symbol{ symbol='d' feat=FEAT_FLOOR info=6 on_walk="A sign on the door reads 'Restricted Access" }
+map.symbol{ symbol='N' feat=FEAT_FLOOR info=6 monster=RACE_FOOT_BASIC }
+--map.symbol{ symbol='O' feat=FEAT_FLOOR info=6 monster=RACE_FOOT_MIDDLE }
+--map.symbol{ symbol='P' feat=FEAT_FLOOR info=6 monster=RACE_FOOT_HIGH }
+map.symbol{ symbol='w' feat=FEAT_GLASS_WALL info=6 }
+map.symbol{ symbol='D' feat=FEAT_DOOR_LOCKED_HEAD+6 info=6 }
+map.symbol{ symbol='e' feat=FEAT_RUBBLE info=6 }
+map.symbol{ symbol='l' feat=FEAT_LADDER_LEFT info=6 inventory_size=0  }
+
+-- Pile of Electonics goods
+-- Not attached to a quest, so items place in dbtstuff.lua
+map.symbol{ symbol='m' feat=FEAT_FOOT_ELECTRONICS info=6 }
+
+map.map
+{
+[[*************************]],
+[[*XXXXXXXXXXXXXXXXXXXXXXX*]],
+[[*X...XXXXXXXXXXX.......X*]],
+[[*X.X.XXX...XXXXX.....X.X*]],
+[[*X.X...X.X.X...X.....X.X*]],
+[[*X.XXX.X.X...X.X.....X>X*]],
+[[*X...X...XXXXXaX.....XXX*]],
+[[*XXXlXXXXXXXXX.X.......X*]],
+[[*X.....e.......X.......X*]],
+[[*X...c.....c.XXX.......X*]],
+[[*X.......e....bw..N...mX*]],
+[[*X.X.a......e..w......mX*]],
+[[*X.X..e.b......X......mX*]],
+[[*X<X..........dD......mX*]],
+[[*XXXXXXXXXXXXXXXXXXXXXXX*]],
+[[*************************]],
+}
+
+-- Starting position
+if dball_data.level_tracker == 1 then
+	map.set_player(5, 22)
+else
+	map.set_player(13, 2)
+end

@@ -1,0 +1,77 @@
+#####R                  /---------------------------\
+#####R                 <    DBT V050 Release Notes   >
+#####R                  \---------------------------/
+
+Summary:
+*****/abook-14.txt*1[(a) Hello!]
+*****/bbook-14.txt*2[(b) Noteworthy Changes since Version 0.4.2]
+*****/cbook-14.txt*3[(c) Known Bugs]
+*****/dbook-14.txt*4[(d) To Submit a Big Report]
+*****/ebook-14.txt*5[(e) Fixnotes 'todo' list]
+
+~~~~~1
+#####G(a)Hello!
+This is the fourth unoffical public release. We like unnofficial
+releases. They are our friend. This particular release is...
+shall we say...not entirely stable. Lots of new material, and
+it's starting to get to the point where it's difficult for me
+to try all the permutations of everything I'm generating. But
+that's where bugtesting comes in. In particular, the Pilaf
+and Rosshi dialogues are likely to generate LUA errors, and/or
+display errors. If you get yourself into trouble, try executing
+'term.load()' from wizard mode, and it may allow you to recover.
+Otherwise, I *think* things are mostly ok...
+
+~~~~~2
+#####G(b)Noteworthy Changes since Version 0.4.2
+Wow...lots of things.
+0) Dragonball T has been upgraded to the new alpha5
+1) Lots of new quests and uniques
+2) A couple new dungeons and special levels
+3) The Red Ribbon Army is no longer wimpy. No more going into
+Muscle Tower at level one and making level 10 in three minutes.
+4) Totally new ID system! Yay! Experiment with it! It's nifty!
+5) Completely revamped the Chi system, but it's largely
+inaccessible right now.
+6) Totally new dialogue system. Much coolness, but odds are
+good only people who have worked with it will notice the
+difference. Basically the new system allows four things:
+ a) You can both talk to and attack the same people
+ b) I can call any function I want from within dialogue
+ c) There can be dialogue responses which are hidden based
+ on any criteria I want
+ d) Multiple people can now talk within the same dialogue.
+ Check out Pilaf to see this in action.
+7) With the new dialogue system comes over 50K worth of new
+dialogue.
+8) Bugs reported by NerdanelVampire on the Wiki *should*
+now be fixed.
+9) Nifty new splash screens, which you've probably already
+seen. :)
+10) The afterlife has been partially, loosely implemented.
+
+~~~~~3
+#####G(c)Known Bugs
+1) Kami's Lookout is broken. Don't go there.
+2) Rosshi, Pilaf and Briefs' dialogues are all a bit skecthy.
+Pilaf's is healthy enough to play with...Rosshi is about 50/50
+going to end your game, Briefs' has some issues.
+3) LUA errors if you ever try to create a second character.
+I don't know why.
+
+~~~~~4
+#####G(d)To Submit a Bug Report
+If convenient, submit bug reports for Dragonball T on the wiki.
+I've created a bug report section on the DBT page. That should
+be a little easier than navigating the official bug report forum.
+If you don't feel comfortable with the Wiki feel welcome to submit
+via email to lordbucket@hotmail.com.
+
+~~~~~5
+#####G(e)Fixnotes 'todo' list
+As usual, see fix notes.txt for the complete to do list.
+
+Enjoy!
+
+Bucket Man
+lordbucket@hotmail.com

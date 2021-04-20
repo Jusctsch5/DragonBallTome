@@ -1,0 +1,39 @@
+-- Dragonball T: The Lair of the Phoenix at the base of the Volcano
+
+map.define("phoenix.map")
+
+map.symbol{ symbol='.' feat=FEAT_DEEP_LAVA info=3 }
+map.symbol{ symbol='#' feat=FEAT_PERMA_WALL info=3 }
+map.symbol{ symbol='X' feat=FEAT_LAVA_WALL info=3 }
+map.symbol{ symbol='<' feat=FEAT_LESS info=3 }
+-- map.symbol{ symbol='w' feat=FEAT_GLASS_WALL info=6 }
+-- map.symbol{ symbol='D' feat=FEAT_DOOR info=6 }
+
+map.symbol{ symbol='P' feat=FEAT_SAND info=3 monster=RACE_PHOENIX }
+
+map.map
+{
+[[###############################]],
+[[#XXXXXXXXXXXXXXXXXXXXXXXXXXXXX#]],
+[[#XXXXXXXXXX.........XXXXXXXXXX#]],
+[[#XXXXXXX...............XXXXXXX#]],
+[[#XXXXX...................XXXXX#]],
+[[#XXXX.....................XXXX#]],
+[[#XXX.......................XXX#]],
+[[#XX.........XXXXXXX.........XX#]],
+[[#XX........XX.....XX........XX#]],
+[[#X.........X.......XX........X#]],
+[[#X.........X...P............<X#]],
+[[#X.........X.......XX........X#]],
+[[#XX........XX.....XX........XX#]],
+[[#XX.........XXXXXXX.........XX#]],
+[[#XXX.......................XXX#]],
+[[#XXXX.....................XXXX#]],
+[[#XXXXX...................XXXXX#]],
+[[#XXXXXXX...............XXXXXXX#]],
+[[#XXXXXXXXXX.........XXXXXXXXXX#]],
+[[#XXXXXXXXXXXXXXXXXXXXXXXXXXXXX#]],
+[[###############################]],
+}
+
+map.set_player(10, 28)

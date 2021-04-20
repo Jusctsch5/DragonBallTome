@@ -1,0 +1,277 @@
+*****************************************
+************ MODERATE SPOILER ***********
+*****************************************
+
+What are the Chi-Gung Powers and their requirements?
+
+Who	Ability			Requirements			When Taught	Skill Point Cost
+Rosshi	Chi Burst		1 Offense, 1 Gung (Always)	First Quest	11
+Rosshi								Second
+Rosshi								Third
+
+Korin	Burst of Speed						First
+Korin	Haste			Gung 5				Second Quest	6
+Korin	Controlled Blink	Gung 12, Haste			Third Quest	9
+
+Kami	Battle Aura		Off: 5 Def: 5 Gung: 5		First Quest	15
+Kami	Flight			Gung: 10			Second Quest	5
+Kami	
+
+Emma	Cure Conditions		Reg: 10						7
+Emma	Healing			Reg: 25, CC					5
+Emma	Regeneration (Phys)							5
+
+Popo	
+Popo								Second
+Popo	Aura Absorbtion Effect	Gung: 25 Battle Aura		Third Quest	25
+
+Kaio	Telepathy		Gung: 15			First Quest	3
+Kaio	Teleport		Gung: 30			Second		5
+Kaio	Planetary Teleport	Gung: 45			Third Quest	1
+Kaio	Spirit Bomb		Gung: 60			"Require?"	Zero
+
+Chaozu: Telepathy?
+
+What do the Various Abilities do?
+
+Chi Burst	Instant Effect	Cost: 2		11 skill points to learn Taught by Rosshi at CLev:15
+	Your basic ranged attack, Chi Burst or 'Kamehameha' will deliver irresistable damage ranging from
+1 up to the varlue of your Chi Offense skill to a target at range. At a Chi Offense of 30 or more, these
+blasts will also destroy raw stone.
+
+Burst of Speed	Instant Effect	Cost=Range
+	By compressing several minutes worth of energy into a single instant, Burst of Speed allows
+the practitioner to travel at such incredible speed that they will appear to the naked eye to be telporting.
+Note that this ability is NOT teleport, and Burst of Speed does require you to travel through every point
+between origination and destination, and only allows you to travel in straght lines. Attempting to use this
+ability to travel through walls in extremely unadvisable. Fortunately, however, since this ability takes
+only an instant, its use does not expend a 'turn' and multiple bursts may be used in sequence.
+
+Haste		Constant Effect	Drain= (Rate * 5) - Chi Gung skill Effect: Ranges 1 - 20
+	So long as you continue to channel Chi via this ability, you will be able to maintain an increased
+rate of universal speed that will enhance all your movements and actions. The amount of gain is completely
+configurable, and you may vary at as you please. The greater the speed boost, the greater the drain. Fortuantley
+however, your ability to effectively channel energy increases with your Chi Gung skill, and with high skill
+you will even be able to sustain this effect at no cost. For instance, with 50 Chu Gung, it would be possible
+to maintain +10 speed at zero drain, or up to +20 at a cost of 50 Chi per turn.
+
+Cure Conditions
+
+Heal		Instant Effect Cost = (11 - (Chi Gung skill / 10)) per 100hp
+	
+
+
+
+
+Spirit Bomb	Special
+	Up until now, all Chi abilities you have learned have made use of your own personal energies to
+acheive physical effects. At last, though, you have progressed to proximity with enlightenment, and the
+understanding that all things are united in fullness. That we as consciousnesses are separate entities
+is only an illusion, and for you or I to channel energy to one another is no different than for the
+heart to send blood to other organs. The Spirit Bomb makes use of this principal to draw energies from
+all willing participants in the area. And, few very are truly unwilling to aid an elightened master.
+For every round that the spirit bomb is 'in effect,' for every living being on the entire level the
+channeler will draw energy sufficient to deliver one point of damage. This gathering may continue for
+as long as desired, and the longer the master waits, the more energy will be gathered, which may then
+ultimately be unleashed into a single, devastating burst. However...this power requires tremendous
+focus, and the practitioner will be unable to move, expend chi, or perform any other action during the
+energy gathering.
+
+Also...it has been said that faith can 'move mountains' and the collective energies of an entire population
+little things like mountains are fairly trivial.
+
+Don't miss.
+
+
+
+
+**************************************
+*********** MODERATE SPOILER *********
+**************************************
+
+
+How do you learn the Chi skills?
+
+There are six people in the game who can teach Chi Skills:
+
+			Specializes in:
+	Master Rosshi	Offense
+	Korin		Chi
+	Kami		Gung
+	Emma Daio	Regeneration
+	Mr. Popo	Defense		
+	The North Kaio	*ALL*
+
+They each specialize in one of the five skills, except the Kaio, who specializes in ALL of them. Each Chi Master has
+a different set of criteria you'll have to meet before they'll teach you, but the general rule is: each Master will teach
+you three times total, with a character level requirement of 15 levels per lesson. At 15th level, you're
+eligible for the fist class from each Master, at 30th the second, at 45th the thrird. Additionally, more often than not
+you will be required to complete a quest before you'll be accepted as a student.
+
+Whomever you choose as your first Chi instructor will forever bias your Chi skill capabilities based on their particular skill set. 
+
+(Hmm. Math is really a better way to explain the progression, but I'll give it a try:)
+
+ * The first time you learn Chi (from anybody) they will teach you a base +.1 mod in every skill, no matter what.
+
+ * However, whatever they specialize in, they will teach you at +1, +.1, with every lesson.
+
+ * However, if their specialty is also your specialty (they taught you first) that +1, +.1 is doubled, to +2, +.2, also for every lesson.
+
+
+SKipping over the North Kaio, for the moment, if, for example, you learn
+first with Rosshi, you'll start with 2 Offense and a +.2 modifier, and the other four Chi skills at 0, +.1. If you
+then take a class from Kami, he'll teach you Chi-Gung only, at +1, +.1. If you then take another class with Rosshi, you'll get an extra +2, +.2 Offense, even though Kami and the others will only be giving you +.1 mods. Taking all 15 classes from Rosshi, Popo, Korin, Emma and Kami, you'll end up with:
+
+Rosshi first, 15 quests
+Offense: 6, +.6 (157 skill points to max)
+Defense: 3, +.4 (243 skill points to max)
+Regen:	 3, +.4
+Chi:	 3, +.4
+Gung:	 3, +.4
+(Total: 1129 skill pointsto max all)
+
+As you can see, who you choose to learn from first will make a big difference. Now, to the North Kaio. As the Overgod of the entire Northen quadrant of the galaxy, he is, as would be expected, extremely powerful. Since he is a master of all five skills, whenever you learn from him, rather than just learning one skill, he will teach you ALL FIVE, at the same base value as everyone else: +1, +.1. Thus, working from the above first...if, after starting with Rosshi, and completing all fifteen lessons as shown above, you then study all three times with the North Kaio, your skills will be as follows:
+
+Rosshi first, 18 quests
+Offense: 9, +.9 (102 skill points to max)
+Defense: 6, +.7 (135 skill points to max)
+Regen:	 6, +.7
+Chi:	 6, +.7
+Gung:	 6, +.7
+(Total: 642 skill points to max all)
+
+However...if you study with the Kaio to begin with, the doubling bonus will apply to all five skills, +2, +.2 and thus, after three lessons with him alone, you would be at:
+
+Kaio first, 3 quests
+Offense: 6, +.6 (157 skill points to max)
+Defense: 6, +.6
+Regen:	 6, +.6
+Chi:	 6, +.6
+Gung:	 6, +.6
+(Total: 785 skill points to max all)
+
+And then could additionally study with the other five for +1, +.1 each, resulting after all 18 quests in a net skill set of:
+
+Kaio first, 18 quests
+Offense: 9, +.9 (102 skill points to max)
+Defense: 9, +.9
+Regen:	 9, +.9
+Chi:	 9, +.9
+Gung:	 9, +.9
+(Total: 510 skill points to max all)
+
+So, for an extra 15 skill and .8 worth of skill modifiers, it really pays off to learn Chi first from the North Kaio. If you can arrange it, that is. As you can see, assuming you want to max all five Chi skills, the North Kaio can theoretically result in a savings of 642 - 510 = 132 skill points.
+
+Of course, it should be mentioned that there are only 495 skill points available from levels at character level 100.
+
+********************************************
+*********** MODERATE SPOILER cont. *********
+********************************************
+
+What if I choose the dark side?
+
+Ahh. Yes, I mispoke. There are actually more than six people who can teach Chi skills. The first six are
+just the good guys. If you open up the 'evil' quest trees, then you can potentially also learn Chi skills from:
+
+(Pending)
+
+Radditz
+Vegita
+Freeza
+
+...and, since you don't have to pick exclusively good or bad, someone who really wanted to specialize in the Chi skills, could deliberately open up the evil quest trees and potentially learn from nine masters.
+
+*************************************
+*********** MODERATE SPOILER *********
+*************************************
+
+Additionally, as with all skills, you may use a Dragonball wish to do any one of the following:
+
+	If you don't know the skill:
+		Learn the skill at 1, .1 if you don't know it at all
+	If you do:
+		Gain up to a full 5.0 value, or...
+		Gain a .2 modifier
+
+Since the Dragonballs can be found any number of times, this, of course, allows for all skills to
+theoretically be raised to max, but in actual pratice, you probably won't get more than two
+Dragonball wishes in the average game, and only very rarely more than three.
+
+**********************************
+*********** BIG SPOILERS *********
+**********************************
+
+(No longer entirely accurate due to game/rule changes)
+
+So, that leaves only one other option if you want high Chi skill modifiers:
+
+	The Room of Spirit and Time
+
+You may only visit the room twice without *adverse* side effects, (though it is *possible*
+to visit it more times.) Each time you visit, you are given ten "turns" of action. Whatever
+you do during those ten turns gains you a .1 modifier in the skill related to that activity.
+
+Action		Result
+Item pickup	+.1 Str
+Read		+.1 Int
+Use item	+.1 Tech or int, depending on item
+Moving		+.1 speed
+Take damage	+.1 con
+Attack		+.1 relevant weapon skill
+Passive regen	+.1 Chi Regen
+Chi Skill	+.1 Chi Gung
+
+
+*****************************************************************************
+*********** MEGA BIG-TIME SUPER MAKE_THE_GAME_NOT_FUN ULTRA SPOILER *********
+*****************************************************************************
+
+(No longer mathematically accurate due to game/rule changes)
+(Also not sure I still want to allow this anyway)
+
+There's a trick to the Room of Spirit and Time. You are allotted ten turns. But they're
+ten TURNS, not ten actions. So...if you have high speed...you effectively get more.
+Hypothetically, if you were to walk into the room with 10 speed, you'd get ten actual
+actions. If you went in with 20 speed, you'd get 20. Etc. So, speed math starts to
+taper off around 33 or so, so let's say you go in with thirty speed. That's 3 full
+points worth of modifiers you can earn in pretty much any skill of your choice. And you
+can do that twice.
+
+Play the numbers correctly, and you should be able to max out both Chi and melee skills.
+In particular, if you're able to max out regeneration and CHi, or at least get them high
+enough, if you can maintain Super Seiyan indefinately, that works out as follows:
+
+(Hypothetical Scenario: Barehanded fighter)
+
+100 Dexterity		+90 to hit
+100 Strength		+90 to damage
+100 Martial Arts	+100 to hit
+100 Barehanded		+100 to hit, 1d100 damage
+Double Attack		x2 attacks
+100 Chi Offense		+100 to hit, +100 to damage, when in Chi Combat mode
+100 Chi Defense		100 points of damage absorbtion
+Super Seiyan		x2 Chi Combat mode modifiers (so an extra (+100, +100), and 100 more absorbtion)
+100 Chi Regen		Can maintain Super Seiyan 24/7
+
+And that's how you make a character who can squash Cell like a bug, with a net:
+
++490 to hit
+two attacks at 1d100+290 damage
+200 Damage Absorbtion
+
+And, just for fun, see if you can throw in:
+
+100th level with 100 Constitution = 10,000 hit points
+100 Speed for 90 general speed
+
+
+
+
+
+
+
+
+
+
+

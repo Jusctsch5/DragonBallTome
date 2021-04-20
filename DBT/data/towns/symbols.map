@@ -1,0 +1,14 @@
+-- Dragonball T: Default map symbols
+-- note that there aren't very many defaults
+
+map.symbol{ symbol='-' feat=FEAT_GRASS info=3 }
+map.symbol{ symbol='#' feat=FEAT_BUILDING info=6 }
+map.symbol{ symbol='^' feat=FEAT_MOUNTAIN info=3 }
+map.symbol{ symbol='T' feat=FEAT_TREES info=3 }
+map.symbol{ symbol='W' feat=FEAT_DEEP_WATER info=3 }
+map.symbol{ symbol='V' feat=FEAT_SHAL_WATER info=3 }
+map.symbol{ symbol=',' feat=FEAT_DIRT info=3 }
+map.symbol{ symbol='O' feat=FEAT_ROAD info=6 }
+
+-- Is this used?
+map.symbol{ symbol='.' feat=FEAT_FLOOR info=3 }

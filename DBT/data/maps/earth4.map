@@ -1,0 +1,127 @@
+map.define("earth4.map")
+
+-- Terrain
+map.symbol{ symbol='=' feat=FEAT_GRASS info=3 }
+map.symbol{ symbol='^' feat=FEAT_MOUNTAIN info=3 }
+map.symbol{ symbol='#' feat=FEAT_BUILDING info=6 }
+map.symbol{ symbol='T' feat=FEAT_TREES info=3 }
+map.symbol{ symbol='W' feat=FEAT_DEEP_WATER info=3 }
+map.symbol{ symbol='V' feat=FEAT_SHAL_WATER info=3 }
+map.symbol{ symbol=',' feat=FEAT_DIRT info=3 }
+map.symbol{ symbol='.' feat=FEAT_ASPHALT info=6 }
+map.symbol{ symbol='O' feat=FEAT_SIDEWALK info=6 }
+map.symbol{ symbol='|' feat=FEAT_ROADSTRIPE_VERT info=3 }
+map.symbol{ symbol='-' feat=FEAT_ROADSTRIPE_HORZ info=3 }
+
+map.quest_symbol
+{
+	quest = QUEST_BOSS_RABBIT
+	symbol = 'j'
+	symbols =
+	{
+		[{QUEST_STATUS_FINISHED}] = { feat=FEAT_GRASS info=3 }
+		default = { feat=FEAT_MORE info=3 dungeon=DUNGEON_RABBIT_HOLE }
+	}
+}
+map.symbol{ symbol='k' feat=FEAT_MORE info=3 dungeon=DUNGEON_OOLONG }
+
+map.symbol{ symbol='1' feat=FEAT_SHOP info=3 building=store.ARU1 }	-- Aru Village, Imelda
+map.symbol{ symbol='2' feat=FEAT_SHOP info=3 building=store.ARU2 }	-- Aru Village, Marcos
+
+-- Aru Village, Joe
+map.quest_symbol
+{
+	quest = QUEST_BOSS_RABBIT
+	symbol = '3'
+	symbols =
+	{
+		[{QUEST_STATUS_COMPLETED}] = { feat=FEAT_SHOP info=3 building=store.ARU3 }
+		[{QUEST_STATUS_FINISHED}] = { feat=FEAT_SHOP info=3 building=store.ARU3 }
+		default = { feat=FEAT_SHOP info=3 building=store.ARU5 }
+	}
+}
+-- Aru Village, Joesephine
+-- Note: There is/should be a 'hack' entry for this tile in dbtstuff.lua, since its
+-- state is dependant upon two quests: Oolong and Rosshi #2
+map.quest_symbol
+{
+	quest = QUEST_OOLONG
+	symbol = '4'
+	symbols =
+	{
+		[{QUEST_STATUS_COMPLETED}] = { feat=FEAT_SHOP info=3 building=store.ARU4 }
+		[{QUEST_STATUS_FINISHED}] = { feat=FEAT_SHOP info=3 building=store.ARU4 }
+		default = { feat=FEAT_SHOP info=3 building=store.ARU5 }
+	}
+}
+
+
+map.map
+{
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW======]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW====================]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW=======================================]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW===========================================]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW==============================================]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW================================================]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW=========================================================]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW================================================================]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW===========================================================================]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW==============================================================================]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW=====================================================================================]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW=============================================================================================]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW=========================================================================================================]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW=====================================================================================================================]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW====================================================================================================================================]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW==================================================================================================================================================]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW=========================================================================================================================================================]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW=================##=====##======================================================...............................................................................]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW====================##=#=#=##=====================================================..-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW=======================#######======================================================.|..............................................................................]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW========================#######======================================================...=============================================================================]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW========================###k###======================================================.|.=============================================================================]],
+[[WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW=======================================================================================...=============================================================================]],
+[[WWWWWWWWWWWWWWWWWWWWWW====WW==========================================================================================.|.=============================================================================]],
+[[WWWWWWWWWWWWWWWWWWWW==================================================================================================...=============================================================================]],
+[[WWWWWWWWWWWWWWWWWW====================================================================================================.|.=============================================================================]],
+[[WWWWWWWWWW===WWW======================================================================================================...=============================================================================]],
+[[WWWWWWWWW=============================================================================================================.|.============================================================================T]],
+[[WWWWWWWW==============================================================================================================...============================================================================T]],
+[[WWWWWWWW==============================================================================================================.|.============================================================================T]],
+[[WWWWWWW===============================================================================================================...============================================================================T]],
+[[WWWWW=================================================================================================================.|.============================================================================T]],
+[[WWW===================================================================================================================...===========================================================================TT]],
+[[======================================================================================================================.|.===========================================================================TT]],
+[[==============================================================================,,,,,===================================...===========================================================================TT]],
+[[============================================================================,,,,,,,,,=================================.|.===========================================================================TT]],
+[[=============================TTTTT=========================================,###,,,###,================================...===========================================================================TT]],
+[[===========================TTTTTTTTTTTT====================================,###,,,###,================================.|.===========================================================================TT]],
+[[==========================TTTTTTTTTTTTTT==================================,,##3,,,2##,,===============================...===========================================================================TT]],
+[[=========================TTTTTTTTTTTTTTTTTT===============================,,,,,,,,,,,,,,,,,,,==.====.==................|.===========================================================================TT]],
+[[==========================TTTTTTTTTTTTTTTTTTTTTT==========================,,,,,,,,,,,,,,,,,,,,,===....=.=.=..-.-.-.-.-...===========================================================================TT]],
+[[==============================TTTTTTTTTTTTTTTTTTTTTTTTT===================,,##1,,,4##,,,,,,,,,==...==.==...............|.==========================================================================TTT]],
+[[===================================TTTTTTTTTTTTTTTTTT======================,###,,,###,================================...==========================================================================TTT]],
+[[========================================jTTTTTTTTTTTTTTTT==================,###,,,###,================================.|.==========================================================================TTT]],
+[[======================================TTTTTTTTTTTTTTTTTTTT==================,,,,,,,,,=================================...=========================================================================TTTT]],
+[[====================================TTTTTTTT==========TTTTTTTTTTTTT===========,,,,,===================================.|.========================================================================TTTTT]],
+[[================================TTTTTTTTTTT==============TTTTTTTTTTTTTTT==============================================...======================================================================TTTTTTT]],
+[[==================================TTTTTT====================TTTTTTTTTTTTTTTTTT========================================.|.================================================================TTTTTTTTTTTTT]],
+[[================================================================TTTTTTTTTTTTTTTTTTTT==================================...========================================================TTTTTTTTTTTTTTTTTTTTT]],
+[[=====================================================================TTTTTTTTTTTTTTTTTTT==============================.|.==================================================TTTTTTTTTTTTTTTTTTTTTTTTTTT]],
+[[===================================================================TTTTTTTTTTTTTTTTTTTTTTTT===========================...===============================TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT]],
+[[=============================================================TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT=======================.|.==================TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT]],
+}

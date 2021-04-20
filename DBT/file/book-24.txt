@@ -1,0 +1,96 @@
+#####R                 /------------------------\                              
+#####R                <  DBT V080 Release Notes  >                             
+#####R                 \------------------------/                              
+                                                                               
+Summary:                                                                       
+*****/abook-24.txt*1[(a) Hello!]                                               
+*****/bbook-24.txt*2[(b) Summary]                                              
+*****/cbook-24.txt*3[(c) Complete Change Log]                                  
+*****/dbook-24.txt*4[(d) About the new skill system]                           
+                                                                               
+~~~~~1                                                                         
+#####G(a)Hello!                                                                
+                                                                               
+ I think I have a solution in place for the skill situation                    
+                                                                               
+~~~~~2                                                                         
+#####G(b)Summary                                                               
+--------------------------------------------                                   
+                                                                               
+ * Yet another new experimental skill system                                   
+ * You may now toggle attack/chat handling via the '=' options screen          
+ * Several bugfixes                                                            
+ * Rule Changes:                                                               
+  * Barehanded fighter must have the Blocking ability to get AC bonuses        
+  * Alignment losses for killing nice people have become more stringent        
+                                                                               
+~~~~~3                                                                         
+#####G(c)Complete Change Log                                                   
+--------------------------------------------                                   
+Changes from Version 0.7.9 to Version 0.8.0                                    
+--------------------------------------------                                   
+Friday Dec 29, 2006                                                            
+* Implementated a 'Story Mode' skill system that uses NO skill modifiers       
+  (Chi Masters and Ninjutsu not implemented in story skillmode)                
+* Two new barehanded abilities: Blocking, Tameshiware                          
+  (Note that barehanded fighters must now learn blocking to gain their ac      
+   bonus, and that Tameshiware is not implemented yet.)                        
+* Corrected Briefs upgrade quest skill gain text                               
+* Added an enrollment spoiler for story mode                                   
+* Whoops! Eliminated a double entry for Oolong...could have odd                
+  ramifications...                                                             
+* Honda may no longer flee from the Sumo ring                                  
+* The Nyoi-bo may now be used to thwap monsters at range                       
+* Bazookas are basically functional again                                      
+* Clarified 'unable to fight florentine' message                               
+* Adjusted AC of a whole bunch of monsters. Waiting until level 20 to          
+  spend skill points will be more difficult now                                
+* Technomancy                                                                  
+        * Added the default 20% base construction success rate. (Oops.)        
+          Chance to build is now 20 + Construction skill - Item Difficulty     
+        * Chance of explosive failure similarly adjusted                       
+        * Ingredients are now 'used up' during construction                    
+        * Removed debug display info during disassembly                        
+* Fixed dragonball drops rates. The following monsters no longer drop          
+  dragonballs:                                                                 
+        * Space Debris                                                         
+        * Children from marriage                                               
+        * Monsters with PLANT or ANIMAL flags now default to zero chance       
+          to drop (Unique plants and animals can still drop dragonballs)       
+        * Mortal/Immortal checking should now be correct. (Immortal beings     
+          do not bother with silly little things like dragonballs)             
+* Implemented 'special case' alignment handling. For example, killing          
+  children, Buddhist monks and starving college students is bad karma.         
+* You may now toggle default attack/talk behavior under options '='            
+                                                                               
+~~~~~4                                                                         
+#####G(d)About the new Skill System                                            
+                                                                               
+At time of character creation you will have a choice of two skill systems.     
+'Story' and 'Math'. They're not terribly well named, but 'Math' mode is        
+the original skill system you're already used to. Characters who run in        
+'Story' mode will notice the following changes:                                
+                                                                               
+ * Skill points are no longer spent via the 'G'ain screen. Instead, they       
+   are spent at the various studios, and you must take a class every time      
+   you wish to gain skill. Details are handled differently by each school.     
+ * You start wih 5 skill points, and gain 2 per level, thus a potential        
+   205 individual class 'enrollments'                                          
+ * The enrollment structure and numbers are totally different for Story        
+   mode                                                                        
+ * There are no skill limits by level                                          
+   (Note: Engine still limits all skills to 50!)                               
+ * Handling of the Briefs quests, and dragonball wishes for skills is          
+   slightly different. In general the gains will be larger.                    
+ * Chi Masters are not yet implemented                                         
+ * Nor is Ninjutsu                                                             
+ * The entire system is a one day hack. There may be bugs. It may need         
+   rebalancing.                                                                
+ * There is a new spoiler available via help outlining the actual numbers      
+   for each class                                                              
+                                                                               
+Enjoy!                                                                         
+                                                                               
+Bucket Man                                                                     
+lordbucket@hotmail.com                                                         
+                                                                               

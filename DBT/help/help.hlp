@@ -1,0 +1,39 @@
+|||||oy                                                                        
+~~~~~01|Help|Main Menu                                                         
+~~~~~02|Main Menu                                                              
+#####RWelcome to the Dragonball T Online Help System                           
+#####R==============================================                           
+                                                                               
+    *****/anew.txt*0[(a)] Help for the First Time Player                       
+    *****/bqref.txt*0[(b)] Quick Command Reference                             
+    *****/ccommands.txt*0[(c)] Complete list of commands                       
+                                                                               
+                                                                               
+Reference:                                                                     
+                                                                               
+    *****/dstats.txt*0[(d)] Stats                                              
+    *****/eskills.txt*0[(e)] Skills                                            
+    *****/fabilities.txt*0[(f)] Abilities                                      
+    *****/graces.txt*0[(g)] Races                                              
+    *****/hclasses.txt*0[(h)] Classes                                          
+    *****/ichi.txt*0[(i)] The Chi System                                       
+                                                                               
+    *****/mfaq.txt*0[(m)] Frequently Asked Questions                           
+                                                                               
+    *****/zspoiler.hlp*0[(z)] Spoiler Menu                                     
+                                                                               
+(Additional in-game help is available at the library.)                         
+                                                                               
+#####GBasic keys:                                                              
+Space          | Advance 1 page (screen)                                       
+2, down arrow  | Advance 1 line                                                
+8, up arrow    | Back up 1 line                                                
+-              | Back up 1 page (screen)                                       
+6, right arrow | Advance 1 link4, left arrow  | Back up 1 link                 
+Return         | Activate the selected link                                    
+Escape         | Leave the Online Help                                         
+Backspace, ?   | Return to previous Help File                                  
+#              | Go to a specific line (defaults to line 0)                    
+%              | Go to a specific help file (defaults to help.hlp)             
+=              | Highlight lines containing a string (e.g. "word")             
+/              | Search for a string (e.g. "word")                             
