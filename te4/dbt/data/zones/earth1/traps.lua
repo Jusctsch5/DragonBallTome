@@ -1,0 +1,1 @@
+-- No traps in this slice.

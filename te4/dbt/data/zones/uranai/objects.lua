@@ -1,0 +1,1 @@
+-- Objects carried at birth are loaded separately.
