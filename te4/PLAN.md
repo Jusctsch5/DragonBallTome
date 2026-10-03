@@ -1,47 +1,36 @@
-# Dragonball T on ToME 4: playable slice
+# ToME 4 slice plan
 
-Status: done. The module is in [te4/dbt](dbt). Played on Tales of Maj'Eyal 1.7.6: walk the outdoor map, kill hostiles, and take the stairs into the house.
+First milestone of the port onto Tales of Maj'Eyal 1.7.6. Engine package `te4-1.7.6`. The full game stays later work.
 
-Dragonball T in this repo is a ToME 2 / T-Engine 3 total conversion ([DBT/module.lua](../DBT/module.lua), alpha 18, version 0.9.1). ToME 4 1.7.6 is a different engine ([module guide](https://te4.org/wiki/T4_Modules_Howto_Guide)). Lua from `DBT/` will not load there. This pass adds a new module written for engine `te4-1.7.6`. [DBT/](../DBT/) remains the content source. `.tome/3.0/modules/dbt/` is a runtime copy and is not edited.
+## Constraints
 
-The engine itself is not vendored. The module is Lua that runs inside a local [Tales of Maj'Eyal 1.7.6](https://te4.org/download) install. `init.lua` sets `engine = {1,7,6,"te4"}`, which resolves to the installed `te4-1.7.6` package. The example module's `{1,1,5,"te4"}` field does not load on that install.
+- New module only. `DBT/` stays the ToME 3 content source and is not edited. `.tome/` is runtime data and is not edited.
+- Do not vendor the engine. The module runs inside a local 1.7.6 install.
+- `engine = {1,7,6,"te4"}`. The example module's `{1,1,5,"te4"}` does not load on 1.7.6.
+- `short_name` is `dbt`. Copy `te4/dbt` to `<ToME 1.7.6>/game/modules/dbt`.
+- ASCII only.
+- Melee is the engine bump-attack. Chi, enrollment, hunger, technomancy, and the ToME 3 combat scripts stay out.
 
-## What the slice plays like
+## Work
 
-```mermaid
-flowchart LR
-  birth[Birth: Male or Female] --> earth[Earth 1 outdoor map]
-  earth --> fight[Bump-attack a hostile]
-  earth --> stairs[Stairs down]
-  stairs --> house[Uranai Baba house]
-  house --> chat[Talk to Uranai Baba]
-  house --> up[Stairs back to Earth 1]
-```
+- [x] Module skeleton from the 1.7.6 example. `init.lua` targets `te4-1.7.6`. A new game starts on Earth 1.
+- [x] Birth is gender only: base body, Male, Female. Starter kit is street clothes, a kubotan, shoes (tennis shoes or high heels), and a note that this is the ToME 4 slice. PlayTest mode waits.
+- [x] Earth 1 is a small outdoor map in the style of `DBT/data/maps/earth1.map`: grass, trees, road, water, a building, a few melee hostiles, and a down-stair. `DUNGEON_URANAI` is the `a` entrance on that map. The full wilderness and the full earth1 map wait.
+- [x] Uranai Baba's house is the static floor from `DBT/data/maps/uranai.map`: walls, door, floor, up-stair. Swamp levels and the tentacle-demon quest stay out.
+- [x] Uranai Baba is neutral. Her chat is the opening of `dialogue.URANAI_BABA`: she has had a lousy day and wants the guest gone. Quest branches stay out.
+- [x] `te4/dbt/README.md` documents copy and launch: `t-engine.exe -Mdbt -uTester -n`.
 
-- Birth matches [DBT/data/player/descriptors.lua](../DBT/data/player/descriptors.lua): gender only. PlayTest mode waits.
-- Start on a small outdoor map in the Earth 1 / Dragonworld style of [DBT/data/maps/earth1.map](../DBT/data/maps/earth1.map) and [DBT/data/wild/terrain.lua](../DBT/data/wild/terrain.lua): grass, trees, road, water, a building, and a stair into Uranai Baba's house (`DUNGEON_URANAI` is the `a` entrance on that map). The full wilderness and the full earth1 ASCII map stay for a later pass.
-- Melee uses the engine's normal bump-to-attack. DBT's custom combat, chi, enrollment, hunger, and technomancy stay in the ToME 3 scripts.
-- One dungeon floor: the static house from [DBT/data/maps/uranai.map](../DBT/data/maps/uranai.map) (walls, door, floor, up-stair). Swamp generator levels and the tentacle-demon quest stay out.
-- One NPC: Uranai Baba, neutral, with a short greeting taken from the opening of `dialogue.URANAI_BABA` in [DBT/scripts/dialogue.lua](../DBT/scripts/dialogue.lua). Quest branches stay out.
-- Starter kit echoes the ToME 3 birth kit: street clothes and a kubotan, plus a short in-game note that this is the ToME 4 slice.
+## Out of scope
 
-## Module layout
+Custom combat, chi, enrollment, hunger, technomancy, PlayTest mode, the full Earth wilderness, the full earth1 map, Uranai's swamp levels, the tentacle-demon quest, and every other dungeon, map, and dialogue.
 
-Tree: `te4/dbt/`, copied into `<ToME 1.7.6>/game/modules/dbt` to run. Skeleton follows the official example module ([getting started](https://te4.org/wiki/T4_Modules_Howto_Guide/Getting_Started)).
+## Acceptance
 
-- `init.lua`: name `Dragonball T`, `short_name = "dbt"`, version `1.0.0` for this port, `show_only_on_cheat` off, `no_funfacts` on.
-- `load.lua` plus `class/Game.lua` and `class/Player.lua`: new game starts on the Earth 1 zone.
-- `data/birth/descriptors.lua`: base body and Male / Female.
-- `data/zones/earth1/`: static ASCII zone, a few hostile melee NPCs, down-stair.
-- `data/zones/uranai/`: static house map, up-stair, Uranai Baba.
-- `data/chats/uranai-baba.lua`: greeting and goodbye.
-- `data/general/grids`, `objects`, `npcs`: floors, walls, door, clothes, kubotan, thug or wild animal.
-- ASCII only, so no tile art is required.
+- [x] New game, pick a gender, spawn on Earth 1.
+- [x] Hit a hostile.
+- [x] Take the stair into the house.
+- [x] Talk to Uranai Baba.
+- [x] Return upstairs.
+- [x] Save and load.
 
-[te4/dbt/README.md](dbt/README.md) says how to copy the folder and launch `t-engine.exe -Mdbt -uTester -n`.
-
-## Check
-
-With 1.7.6 installed: new game, pick a gender, spawn on Earth 1, hit a hostile, take the stair, talk to Baba, return upstairs, save and load.
-
-Played on the local 1.7.6 install. Walking, killing, and the stairs into the house all worked. A scripted pass also confirmed female birth gear, melee damage, Baba's greeting, the return to the road, and a save that loaded.
+Played on a local 1.7.6 install. Walking, killing, and the stairs into the house worked.
