@@ -1,52 +1,33 @@
--- Earth 1 hostiles and Uranai Baba. Melee uses the engine bump attack.
+-- Talkers and the quest hook. Everyone else is a race from races.lua.
+
+load("/data/general/npcs/races.lua")
+
+newEntity{ base = "RACE_TENTACLE_DEMON",
+	define_as = "TENTACLE_DEMON",
+	on_die = function(self, src)
+		local p = game.player
+		local q = p and p.quests and p.quests.tentacle_demon
+		if q and q.status == "taken" then
+			q.status = "slain"
+			game.log("The basement goes quiet. Uranai Baba will want to hear of this.")
+		end
+	end,
+}
 
 newEntity{
-	define_as = "BASE_NPC_EARTH",
-	type = "humanoid", subtype = "earth",
-	display = "p", color=colors.WHITE,
-	desc = [[Someone from Earth.]],
-	stats = { str=5, dex=5, con=5 },
-	combat_armor = 0,
-	combat = { dam=2 },
-	body = { INVEN = 1 },
-	life_rating = 8,
-	rank = 1,
-	exp_worth = 1,
-	level_range = {1, 1},
-}
-
-newEntity{ base = "BASE_NPC_EARTH",
-	define_as = "WOLF",
-	name = "wolf",
-	type = "animal", subtype = "canine",
-	display = "w", color=colors.UMBER,
-	desc = [[A wolf prowling the edge of the road.]],
-	faction = "enemies",
-	ai = "simple", ai_state = { talent_in=3 },
-	max_life = 10,
-	combat = { dam=2 },
-}
-
-newEntity{ base = "BASE_NPC_EARTH",
-	define_as = "THUG",
-	name = "street thug",
-	display = "h", color=colors.LIGHT_RED,
-	desc = [[A thug looking for an easy mark.]],
-	faction = "enemies",
-	ai = "simple", ai_state = { talent_in=3 },
-	max_life = 16,
-	combat_armor = 1,
-	combat = { dam=2 },
-}
-
-newEntity{ base = "BASE_NPC_EARTH",
 	define_as = "URANAI_BABA",
 	name = "Uranai Baba",
+	type = "humanoid", subtype = "earth",
 	display = "B", color=colors.LIGHT_BLUE,
 	desc = [[The fortune teller. She does not look pleased to see a guest.]],
+	stats = { str=10, dex=10, con=10 },
+	combat_armor = 50,
+	max_life = 400,
+	life = 400,
+	level = 27,
+	body = { INVEN = 1 },
 	faction = nil,
 	ai = "none",
-	max_life = 40,
 	can_talk = "uranai-baba",
 	never_move = true,
 }

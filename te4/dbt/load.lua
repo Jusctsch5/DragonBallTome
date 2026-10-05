@@ -42,11 +42,16 @@ ActorTemporaryEffects:loadDefinition("/data/timed_effects.lua")
 
 -- Actor resources
 ActorResource:defineResource("Power", "power", nil, "power_regen", "Power represent your ability to use special talents.")
+ActorResource:defineResource("Chi", "chi", nil, "chi_regen", "Spiritual energy. It stays empty until a master teaches you.")
 
--- Actor stats
-ActorStats:defineStat("Strength",	"str", 10, 1, 100, "Strength defines your character's ability to apply physical force. It increases your melee damage, damage with heavy weapons, your chance to resist physical effects, and carrying capacity.")
-ActorStats:defineStat("Dexterity",	"dex", 10, 1, 100, "Dexterity defines your character's ability to be agile and alert. It increases your chance to hit, your ability to avoid attacks and your damage with light weapons.")
-ActorStats:defineStat("Constitution",	"con", 10, 1, 100, "Constitution defines your character's ability to withstand and resist damage. It increases your maximum life and physical resistance.")
+-- Actor stats. Birth starts each at 10. The arrangement screen can move them between 6 and 14.
+ActorStats:defineStat("Strength", "str", 10, 1, 100, "Melee damage is Strength minus 10, before the weapon roll.")
+ActorStats:defineStat("Intelligence", "int", 10, 1, 100, "Intelligence is for machines and noticing things. It does not change a punch.")
+ActorStats:defineStat("Willpower", "wil", 10, 1, 100, "Willpower feeds chi, once you have learned to use it.")
+ActorStats:defineStat("Dexterity", "dex", 10, 1, 100, "Barehand and weapon to-hit is Dexterity minus 10.")
+ActorStats:defineStat("Constitution", "con", 10, 1, 100, "Life is Constitution times your level.")
+ActorStats:defineStat("Charisma", "chr", 10, 1, 100, "Charisma sets your starting zeni and the price shops charge.")
+ActorStats:defineStat("Speed", "spd", 10, 1, 100, "Speed is how quickly you act. 10 is normal.")
 
 -- Actor AIs
 ActorAI:loadDefinition("/engine/ai/")

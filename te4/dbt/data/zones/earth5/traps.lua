@@ -1,0 +1,1 @@
+-- No traps on the Earth overworld.

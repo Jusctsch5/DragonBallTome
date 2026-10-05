@@ -1,0 +1,1 @@
+-- The closed interior has no actors.

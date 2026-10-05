@@ -1,0 +1,1 @@
+-- Floor treasure is placed when the level is generated.

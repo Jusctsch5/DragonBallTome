@@ -28,12 +28,34 @@ function _M:init(t, no_default)
 end
 
 function _M:block_move(x, y, e, act, couldpass)
+	if self.dbt_wt_door and e and e.player and (e.tourny_registered or 0) < 1 then
+		-- The exit stairs are west of this door. Unregistered fighters can always walk back out.
+		if e.x and x and e.x > x then return false end
+		if act then game.log("The door is for registered fighters.") end
+		return true
+	end
+	if self.dbt_ring_edge and e and not e.player and not e.flying then
+		return true
+	end
+	if self.dbt_temple_lock and e and e.player and (e.temple_key or 0) < 1 then
+		if act then game.log("This door looks quite sturdy.") end
+		return true
+	end
+	if self.dbt_temple_lock then return false end
+
 	-- Open doors
 	if self.door_opened and act then
 		game.level.map(x, y, engine.Map.TERRAIN, game.zone.grid_list.DOOR_OPEN)
 		return true
 	elseif self.door_opened and not couldpass then
 		return true
+	end
+
+	if e and e.flying and self.does_block_move then
+		local kind = self.define_as or ""
+		if kind:find("WATER") or kind:find("TREE") or kind:find("MOUNTAIN") or kind:find("LAVA") then
+			return false
+		end
 	end
 
 	-- Pass walls
@@ -48,6 +70,21 @@ end
 
 function _M:on_move(x, y, who, forced)
 	if forced then return end
+	if who and who.player and self.change_level then
+		local how = self.desc
+		if not how or how == "Press > to enter." then
+			game.log("#LIGHT_BLUE#%s.#LAST# Press > to enter.", (self.name or "Entrance"):capitalize())
+		else
+			game.log("#LIGHT_BLUE#%s.#LAST# %s", (self.name or "Entrance"):capitalize(), how)
+		end
+	elseif who and who.player and self.notice and self.desc and not self.change_level then
+		game.log("#LIGHT_BLUE#%s#LAST#", self.desc)
+	end
+	if who and who.player and who.tourny_now and not who.flying and not who.tourny_death then
+		if self.dbt_ring_edge or self.dbt_ring_out then
+			if game.loseTournament then game:loseTournament("ring") end
+		end
+	end
 	if who.move_project and next(who.move_project) then
 		for typ, dam in pairs(who.move_project) do
 			DamageType:get(typ).projector(who, x, y, typ, dam)

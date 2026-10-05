@@ -1,0 +1,47 @@
+-- Underwater Cavern, from bluelair.map.
+
+defineTile("X", "WALL")
+defineTile("G", "DIRT")
+defineTile("A", "FLOOR", nil, "RACE_RRA_CORPORAL")
+defineTile(".", "FLOOR")
+defineTile("e", "FLOOR", nil, "RACE_RRA_TURRET")
+defineTile("i", "FLOOR")
+defineTile("D", "WALL")
+defineTile("+", "DOOR")
+defineTile("B", "FLOOR", nil, "RACE_RRA_LIETENANT")
+defineTile("j", "SIGN_A_sign_on_the_door_read_Storage")
+defineTile("C", "FLOOR", nil, "RACE_RRA_CAPTAIN")
+defineTile("f", "FLOOR", nil, "RACE_RRA_CAMERA")
+defineTile("k", "GLASS")
+defineTile("h", "FLOOR")
+defineTile("<", "UP_HOUSE")
+defineTile("c", "FLOOR", nil, "RACE_RRA_BLUE")
+defineTile("l", "FLOOR")
+
+startx = 2
+starty = 11
+endx = 2
+endy = 11
+
+return [[XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+XXGGGGGA.AXA.AXA.AXA.AXA.AXA.AXA.AXA.AXA.AXeX...AXXXXiiiiiiiiiiX
+XXG..D....+...+...+...+...+...+...+...+...X.D...eXXXXiiiiiiiiiiX
+XXG.GGGA.AXA.AXA.AXA.AXA.AXA.AXB.AXA.AXA.AX.X....AjDAiiiiiiiiiiX
+XXG..GGGGXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX+XX.XXA.AXXXXiiiiiiiiiiX
+XXGG.GGA.AXA.AXA.AXA.AXA.AXA.AXA.AXA.AXA.AX.XXX.XXXXXiiiiiiiiiiX
+XXGG.GG...+...+...+...+...+...+...+...+...X.XXX+XXXXXXXXXXXXXXXX
+XXG..GGA.AXA.AXA.AXB.AXA.CXA.AXA.AXA.AXA.AX.Xfk........ekfXeeeeX
+XGh.GGGGDXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.Xkk.........kkX....X
+XGhGGGGA.AXA.AXA.AXA.AXA.AXA.AXA.AXA.AXA.AX.Xe............X....X
+XG.GGGG...+...+...+...+...+...+...+...+...X.Xe................fX
+XG<GGGGA.CGA.AXB.AXA.AXA.AXA.AXA.BXA.AXA.AX.Xkk.........kkXXX.XX
+XGGGGGGGGGGXXXXXXXXXXXXXXXXXXXXXXXXXXXXXDXX.Xfke.......ekfXXX.XX
+XGiiiGGA.AGA.AXA.AXA.AXA.AXA.AXA.AXA.AXA.BX.XXXXXXXXXXXXXXXXX.XX
+XGiiiGG...+...+...+...+...+...+...+...+...X.XXXXXXXXXXXXXXXXX.XX
+XGiiiGGA.AGA.AXA.AXA.AXA.AXA.BXA.AXA.AXB.AX.XXXXfk.......kfXX.XX
+XGXDXGGGDGGGGGGGGGXXXXXXXXXXXXXXXXXXXXXXXXX.XXXXkk.......kkXX.XX
+XGX.XGGAAAGA.AGA.AGA.AXA.AXA.CXA.AXA.BXA.CX.X<.D.....c...ll.+.XX
+XGX..DAAAA+...+...+...+...+...+...+...+...+.XXXXkk.......kkXX.XX
+XGXXXGGAAAGA.AGA.AGA.AXB.AXA.AXA.CXA.AXA.CX.XXXXfk.......kfXXeXX
+XGGGGGGGGGGGGGGGGGGGGGGGGGGGXXXXXXXXXXXXXXXfXXXXXXXXXXXXXXXXXXXX
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX]]

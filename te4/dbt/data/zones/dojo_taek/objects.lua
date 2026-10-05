@@ -1,0 +1,1 @@
+-- No loose objects on the map.

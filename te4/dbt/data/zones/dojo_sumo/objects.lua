@@ -1,0 +1,1 @@
+-- The dojo floor has no loose objects.

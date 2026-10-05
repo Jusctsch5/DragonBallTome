@@ -1,1 +1,1 @@
--- No traps in this slice.
+-- No traps on the Earth overworld.

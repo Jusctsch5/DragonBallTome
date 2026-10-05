@@ -1,5 +1,5 @@
 -- Uranai Baba's house, from the ToME 3 uranai.map.
--- The basement stair and tentacle-demon quest are not in this slice.
+-- Tile c stays floor until the tentacle quest is taken, then it becomes the basement stair.
 
 defineTile('*', "MAP_BORDER")
 defineTile('X', "WALL")
@@ -10,7 +10,7 @@ defineTile('d', "DOOR")
 defineTile('<', "UP_EARTH")
 defineTile('a', "PLACARD")
 defineTile('b', "FLOOR", nil, "URANAI_BABA")
-defineTile('c', "FLOOR")
+defineTile('c', "URANAI_CELLAR")
 
 startx = 10
 starty = 2
